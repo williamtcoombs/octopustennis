@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+<head>
+  <script>
+    /* Light-only mode guard (standardized). */
+    (function () {
+      try {
+        var root = document.documentElement;
+        if (root && root.classList) root.classList.remove('dark');
+        if (typeof localStorage !== 'undefined') {
+          localStorage.setItem('theme', 'light');
+        }
+      } catch (_) {}
+    })();
+  </script>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&amp;family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<!-- Styles -->
+<link href="/assets/site.css" rel="stylesheet"/>
+<!-- Meta -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+<!-- Favicons -->
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/img/favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon-96x96.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+
+<!-- SEO core: title, description, canonical, OG/Twitter -->
+<title>Fundamentals | Team Combat USA</title>
+<meta content="Learn, practice, refine, and perfect practical, pressure-tested combatives techniques proven effective in sport and self-defense." name="description"/>
+<link href="https://www.teamcombatusadc.com/fundamentals.html" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="Team Combat USA" property="og:site_name"/>
+<meta content="Fundamentals | Team Combat USA" property="og:title"/>
+<meta content="Learn, practice, refine, and perfect practical, pressure-tested combatives techniques proven effective in sport and self-defense." property="og:description"/>
+<meta content="https://www.teamcombatusadc.com/fundamentals.html" property="og:url"/>
+<meta content="https://www.teamcombatusadc.com/assets/img/og-default.png" property="og:image"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Fundamentals | Team Combat USA" name="twitter:title"/>
+<meta content="Master the fundamentals of Team Combat USA: essential techniques, movement, and core skills to build your foundation." name="twitter:description"/>
+<meta name="twitter:image" content="https://www.teamcombatusadc.com/assets/img/og-default.png"/>
+<!-- Theme color -->
+<meta name="theme-color" content="#991b1b">
+<script src="/assets/site.js" defer></script>
+<style>/* Page-scoped: Remove faint focus/shadow ring in iOS Safari/Chrome for the mobile drawer */
+#mobile-menu a:focus,
+#mobile-menu a:focus-visible,
+#mobile-menu button:focus,
+#mobile-menu button:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Reduce iOS tap highlight halo on links/buttons in the mobile drawer */
+#mobile-menu a, 
+#mobile-menu button {
+  -webkit-tap-highlight-color: transparent;
+}</style></head>
+<body class="typography-v1 bg-white dark:bg-slate-950 min-h-dvh text-slate-900 font-body dark:text-slate-100 antialiased">
+<a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded-lg focus:bg-white/90 focus:px-3 focus:py-2 focus:text-slate-900" href="#main">
+   Skip to content
+  </a>
+<!-- Header / Navbar -->
+<!-- Header / Navbar (Fundamentals Active) -->
+<header class="sticky top-0 z-40 transition-all duration-300 bg-white/80 backdrop-blur dark:bg-slate-900/70" id="site-header">
+<div class="mx-auto max-w-screen-xl px-4">
+<div class="flex items-center justify-between py-3 lg:py-4" id="header-inner">
+<!-- Brand -->
+<a class="flex items-center gap-2" href="/">
+<span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">TC</span>
+<span class="font-display text-lg font-semibold tracking-wide">Team Combat USA</span>
+</a>
+<!-- Desktop nav -->
+<nav aria-label="Primary" class="hidden gap-6 md:flex is-collapsible" id="primary-nav">
+<a class="nav-link" href="/">Home</a>
+<a class="nav-link" href="/warrior-ethos.html">Warrior Ethos</a>
+<a class="nav-link" href="/history.html">History</a>
+<a class="nav-link" href="/styles.html">Styles</a>
+<a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/fundamentals.html">Fundamentals</a>
+<a class="nav-link" href="/gameplan.html">Gameplan</a>
+<a class="nav-link" href="/top-positions.html">Top Positions</a>
+<a class="nav-link" href="/standing.html">Standing</a>
+<a class="nav-link" href="/bottom-positions.html">Bottom Positions</a>
+<a class="nav-link" href="/leg-entanglement-positions.html">Leg Entanglement Positions</a>
+<a class="nav-link" href="/fitness.html">Fitness</a>
+<a class="nav-link" href="/drills.html">Drills</a>
+<a class="nav-link" href="/competition.html">Competition</a>
+<a class="nav-link" href="/self-defense.html">Self-Defense</a>
+<a class="nav-link" href="/inspiration.html">Inspiration</a>
+</nav>
+<!-- Buttons -->
+<div class="flex items-center gap-2 md:gap-3">
+<!-- Theme toggle intentionally disabled (light-only mode) -->
+
+<!-- Mobile menu toggle -->
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-900 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-800" id="menu-toggle" type="button">
+<svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile drawer -->
+<div class="absolute inset-x-0 top-full z-30 md:hidden duration-200 invisible opacity-0 -translate-y-2 h-[calc(100dvh-64px)]" data-open="false" id="mobile-menu">
+<div class="mx-4 rounded-2xl border border-slate-200/60 bg-white/95 shadow-xl backdrop-blur dark:border-slate-800 dark:bg-slate-900/90 p-4">
+<nav aria-label="Mobile" class="grid gap-2 text-base">
+<a class="nav-link" href="/">Home</a>
+<a class="nav-link" href="/warrior-ethos.html">Warrior Ethos</a>
+<a class="nav-link" href="/history.html">History</a>
+<a class="nav-link" href="/styles.html">Styles</a>
+<a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/fundamentals.html">Fundamentals</a>
+<a class="nav-link" href="/gameplan.html">Gameplan</a>
+<a class="nav-link" href="/top-positions.html">Top Positions</a>
+<a class="nav-link" href="/standing.html">Standing</a>
+<a class="nav-link" href="/bottom-positions.html">Bottom Positions</a>
+<a class="nav-link" href="/leg-entanglement-positions.html">Leg Entanglement Positions</a>
+<a class="nav-link" href="/fitness.html">Fitness</a>
+<a class="nav-link" href="/drills.html">Drills</a>
+<a class="nav-link" href="/competition.html">Competition</a>
+<a class="nav-link" href="/self-defense.html">Self-Defense</a>
+<a class="nav-link" href="/inspiration.html">Inspiration</a>
+</nav>
+</div>
+</div>
+</header>
+<!-- Hero: high-contrast, light & dark safe -->
+<section class="relative isolate py-20 sm:py-24">
+<!-- Background (tuned per mode for best contrast with white text) -->
+<div class="absolute inset-0 -z-10 bg-gradient-to-b from-brand-700 to-brand-700 dark:from-brand-700 dark:to-brand-700">
+</div>
+<!-- Optional subtle vignette for readability on all screens -->
+<div class="absolute inset-0 -z-10 bg-black/0 dark:bg-black/10">
+</div>
+<div class="container mx-auto px-6 text-left">
+<h1 class="font-heading text-4xl sm:text-5xl md:text-6xl font-extrabold text-white drop-shadow-md">
+     Fundamentals
+    </h1>
+<p class="mt-4 text-base sm:text-lg md:text-xl font-body text-white/80 italic">
+     “You don’t rise to the occasion; you fall to the level of your training.” — Archilochus
+    </p>
+<!-- If you have links in the hero: keep them legible -->
+<!-- <a href="#" class="mt-6 inline-block text-white underline decoration-white/60 underline-offset-4 hover:decoration-white">Learn more</a> -->
+</div>
+</section>
+<!-- Main Content -->
+<main class="py-10 md:max-w-4xl lg:px-8 px-4 sm:px-6 mx-auto container max-w-3xl lg:max-w-5xl" id="main">
+<!-- Feature photo -->
+<section class="mt-10">
+<div class="mx-auto max-w-5xl px-4">
+<img alt="Instructor teaching fundamentals to a class of students" class="w-full rounded-xl shadow mb-6" height="800" loading="lazy" src="/assets/img/instructor_teaching_group.jpeg" width="1200"/>
+</div>
+</section>
+<!-- Core Concepts -->
+<section class="flow" id="core-concepts">
+<h2 class="tracking-tight md:text-3xl text-slate-900 dark:text-white font-semibold scroll-mt-20 mb-4 font-display text-2xl">
+     Core Concepts
+    </h2>
+<p class="mt-2 text-slate-600 dark:text-slate-300">
+     These are the building blocks you’ll feel in every round, every drill, every position.
+    </p>
+<div class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+<article class="dark:bg-slate-900 border-slate-200/60 flow dark:border-slate-800 shadow-card p-5 rounded-xl bg-white border">
+<h3 class="dark:text-white font-semibold text-slate-900">
+       Base &amp; Balance
+      </h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+       Stable feet/hips; head over hips. If they can’t move you, they can’t beat you.
+      </p>
+</article>
+<article class="dark:bg-slate-900 border-slate-200/60 flow dark:border-slate-800 shadow-card p-5 rounded-xl bg-white border">
+<h3 class="dark:text-white font-semibold text-slate-900">
+       Posture &amp; Frames
+      </h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+       Protect your spine. Build frames with bone, not muscle.
+      </p>
+</article>
+<article class="dark:bg-slate-900 border-slate-200/60 flow dark:border-slate-800 shadow-card p-5 rounded-xl bg-white border">
+<h3 class="dark:text-white font-semibold text-slate-900">
+       Connection &amp; Pressure
+      </h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+       Stick to what you control, drive through strong lines, remove slack.
+      </p>
+</article>
+<article class="dark:bg-slate-900 border-slate-200/60 flow dark:border-slate-800 shadow-card p-5 rounded-xl bg-white border">
+<h3 class="dark:text-white font-semibold text-slate-900">
+       Wedges &amp; Levers
+      </h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+       Trap joints, isolate segments, use angles — not brute force.
+      </p>
+</article>
+<article class="dark:bg-slate-900 border-slate-200/60 flow dark:border-slate-800 shadow-card p-5 rounded-xl bg-white border">
+<h3 class="dark:text-white font-semibold text-slate-900">
+       Movement Patterns
+      </h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+       Hip escape, bridge, technical stand‑up, knee slide, pummel — rehearse daily.
+      </p>
+</article>
+<article class="dark:bg-slate-900 border-slate-200/60 flow dark:border-slate-800 shadow-card p-5 rounded-xl bg-white border">
+<h3 class="dark:text-white font-semibold text-slate-900">
+       Breathing &amp; Pace
+      </h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+       Stay calm. Breathe through frames. Choose when to surge.
+      </p>
+</article>
+</div>
+</section>
+<!-- Integrated content from fundamentals-production.html -->
+<section class="flow mt-14" id="concept-frameworks">
+<h2 class="tracking-tight md:text-3xl text-slate-900 dark:text-white font-semibold scroll-mt-20 mb-4 font-display text-2xl">
+     Insights Worth Knowing
+    </h2>
+<p class="mt-2 text-slate-600 dark:text-slate-300">
+     John Danaher (overview), the importance of inside control (Jordan Preisinger), the 32 principles (Rener Gracie), white and blue belt priorities (Gordon Ryan), 
+  and positional hierarchy (Team Combat USA thoughts & Lachlan Giles) provide a basis from which we can build.
+    </p>
+<div class="mt-6 space-y-10">
+<!-- fundamentals danaher section -->
+<section class="mb-12 p-4 rounded-xl bg-white/10 dark:bg-gray-700/20 shadow" id="fundamentals">
+<div class="flow mx-auto max-w-4xl">
+<!-- Section Title -->
+<h2 class="md:text-3xl text-slate-900 dark:text-white scroll-mt-20 mb-4 font-display text-2xl font-semibold">
+        Overview
+       </h2>
+<!-- Section Description -->
+<p class="text-gray-700 dark:text-gray-300 mb-8">
+        John Danaher partitions fundamentals into 3 areas, each with 5 corresponding skills. His approach is easy to understand, implement, and utilize 
+      as a framework for instruction and conceptualization. It includes standing [stance, motion, grip,
+        <i>
+         kuzushi
+        </i>
+        (off balancing), transitioning to the ground], ground position 
+      bottom (pin escapes, guard retention, guard sweeps, half guard sweeps, turtle escapes), and ground position top (opening closed guard, passing open guard, 
+      passing half guard, pin maintenance &amp; transitions, turtle breakdowns).
+       </p>
+<!-- Responsive Video Embed -->
+<div class="w-full aspect-video rounded-xl overflow-hidden shadow-lg mt-6">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="w-full h-full" frameborder="0" loading="lazy" src="https://www.youtube.com/embed/jdv82OdlTO8/" title="bjj fundamentals overview">
+</iframe>
+</div>
+</div>
+</section>
+<section class="mb-12 p-4 rounded-xl bg-white/10 dark:bg-gray-700/20 shadow" id="fundamentals-inside-control">
+<div class="flow mx-auto max-w-4xl">
+<!-- Section Title -->
+<h2 class="md:text-3xl text-slate-900 dark:text-white scroll-mt-20 mb-4 font-display text-2xl font-semibold">
+        The Importance of Inside Control
+       </h2>
+<!-- Section Description -->
+<p class="text-gray-700 dark:text-gray-300 mb-8">
+        Jordan Preisinger argues that the battle for grappling supremacy can be reduced to who more effectively used grips, frames, and space management to 
+  control their opponent's torso and neck, specifically the areas from the ear to the shoulder, the armpit to the hip, and from one side of the hip to the other side 
+  of the hip.
+       </p>
+<!-- Responsive Video Embed -->
+<div class="w-full aspect-video rounded-xl overflow-hidden shadow-lg mt-6">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="w-full h-full" frameborder="0" loading="lazy" src="https://www.youtube.com/embed/peYJDb7LZMM/" title="the importance of inside control">
+</iframe>
+</div>
+</div>
+</section>
+
+<section class="mb-12 p-4 rounded-xl bg-white/10 dark:bg-gray-700/20 shadow" id="fundamentals-32-principles">
+  <div class="flow mx-auto max-w-4xl">
+    <!-- Section Title -->
+    <h2 class="md:text-3xl text-slate-900 dark:text-white scroll-mt-20 mb-4 font-display text-2xl font-semibold">
+      The 32 Principles
+    </h2>
+    <!-- Section Description -->
+    <p class="text-gray-700 dark:text-gray-300 mb-8">
+      Rener Gracie, based on work with his brother Ryron, provides another conceptual framework for jiu-jitsu.
+    </p>
+    <ol class="list-decimal pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+      <li><strong>Connection:</strong> Establishing and maintaining contact to control your opponent.</li>
+      <li><strong>Detachment:</strong> Knowing when to let go to maintain control or set up a submission.</li>
+      <li><strong>Distance:</strong> Controlling the space between you and your opponent.</li>
+      <li><strong>Pyramid:</strong> Building from a strong base to be stable and apply pressure.</li>
+      <li><strong>Creation:</strong> Forcing your opponent to react to your moves, rather than the other way around.</li>
+      <li><strong>Acceptance:</strong> Yielding to your opponent's pressure to create an opening for a counter-attack.</li>
+      <li><strong>Velocity:</strong> Using speed and timing to your advantage.</li>
+      <li><strong>Clock:</strong> Managing time and tempo to exhaust your opponent.</li>
+      <li><strong>Prevention:</strong> Stopping your opponent from progressing and disrupting their strategy.</li>
+      <li><strong>Tension:</strong> Using the creation and release of tension to control your opponent.</li>
+      <li><strong>Fork:</strong> Putting your opponent in a dilemma where any action they take leads to a disadvantage.</li>
+      <li><strong>Posture:</strong> Disrupting your opponent's posture to neutralize their movements and break their structure.</li>
+      <li><strong>False Surrender:</strong> Voluntarily yielding to bait your opponent into a mistake.</li>
+      <li><strong>Depletion:</strong> Exhausting your opponent physically and mentally until they make an error.</li>
+      <li><strong>Isolation:</strong> Focusing on and neutralizing a specific part of your opponent's body.</li>
+      <li><strong>Sacrifice:</strong> Giving up something to trick your opponent into overextending.</li>
+      <li><strong>Momentum:</strong> Using the laws of physics to generate and control force.</li>
+      <li><strong>Pivot:</strong> Using circular movement to create leverage and increase your power.</li>
+      <li><strong>Tagalong:</strong> Using your opponent's own momentum against them.</li>
+      <li><strong>Overload:</strong> Applying overwhelming pressure to a single point until your opponent submits.</li>
+      <li><strong>Anchor:</strong> Using a fixed point to increase leverage and control your opponent.</li>
+      <li><strong>Ratchet:</strong> Applying small, increasing increments of pressure to tighten a position.</li>
+      <li><strong>Buoyancy:</strong> Knowing when to float and when to apply pressure, conserving energy.</li>
+      <li><strong>Head Control:</strong> Applying pressure and control to the head, as the body follows the head.</li>
+      <li><strong>Redirection:</strong> Changing the direction of an attack or force to your advantage.</li>
+      <li><strong>Mobility:</strong> Moving yourself effectively when you cannot move your opponent.</li>
+      <li><strong>Centerline:</strong> Controlling the opponent's centerline to break their balance and stability.</li>
+      <li><strong>Base:</strong> Maintaining a wide, low center of gravity to prevent being swept.</li>
+      <li><strong>Leverage:</strong> Using mechanical advantage to maximize your force.</li>
+      <li><strong>Weight Distribution:</strong> Correctly positioning your weight to apply pressure or escape effectively.</li>
+      <li><strong>Equilibrium:</strong> Disrupting your opponent's balance while maintaining your own.</li>
+      <li><strong>Grandmaster:</strong> The continual evolution and adaptation of one's jiu-jitsu.</li>
+    </ol>
+    <!-- Responsive Video Embed -->
+    <div class="w-full aspect-video rounded-xl overflow-hidden shadow-lg mt-6">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+        class="w-full h-full" frameborder="0" loading="lazy"
+        src="https://www.youtube.com/embed/lS8LNQyXCqs/"
+        title="the 32 principles">
+      </iframe>
+    </div>
+  </div>
+</section>
+<section class="mb-12 p-4 rounded-xl bg-white/10 dark:bg-gray-700/20 shadow" id="fundamentals-belt-priorities">
+<div class="flow mx-auto max-w-4xl">
+<!-- Section Title -->
+<h2 class="md:text-3xl text-slate-900 dark:text-white scroll-mt-20 mb-4 font-display text-2xl font-semibold">
+        White Belt and Blue Belt Priorities
+       </h2>
+<!-- Section Description -->
+<p class="text-gray-700 dark:text-gray-300 mb-8">
+        Gordon Ryan believes that positional escapes, dominant position control, and a focus on tried-and-true, high-percentage submissions are optimal for 
+  long-term development.</p>
+<!-- Responsive Video Embed -->
+<div class="w-full aspect-video rounded-xl overflow-hidden shadow-lg mt-6">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="w-full h-full" frameborder="0" loading="lazy" src="https://www.youtube.com/embed/Jekd1ruohpw/" title="white belt and blue belt priorities">
+</iframe>
+</div>
+</div>
+</section>
+<section class="mb-12 p-4 rounded-xl bg-white/10 dark:bg-gray-700/20 shadow" id="classical-bjj-positional-hierarchy">
+<div class="flow mx-auto max-w-4xl">
+<!-- Section Title -->
+<h2 class="md:text-3xl text-slate-900 dark:text-white scroll-mt-20 mb-4 font-display text-2xl font-semibold">
+        Classical BJJ Positional Hierarchy
+       </h2>
+<!-- Section Description -->
+<p class="text-gray-700 dark:text-gray-300 mb-8">
+        Positions are conjugate pairs where, with the exception of the symmetric class (e.g., standing, kneeling, 50/50 guard), one position is superior in terms of offensive 
+      and defensive potential. We have partitioned positions into four categories (i.e., top positions, bottom positions, standing, leg entanglement positions) to aid conceptualization. 
+      As a general strategy, seek to improve your position, looking for submission opportunities as they arise.
+       </p>
+<p class="text-gray-700 dark:text-gray-300 mb-8">
+        We provide a relative position metric, where a positive score denotes the superior position; whereas, a negative score denotes the inferior. For example, top mount position has 
+      been assigned a score of "+8" because it is the dominant/preferred position and bottom mount position has a score of "-8" because it is inferior. A position score is best thought 
+      of as a range of scores, where realignment might change the advantage/disadvantage proportion in say the "50/50 guard" to 60/40 or 70/30 depending on who has slightly improved 
+      control of the knee and access to a dangling ankle. Position ratings represent ordinal-scale approximations of relative desirability. The utility of a transition may be computed 
+      by subtracting the starting from the ending position, so, moving from bottom mount position to bottom half guard position is a 6-point [i.e., (-2)-(-8) = 6] improvement in position. 
+      This is conceptual guidance, not the scoring system used in tournaments. It would be misleading to interpret these metrics too literally, as the metrics differ for each practitioner. 
+      If, for example, you are a Darce choke aficionado, then those positions where there is easier access (e.g., side control position, turtle position) could be bumped up a little, whereas 
+      if you are weak in a position, let's arbitrarily choose bottom guard position, then your personal guard score should be reduced. This metric is an obvious simplification, as are 
+      labels for positions, as there are many variations within any given position. In each case, they are attempts to aid understanding.
+       </p>
+<p class="text-gray-700 dark:text-gray-300 mb-8">
+        To muddy the waters further, the scores differ depending on the rules of engagement. For example, John Danaher considers the closed guard position to be neutral (0.0), which is a 
+      rational argument in the context of a Brazilian jiu-jitsu tournament, where striking is forbidden, whereas in a mixed martial arts competition where striking is permissible, the 
+      striking advantage tilts the scales in favor of the top closed guard individual. This complexity of quantification increases swiftly as additional fight factors (e.g., weapons, 
+      terrain, multiple assailants) are considered.
+       </p>
+<p class="text-gray-700 dark:text-gray-300 mb-8">
+        Below, Lachlan Giles discusses the classical Brazilian jiu-jitsu hierarchy. We postpone discussion of the hierarchy of leg entanglement positions until after we 
+  have established some fundamentals. Skip ahead if that is your immediate topic of interest.
+       </p>
+<!-- Responsive Video Embed -->
+<div class="w-full aspect-video rounded-xl overflow-hidden shadow-lg mt-6">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="w-full h-full" frameborder="0" loading="lazy" src="https://www.youtube.com/embed/OVNThMHxY4k/" title="classical bjj positional hierarchy">
+</iframe>
+</div>
+</div>
+</section>
+</div>
+</section>
+<!-- Day 1 Checklist -->
+<section class="flow mt-14" id="day-one">
+<h2 class="tracking-tight md:text-3xl text-slate-900 dark:text-white font-semibold scroll-mt-20 mb-4 font-display text-2xl">
+     Day‑1 Checklist
+    </h2>
+<ul class="mt-4 space-y-3">
+<li class="flex gap-3">
+<span class="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-brand-700/10 text-brand-700">
+       1
+      </span>
+<p>
+       Tap early, tap often. Partners matter.
+      </p>
+</li>
+<li class="flex gap-3">
+<span class="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-brand-700/10 text-brand-700">
+       2
+      </span>
+<p>
+       Learn the breakfalls. Protect your head/neck/hands.
+      </p>
+</li>
+<li class="flex gap-3">
+<span class="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-brand-700/10 text-brand-700">
+       3
+      </span>
+<p>
+       Master the technical stand‑up. It’s your first self‑defense move.
+      </p>
+</li>
+<li class="flex gap-3">
+<span class="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-brand-700/10 text-brand-700">
+       4
+      </span>
+<p>
+       Frames before grabs. Posture before power.
+      </p>
+</li>
+<li class="flex gap-3">
+<span class="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-brand-700/10 text-brand-700">
+       5
+      </span>
+<p>
+       Ask questions. Stay coachable. Take notes.
+      </p>
+</li>
+</ul>
+</section>
+<!-- Core Positions -->
+<section class="flow mt-14" id="positions">
+<h2 class="tracking-tight md:text-3xl text-slate-900 dark:text-white font-semibold scroll-mt-20 mb-4 font-display text-2xl">
+     Core Positions
+    </h2>
+<p class="mt-2 text-slate-600 dark:text-slate-300">
+     Target these first. They appear in every round, sport or self‑defense.
+    </p>
+<div class="mt-6 grid gap-5 md:grid-cols-2">
+<article class="rounded-xl p-6 bg-white dark:bg-slate-900 border border-slate-200/60 flow dark:border-slate-800">
+<h3 class="dark:text-white font-semibold text-slate-900">
+       Closed Guard → Open Guard
+      </h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+       Break posture, control distance, climb to angles. Technical stand‑up when needed.
+      </p>
+<div class="mt-3 flex flex-wrap gap-2 text-xs">
+<span class="rounded-full bg-slate-100 px-2 py-1 dark:bg-slate-800">
+        Hip Escape
+       </span>
+<span class="rounded-full bg-slate-100 px-2 py-1 dark:bg-slate-800">
+        Knee Shield
+       </span>
+<span class="rounded-full bg-slate-100 px-2 py-1 dark:bg-slate-800">
+        Collar/Sleeve
+       </span>
+</div>
+</article>
+<article class="rounded-xl p-6 bg-white dark:bg-slate-900 border border-slate-200/60 flow dark:border-slate-800">
+<h3 class="dark:text-white font-semibold text-slate-900">
+       Standing
+      </h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+       Own your stance, control grips, and use movement to off-balance before engaging.
+      </p>
+<div class="mt-3 flex flex-wrap gap-2 text-xs">
+<span class="rounded-full bg-slate-100 px-2 py-1 dark:bg-slate-800">
+        Stance &amp; Motion
+       </span>
+<span class="rounded-full bg-slate-100 px-2 py-1 dark:bg-slate-800">
+        Grip Fighting
+       </span>
+<span class="rounded-full bg-slate-100 px-2 py-1 dark:bg-slate-800">
+        Off-Balancing (
+        <i>
+         kuzushi
+        </i>
+        )
+       </span>
+</div>
+</article>
+<article class="rounded-xl p-6 bg-white dark:bg-slate-900 border border-slate-200/60 flow dark:border-slate-800">
+<h3 class="dark:text-white font-semibold text-slate-900">
+       Passing the Guard
+      </h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+       Break grips, control hips, and advance past the legs to establish dominant top position.
+      </p>
+<div class="mt-3 flex flex-wrap gap-2 text-xs">
+<span class="rounded-full bg-slate-100 px-2 py-1 dark:bg-slate-800">
+        Posture &amp; Base
+       </span>
+<span class="rounded-full bg-slate-100 px-2 py-1 dark:bg-slate-800">
+        Pressure &amp; Angles
+       </span>
+<span class="rounded-full bg-slate-100 px-2 py-1 dark:bg-slate-800">
+        Hip Control
+       </span>
+</div>
+</article>
+<article class="rounded-xl p-6 bg-white dark:bg-slate-900 border border-slate-200/60 flow dark:border-slate-800">
+<h3 class="dark:text-white font-semibold text-slate-900">
+       Half Guard (Top/Bottom)
+      </h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+       Bottom: knee shield + underhook to stand or take back. Top: crossface + underhook to flatten and pass.
+      </p>
+<div class="mt-3 flex flex-wrap gap-2 text-xs">
+<span class="rounded-full bg-slate-100 px-2 py-1 dark:bg-slate-800">
+        Frames
+       </span>
+<span class="rounded-full bg-slate-100 px-2 py-1 dark:bg-slate-800">
+        Underhook
+       </span>
+<span class="rounded-full bg-slate-100 px-2 py-1 dark:bg-slate-800">
+        Knee Slice
+       </span>
+</div>
+</article>
+<article class="rounded-xl p-6 bg-white dark:bg-slate-900 border border-slate-200/60 flow dark:border-slate-800">
+<h3 class="dark:text-white font-semibold text-slate-900">
+       Side Control → Mount
+      </h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+       Kill hips, isolate an arm, step to mount. Bottom: frames, hip escape, recover guard.
+      </p>
+<div class="mt-3 flex flex-wrap gap-2 text-xs">
+<span class="rounded-full bg-slate-100 px-2 py-1 dark:bg-slate-800">
+        Crossface
+       </span>
+<span class="rounded-full bg-slate-100 px-2 py-1 dark:bg-slate-800">
+        Hip Switch
+       </span>
+<span class="rounded-full bg-slate-100 px-2 py-1 dark:bg-slate-800">
+        Mount Transitions
+       </span>
+</div>
+</article>
+<article class="rounded-xl p-6 bg-white dark:bg-slate-900 border border-slate-200/60 flow dark:border-slate-800">
+<h3 class="dark:text-white font-semibold text-slate-900">
+       Back Control
+      </h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+       Seatbelt + hooks, head over head. Attack the choke, follow the hips.
+      </p>
+<div class="mt-3 flex flex-wrap gap-2 text-xs">
+<span class="rounded-full bg-slate-100 px-2 py-1 dark:bg-slate-800">
+        Seatbelt
+       </span>
+<span class="rounded-full bg-slate-100 px-2 py-1 dark:bg-slate-800">
+        Hooks/Body Triangle
+       </span>
+<span class="rounded-full bg-slate-100 px-2 py-1 dark:bg-slate-800">
+        Hand Fighting
+       </span>
+</div>
+</article>
+</div>
+</section>
+<!-- Essential Drills -->
+<section class="mt-14" id="drills">
+<h2 class="tracking-tight md:text-3xl text-slate-900 dark:text-white font-semibold scroll-mt-20 mb-4 font-display text-2xl">
+     Essential Drills
+    </h2>
+<div class="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+<article class="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/60 flow dark:border-slate-800">
+<h3 class="dark:text-white font-semibold text-slate-900">
+       Hip Escape → Guard Recover
+      </h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+       Partner applies light chest pressure; bottom recovers frames to guard.
+      </p>
+</article>
+<article class="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/60 flow dark:border-slate-800">
+<h3 class="dark:text-white font-semibold text-slate-900">
+       Bridge &amp; Roll from Mount
+      </h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+       Trap an arm, bridge with angle, land in closed guard or stand.
+      </p>
+</article>
+<article class="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/60 flow dark:border-slate-800">
+<h3 class="dark:text-white font-semibold text-slate-900">
+       Technical Stand‑Up
+      </h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+       Frame, create distance, stand safely without giving your back.
+      </p>
+</article>
+<article class="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/60 flow dark:border-slate-800">
+<h3 class="dark:text-white font-semibold text-slate-900">
+       Pummeling Series
+      </h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+       Win inside position, build underhooks, feel timing for level change.
+      </p>
+</article>
+<article class="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/60 flow dark:border-slate-800">
+<h3 class="dark:text-white font-semibold text-slate-900">
+       Knee Slice Progression
+      </h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+       From half guard: crossface + underhook → knee slice → settle side control.
+      </p>
+</article>
+<article class="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/60 flow dark:border-slate-800">
+<h3 class="dark:text-white font-semibold text-slate-900">
+       Back Take from Turtle
+      </h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+       Seatbelt, insert hook, follow the roll, secure harness.
+      </p>
+</article>
+</div>
+</section>
+<!-- Safety & Hygiene -->
+<section class="mt-14" id="safety">
+<h2 class="tracking-tight md:text-3xl text-slate-900 dark:text-white font-semibold scroll-mt-20 mb-4 font-display text-2xl">
+     Safety &amp; Hygiene
+    </h2>
+<div class="mt-4 grid gap-5 md:grid-cols-2">
+<div class="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/60 flow dark:border-slate-800">
+<h3 class="dark:text-white font-semibold text-slate-900">
+       Safety Rules
+      </h3>
+<ul class="mt-2 list-disc pl-5 text-sm leading-6 text-slate-700 dark:text-slate-300">
+<li>
+        Tap fast, release faster. No neck cranks or heel hooks for beginners.
+       </li>
+<li>
+        Protect partners’ joints; no spikes or uncontrolled slams.
+       </li>
+<li>
+        Tell your partner/coach about injuries or limits before rounds.
+       </li>
+</ul>
+</div>
+<div class="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/60 flow dark:border-slate-800">
+<h3 class="dark:text-white font-semibold text-slate-900">
+       Hygiene
+      </h3>
+<ul class="mt-2 list-disc pl-5 text-sm leading-6 text-slate-700 dark:text-slate-300">
+<li>
+        Clean gi/rashguard every session. No exceptions.
+       </li>
+<li>
+        Trim nails; cover cuts; shower ASAP after training.
+       </li>
+<li>
+        Leave the room better than you found it.
+       </li>
+</ul>
+</div>
+</div>
+</section>
+
+</section>
+</main>
+<!-- Footer (kept static, no active highlight) -->
+<footer class="mt-16 border-t border-slate-200/60 bg-slate-50/60 py-10 dark:border-slate-800 dark:bg-slate-900/40">
+<div class="mx-auto max-w-screen-xl px-4">
+<div class="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
+<div class="flex items-center gap-2">
+<span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">
+       TC
+      </span>
+<span class="font-display text-lg font-semibold">
+       Team Combat USA
+      </span>
+</div>
+<nav aria-label="Primary" class="hidden gap-6 md:flex">
+<a class="nav-link text-sm dark:text-slate-200" href="/">
+       Home
+      </a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/warrior-ethos.html">
+       Warrior Ethos
+      </a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/history.html">
+       History
+      </a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/styles.html">
+       Styles
+      </a>
+<a aria-current="page" class="nav-link text-brand-700 font-semibold text-sm dark:text-slate-200" href="/fundamentals.html">
+       Fundamentals
+      </a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/gameplan.html">
+       Gameplan
+      </a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/top-positions.html">
+       Top Positions
+      </a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/standing.html">
+       Standing
+      </a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/bottom-positions.html">
+       Bottom Positions
+      </a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/leg-entanglement-positions.html">
+       Leg Entanglement Positions
+      </a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/fitness.html">
+       Fitness
+      </a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/drills.html">
+       Drills
+      </a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/competition.html">
+       Competition
+      </a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/self-defense.html">
+       Self‑Defense
+      </a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/inspiration.html">
+       Inspiration
+      </a>
+</nav>
+</div>
+<p class="mt-6 text-xs text-slate-500">
+     © Team Combat USA. All rights reserved.</p>
+</div>
+</footer>
+<!-- Back to top -->
+<style>
+   /* Page-specific tweaks */
+      .prose :where(h2,h3) { scroll-margin-top: 96px; }
+  </style>
+<script>
+   (function () {
+  function sample(el) {
+    if (!el) return "(n/a)";
+    return window.getComputedStyle(el).fontFamily;
+  }
+  function log() {
+    var body = document.body;
+    var h1 = document.querySelector("h1");
+    var p = document.querySelector("p");
+    var info = {
+      body: sample(body),
+      h1: sample(h1),
+      p: sample(p)
+    };
+    console.log("[FontCheck]", info);
+    // visible, non-intrusive badge for quick glance
+    var badge = document.createElement('div');
+    badge.textContent = 'Fonts ✓';
+    badge.style.position = 'fixed';
+    badge.style.bottom = '10px';
+    badge.style.right = '10px';
+    badge.style.padding = '4px 8px';
+    badge.style.background = 'rgba(0,0,0,0.6)';
+    badge.style.color = '#fff';
+    badge.style.fontSize = '12px';
+    badge.style.borderRadius = '6px';
+    badge.style.zIndex = '99999';
+    badge.title = 'Open DevTools console to see computed font-family for body/h1/p';
+    document.body.appendChild(badge);
+    setTimeout(function(){ badge.remove(); }, 3500);
+  }
+  if (document.readyState === "complete" || document.readyState === "interactive") {
+    setTimeout(log, 0);
+  } else {
+    document.addEventListener("DOMContentLoaded", log);
+  }
+})();
+  </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var btn = document.getElementById('menu-toggle');
+    var drawer = document.getElementById('mobile-menu');
+    if (!btn || !drawer) return;
+
+    function setOpen(open) {
+      // ARIA/state
+      drawer.setAttribute('data-open', open ? 'true' : 'false');
+      btn.setAttribute('aria-expanded', String(open));
+
+      // Make sure display isn't blocked by the hidden attribute/class
+      if (open) {
+        drawer.removeAttribute('hidden');
+        if (drawer.classList) drawer.classList.remove('hidden');
+        if (window.innerWidth < 1024) drawer.style.display = 'block';
+      } else {
+        drawer.setAttribute('hidden', '');
+        if (drawer.classList) drawer.classList.add('hidden');
+        drawer.style.display = '';
+      }
+
+      // Visibility/animation classes
+      drawer.classList.toggle('invisible', !open);
+      drawer.classList.toggle('opacity-0', !open);
+      drawer.classList.toggle('-translate-y-2', !open);
+    }
+
+    btn.addEventListener('click', function () {
+      var open = drawer.getAttribute('data-open') === 'true';
+      setOpen(!open);
+    });
+
+    // Start closed
+    setOpen(false);
+  });
+</script>
+<script>
+(function () {
+  if (window.__TC_BTT_SHADOW__) return;
+  window.__TC_BTT_SHADOW__ = true;
+  var showAt = 60;
+  var host = document.createElement('div');
+  host.style.position='fixed'; host.style.bottom='20px'; host.style.right='20px';
+  host.style.zIndex='2147483647'; host.style.pointerEvents='auto';
+  document.body.appendChild(host);
+  var root = host.attachShadow({mode:'open'});
+  root.innerHTML = '<style>button{all:initial;font:600 14px/1 system-ui,-apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial;display:none;padding:.55rem .75rem;border-radius:9999px;background:#fff;color:#111;box-shadow:0 8px 24px rgba(0,0,0,.18);cursor:pointer}button.show{display:inline-block}</style><button id="btn" aria-label="Back to top">↑</button>';
+  var btn = root.getElementById('btn');
+  function y(){return window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0}
+  function onScroll(){ if(y()>showAt) btn.classList.add('show'); else btn.classList.remove('show'); }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  btn.addEventListener('click', function(){ try{window.scrollTo({top:0,behavior:'smooth'})}catch(e){window.scrollTo(0,0)}; btn.blur(); });
+})();
+</script>
+</body>
+</html>
