@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.teamcombatusadc.com/sitemap.xml
+Sitemap: https://www.octopustennis.com/sitemap.xml
+
