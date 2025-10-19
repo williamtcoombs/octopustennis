@@ -1,0 +1,31 @@
+/* === Octopus Tennis: Roland-Garros clay + green (tokens & utilities override) ===
+   Load AFTER /assets/site.css. Non-destructive; safe to revert.
+========================================================================== */
+
+/* Token overrides (existing variables observed in :root) */
+:root {
+  --brand-bg: #782A03;
+  --brand-fg: #0F3527;
+  --accent:   #EE6B2E;
+  --accent-2: #E35205;
+  --muted:    #64748b; /* unchanged neutral */
+}
+
+/* Utility overrides matching compiled classes in your CSS */
+.bg-brand-700 { background-color: #9E3604 !important; }
+.bg-brand-800 { background-color: #782A03 !important; }
+.text-brand-700 { color: #9E3604 !important; }
+.text-brand-800 { color: #782A03 !important; }
+.border-brand-700 { border-color: #9E3604 !important; }
+.ring-brand-700 { --tw-ring-color: #9E3604 !important; }
+
+/* Gradients used in hero sections */
+.from-brand-800 { --tw-gradient-from: #782A03 var(--tw-gradient-from-position); --tw-gradient-to: color-mix(in oklab, #782A03 0%, transparent) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+.from-brand-700 { --tw-gradient-from: #9E3604 var(--tw-gradient-from-position); --tw-gradient-to: color-mix(in oklab, #9E3604 0%, transparent) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+.to-brand-700   { --tw-gradient-to: #9E3604 var(--tw-gradient-to-position); }
+
+/* Secondary green accent (optional helper classes) */
+.text-accent-700 { color: #154734 !important; }
+.bg-accent-700  { background-color: #154734 !important; }
+.from-accent-800 { --tw-gradient-from: #0F3527 var(--tw-gradient-from-position); --tw-gradient-to: color-mix(in oklab, #0F3527 0%, transparent) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+.to-accent-700  { --tw-gradient-to: #154734 var(--tw-gradient-to-position); }
