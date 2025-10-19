@@ -1,0 +1,37 @@
+/* Team Combat USA – Lime Court (Grassy Cool) overlay
+   Drop-in test stylesheet. Load AFTER /assets/site.css for non-destructive preview.
+   Palette: brand-700 = #5CA80F, brand-800 = #3E7A0C, accent = clay #E35205
+*/
+
+:root {
+  --brand-bg: #3E7A0C;
+  --brand-fg: #E35205;
+  --accent:   #5CA80F;
+  --accent-2: #E35205;
+}
+
+/* Brand utilities */
+.bg-brand-700 { background-color: #5CA80F !important; }
+.bg-brand-800 { background-color: #3E7A0C !important; }
+.text-brand-700 { color: #5CA80F !important; }
+.text-brand-800 { color: #3E7A0C !important; }
+
+/* Gradients */
+.from-brand-800 {
+  --tw-gradient-from: #3E7A0C var(--tw-gradient-from-position);
+  --tw-gradient-to: color-mix(in oklab, #3E7A0C 0%, transparent) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.from-brand-700 {
+  --tw-gradient-from: #5CA80F var(--tw-gradient-from-position);
+  --tw-gradient-to: color-mix(in oklab, #5CA80F 0%, transparent) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.to-brand-700 {
+  --tw-gradient-to: #5CA80F var(--tw-gradient-to-position);
+}
+
+/* Clay accents */
+.text-accent-700 { color: #E35205 !important; }
+.border-accent-700 { border-color: #E35205 !important; }
+.bg-accent-700 { background-color: #E35205 !important; }
