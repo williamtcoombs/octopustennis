@@ -48,5 +48,19 @@ module.exports = {
     "translate-y-0",
   ],
 
-  plugins: [],
-};
+plugins: [
+  function ({ addComponents, theme }) {
+    const lime = theme('colors.highlight.lime');
+
+    addComponents({
+      /* Header & footer nav underline for the current page */
+      'nav a[aria-current="page"]': {
+        'border-color': lime,
+      },
+      'footer nav a[aria-current="page"]': {
+        'border-color': lime,
+      },
+    });
+  },
+],
+
