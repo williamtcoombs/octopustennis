@@ -2,31 +2,51 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
+  // Scan your HTML pages at the repo root and any JS in /assets
   content: ["./*.html", "./assets/**/*.js"],
+
   theme: {
     extend: {
+      // Octopus Tennis brand palette (compiled; no overlay needed)
       colors: {
-        // Octopus Tennis brand palette
         brand: {
-          700: "#0ea5e9", // primary (used for text-brand-700, bg-brand-700, gradients)
-          800: "#0369a1", // darker step (hover/bg-brand-800, gradients)
-          // 600: "#0284c7", // optional intermediate step if you need it later
+          50:  "#f0f9ff",
+          100: "#e0f2fe",
+          200: "#bae6fd",
+          300: "#7dd3fc",
+          400: "#38bdf8",
+          500: "#0ea5e9", // primary
+          600: "#0284c7",
+          700: "#0369a1", // darker/hover
+          800: "#075985",
+          900: "#0c4a6e",
         },
         accent: {
-          300: "#22d3ee", // secondary accent (cyan-300)
+          100: "#cffafe",
+          200: "#a5f3fc",
+          300: "#22d3ee", // cyan accent
+          400: "#06b6d4",
         },
         highlight: {
-          lime: "#a3e635", // active nav underline
+          lime: "#a3e635", // active nav underline / focus accent
         },
       },
+
+      // Keep typography consistent with your current setup
       fontFamily: {
         sans: [...defaultTheme.fontFamily.sans],
       },
     },
   },
+
+  // Classes toggled by your JS that shouldn’t be purged
   safelist: [
-    // Classes toggled by JS or used conditionally
-    "hidden", "invisible", "opacity-0", "-translate-y-2", "translate-y-0",
+    "hidden",
+    "invisible",
+    "opacity-0",
+    "-translate-y-2",
+    "translate-y-0",
   ],
+
   plugins: [],
 };
