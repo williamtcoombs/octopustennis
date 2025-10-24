@@ -35,10 +35,14 @@ jobs:
       - name: Remove temporary file
         run: rm .tmp-in.css
 
-      # ✅ Only commit built CSS on testing branch, not on main or PRs
+      # ✅ Only auto-commit CSS when pushing directly to testing
       - name: Commit built CSS (testing only)
         if: github.ref == 'refs/heads/testing' && github.event_name == 'push'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Build CSS"
           file_pattern: assets/site.css
+
+      # Optional: simple success message for logs
+      - name: Log success
+        run: echo "✅ CSS build completed successfully."
