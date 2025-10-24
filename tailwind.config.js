@@ -50,16 +50,16 @@ module.exports = {
 
 plugins: [
   function ({ addComponents, theme }) {
-    const lime = theme('colors.highlight.lime');
+    const lime = theme('colors.highlight.lime'); // #a3e635
 
     addComponents({
-      /* Header & footer nav underline for the current page */
-      'nav a[aria-current="page"]': {
-        'border-color': lime,
-      },
-      'footer nav a[aria-current="page"]': {
-        'border-color': lime,
-      },
+      /* Active page underline (top + bottom nav) */
+      'nav a[aria-current="page"]': { borderColor: lime },
+      'footer nav a[aria-current="page"]': { borderColor: lime },
+
+      /* Subtle hover brighten for ALL nav links */
+      'nav a:hover': { borderColor: '#bef264' },        // lime-300-ish
+      'footer nav a:hover': { borderColor: '#bef264' },
     });
   },
 ],
