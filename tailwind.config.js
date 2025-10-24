@@ -33,12 +33,28 @@ module.exports = {
       const accent = theme('colors.brand.accent');
       addComponents({
         /* Active page underline (top + bottom nav) */
-        'nav a[aria-current="page"]': { borderColor: accent },
-        'footer nav a[aria-current="page"]': { borderColor: accent },
+        'nav a[aria-current="page"]': {
+          borderBottomWidth: '2px',
+          borderColor: accent,
+          borderStyle: 'solid',
+        },
+        'footer nav a[aria-current="page"]': {
+          borderBottomWidth: '2px',
+          borderColor: accent,
+          borderStyle: 'solid',
+        },
 
         /* Subtle hover brighten for ALL nav links */
-        'nav a:hover': { borderColor: '#bef264' },
-        'footer nav a:hover': { borderColor: '#bef264' },
+        'nav a:hover': {
+          borderBottomWidth: '2px',
+          borderColor: '#bef264',
+          borderStyle: 'solid',
+        },
+        'footer nav a:hover': {
+          borderBottomWidth: '2px',
+          borderColor: '#bef264',
+          borderStyle: 'solid',
+        },
       });
     },
   ],
