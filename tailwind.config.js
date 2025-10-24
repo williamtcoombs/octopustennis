@@ -7,27 +7,32 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        highlight: {
-          lime: '#a3e635',
-          blue: '#0ea5e9',
-          navy: '#0369a1',
+        // Consolidated active palette: brand = teal-blue base + lime accent
+        brand: {
+          base: '#0369a1',   // teal-blue (core brand tone)
+          accent: '#a3e635', // lime accent
+          dark: '#075985',   // deeper shade for gradients or hover
         },
       },
     },
   },
   safelist: [
-    'bg-highlight-lime',
-    'text-highlight-blue',
-    'text-highlight-navy',
+    // ensure brand utilities are always available in production builds
+    'bg-brand-base',
+    'bg-brand-accent',
+    'from-brand-dark',
+    'to-brand-base',
+    'text-brand-base',
+    'text-brand-accent',
   ],
   plugins: [
     function ({ addComponents, theme }) {
-      const lime = theme('colors.highlight.lime');
+      const accent = theme('colors.brand.accent');
 
       addComponents({
         /* Active page underline (top + bottom nav) */
-        'nav a[aria-current="page"]': { borderColor: lime },
-        'footer nav a[aria-current="page"]': { borderColor: lime },
+        'nav a[aria-current="page"]': { borderColor: accent },
+        'footer nav a[aria-current="page"]': { borderColor: accent },
 
         /* Subtle hover brighten for ALL nav links */
         'nav a:hover': { borderColor: '#bef264' },
