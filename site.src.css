@@ -1,0 +1,13 @@
+/* Local-only build entry (do not upload to server). */
+/* Compile this file with Tailwind; output should be /assets/site.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Replaces the old overlay's active-tab accent */
+@layer components {
+  nav a[aria-current="page"] {
+    border-color: theme(colors.highlight.lime) !important;
+  }
+}
