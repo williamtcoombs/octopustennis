@@ -11,21 +11,29 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
+
       - name: Install TailwindCSS
         run: npm install tailwindcss@3.4.18
-      - name: Create ephemeral Tailwind input
+
+      - name: Create temporary Tailwind input
         run: echo '@tailwind base;@tailwind components;@tailwind utilities;' > .tmp-in.css
+
       - name: Build CSS
         run: npx tailwindcss -c tailwind.config.js -i ./.tmp-in.css -o ./assets/site.css --minify
-      - name: Remove temp file
+
+      - name: Remove temporary file
         run: rm .tmp-in.css
 
-      # ✅ Only commit the built CSS on `testing`
+      # ✅ Only commit the built CSS on the testing branch
       - name: Commit built CSS (testing only)
         if: github.ref == 'refs/heads/testing'
         uses: stefanzweifel/git-auto-commit-action@v5
