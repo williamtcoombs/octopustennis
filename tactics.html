@@ -129,30 +129,32 @@
 </div>
 </div>
 </header>
-<!-- Hero: top wave + radial glow -->
-<section class="relative overflow-hidden bg-sky-950 text-white">
-  <!-- Radial glow overlay -->
-  <div class="pointer-events-none absolute inset-0 -z-10">
-    <div class="absolute left-1/2 -top-32 h-[28rem] w-[52rem] -translate-x-1/2 rounded-full bg-gradient-to-b from-sky-400/40 to-transparent blur-3xl"></div>
-  </div>
-
-  <!-- Decorative top wave -->
+<!-- Hero with soft wave + radial accent -->
+<section class="relative isolate overflow-hidden bg-gradient-to-b from-brand-800 to-brand-700 py-20 sm:py-24 text-white">
+  <!-- soft top wave -->
   <svg aria-hidden="true"
-       class="block h-14 w-full text-sky-950"
+       class="pointer-events-none absolute left-0 right-0 top-0 h-[90px] w-full opacity-35"
        preserveAspectRatio="none"
-       viewBox="0 0 1200 120"
-       xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0h1200v27.35c-64.6 23.67-164.71 42.83-283 41.89C734 68.12 656.49 42.1 553 35.2 410.83 25.65 330.39 63.58 207 78.3 108.35 90.2 39.04 74.18 0 61.36V0Z" fill="currentColor" />
+       viewBox="0 0 1440 100">
+    <path fill="currentColor"
+          d="M0,80 C320,120 640,0 960,60 C1200,105 1320,100 1440,70 L1440,0 L0,0 Z" />
   </svg>
 
-  <div class="mx-auto max-w-screen-xl px-4 pb-12 pt-14 text-center">
-    <h1 class="font-display text-4xl font-bold tracking-tight sm:text-5xl">Tactics</h1>
-    <p class="mt-4 text-lg opacity-90">
-      Specific patterns, shot choices, and situational plays that express your strategy on court.
-    </p>
+  <!-- radial glow -->
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
+    <div class="absolute left-1/2 top-10 h-[500px] w-[500px] -translate-x-1/2 rounded-full opacity-30 blur-3xl"
+         style="background: radial-gradient(50% 50% at 50% 50%, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0) 70%);"></div>
+  </div>
+
+  <div class="relative mx-auto max-w-screen-xl px-4">
+    <div class="mx-auto max-w-3xl text-center">
+      <h1 class="font-display text-4xl font-bold tracking-tight sm:text-5xl">Tactics</h1>
+      <p class="mt-4 text-lg opacity-90">
+        Specific patterns, shot choices, and situational plays that express your strategy on court.
+      </p>
+    </div>
   </div>
 </section>
-
 
 <aside class="not-prose mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 mt-6">
 <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/40 border border-slate-200/50 dark:border-slate-700/50">
