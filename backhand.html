@@ -133,25 +133,31 @@
 </div>
 </div>
 </header>
-<!-- Hero: high-contrast, light & dark safe -->
-<section class="relative isolate py-20 sm:py-24">
-<!-- Background (tuned per mode for best contrast with white text) -->
-<div class="absolute inset-0 -z-10 bg-gradient-to-b from-brand-700 to-brand-700 dark:from-brand-700 dark:to-brand-700">
-</div>
-<!-- Optional subtle vignette for readability on all screens -->
-<div class="absolute inset-0 -z-10 bg-black/0 dark:bg-black/10">
-</div>
-<div class="container mx-auto px-6 text-left">
-<h1 class="font-heading text-4xl sm:text-5xl md:text-6xl font-extrabold text-white drop-shadow-md">
-     The Backhand
-    </h1>
-<p class="mt-4 text-base sm:text-lg md:text-xl font-body text-white/80 italic">
-     “You don’t rise to the occasion; you fall to the level of your training.” — Archilochus
-    </p>
-<!-- If you have links in the hero: keep them legible -->
-<!-- <a href="#" class="mt-6 inline-block text-white underline decoration-white/60 underline-offset-4 hover:decoration-white">Learn more</a> -->
-</div>
+<!-- Hero with top and bottom waves, consistent with Octopus Tennis final style -->
+<section class="relative isolate overflow-hidden bg-gradient-to-b from-brand-800 to-brand-700 py-20 sm:py-24 text-white">
+  <!-- soft top wave -->
+  <svg aria-hidden="true" class="pointer-events-none absolute left-0 right-0 top-0 h-[90px] w-full opacity-35" preserveAspectRatio="none" viewBox="0 0 1440 100">
+    <path fill="currentColor" d="M0,80 C320,120 640,0 960,60 C1200,105 1320,100 1440,70 L1440,0 L0,0 Z" />
+  </svg>
+
+  <!-- radial glow -->
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
+    <div class="absolute left-1/2 top-10 h-[500px] w-[500px] -translate-x-1/2 rounded-full opacity-30 blur-3xl"
+      style="background: radial-gradient(50% 50% at 50% 50%, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0) 70%);">
+    </div>
+  </div>
+
+  <div class="relative mx-auto max-w-screen-xl px-4 text-center">
+    <h1 class="font-display text-4xl font-bold tracking-tight sm:text-5xl">The Backhand</h1>
+    <p class="mt-4 text-lg opacity-90">[Tagline text goes here]</p>
+  </div>
+
+  <!-- soft bottom wave -->
+  <svg aria-hidden="true" class="pointer-events-none absolute left-0 right-0 bottom-0 h-[90px] w-full opacity-35" preserveAspectRatio="none" viewBox="0 0 1440 100">
+    <path fill="currentColor" d="M0,30 C360,90 720,0 1080,50 C1260,80 1380,90 1440,70 L1440,100 L0,100 Z" />
+  </svg>
 </section>
+
 <!-- Main Content -->
 <main class="py-10 md:max-w-4xl lg:px-8 px-4 sm:px-6 mx-auto container max-w-3xl lg:max-w-5xl" id="main">
 <!-- Octopus Tennis — Fundamentals: Stroke Hierarchy -->
