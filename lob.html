@@ -133,19 +133,31 @@
 </div>
 </div>
 </header>
-<!-- Hero -->
-<section class="relative isolate overflow-hidden bg-gradient-to-b from-brand-800 to-brand-700 py-16 text-white">
-<div class="mx-auto max-w-screen-xl px-4">
-<div class="max-w-2xl">
-<h1 class="font-display text-3xl font-bold leading-tight md:text-5xl">
-      The Lob
-     </h1>
-<p class="mt-3 max-w-prose text-white/90 md:text-lg">
-      “Secure, isolate, finish—always in that order.” — Grappling principle
-     </p>
-</div>
-</div>
+<!-- Hero with top and bottom waves, consistent with Octopus Tennis final style -->
+<section class="relative isolate overflow-hidden bg-gradient-to-b from-brand-800 to-brand-700 py-20 sm:py-24 text-white">
+  <!-- soft top wave -->
+  <svg aria-hidden="true" class="pointer-events-none absolute left-0 right-0 top-0 h-[90px] w-full opacity-35" preserveAspectRatio="none" viewBox="0 0 1440 100">
+    <path fill="currentColor" d="M0,80 C320,120 640,0 960,60 C1200,105 1320,100 1440,70 L1440,0 L0,0 Z" />
+  </svg>
+
+  <!-- radial glow -->
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
+    <div class="absolute left-1/2 top-10 h-[500px] w-[500px] -translate-x-1/2 rounded-full opacity-30 blur-3xl"
+      style="background: radial-gradient(50% 50% at 50% 50%, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0) 70%);">
+    </div>
+  </div>
+
+  <div class="relative mx-auto max-w-screen-xl px-4 text-center">
+    <h1 class="font-display text-4xl font-bold tracking-tight sm:text-5xl">[Page Title]</h1>
+    <p class="mt-4 text-lg opacity-90">[Tagline text goes here]</p>
+  </div>
+
+  <!-- soft bottom wave -->
+  <svg aria-hidden="true" class="pointer-events-none absolute left-0 right-0 bottom-0 h-[90px] w-full opacity-35" preserveAspectRatio="none" viewBox="0 0 1440 100">
+    <path fill="currentColor" d="M0,30 C360,90 720,0 1080,50 C1260,80 1380,90 1440,70 L1440,100 L0,100 Z" />
+  </svg>
 </section>
+
 <aside class="not-prose mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 mt-6">
 <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/40 border border-slate-200/50 dark:border-slate-700/50">
 <h2 class="text-sm font-semibold tracking-wide uppercase">
