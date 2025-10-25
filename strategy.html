@@ -14,11 +14,10 @@
     })();
   </script>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
   <!-- Styles -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/site.css" />
   <!-- Meta -->
   <meta charset="utf-8"/>
@@ -32,12 +31,12 @@
 
   <!-- SEO core -->
   <title>Strategy | Octopus Tennis</title>
-  <meta name="description" content="Master the art of intelligent tennis strategy — shape tempo, control space, and play with purpose through the Octopus framework."/>
+  <meta name="description" content="Master the art of intelligent ...l space, and play with purpose through the Octopus framework."/>
   <link rel="canonical" href="https://www.octopustennis.com/strategy.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Octopus Tennis" />
   <meta property="og:title" content="Strategy | Octopus Tennis" />
-  <meta property="og:description" content="Master the art of intelligent tennis strategy — shape tempo, control space, and play with purpose through the Octopus framework." />
+  <meta property="og:description" content="Master the art of int... space, and play with purpose through the Octopus framework." />
   <meta property="og:url" content="https://www.octopustennis.com/strategy.html" />
   <meta property="og:image" content="https://www.octopustennis.com/assets/img/og-default.png" />
   <meta name="theme-color" content="#0369a1" />
@@ -45,17 +44,19 @@
 </head>
 
 <body class="typography-v1 bg-white text-slate-900 min-h-dvh font-body antialiased">
-  <a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded-lg focus:bg-white/90 focus:px-3 focus:py-2 focus:text-slate-900" href="#main">Skip to content</a>
+  <a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[9999] focus:rounded focus:bg-white focus:px-3 focus:py-2 focus:text-slate-900" href="#main">Skip to content</a>
 
   <!-- Header -->
   <header class="sticky top-0 z-40 bg-white/80 backdrop-blur transition-all duration-300" id="site-header">
     <div class="mx-auto max-w-screen-xl px-4">
-      <div class="flex items-center justify-between py-3 lg:py-4">
+      <div class="flex items-center justify-between py-3 lg:py-4" id="header-inner">
         <a class="flex items-center gap-2" href="/">
           <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">OT</span>
           <span class="font-display text-lg font-semibold tracking-wide">Octopus Tennis</span>
         </a>
-        <nav aria-label="Primary" class="hidden gap-6 md:flex" id="primary-nav">
+
+        <!-- Desktop nav -->
+        <nav aria-label="Primary" class="hidden gap-6 md:flex is-collapsible" id="primary-nav">
           <a class="nav-link" href="/">Home</a>
           <a class="nav-link" href="/serve.html">Serve</a>
           <a class="nav-link" href="/return-of-serve.html">Return</a>
@@ -72,11 +73,37 @@
           <a class="nav-link" href="/competition.html">Competition</a>
           <a class="nav-link" href="/inspiration.html">Inspiration</a>
         </nav>
-        <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-900 hover:bg-slate-50" id="menu-toggle" type="button">
+
+        <!-- Hamburger -->
+        <button aria-controls="mobile-menu" aria-expanded="false" class="inline-flex items-center justify-center gap-1 rounded-xl border border-slate-200 bg-white/70 px-3 py-2 text-sm font-medium text-slate-900 hover:bg-slate-50 md:hidden" id="menu-toggle" type="button">
           <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewBox="0 0 24 24">
             <path d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
+          Menu
         </button>
+      </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div id="mobile-menu" data-open="false" class="absolute inset-x-0 top-full z-30 md:hidden duration-200 invisible opacity-0 -translate-y-2 h-[calc(100dvh-64px)]">
+      <div class="mx-4 rounded-2xl border border-slate-200/60 bg-white/95 shadow-xl backdrop-blur p-4">
+        <nav aria-label="Mobile" class="grid gap-2 text-base">
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/serve.html">Serve</a>
+          <a class="nav-link" href="/return-of-serve.html">Return</a>
+          <a class="nav-link" href="/forehand.html">Forehand</a>
+          <a class="nav-link" href="/backhand.html">Backhand</a>
+          <a class="nav-link" href="/volley.html">Volley</a>
+          <a class="nav-link" href="/lob.html">Lob</a>
+          <a class="nav-link" href="/overhead.html">Overhead</a>
+          <a class="nav-link" href="/drop-shot.html">Drop Shot</a>
+          <a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/strategy.html">Strategy</a>
+          <a class="nav-link" href="/tactics.html">Tactics</a>
+          <a class="nav-link" href="/drills.html">Drills</a>
+          <a class="nav-link" href="/fitness.html">Fitness</a>
+          <a class="nav-link" href="/competition.html">Competition</a>
+          <a class="nav-link" href="/inspiration.html">Inspiration</a>
+        </nav>
       </div>
     </div>
   </header>
@@ -84,67 +111,104 @@
   <!-- Hero with soft wave + radial accent -->
   <section class="relative isolate overflow-hidden bg-gradient-to-b from-brand-800 to-brand-700 py-20 sm:py-24 text-white">
     <!-- soft top wave -->
-    <svg aria-hidden="true" class="pointer-events-none absolute -top-10 left-0 h-16 w-full opacity-35" preserveAspectRatio="none" viewBox="0 0 1440 100">
-      <path fill="rgba(255,255,255,0.35)" d="M0,32 C180,80 360,0 540,16 C720,32 900,112 1080,96 C1260,80 1350,40 1440,24 L1440,0 L0,0 Z"></path>
+    <svg aria-hidden="true" class="pointer-events-none absolute left-0 right-0 top-0 h-[90px] w-full opacity-35" preserveAspectRatio="none" viewBox="0 0 1440 100">
+      <path fill="currentColor" d="M0,80 C320,120 640,0 960,60 C1200,105 1320,100 1440,70 L1440,0 L0,0 Z" />
     </svg>
 
-    <!-- radial highlight accent -->
-    <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-0" style="
-      background:
-        radial-gradient(1200px 400px at 50% -10%, rgba(255,255,255,0.22), transparent 60%)
-    "></div>
+    <!-- radial glow -->
+    <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
+      <div class="absolute left-1/2 top-10 h-[500px] w-[500px] -translate-x-1/2 rounded-full opacity-30 blur-3xl" style="background: radial-gradient(50% 50% at 50% 50%, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0) 70%);"></div>
+    </div>
 
     <div class="relative mx-auto max-w-screen-xl px-4">
       <div class="mx-auto max-w-3xl text-center">
-        <h1 class="font-display text-4xl font-extrabold leading-tight sm:text-5xl md:text-6xl">
-          Strategy
-        </h1>
-        <p class="mt-5 text-balance text-white/85 md:text-lg">
-          Strategy is the art of making choices before the point begins — shaping tempo, patterns, and positions so that skill can express itself with purpose.
-        </p>
-        <div class="mx-auto mt-6 h-1 w-16 rounded-full bg-white/70"></div>
+        <h1 class="font-display text-4xl font-bold tracking-tight sm:text-5xl">Strategy</h1>
+        <p class="mt-4 text-lg opacity-90">The Octopus framework for building intelligent positioning, pressure, and patterns — so your tennis scales under stress.</p>
       </div>
     </div>
   </section>
 
-  <!-- Main -->
-  <main id="main" class="py-12">
-    <section class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-0">
-      <header class="mb-8">
-        <h2 class="text-2xl sm:text-3xl font-extrabold font-heading tracking-tight text-slate-900">
-          The Octopus Strategy
-        </h2>
-        <p class="mt-3 text-slate-600 leading-relaxed">
-          It’s not about doing more; it’s about doing the right things, at the right times, in the right order.
-        </p>
-      </header>
+  <main id="main" tabindex="-1">
+    <!-- Content wrapper -->
+    <section class="mx-auto max-w-screen-xl px-4">
+      <article class="prose prose-slate mx-auto max-w-3xl py-12">
+        <p><strong>Strategy is the why behind the where.</strong> While tactics choose shots, strategy shapes the court, tempo, and options you leave yourself.</p>
 
-      <article class="prose prose-slate lg:prose-lg leading-relaxed">
-        <h2>1. Build from First Principles</h2>
-        <p>Every point in tennis begins from an imbalance. Strategy starts with recognizing which variables you can control — time, space, and rhythm — and which you must respond to. The Octopus approach emphasizes awareness first: know where you are, where the ball is going, and what each shot buys you. From this foundation, you decide whether to press, hold, or reset.</p>
+        <h2>1. Win the Map Before the Rally</h2>
+        <p>Your first goal is to control space: start neutral, create advantage, exploit it, then reset. Think in phases and invest in positioning that compounds later.</p>
 
-        <h2>2. Control What Matters</h2>
-        <p>We train to control <em>space</em> through placement, <em>time</em> through tempo, and <em>pressure</em> through consistency. A strong strategy turns mechanical skills into reliable decision tools. A deep crosscourt forehand isn’t just a stroke — it’s territory. A slice return isn’t just a neutral shot — it’s a delay that lets you recover your shape. Strategy ties the physical to the tactical.</p>
+        <h2>2. Build Sustainable Pressure</h2>
+        <p>Consistency, depth, and height are pressure. Use margin to make your patterns repeatable under stress. Don’t just hit harder — remove air from your opponent’s options.</p>
 
         <h2>3. Think in Patterns, Not Points</h2>
-        <p>Winning a rally is rarely about a single shot. The Octopus framework treats each exchange as a pattern — setup, pressure, and finish. The serve sets up the first forehand; the forehand opens the backhand corner; the volley closes. Training strategy means rehearsing these chains deliberately, until each link becomes instinctive.</p>
+        <p>Winning rallies comes from chains, not single strikes. Define your A/B patterns from common ball feeds and rehearse them until they run on rails.</p>
 
         <h2>4. Adapt Like an Octopus</h2>
-        <p>Adaptability is a core virtue. When the environment changes — faster courts, heavier balls, awkward opponents — strategy evolves. We avoid rigid “game plans” and teach flexible systems instead: open with depth, close with angles, defend through neutral zones, and build the habit of reading cues.</p>
+        <p>Change shape as the situation changes. If they rush the net, thread through lanes; if they camp deep, take time away; if they moonball, step in and reframe height vs. depth.</p>
 
         <h2>5. Train Decision, Not Just Execution</h2>
-        <p>Strategy only works if it shows up under pressure. That’s why Octopus training pairs technical drills with decision constraints: limited-court games, timed rallies, pattern-only points. These methods create decision fluency, where choices feel automatic but remain intentional.</p>
+        <p>Skill under pressure is decision + action. Add time constraints, variable feeds, and score pressure to practice so your choices become automatic and robust.</p>
 
         <h2>6. From Strategy to Tactics</h2>
-        <p>Once the player understands <em>why</em> a pattern exists, tactics fill in the <em>how</em>. The strategy page gives the architecture; the tactics page gives the tools. Together, they define the complete Octopus method — dynamic, adaptable, and relentlessly practical.</p>
-      </article>
+        <p>Once the why is clear, the what gets easier. Pick patterns that express your strengths, disrupt theirs, and scale as matches get tight.</p>
 
-      <footer class="mt-10">
-        <p class="text-slate-500 italic text-center">
-          “Fluid, connected, and intelligent — like the octopus itself.”
-        </p>
-      </footer>
+        <footer class="mt-10">
+          <p class="text-slate-500 italic text-center">
+            “Fluid, connected, and intelligent — like the octopus itself.”
+          </p>
+        </footer>
+      </article>
     </section>
   </main>
+
+  <!-- Site-wide footer -->
+  <footer class="mt-16 border-t border-slate-200/60 bg-slate-50/60 py-10">
+    <div class="mx-auto max-w-screen-xl px-4">
+      <div class="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
+        <div class="flex items-center gap-2">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">OT</span>
+          <span class="font-display text-lg font-semibold">Octopus Tennis</span>
+        </div>
+        <nav aria-label="Primary" class="hidden gap-6 md:flex">
+          <a class="nav-link text-sm" href="/">Home</a>
+          <a class="nav-link text-sm" href="/serve.html">Serve</a>
+          <a class="nav-link text-sm" href="/return-of-serve.html">Return</a>
+          <a class="nav-link text-sm" href="/forehand.html">Forehand</a>
+          <a class="nav-link text-sm" href="/backhand.html">Backhand</a>
+          <a class="nav-link text-sm" href="/volley.html">Volley</a>
+          <a class="nav-link text-sm" href="/lob.html">Lob</a>
+          <a class="nav-link text-sm" href="/overhead.html">Overhead</a>
+          <a class="nav-link text-sm" href="/drop-shot.html">Drop Shot</a>
+          <a aria-current="page" class="nav-link text-brand-700 font-semibold text-sm" href="/strategy.html">Strategy</a>
+          <a class="nav-link text-sm" href="/tactics.html">Tactics</a>
+          <a class="nav-link text-sm" href="/drills.html">Drills</a>
+          <a class="nav-link text-sm" href="/fitness.html">Fitness</a>
+          <a class="nav-link text-sm" href="/competition.html">Competition</a>
+          <a class="nav-link text-sm" href="/inspiration.html">Inspiration</a>
+        </nav>
+      </div>
+      <p class="mt-6 text-xs text-slate-500">© Octopus Tennis. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top shadow button -->
+  <script>
+  (function () {
+    if (window.__OT_BTT__) return; window.__OT_BTT__ = true;
+    var showAt = 60;
+    var host = document.createElement('div');
+    host.style.position='fixed'; host.style.bottom='20px'; host.style.right='20px';
+    host.style.zIndex='2147483647'; host.style.pointerEvents='auto';
+    document.body.appendChild(host);
+    var root = host.attachShadow({mode:'open'});
+    root.innerHTML = '<style>button{all:initial;font:600 14px/1 system-ui,-apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial;display:none;padding:.55rem .75rem;border-radius:9999px;background:#fff;color:#111;box-shadow:0 8px 24px rgba(0,0,0,.18);cursor:pointer}button.show{display:inline-block}</style><button id="btn" aria-label="Back to top">↑</button>';
+    var btn = root.getElementById('btn');
+    function y(){return window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0}
+    function onScroll(){ if(y()>showAt) btn.classList.add('show'); else btn.classList.remove('show'); }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+    btn.addEventListener('click', function(){ try{window.scrollTo({top:0,behavior:'smooth'})}catch(e){window.scrollTo(0,0)}; btn.blur(); });
+  })();
+  </script>
 </body>
 </html>
