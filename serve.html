@@ -133,40 +133,32 @@
 </div>
 </div>
 </header>
-  
-<!-- HERO: Serve (rectangular, forced sizes) -->
+
+<!-- HERO: Generic Page -->
 <section
   style="
     min-height:60vh;
     display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
     background:linear-gradient(to bottom,#075985,#0369a1);
     color:#ffffff;padding:80px 16px;">
-  <h1
-    style="
-      font-family: var(--font-display, 'Antonio', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji'); 
-      font-weight:800;
-      line-height:1.1;
-      margin:0;
-      /* BIG on mobile, HUGE on desktop */
-      font-size:72px !important;
-    ">
+  
+  <!-- Title -->
+  <div role='heading' aria-level='1'
+       style="
+         font-family: var(--font-display, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans');
+         font-weight:800; line-height:1.1; margin:0;
+         font-size:clamp(44px,8vw,88px) !important;">
     Serve
-  </h1>
+  </div>
+
+  <!-- Tagline -->
   <p
     style="
-      margin:18px 0 0 0;
-      max-width:48rem;
-      line-height:1.6;
-      opacity:.9;
-      /* tagline scale */
-      font-size:20px !important;
-    ">
+      margin:22px 0 0 0; max-width:48rem; line-height:1.6; opacity:.9;
+      font-size:clamp(18px,2.2vw,24px) !important;">
     Start every point on your terms with precise targets, shape, and disguise.
   </p>
 </section>
-
-
-
 
   
 <!-- Main Content -->
