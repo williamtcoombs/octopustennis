@@ -134,14 +134,27 @@
 </div>
 </header>
   
-<!-- Hero: Serve (rectangular, consistent sizes) -->
+<!-- Hero: Serve (rectangular, forced heading/tagline sizes) -->
 <section class="flex flex-col justify-center items-center text-center
                 bg-gradient-to-b from-brand-800 to-brand-700 text-white
                 min-h-[60vh] px-4 py-20">
-  <h1 class="font-display text-6xl sm:text-8xl font-extrabold leading-tight tracking-tight">
+
+  <!-- Optional: remove this div if you want perfectly flat color -->
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
+    <div class="absolute left-1/2 top-8 sm:top-10
+                h-[300px] w-[300px] sm:h-[460px] sm:w-[460px]
+                -translate-x-1/2 rounded-full opacity-20 sm:opacity-30 blur-3xl"
+         style="background: radial-gradient(50% 50% at 50% 50%, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0) 70%);">
+    </div>
+  </div>
+
+  <h1 class="font-display font-bold tracking-tight leading-tight"
+      style="font-size: clamp(40px, 8vw, 80px);">
     Serve
   </h1>
-  <p class="mt-6 max-w-2xl text-lg sm:text-2xl leading-relaxed text-white/90">
+
+  <p class="mt-6 max-w-2xl text-white/90 leading-relaxed"
+     style="font-size: clamp(16px, 2.2vw, 22px);">
     Start every point on your terms with precise targets, shape, and disguise.
   </p>
 </section>
