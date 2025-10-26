@@ -155,7 +155,7 @@
 </div>
 </header>
 
-<!-- Hero with corrected wave spacing and centered content -->
+<!-- Hero with seamless bottom wave blend -->
 <section class="hero relative isolate overflow-hidden bg-gradient-to-b from-brand-800 to-brand-700 flex flex-col justify-center min-h-[60vh] sm:min-h-[70vh] py-20 sm:py-28 text-white">
 
   <!-- Top decorative wave -->
@@ -177,20 +177,21 @@
       Train practical, pressure-tested skills in a welcoming team environment. Clear curriculum, live drilling, and coaching that meets you where you are—from first class to competition.
     </p>
     <div class="mt-8 flex justify-center">
-      <!-- force the CTA to size-to-content -->
       <a href="/serve.html" class="inline-flex w-auto items-center justify-center rounded-xl bg-white/10 px-6 py-3 font-semibold backdrop-blur hover:bg-white/20 transition">
         Get Started
       </a>
     </div>
   </div>
 
-  <!-- Bottom decorative wave (behind content) -->
-  <svg aria-hidden="true" class="pointer-events-none absolute inset-x-0 bottom-0 w-full h-20 sm:h-28 md:h-32 opacity-35 z-0 translate-y-[1px]" preserveAspectRatio="none" viewBox="0 0 1440 100">
-    <path fill="currentColor" d="M0,30 C360,90 720,0 1080,50 C1260,80 1380,90 1440,70 L1440,100 L0,100 Z"></path>
+  <!-- Bottom decorative wave -->
+  <svg aria-hidden="true" class="pointer-events-none absolute inset-x-0 bottom-[-2px] w-full h-20 sm:h-28 md:h-32 opacity-35 z-0" preserveAspectRatio="none" viewBox="0 0 1440 100">
+    <path fill="currentColor" d="M0,40 C360,90 720,0 1080,50 C1260,80 1380,90 1440,70 L1440,100 L0,100 Z"></path>
   </svg>
+
+  <!-- Bottom fade overlay to blend into white page background -->
+  <div class="absolute bottom-0 left-0 w-full h-8 sm:h-12 bg-gradient-to-b from-brand-700/40 via-brand-700/10 to-white z-[1]"></div>
 </section>
 
- 
 
 <main id="content" class="py-12">
   <section class="text-center text-slate-500">
