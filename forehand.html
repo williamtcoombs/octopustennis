@@ -366,40 +366,6 @@
   })();
   </script>
 
-  <!-- Mobile menu script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var btn = document.getElementById('menu-toggle');
-      var drawer = document.getElementById('mobile-menu');
-      if (!btn || !drawer) return;
-
-      function setOpen(open) {
-        drawer.setAttribute('data-open', open ? 'true' : 'false');
-        btn.setAttribute('aria-expanded', String(open));
-
-        if (open) {
-          drawer.removeAttribute('hidden');
-          if (drawer.classList) drawer.classList.remove('hidden');
-          if (window.innerWidth < 1024) drawer.style.display = 'block';
-        } else {
-          drawer.setAttribute('hidden', '');
-          if (drawer.classList) drawer.classList.add('hidden');
-          drawer.style.display = '';
-        }
-
-        drawer.classList.toggle('invisible', !open);
-        drawer.classList.toggle('opacity-0', !open);
-        drawer.classList.toggle('-translate-y-2', !open);
-      }
-
-      btn.addEventListener('click', function () {
-        var open = drawer.getAttribute('data-open') === 'true';
-        setOpen(!open);
-      });
-
-      setOpen(false);
-    });
-  </script>
 
   <!-- Back to top (subtle) -->
   <script>
