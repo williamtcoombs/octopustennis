@@ -1,88 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#00b3a4" />
-    <meta name="robots" content="noindex, nofollow" />
-    <meta name="googlebot" content="noindex, nofollow" />
+<html class="scroll-smooth" lang="en">
+<head>
+  <script>
+    /* Light-only mode guard (standardized). */
+    (function () {
+      try {
+        var root = document.documentElement;
+        if (root && root.classList) root.classList.remove('dark');
+        if (typeof localStorage !== 'undefined') {
+          localStorage.setItem('theme', 'light');
+        }
+      } catch (_) {}
+    })();
+  </script>
 
-    <title>Page Not Found | Octopus Tennis</title>
-    <meta
-      name="description"
-      content="That page does not exist. Head back to Octopus Tennis to learn more about our training, curriculum, and ethos."
-    />
+  <!-- Meta -->
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta name="theme-color" content="#0369a1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="googlebot" content="noindex, nofollow" />
 
-    <link
-      rel="canonical"
-      href="https://www.octopustennis.com/404.html"
-    />
-    <meta property="og:title" content="Page Not Found | Octopus Tennis" />
-    <meta
-      property="og:description"
-      content="That page does not exist. Head back to Octopus Tennis to learn more about our training, curriculum, and ethos."
-    />
-    <meta
-      property="og:url"
-      content="https://www.octopustennis.com/404.html"
-    />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Page Not Found | Octopus Tennis" />
-    <meta
-      name="twitter:description"
-      content="That page does not exist. Head back to Octopus Tennis to learn more about our training, curriculum, and ethos."
-    />
+  <!-- SEO core: title, description, canonical, OG/Twitter -->
+  <title>Page Not Found — Octopus Tennis</title>
+  <meta name="description" content="That page does not exist. Head back to Octopus Tennis to learn more about our training, curriculum, and ethos.">
+  <link rel="canonical" href="https://www.octopustennis.com/404.html" />
 
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-512x512.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
-<link rel="shortcut icon" href="/favicon.ico">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Octopus Tennis" />
+  <meta property="og:title" content="Page Not Found — Octopus Tennis" />
+  <meta property="og:description" content="That page does not exist. Head back to Octopus Tennis to learn more about our training, curriculum, and ethos.">
+  <meta property="og:url" content="https://www.octopustennis.com/404.html" />
+  <meta property="og:image" content="https://www.octopustennis.com/assets/img/og-default.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
-    <link rel="stylesheet" href="/assets/site.css" />
-    <script src="/assets/site.js" defer></script>
-  </head>
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Page Not Found — Octopus Tennis" />
+  <meta name="twitter:description" content="That page does not exist. Head back to Octopus Tennis to learn more about our training, curriculum, and ethos.">
+  <meta name="twitter:image" content="https://www.octopustennis.com/assets/img/og-default.png" />
 
-  <body class="min-h-screen flex flex-col bg-white text-gray-900">
-    <header class="sticky top-0 bg-white/90 backdrop-blur border-b border-gray-200">
-      <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+  <!-- Favicons (sitewide standard) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-512x512.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&amp;family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/site.css" />
+  <script src="/assets/site.js" defer></script>
+</head>
+<body class="min-h-dvh bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100 font-body typography-v1">
+  <a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded-lg focus:bg-white/90 focus:px-3 focus:py-2 focus:text-slate-900" href="#main">
+    Skip to content
+  </a>
+
+  <!-- Header / Navbar (minimal) -->
+  <header class="sticky top-0 z-40 transition-all duration-300 bg-white/80 backdrop-blur dark:bg-slate-900/70" id="site-header">
+    <div class="mx-auto max-w-screen-xl px-4">
+      <div class="flex items-center justify-between py-3 lg:py-4" id="header-inner">
+        <!-- Brand -->
         <a class="flex items-center gap-2" href="/">
-          <img
-            src="/assets/logo.svg"
-            alt="Octopus Tennis logo"
-            class="h-8 w-8"
-          />
-          <span class="font-semibold text-lg text-teal-700">Octopus Tennis</span>
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">OT</span>
+          <span class="font-display text-lg font-semibold tracking-wide">Octopus Tennis</span>
         </a>
-        <ul class="hidden md:flex gap-6 text-sm font-medium">
-          <li><a href="/" class="nav-link">Home</a></li>
-          <li><a href="/strategy.html" class="nav-link">Strategy</a></li>
-          <li><a href="/team.html" class="nav-link">Team</a></li>
-          <li><a href="/contact.html" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+      </div>
+    </div>
+  </header>
 
-    <main class="flex-1 flex flex-col items-center justify-center text-center px-4 py-24">
-      <h1 class="text-5xl font-bold text-teal-700 mb-6">404</h1>
-      <p class="text-lg text-gray-600 mb-8">
-        Oops — that page doesn’t exist. Maybe try the home page?
-      </p>
-      <a
-        href="/"
-        class="inline-flex items-center justify-center rounded-lg bg-teal-600 text-white px-6 py-3 font-semibold hover:bg-teal-700 transition"
-      >
+  <main id="main" class="py-16 px-4 sm:px-6 lg:px-8 mx-auto max-w-3xl text-center">
+    <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight">404</h1>
+    <p class="mt-4 text-lg text-slate-700">
+      Oops — that page doesn’t exist. Try heading back to the home page or check the sitemap.
+    </p>
+
+    <div class="mt-8 flex items-center justify-center gap-3">
+      <a class="inline-flex items-center gap-2 rounded-xl bg-brand-700 px-4 py-2.5 text-white hover:bg-brand-800 shadow-card" href="/">
         Back to Home
       </a>
-    </main>
-
-    <footer class="border-t border-gray-200 py-6 text-center text-sm text-gray-500">
-      <p>&copy; <span id="year"></span> Octopus Tennis. All rights reserved.</p>
-      <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-      </script>
-    </footer>
-  </body>
+      <a class="inline-flex items-center gap-2 rounded-xl border px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-slate-900/40" href="/sitemap.xml" target="_blank" rel="noopener noreferrer">
+        View sitemap
+      </a>
+    </div>
+  </main>
+</body>
 </html>
