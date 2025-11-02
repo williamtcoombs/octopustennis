@@ -1,229 +1,187 @@
-<!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
+<!doctype html>
+<html lang="en">
 <head>
-  <script>
-    /* Light-only mode guard (standardized). */
-    (function () {
-      try {
-        var root = document.documentElement;
-        if (root && root.classList) root.classList.remove('dark');
-        if (typeof localStorage !== 'undefined') {
-          localStorage.setItem('theme', 'light');
-        }
-      } catch (_) {}
-    })();
-  </script>
-
-  <!-- Meta -->
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-
-  <!-- SEO core: title, description, canonical, OG/Twitter (standardized) -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Strategy | Octopus Tennis</title>
-  <meta name="description" content="Master the art of intelligent point construction—control space, stay patient, and win with purpose.">
-  <link rel="canonical" href="https://www.octopustennis.com/strategy.html" />
+  <meta name="description" content="Match strategy for high school varsity tennis: patterns, decision frameworks, and a shot selection matrix for smarter points." />
+  <link rel="canonical" href="/strategy.html" />
+  <meta name="theme-color" content="#0f766e" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Octopus Tennis" />
   <meta property="og:title" content="Strategy | Octopus Tennis" />
-  <meta property="og:description" content="Master the art of intelligent point construction—control space, stay patient, and win with purpose.">
-  <meta property="og:url" content="https://www.octopustennis.com/strategy.html" />
-  <meta property="og:image" content="https://www.octopustennis.com/assets/img/og-default.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <meta property="og:description" content="Match strategy for high school varsity tennis: patterns, decision frameworks, and a shot selection matrix for smarter points." />
+  <meta property="og:url" content="/strategy.html" />
+  <meta property="og:image" content="/assets/og/strategy-og.jpg" />
 
-  <!-- Twitter -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Strategy | Octopus Tennis" />
-  <meta name="twitter:description" content="Master the art of intelligent point construction—control space, stay patient, and win with purpose.">
-  <meta name="twitter:image" content="https://www.octopustennis.com/assets/img/og-default.png" />
+  <meta name="twitter:description" content="Match strategy for high school varsity tennis: patterns, decision frameworks, and a shot selection matrix for smarter points." />
+  <meta name="twitter:image" content="/assets/og/strategy-og.jpg" />
 
-  <!-- Theme color (sitewide standard) -->
-  <meta name="theme-color" content="#0369a1" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-  <!-- Fonts & Styles (preserved) -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
+  <!-- Compiled site CSS -->
   <link rel="stylesheet" href="/assets/site.css" />
-
-  <script src="/assets/site.js" defer></script>
+  
+  <!-- Guard: light-only mode (if used sitewide) -->
+  <script>try{document.documentElement.classList.remove('dark')}catch{}</script>
 </head>
-
-<body class="typography-v1 bg-white text-slate-900 min-h-dvh font-body antialiased">
-  <a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[9999] focus:rounded focus:bg-white focus:px-3 focus:py-2 focus:text-slate-900" href="#main">Skip to content</a>
-
-  <!-- Header -->
-  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur transition-all duration-300" id="site-header">
+<body class="bg-white text-slate-900 antialiased">
+  <!-- Site Header: three-column layout (brand | nav | hamburger) -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b">
     <div class="mx-auto max-w-screen-xl px-4">
-      <div class="flex items-center justify-between py-3 lg:py-4" id="header-inner">
-        <a class="flex items-center gap-2" href="/">
-          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">OT</span>
-          <span class="font-display text-lg font-semibold tracking-wide">Octopus Tennis</span>
-        </a>
-
-        <!-- Desktop nav -->
-        <nav aria-label="Primary" class="hidden gap-6 md:flex is-collapsible" id="primary-nav">
-          <a class="nav-link" href="/">Home</a>
-          <a class="nav-link" href="/serve.html">Serve</a>
-          <a class="nav-link" href="/return-of-serve.html">Return</a>
-          <a class="nav-link" href="/forehand.html">Forehand</a>
-          <a class="nav-link" href="/backhand.html">Backhand</a>
-          <a class="nav-link" href="/volley.html">Volley</a>
-          <a class="nav-link" href="/lob.html">Lob</a>
-          <a class="nav-link" href="/overhead.html">Overhead</a>
-          <a class="nav-link" href="/drop-shot.html">Drop Shot</a>
-          <a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/strategy.html">Strategy</a>
-          <a class="nav-link" href="/tactics.html">Tactics</a>
-          <a class="nav-link" href="/drills.html">Drills</a>
-          <a class="nav-link" href="/fitness.html">Fitness</a>
-          <a class="nav-link" href="/competition.html">Competition</a>
-          <a class="nav-link" href="/inspiration.html">Inspiration</a>
+      <div class="grid grid-cols-3 items-center h-16">
+        <!-- Brand -->
+        <div class="flex items-center gap-3">
+          <a href="/" class="inline-flex items-center gap-2">
+            <img src="/assets/ot-mark.svg" alt="Octopus Tennis" class="h-8 w-8" />
+            <span class="font-semibold tracking-tight">Octopus Tennis</span>
+          </a>
+        </div>
+        <!-- Primary Nav (desktop) -->
+        <nav id="primary-nav" class="hidden md:flex justify-center">
+          <ul class="flex items-center gap-6 text-sm">
+            <li><a class="hover:underline" href="/index.html">Home</a></li>
+            <li><a class="hover:underline" href="/serve.html">Serve</a></li>
+            <li><a class="hover:underline" href="/return-of-serve.html">Return</a></li>
+            <li><a class="hover:underline font-semibold text-teal-700" aria-current="page" href="/strategy.html">Strategy</a></li>
+            <li><a class="hover:underline" href="/backhand.html">Backhand</a></li>
+          </ul>
         </nav>
-
-        <!-- Hamburger -->
-        <button aria-controls="mobile-menu" aria-expanded="false" class="inline-flex items-center justify-center gap-1 rounded-xl border border-slate-200 bg-white/70 px-3 py-2 text-sm font-medium text-slate-900 hover:bg-slate-50 md:hidden" id="menu-toggle" type="button">
-          <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewBox="0 0 24 24">
-            <path d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-          Menu
-        </button>
+        <!-- Mobile Menu Button -->
+        <div class="flex justify-end md:hidden">
+          <button id="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" class="p-2 rounded-lg border" type="button">
+            <span class="sr-only">Open menu</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+        </div>
       </div>
     </div>
-
-    <!-- Mobile drawer -->
-    <div id="mobile-menu" data-open="false" class="absolute inset-x-0 top-full z-30 md:hidden duration-200 invisible opacity-0 -translate-y-2 h-[calc(100dvh-64px)]">
-      <div class="mx-4 rounded-2xl border border-slate-200/60 bg-white/95 shadow-xl backdrop-blur p-4">
-        <nav aria-label="Mobile" class="grid gap-2 text-base">
-          <a class="nav-link" href="/">Home</a>
-          <a class="nav-link" href="/serve.html">Serve</a>
-          <a class="nav-link" href="/return-of-serve.html">Return</a>
-          <a class="nav-link" href="/forehand.html">Forehand</a>
-          <a class="nav-link" href="/backhand.html">Backhand</a>
-          <a class="nav-link" href="/volley.html">Volley</a>
-          <a class="nav-link" href="/lob.html">Lob</a>
-          <a class="nav-link" href="/overhead.html">Overhead</a>
-          <a class="nav-link" href="/drop-shot.html">Drop Shot</a>
-          <a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/strategy.html">Strategy</a>
-          <a class="nav-link" href="/tactics.html">Tactics</a>
-          <a class="nav-link" href="/drills.html">Drills</a>
-          <a class="nav-link" href="/fitness.html">Fitness</a>
-          <a class="nav-link" href="/competition.html">Competition</a>
-          <a class="nav-link" href="/inspiration.html">Inspiration</a>
-        </nav>
-      </div>
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="md:hidden invisible opacity-0 -translate-y-2 transition-all duration-200">
+      <nav class="mx-auto max-w-screen-xl px-4 pb-4">
+        <ul class="grid gap-2 text-sm">
+          <li><a class="block rounded-lg px-3 py-2 hover:bg-slate-100" href="/index.html">Home</a></li>
+          <li><a class="block rounded-lg px-3 py-2 hover:bg-slate-100" href="/serve.html">Serve</a></li>
+          <li><a class="block rounded-lg px-3 py-2 hover:bg-slate-100" href="/return-of-serve.html">Return</a></li>
+          <li><a class="block rounded-lg px-3 py-2 bg-teal-50 font-semibold text-teal-700" aria-current="page" href="/strategy.html">Strategy</a></li>
+          <li><a class="block rounded-lg px-3 py-2 hover:bg-slate-100" href="/backhand.html">Backhand</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-<!-- HERO: Generic Page -->
-<section
-  style="
-    min-height:60vh;
-    display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
-    background:linear-gradient(to bottom,#075985,#0369a1);
-    color:#ffffff;padding:80px 16px;">
-  
-  <!-- Title -->
-  <div role='heading' aria-level='1'
-       style="
-         font-family: var(--font-display, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans');
-         font-weight:800; line-height:1.1; margin:0;
-         font-size:clamp(44px,8vw,88px) !important;">
-    Strategy
-  </div>
+  <main id="content" class="mx-auto max-w-screen-xl">
+    <!-- Hero: flat rectangular gradient + centered content -->
+    <section class="mx-4 mt-6 rounded-2xl px-6 py-10 md:px-10 md:py-14 bg-gradient-to-br from-teal-600 to-lime-500 text-white">
+      <div class="text-center max-w-3xl mx-auto">
+        <h1 class="text-3xl md:text-5xl font-bold tracking-tight">Match Strategy</h1>
+        <p class="mt-3 md:mt-4 text-white/90 md:text-lg">Build confidence, sharpen decision‑making, and play percentage tennis. Where effort, integrity, and teamwork make champions on and off the court.</p>
+      </div>
+    </section>
 
-  <!-- Tagline -->
-  <p
-    style="
-      margin:22px 0 0 0; max-width:48rem; line-height:1.6; opacity:.9;
-      font-size:clamp(18px,2.2vw,24px) !important;">
-    Build your plan around patterns, patience, and precision — play smarter, not just harder.
-  </p>
-</section>
+    <!-- Intro -->
+    <section class="mx-4 my-8 md:my-10">
+      <div class="prose prose-slate max-w-none">
+        <h2>How we think about points</h2>
+        <p>Strategy is the bridge between your skills and the score. We simplify choices with clear priorities: first‑serve percentage, depth to the middle when in doubt, and <em>smart</em> aggression on short balls. Use the matrix below to align your shot choice with the situation.</p>
+      </div>
+    </section>
 
+    <!-- BEGIN: Shot Selection Matrix (moved from backhand.html) -->
+    <section id="shot-selection-matrix" class="mx-4 my-8 md:my-12">
+      <header class="mb-4">
+        <h2 class="text-2xl font-semibold tracking-tight">Shot Selection Matrix</h2>
+        <p class="text-sm opacity-80">Quick reference for patterns and choices by situation. (Relocated from Backhand.)</p>
+      </header>
+      <div class="overflow-x-auto rounded-xl border shadow-sm">
+        <table class="w-full text-left text-sm">
+          <caption class="sr-only">Shot choices by situation with risk and coaching cues</caption>
+          <thead class="bg-slate-50">
+            <tr>
+              <th scope="col" class="py-3 px-4">Situation</th>
+              <th scope="col" class="py-3 px-4">Preferred Shot</th>
+              <th scope="col" class="py-3 px-4">Alternative</th>
+              <th scope="col" class="py-3 px-4">Risk</th>
+              <th scope="col" class="py-3 px-4">Cue/Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- ⬇️ Paste the COMPLETE set of rows moved from backhand.html here. Do not change content/order. -->
+            <!-- Example row format (remove once you paste real rows):
+            <tr class="border-t">
+              <th scope="row" class="py-3 px-4 font-medium">Neutral rally (deep middle)</th>
+              <td class="py-3 px-4">Deep cross‑court topspin</td>
+              <td class="py-3 px-4">Heavy middle ball</td>
+              <td class="py-3 px-4">Low</td>
+              <td class="py-3 px-4">Height over net; big margin</td>
+            </tr>
+            -->
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-3 text-xs text-slate-500">Tip: On mobile, scroll horizontally to view all columns.</p>
+    </section>
+    <!-- END: Shot Selection Matrix -->
 
-  <main id="main" tabindex="-1">
-    <!-- Content wrapper -->
-    <section class="mx-auto max-w-screen-xl px-4">
-      <article class="prose prose-slate mx-auto max-w-3xl py-12">
-        <p><strong>Strategy is the why behind the where.</strong> While tactics choose shots, strategy shapes the court, tempo, and options you leave yourself.</p>
-
-        <h2>1. Win the Map Before the Rally</h2>
-        <p>Your first goal is to control space: start neutral, create advantage, exploit it, then reset. Think in phases and invest in positioning that compounds later.</p>
-
-        <h2>2. Build Sustainable Pressure</h2>
-        <p>Consistency, depth, and height are pressure. Use margin to make your patterns repeatable under stress. Don’t just hit harder — remove air from your opponent’s options.</p>
-
-        <h2>3. Think in Patterns, Not Points</h2>
-        <p>Winning rallies comes from chains, not single strikes. Define your A/B patterns from common ball feeds and rehearse them until they run on rails.</p>
-
-        <h2>4. Adapt Like an Octopus</h2>
-        <p>Change shape as the situation changes. If they rush the net, thread through lanes; if they camp deep, take time away; if they moonball, step in and reframe height vs. depth.</p>
-
-        <h2>5. Train Decision, Not Just Execution</h2>
-        <p>Skill under pressure is decision + action. Add time constraints, variable feeds, and score pressure to practice so your choices become automatic and robust.</p>
-
-        <h2>6. From Strategy to Tactics</h2>
-        <p>Once the why is clear, the what gets easier. Pick patterns that express your strengths, disrupt theirs, and scale as matches get tight.</p>
-
-        <footer class="mt-10">
-          <p class="text-slate-500 italic text-center">
-            “Fluid, connected, and intelligent — like the octopus itself.”
-          </p>
-        </footer>
-      </article>
+    <!-- Principles -->
+    <section class="mx-4 mb-16">
+      <div class="grid gap-4 md:grid-cols-3">
+        <article class="rounded-xl border p-4">
+          <h3 class="font-semibold">Play High‑Percentage</h3>
+          <p class="text-sm mt-1">Aim big targets: cross‑court, deep middle, and attacking short balls with margin.</p>
+        </article>
+        <article class="rounded-xl border p-4">
+          <h3 class="font-semibold">Win Patterns</h3>
+          <p class="text-sm mt-1">Build patterns you trust under pressure: serve +1 to backhand; return deep middle.</p>
+        </article>
+        <article class="rounded-xl border p-4">
+          <h3 class="font-semibold">Control the Middle</h3>
+          <p class="text-sm mt-1">Neutralize with depth to the middle; change direction only on balanced balls.</p>
+        </article>
+      </div>
     </section>
   </main>
 
-  <!-- Site-wide footer -->
-  <footer class="mt-16 border-t border-slate-200/60 bg-slate-50/60 py-10">
+  <footer class="border-t py-8 mt-10">
     <div class="mx-auto max-w-screen-xl px-4">
-      <div class="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
-        <div class="flex items-center gap-2">
-          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">OT</span>
-          <span class="font-display text-lg font-semibold">Octopus Tennis</span>
-        </div>
-        <nav aria-label="Primary" class="hidden gap-6 md:flex">
-          <a class="nav-link text-sm" href="/">Home</a>
-          <a class="nav-link text-sm" href="/serve.html">Serve</a>
-          <a class="nav-link text-sm" href="/return-of-serve.html">Return</a>
-          <a class="nav-link text-sm" href="/forehand.html">Forehand</a>
-          <a class="nav-link text-sm" href="/backhand.html">Backhand</a>
-          <a class="nav-link text-sm" href="/volley.html">Volley</a>
-          <a class="nav-link text-sm" href="/lob.html">Lob</a>
-          <a class="nav-link text-sm" href="/overhead.html">Overhead</a>
-          <a class="nav-link text-sm" href="/drop-shot.html">Drop Shot</a>
-          <a aria-current="page" class="nav-link text-brand-700 font-semibold text-sm" href="/strategy.html">Strategy</a>
-          <a class="nav-link text-sm" href="/tactics.html">Tactics</a>
-          <a class="nav-link text-sm" href="/drills.html">Drills</a>
-          <a class="nav-link text-sm" href="/fitness.html">Fitness</a>
-          <a class="nav-link text-sm" href="/competition.html">Competition</a>
-          <a class="nav-link text-sm" href="/inspiration.html">Inspiration</a>
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <p class="text-sm">© <span id="year"></span> Octopus Tennis. All rights reserved.</p>
+        <nav aria-label="Footer">
+          <ul class="flex gap-4 text-sm">
+            <li><a class="hover:underline" href="/sitemap.xml">Sitemap</a></li>
+            <li><a class="hover:underline" href="/robots.txt">Robots</a></li>
+          </ul>
         </nav>
       </div>
-      <p class="mt-6 text-xs text-slate-500">© Octopus Tennis. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Back to top shadow button -->
+  <!-- Compiled site JS -->
+  <script src="/assets/site.js" defer></script>
+  
+  <!-- Minimal menu toggle to avoid layout FOUC; safe if site.js hasn’t wired it yet. Remove if redundant. -->
   <script>
-  (function () {
-    if (window.__OT_BTT__) return; window.__OT_BTT__ = true;
-    var showAt = 60;
-    var host = document.createElement('div');
-    host.style.position='fixed'; host.style.bottom='20px'; host.style.right='20px';
-    host.style.zIndex='2147483647'; host.style.pointerEvents='auto';
-    document.body.appendChild(host);
-    var root = host.attachShadow({mode:'open'});
-    root.innerHTML = '<style>button{all:initial;font:600 14px/1 system-ui,-apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial;display:none;padding:.55rem .75rem;border-radius:9999px;background:#fff;color:#111;box-shadow:0 8px 24px rgba(0,0,0,.18);cursor:pointer}button.show{display:inline-block}</style><button id="btn" aria-label="Back to top">↑</button>';
-    var btn = root.getElementById('btn');
-    function y(){return window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0}
-    function onScroll(){ if(y()>showAt) btn.classList.add('show'); else btn.classList.remove('show'); }
-    window.addEventListener('scroll', onScroll, {passive:true});
-    onScroll();
-    btn.addEventListener('click', function(){ try{window.scrollTo({top:0,behavior:'smooth'})}catch(e){window.scrollTo(0,0)}; btn.blur(); });
-  })();
+    (function(){
+      const btn = document.getElementById('menu-toggle');
+      const menu = document.getElementById('mobile-menu');
+      if(!btn || !menu) return;
+      let open = false;
+      function setOpen(v){
+        open = v; btn.setAttribute('aria-expanded', String(open));
+        if(open){ menu.classList.remove('invisible','opacity-0','-translate-y-2'); }
+        else{ menu.classList.add('invisible','opacity-0','-translate-y-2'); }
+      }
+      setOpen(false);
+      btn.addEventListener('click', ()=> setOpen(!open));
+    })();
+    // Yearless footer helper
+    (function(){ var y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear(); })();
   </script>
 </body>
 </html>
