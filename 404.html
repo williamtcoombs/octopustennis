@@ -1,293 +1,82 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
-<head>
-  <script>
-    /* Light-only mode guard (standardized). */
-    (function () {
-      try {
-        var root = document.documentElement;
-        if (root && root.classList) root.classList.remove('dark');
-        if (typeof localStorage !== 'undefined') {
-          localStorage.setItem('theme', 'light');
-        }
-      } catch (_) {}
-    })();
-  </script>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#00b3a4" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
 
-  <meta charset="utf-8"/>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="/assets/site.css" />
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <meta content="noindex, nofollow" name="robots"/>
-  <meta content="noindex, nofollow" name="googlebot"/>
-  <title>Page Not Found — Octopus Tennis</title>
-  <meta content="That page doesn’t exist." name="description"/>
-  <link rel="canonical" href="https://www.octopustennis.com/404.html" />
-  <meta name="description" content="That page does not exist. Head back to Octopus Tennis to learn more about our training, curriculum, and ethos.">
-  <meta name="theme-color" content="#0369a1">
-  <link href="https://www.octopustennis.com/404.html" rel="canonical"/>
-  <meta content="Page Not Found — Octopus Tennis" property="og:title"/>
-  <meta content="That page doesn’t exist." property="og:description"/>
-  <meta content="https://www.octopustennis.com/404.html" property="og:url"/>
-  <meta content="website" property="og:type"/>
-  <meta content="summary_large_image" name="twitter:card"/>
-  <meta content="Page Not Found — Octopus Tennis" name="twitter:title"/>
-  <meta content="That page doesn’t exist." name="twitter:description"/>
+    <title>Page Not Found | Octopus Tennis</title>
+    <meta
+      name="description"
+      content="That page does not exist. Head back to Octopus Tennis to learn more about our training, curriculum, and ethos."
+    />
 
- <!-- Favicons -->
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-512x512.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
-<link rel="shortcut icon" href="/favicon.ico">
+    <link
+      rel="canonical"
+      href="https://www.octopustennis.com/404.html"
+    />
+    <meta property="og:title" content="Page Not Found | Octopus Tennis" />
+    <meta
+      property="og:description"
+      content="That page does not exist. Head back to Octopus Tennis to learn more about our training, curriculum, and ethos."
+    />
+    <meta
+      property="og:url"
+      content="https://www.octopustennis.com/404.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Page Not Found | Octopus Tennis" />
+    <meta
+      name="twitter:description"
+      content="That page does not exist. Head back to Octopus Tennis to learn more about our training, curriculum, and ethos."
+    />
 
-  <script src="/assets/site.js" defer></script>
-</head>
- <body class="min-h-dvh bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100 font-body typography-v1">
-  <header class="sticky top-0 z-40 transition-all duration-300 bg-white/80 backdrop-blur dark:bg-slate-900/70" id="site-header">
-   <div class="mx-auto max-w-screen-xl px-4">
-    <div class="flex items-center justify-between py-3 lg:py-4" id="header-inner">
-     <!-- Brand -->
-     <a class="flex items-center gap-2" href="/index.html">
-      <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">
-       OT
-      </span>
-      <span class="font-display text-lg font-semibold tracking-wide">
-       Octopus Tennis
-      </span>
-     </a>
-     <!-- Desktop nav -->
-     <nav aria-label="Primary" class="hidden gap-6 md:flex is-collapsible" id="primary-nav">
-      <a class="nav-link" href="/index.html">
-       Home
-      </a>
-      <a class="nav-link" href="/serve.html">
-       Serve
-      </a>
-      <a class="nav-link" href="/return-of-serve.html">
-       Return
-      </a>
-      <a class="nav-link" href="/forehand.html">
-       Forehand
-      </a>
-      <a class="nav-link" href="/backhand.html">
-       Backhand
-      </a>
-      <a class="nav-link" href="/volley.html">
-       Volley
-      </a>
-      <a class="nav-link" href="/lob.html">
-       Lob
-      </a>
-      <a class="nav-link" href="/overhead.html">
-       Overhead
-      </a>
-      <a class="nav-link" href="/drop-shot.html">
-       Drop Shot
-      </a>
-      <a class="nav-link" href="/strategy.html">
-       Strategy
-      </a>
-      <a class="nav-link" href="/tactics.html">
-       Tactics
-      </a>
-      <a class="nav-link" href="/drills.html">
-       Drills
-      </a>
-      <a class="nav-link" href="/fitness.html">
-       Fitness
-      </a>
-      <a class="nav-link" href="/competition.html">
-       Competition
-      </a>
-      <a class="nav-link" href="/inspiration.html">
-       Inspiration
-      </a>
-     </nav>
-     <!-- Buttons -->
-     <div class="flex items-center gap-2 md:gap-3">
-      <!-- Theme toggle intentionally disabled (light-only mode) -->
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <link rel="stylesheet" href="/assets/site.css" />
+    <script src="/assets/site.js" defer></script>
+  </head>
 
-      <!-- Mobile menu toggle (no data-menu-toggle) -->
-      <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-900 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-800" id="menu-toggle" type="button">
-       <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewbox="0 0 24 24">
-        <path d="M4 6h16M4 12h16M4 18h16">
-        </path>
-       </svg>
-      </button>
-     </div>
-    </div>
-   </div>
-   <!-- Mobile drawer -->
-   <div class="absolute inset-x-0 top-full z-30 md:hidden duration-200 invisible opacity-0 -translate-y-2 h-[calc(100dvh-64px)]" data-open="false" id="mobile-menu">
-    <div class="mx-4 rounded-2xl border border-slate-200/60 bg-white/95 shadow-xl backdrop-blur dark:border-slate-800 dark:bg-slate-900/90 p-4">
-     <nav aria-label="Mobile" class="grid gap-2 text-base">
-      <a class="nav-link" href="/index.html">
-       Home
-      </a>
-      <a class="nav-link" href="/serve.html">
-       Serve
-      </a>
-      <a class="nav-link" href="/return-of-serve.html">
-       Return
-      </a>
-      <a class="nav-link" href="/forehand.html">
-       Forehand
-      </a>
-      <a class="nav-link" href="/backhand.html">
-       Backhand
-      </a>
-      <a class="nav-link" href="/volley.html">
-       Volley
-      </a>
-      <a class="nav-link" href="/lob.html">
-       Lob
-      </a>
-      <a class="nav-link" href="/overhead.html">
-       Overhead
-      </a>
-      <a class="nav-link" href="/drop-shot.html">
-       Drop Shot
-      </a>
-      <a class="nav-link" href="/strategy.html">
-       Strategy
-      </a>
-      <a class="nav-link" href="/tactics.html">
-       Tactics
-      </a>
-      <a class="nav-link" href="/drills.html">
-       Drills
-      </a>
-      <a class="nav-link" href="/fitness.html">
-       Fitness
-      </a>
-      <a class="nav-link" href="/competition.html">
-       Competition
-      </a>
-      <a class="nav-link" href="/inspiration.html">
-       Inspiration
-      </a>
-     </nav>
-    </div>
-   </div>
-  </header>
-  <a class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 bg-white dark:bg-slate-900 px-3 py-2 rounded-md shadow" href="#main">
-   Skip to content
-  </a>
-  <main class="grid place-items-center min-h-dvh px-4" id="main">
-   <div class="text-center max-w-xl">
-    <p class="text-sm uppercase tracking-wide text-slate-500">
-     Error 404
-    </p>
-    <h1 class="font-display text-4xl md:text-5xl font-bold mt-2">
-     Page not found
-    </h1>
-    <p class="mt-3 text-slate-600 dark:text-slate-300">
-     Sorry — the page you’re looking for doesn’t exist or has moved.
-    </p>
-    <div class="mt-6 flex items-center justify-center gap-3">
-     <a class="inline-flex items-center gap-2 rounded-xl bg-brand-700 px-4 py-2.5 text-white hover:bg-brand-800 shadow-card" href="/index.html">
-      Back to Home
-     </a>
-     <a class="inline-flex items-center gap-2 rounded-xl border px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-slate-900/40" href="/sitemap.xml" rel="noopener noreferrer" target="_blank">
-      View sitemap
-     </a>
-    </div>
-   </div>
-  </main>
-  <script>
-   (function () {
-  function sample(el) {
-    if (!el) return "(n/a)";
-    return window.getComputedStyle(el).fontFamily;
-  }
-  function log() {
-    var body = document.body;
-    var h1 = document.querySelector("h1");
-    var p = document.querySelector("p");
-    var info = {
-      body: sample(body),
-      h1: sample(h1),
-      p: sample(p)
-    };
-    console.log("[FontCheck]", info);
-    // visible, non-intrusive badge for quick glance
-    var badge = document.createElement('div');
-    badge.textContent = 'Fonts ✓';
-    badge.style.position = 'fixed';
-    badge.style.bottom = '10px';
-    badge.style.right = '10px';
-    badge.style.padding = '4px 8px';
-    badge.style.background = 'rgba(0,0,0,0.6)';
-    badge.style.color = '#fff';
-    badge.style.fontSize = '12px';
-    badge.style.borderRadius = '6px';
-    badge.style.zIndex = '99999';
-    badge.title = 'Open DevTools console to see computed font-family for body/h1/p';
-    document.body.appendChild(badge);
-    setTimeout(function(){ badge.remove(); }, 3500);
-  }
-  if (document.readyState === "complete" || document.readyState === "interactive") {
-    setTimeout(log, 0);
-  } else {
-    document.addEventListener("DOMContentLoaded", log);
-  }
-})();
-  
+  <body class="min-h-screen flex flex-col bg-white text-gray-900">
+    <header class="sticky top-0 bg-white/90 backdrop-blur border-b border-gray-200">
+      <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a class="flex items-center gap-2" href="/">
+          <img
+            src="/assets/logo.svg"
+            alt="Octopus Tennis logo"
+            class="h-8 w-8"
+          />
+          <span class="font-semibold text-lg text-teal-700">Octopus Tennis</span>
+        </a>
+        <ul class="hidden md:flex gap-6 text-sm font-medium">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/strategy.html" class="nav-link">Strategy</a></li>
+          <li><a href="/team.html" class="nav-link">Team</a></li>
+          <li><a href="/contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  document.addEventListener('DOMContentLoaded', function () {
-    var btn = document.getElementById('menu-toggle');
-    var drawer = document.getElementById('mobile-menu');
-    if (!btn || !drawer) return;
+    <main class="flex-1 flex flex-col items-center justify-center text-center px-4 py-24">
+      <h1 class="text-5xl font-bold text-teal-700 mb-6">404</h1>
+      <p class="text-lg text-gray-600 mb-8">
+        Oops — that page doesn’t exist. Maybe try the home page?
+      </p>
+      <a
+        href="/"
+        class="inline-flex items-center justify-center rounded-lg bg-teal-600 text-white px-6 py-3 font-semibold hover:bg-teal-700 transition"
+      >
+        Back to Home
+      </a>
+    </main>
 
-    function setOpen(open) {
-      drawer.setAttribute('data-open', open ? 'true' : 'false');
-      btn.setAttribute('aria-expanded', String(open));
-
-      if (open) {
-        drawer.removeAttribute('hidden');
-        if (drawer.classList) drawer.classList.remove('hidden');
-        if (window.innerWidth < 1024) drawer.style.display = 'block';
-      } else {
-        drawer.setAttribute('hidden', '');
-        if (drawer.classList) drawer.classList.add('hidden');
-        drawer.style.display = '';
-      }
-
-      drawer.classList.toggle('invisible', !open);
-      drawer.classList.toggle('opacity-0', !open);
-      drawer.classList.toggle('-translate-y-2', !open);
-    }
-
-    btn.addEventListener('click', function () {
-      var open = drawer.getAttribute('data-open') === 'true';
-      setOpen(!open);
-    });
-
-    setOpen(false);
-  });
-
-
-(function () {
-  if (window.__TC_BTT_SHADOW__) return;
-  window.__TC_BTT_SHADOW__ = true;
-  var showAt = 60;
-  var host = document.createElement('div');
-  host.style.position='fixed'; host.style.bottom='20px'; host.style.right='20px';
-  host.style.zIndex='2147483647'; host.style.pointerEvents='auto';
-  document.body.appendChild(host);
-  var root = host.attachShadow({mode:'open'});
-  root.innerHTML = '<style>button{all:initial;font:600 14px/1 system-ui,-apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial;display:none;padding:.55rem .75rem;border-radius:9999px;background:#fff;color:#111;box-shadow:0 8px 24px rgba(0,0,0,.18);cursor:pointer}button.show{display:inline-block}</style><button id="btn" aria-label="Back to top">↑</button>';
-  var btn = root.getElementById('btn');
-  function y(){return window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0}
-  function onScroll(){ if(y()>showAt) btn.classList.add('show'); else btn.classList.remove('show'); }
-  window.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
-  btn.addEventListener('click', function(){ try{window.scrollTo({top:0,behavior:'smooth'})}catch(e){window.scrollTo(0,0)}; btn.blur(); });
-})();
-  </script>
- </body>
+    <footer class="border-t border-gray-200 py-6 text-center text-sm text-gray-500">
+      <p>&copy; <span id="year"></span> Octopus Tennis. All rights reserved.</p>
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </footer>
+  </body>
 </html>
