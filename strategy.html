@@ -1,187 +1,637 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    /* Light-only mode guard (same pattern as other pages) */
+    (function () {
+      try {
+        var root = document.documentElement;
+        if (root && root.classList) root.classList.remove('dark');
+        if (typeof localStorage !== 'undefined') {
+          localStorage.setItem('theme', 'light');
+        }
+      } catch (_) {}
+    })();
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/site.css" />
+
+  <!-- Meta -->
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-512x512.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- SEO core: title, description, canonical, OG/Twitter -->
   <title>Strategy | Octopus Tennis</title>
-  <meta name="description" content="Match strategy for high school varsity tennis: patterns, decision frameworks, and a shot selection matrix for smarter points." />
-  <link rel="canonical" href="/strategy.html" />
-  <meta name="theme-color" content="#0f766e" />
+  <meta name="description" content="Match strategy for high school varsity tennis: simple shot priorities, rally patterns, and a shot selection matrix you can trust under pressure." />
+  <link rel="canonical" href="https://www.octopustennis.com/strategy.html" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Octopus Tennis" />
   <meta property="og:title" content="Strategy | Octopus Tennis" />
-  <meta property="og:description" content="Match strategy for high school varsity tennis: patterns, decision frameworks, and a shot selection matrix for smarter points." />
-  <meta property="og:url" content="/strategy.html" />
-  <meta property="og:image" content="/assets/og/strategy-og.jpg" />
+  <meta property="og:description" content="Match strategy for high school varsity tennis: simple shot priorities, rally patterns, and a shot selection matrix you can trust under pressure." />
+  <meta property="og:url" content="https://www.octopustennis.com/strategy.html" />
+  <meta property="og:image" content="https://www.octopustennis.com/assets/img/og-default.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Strategy | Octopus Tennis" />
-  <meta name="twitter:description" content="Match strategy for high school varsity tennis: patterns, decision frameworks, and a shot selection matrix for smarter points." />
-  <meta name="twitter:image" content="/assets/og/strategy-og.jpg" />
+  <meta name="twitter:description" content="Match strategy for high school varsity tennis: simple shot priorities, rally patterns, and a shot selection matrix you can trust under pressure." />
+  <meta name="twitter:image" content="https://www.octopustennis.com/assets/img/og-default.png" />
 
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <!-- Theme color -->
+  <meta name="theme-color" content="#0369a1">
 
-  <!-- Compiled site CSS -->
-  <link rel="stylesheet" href="/assets/site.css" />
-  
-  <!-- Guard: light-only mode (if used sitewide) -->
-  <script>try{document.documentElement.classList.remove('dark')}catch{}</script>
+  <!-- Scripts -->
+  <script src="/assets/site.js" defer></script>
+
+  <!-- Breadcrumbs (structured data) -->
+  <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.octopustennis.com/" },
+     { "@type": "ListItem", "position": 2, "name": "Strategy", "item": "https://www.octopustennis.com/strategy.html" }
+   ]
+  }
+  </script>
+
+  <style>
+  /* Page-scoped: remove faint focus/shadow ring in iOS Safari/Chrome for the mobile drawer */
+  #mobile-menu a:focus,
+  #mobile-menu a:focus-visible,
+  #mobile-menu button:focus,
+  #mobile-menu button:focus-visible {
+    outline: none;
+    box-shadow: none;
+  }
+  /* Reduce iOS tap highlight halo on links/buttons in the mobile drawer */
+  #mobile-menu a,
+  #mobile-menu button { -webkit-tap-highlight-color: transparent; }
+  </style>
 </head>
-<body class="bg-white text-slate-900 antialiased">
-  <!-- Site Header: three-column layout (brand | nav | hamburger) -->
-  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b">
+<body class="min-h-dvh bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100 font-body typography-v1">
+  <a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded-lg focus:bg-white/90 focus:px-3 focus:py-2 focus:text-slate-900" href="#main">
+    Skip to content
+  </a>
+
+  <!-- Header / Navbar (copied pattern) -->
+  <header id="site-header" class="sticky top-0 z-40 transition-all duration-300 bg-white/80 backdrop-blur dark:bg-slate-900/70">
     <div class="mx-auto max-w-screen-xl px-4">
-      <div class="grid grid-cols-3 items-center h-16">
+      <div id="header-inner" class="flex items-center justify-between py-3 lg:py-4">
         <!-- Brand -->
-        <div class="flex items-center gap-3">
-          <a href="/" class="inline-flex items-center gap-2">
-            <img src="/assets/ot-mark.svg" alt="Octopus Tennis" class="h-8 w-8" />
-            <span class="font-semibold tracking-tight">Octopus Tennis</span>
-          </a>
-        </div>
-        <!-- Primary Nav (desktop) -->
-        <nav id="primary-nav" class="hidden md:flex justify-center">
-          <ul class="flex items-center gap-6 text-sm">
-            <li><a class="hover:underline" href="/index.html">Home</a></li>
-            <li><a class="hover:underline" href="/serve.html">Serve</a></li>
-            <li><a class="hover:underline" href="/return-of-serve.html">Return</a></li>
-            <li><a class="hover:underline font-semibold text-teal-700" aria-current="page" href="/strategy.html">Strategy</a></li>
-            <li><a class="hover:underline" href="/backhand.html">Backhand</a></li>
-          </ul>
+        <a class="flex items-center gap-2" href="/">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">OT</span>
+          <span class="font-display text-lg font-semibold tracking-wide">Octopus Tennis</span>
+        </a>
+
+        <!-- Desktop nav -->
+        <nav id="primary-nav" aria-label="Primary" class="hidden gap-6 md:flex is-collapsible">
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/serve.html">Serve</a>
+          <a class="nav-link" href="/return-of-serve.html">Return</a>
+          <a class="nav-link" href="/forehand.html">Forehand</a>
+          <a class="nav-link" href="/backhand.html">Backhand</a>
+          <a class="nav-link" href="/volley.html">Volley</a>
+          <a class="nav-link" href="/lob.html">Lob</a>
+          <a class="nav-link" href="/overhead.html">Overhead</a>
+          <a class="nav-link" href="/drop-shot.html">Drop Shot</a>
+          <a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/strategy.html">Strategy</a>
+          <a class="nav-link" href="/tactics.html">Tactics</a>
+          <a class="nav-link" href="/drills.html">Drills</a>
+          <a class="nav-link" href="/fitness.html">Fitness</a>
+          <a class="nav-link" href="/competition.html">Competition</a>
+          <a class="nav-link" href="/inspiration.html">Inspiration</a>
         </nav>
-        <!-- Mobile Menu Button -->
-        <div class="flex justify-end md:hidden">
-          <button id="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" class="p-2 rounded-lg border" type="button">
-            <span class="sr-only">Open menu</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+
+        <!-- Buttons / Mobile toggle -->
+        <div class="flex items-center gap-2 md:gap-3">
+          <button id="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"
+                  class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-900 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-800">
+            <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewBox="0 0 24 24">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
           </button>
         </div>
       </div>
     </div>
-    <!-- Mobile Drawer -->
-    <div id="mobile-menu" class="md:hidden invisible opacity-0 -translate-y-2 transition-all duration-200">
-      <nav class="mx-auto max-w-screen-xl px-4 pb-4">
-        <ul class="grid gap-2 text-sm">
-          <li><a class="block rounded-lg px-3 py-2 hover:bg-slate-100" href="/index.html">Home</a></li>
-          <li><a class="block rounded-lg px-3 py-2 hover:bg-slate-100" href="/serve.html">Serve</a></li>
-          <li><a class="block rounded-lg px-3 py-2 hover:bg-slate-100" href="/return-of-serve.html">Return</a></li>
-          <li><a class="block rounded-lg px-3 py-2 bg-teal-50 font-semibold text-teal-700" aria-current="page" href="/strategy.html">Strategy</a></li>
-          <li><a class="block rounded-lg px-3 py-2 hover:bg-slate-100" href="/backhand.html">Backhand</a></li>
-        </ul>
-      </nav>
+
+    <!-- Mobile drawer -->
+    <div id="mobile-menu" data-open="false"
+         class="absolute inset-x-0 top-full z-30 md:hidden duration-200 invisible opacity-0 -translate-y-2 h-[calc(100dvh-64px)]">
+      <div class="mx-4 rounded-2xl border border-slate-200/60 bg-white/95 shadow-xl backdrop-blur dark:border-slate-800 dark:bg-slate-900/90 p-4">
+        <nav aria-label="Mobile" class="grid gap-2 text-base">
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/serve.html">Serve</a>
+          <a class="nav-link" href="/return-of-serve.html">Return</a>
+          <a class="nav-link" href="/forehand.html">Forehand</a>
+          <a class="nav-link" href="/backhand.html">Backhand</a>
+          <a class="nav-link" href="/volley.html">Volley</a>
+          <a class="nav-link" href="/lob.html">Lob</a>
+          <a class="nav-link" href="/overhead.html">Overhead</a>
+          <a class="nav-link" href="/drop-shot.html">Drop Shot</a>
+          <a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/strategy.html">Strategy</a>
+          <a class="nav-link" href="/tactics.html">Tactics</a>
+          <a class="nav-link" href="/drills.html">Drills</a>
+          <a class="nav-link" href="/fitness.html">Fitness</a>
+          <a class="nav-link" href="/competition.html">Competition</a>
+          <a class="nav-link" href="/inspiration.html">Inspiration</a>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <main id="content" class="mx-auto max-w-screen-xl">
-    <!-- Hero: flat rectangular gradient + centered content -->
-    <section class="mx-4 mt-6 rounded-2xl px-6 py-10 md:px-10 md:py-14 bg-gradient-to-br from-teal-600 to-lime-500 text-white">
-      <div class="text-center max-w-3xl mx-auto">
-        <h1 class="text-3xl md:text-5xl font-bold tracking-tight">Match Strategy</h1>
-        <p class="mt-3 md:mt-4 text-white/90 md:text-lg">Build confidence, sharpen decision‑making, and play percentage tennis. Where effort, integrity, and teamwork make champions on and off the court.</p>
-      </div>
-    </section>
+  <!-- HERO: Generic Page (same gradient pattern) -->
+  <section
+    style="
+      min-height:60vh;
+      display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+      background:linear-gradient(to bottom,#075985,#0369a1);
+      color:#ffffff;padding:80px 16px;">
+    <!-- Title -->
+    <div role="heading" aria-level="1"
+         style="
+           font-family: var(--font-display, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans');
+           font-weight:800; line-height:1.1; margin:0;
+           font-size:clamp(44px,8vw,88px) !important;">
+      Strategy
+    </div>
 
+    <!-- Tagline -->
+    <p
+      style="
+        margin:22px 0 0 0; max-width:48rem; line-height:1.6; opacity:.9;
+        font-size:clamp(18px,2.2vw,24px) !important;">
+      Make smart choices under pressure: simple priorities, trusted patterns, and a clear plan between points.
+    </p>
+  </section>
+
+  <!-- Main Content -->
+  <main id="main" class="py-10 md:max-w-4xl lg:px-8 px-4 sm:px-6 mx-auto container max-w-3xl lg:max-w-5xl">
     <!-- Intro -->
-    <section class="mx-4 my-8 md:my-10">
-      <div class="prose prose-slate max-w-none">
-        <h2>How we think about points</h2>
-        <p>Strategy is the bridge between your skills and the score. We simplify choices with clear priorities: first‑serve percentage, depth to the middle when in doubt, and <em>smart</em> aggression on short balls. Use the matrix below to align your shot choice with the situation.</p>
-      </div>
+    <section class="mx-auto max-w-5xl mb-10">
+      <header class="mb-6">
+        <h1 class="text-4xl font-extrabold tracking-tight">Match Strategy</h1>
+        <p class="mt-3 text-slate-700">
+          Strategy is the bridge between your skills and the score. When in doubt: play deep to the middle, change
+          direction only on balanced balls, and attack short balls with margin.
+        </p>
+      </header>
     </section>
 
-    <!-- BEGIN: Shot Selection Matrix (moved from backhand.html) -->
-    <section id="shot-selection-matrix" class="mx-4 my-8 md:my-12">
+    <!-- Singles Matrix -->
+    <section id="shot-selection-matrix" class="mx-auto max-w-5xl my-12">
       <header class="mb-4">
-        <h2 class="text-2xl font-semibold tracking-tight">Shot Selection Matrix</h2>
-        <p class="text-sm opacity-80">Quick reference for patterns and choices by situation. (Relocated from Backhand.)</p>
+        <h2 class="text-2xl font-semibold tracking-tight">Singles Shot Selection Matrix</h2>
+        <p class="text-slate-700 text-sm max-w-3xl">
+          Percentage-based choices for common singles situations—prioritizing depth, middle control, and smart aggression.
+        </p>
       </header>
-      <div class="overflow-x-auto rounded-xl border shadow-sm">
-        <table class="w-full text-left text-sm">
-          <caption class="sr-only">Shot choices by situation with risk and coaching cues</caption>
+
+      <div class="overflow-x-auto rounded-2xl ring-1 ring-slate-200 shadow-sm">
+        <table class="min-w-full divide-y divide-slate-200 text-left text-sm" aria-describedby="shot-selection-caption">
+          <caption id="shot-selection-caption" class="sr-only">
+            Shot choices by situation with risk and coaching cues
+          </caption>
           <thead class="bg-slate-50">
             <tr>
-              <th scope="col" class="py-3 px-4">Situation</th>
-              <th scope="col" class="py-3 px-4">Preferred Shot</th>
-              <th scope="col" class="py-3 px-4">Alternative</th>
-              <th scope="col" class="py-3 px-4">Risk</th>
-              <th scope="col" class="py-3 px-4">Cue/Notes</th>
+              <th scope="col" class="py-3.5 pl-4 pr-3 text-left font-semibold text-slate-900 sm:pl-6">Situation</th>
+              <th scope="col" class="px-3 py-3.5 text-left font-semibold text-slate-900">Preferred Shot</th>
+              <th scope="col" class="px-3 py-3.5 text-left font-semibold text-slate-900">Alternative</th>
+              <th scope="col" class="px-3 py-3.5 text-left font-semibold text-slate-900">Risk</th>
+              <th scope="col" class="px-3 py-3.5 text-left font-semibold text-slate-900">Cue / Notes</th>
             </tr>
           </thead>
-          <tbody>
-            <!-- ⬇️ Paste the COMPLETE set of rows moved from backhand.html here. Do not change content/order. -->
-            <!-- Example row format (remove once you paste real rows):
-            <tr class="border-t">
-              <th scope="row" class="py-3 px-4 font-medium">Neutral rally (deep middle)</th>
-              <td class="py-3 px-4">Deep cross‑court topspin</td>
-              <td class="py-3 px-4">Heavy middle ball</td>
-              <td class="py-3 px-4">Low</td>
-              <td class="py-3 px-4">Height over net; big margin</td>
+          <tbody class="divide-y divide-slate-200 bg-white">
+            <!-- Paste the COMPLETE set of rows you were using on backhand.html here. -->
+            <!-- Example rows (remove once you paste real rows): -->
+            <tr class="align-top">
+              <th scope="row" class="whitespace-nowrap py-4 pl-4 pr-3 font-medium text-slate-900 sm:pl-6">
+                Neutral rally (deep middle)
+              </th>
+              <td class="px-3 py-4 text-slate-900">Deep cross-court topspin</td>
+              <td class="px-3 py-4 text-slate-600">Heavy neutral ball middle</td>
+              <td class="px-3 py-4 text-slate-600">Low</td>
+              <td class="px-3 py-4 text-slate-600">Height over net; big target</td>
             </tr>
-            -->
+            <tr class="align-top">
+              <th scope="row" class="whitespace-nowrap py-4 pl-4 pr-3 font-medium text-slate-900 sm:pl-6">
+                Short ball inside baseline
+              </th>
+              <td class="px-3 py-4 text-slate-900">Aggressive approach to corner</td>
+              <td class="px-3 py-4 text-slate-600">Deep topspin middle</td>
+              <td class="px-3 py-4 text-slate-600">Medium</td>
+              <td class="px-3 py-4 text-slate-600">Commit early; follow to net</td>
+            </tr>
+            <tr class="align-top">
+              <th scope="row" class="whitespace-nowrap py-4 pl-4 pr-3 font-medium text-slate-900 sm:pl-6">
+                Defensive scramble
+              </th>
+              <td class="px-3 py-4 text-slate-900">High, deep lob or slice</td>
+              <td class="px-3 py-4 text-slate-600">Moonball middle</td>
+              <td class="px-3 py-4 text-slate-600">Low</td>
+              <td class="px-3 py-4 text-slate-600">Reset the rally; buy time</td>
+            </tr>
           </tbody>
         </table>
       </div>
       <p class="mt-3 text-xs text-slate-500">Tip: On mobile, scroll horizontally to view all columns.</p>
     </section>
-    <!-- END: Shot Selection Matrix -->
 
-    <!-- Principles -->
-    <section class="mx-4 mb-16">
-      <div class="grid gap-4 md:grid-cols-3">
-        <article class="rounded-xl border p-4">
-          <h3 class="font-semibold">Play High‑Percentage</h3>
-          <p class="text-sm mt-1">Aim big targets: cross‑court, deep middle, and attacking short balls with margin.</p>
-        </article>
-        <article class="rounded-xl border p-4">
-          <h3 class="font-semibold">Win Patterns</h3>
-          <p class="text-sm mt-1">Build patterns you trust under pressure: serve +1 to backhand; return deep middle.</p>
-        </article>
-        <article class="rounded-xl border p-4">
-          <h3 class="font-semibold">Control the Middle</h3>
-          <p class="text-sm mt-1">Neutralize with depth to the middle; change direction only on balanced balls.</p>
-        </article>
+    <!-- Doubles Matrix -->
+    <section id="doubles-shot-selection-matrix" class="mx-auto max-w-5xl my-12">
+      <header class="mb-4">
+        <h2 class="text-2xl font-semibold tracking-tight">Doubles Shot Selection Matrix</h2>
+        <p class="text-slate-700 text-sm max-w-3xl">
+          Team-first decisions keyed to formation, poach risk, and middle-seam control—with clear partner cues.
+        </p>
+      </header>
+
+      <div class="overflow-x-auto rounded-2xl border shadow-sm">
+        <table class="w-full text-left text-sm">
+          <caption class="sr-only">
+            Doubles shot choices by situation with partner and opponent positioning cues
+          </caption>
+          <thead class="bg-slate-50">
+            <tr>
+              <th scope="col" class="py-3 px-4">Situation</th>
+              <th scope="col" class="py-3 px-4">Team Formation</th>
+              <th scope="col" class="py-3 px-4">Preferred Shot</th>
+              <th scope="col" class="py-3 px-4">Alternative</th>
+              <th scope="col" class="py-3 px-4">Risk</th>
+              <th scope="col" class="py-3 px-4">Cue / Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- SERVE TEAM SCENARIOS -->
+            <tr class="border-t align-top">
+              <th scope="row" class="py-3 px-4 font-medium">1st serve made; returner late</th>
+              <td class="py-3 px-4">Server back, partner at net</td>
+              <td class="py-3 px-4">+1 to middle at net player’s hip</td>
+              <td class="py-3 px-4">Deep cross-court rally ball</td>
+              <td class="py-3 px-4">Low</td>
+              <td class="py-3 px-4">Target seams; partner shades middle for poach.</td>
+            </tr>
+
+            <tr class="border-t align-top">
+              <th scope="row" class="py-3 px-4 font-medium">2nd serve to backhand; aggressive returner</th>
+              <td class="py-3 px-4">Both back (two-back)</td>
+              <td class="py-3 px-4">Heavy deep middle to reset</td>
+              <td class="py-3 px-4">High, deep lob over net player</td>
+              <td class="py-3 px-4">Medium</td>
+              <td class="py-3 px-4">Buy time to approach behind a quality ball.</td>
+            </tr>
+
+            <tr class="border-t align-top">
+              <th scope="row" class="py-3 px-4 font-medium">Short return sits up</th>
+              <td class="py-3 px-4">Server closes, partner at net</td>
+              <td class="py-3 px-4">Approach down the line at feet</td>
+              <td class="py-3 px-4">Angle to middle seam</td>
+              <td class="py-3 px-4">Medium</td>
+              <td class="py-3 px-4">Follow to net; partner pinches middle.</td>
+            </tr>
+
+            <!-- RETURN TEAM SCENARIOS -->
+            <tr class="border-t align-top">
+              <th scope="row" class="py-3 px-4 font-medium">Return vs. active poacher</th>
+              <td class="py-3 px-4">Returner back, partner at net</td>
+              <td class="py-3 px-4">Deep cross-court at server’s feet</td>
+              <td class="py-3 px-4">Hard middle through seam</td>
+              <td class="py-3 px-4">Medium</td>
+              <td class="py-3 px-4">Hold your line; disguise until contact.</td>
+            </tr>
+
+            <tr class="border-t align-top">
+              <th scope="row" class="py-3 px-4 font-medium">Second-serve return, server stays back</th>
+              <td class="py-3 px-4">Both back (two-back) on opponents</td>
+              <td class="py-3 px-4">Aggressive cross-court and follow to net</td>
+              <td class="py-3 px-4">Chip + charge down the line</td>
+              <td class="py-3 px-4">Medium</td>
+              <td class="py-3 px-4">Call “follow” early; partner closes middle.</td>
+            </tr>
+
+            <!-- NET PRESSURE / DEFENSE -->
+            <tr class="border-t align-top">
+              <th scope="row" class="py-3 px-4 font-medium">Opponent at net, ball below tape (yours)</th>
+              <td class="py-3 px-4">You back, partner at net</td>
+              <td class="py-3 px-4">Low chip through middle</td>
+              <td class="py-3 px-4">Lob cross-court over net player</td>
+              <td class="py-3 px-4">Low</td>
+              <td class="py-3 px-4">Keep it low; avoid the high volley sitter.</td>
+            </tr>
+
+            <tr class="border-t align-top">
+              <th scope="row" class="py-3 px-4 font-medium">Both opponents at net</th>
+              <td class="py-3 px-4">Both back (you/partner)</td>
+              <td class="py-3 px-4">High, deep lob to backhand side</td>
+              <td class="py-3 px-4">Drive middle at body (jam)</td>
+              <td class="py-3 px-4">Medium</td>
+              <td class="py-3 px-4">Mix lobs with body jams to force errors.</td>
+            </tr>
+
+            <!-- TRANSITION / POACHING -->
+            <tr class="border-t align-top">
+              <th scope="row" class="py-3 px-4 font-medium">Partner signaling poach on serve</th>
+              <td class="py-3 px-4">I-formation or standard</td>
+              <td class="py-3 px-4">Serve to set up middle poach</td>
+              <td class="py-3 px-4">Body serve to jam</td>
+              <td class="py-3 px-4">Medium</td>
+              <td class="py-3 px-4">Server covers vacated line; clear verbal call.</td>
+            </tr>
+
+            <tr class="border-t align-top">
+              <th scope="row" class="py-3 px-4 font-medium">Floating ball to you at net</th>
+              <td class="py-3 px-4">Partner back, you at net</td>
+              <td class="py-3 px-4">Punch volley to open seam</td>
+              <td class="py-3 px-4">Soft angle away from net player</td>
+              <td class="py-3 px-4">Low</td>
+              <td class="py-3 px-4">Hit in front; recover to middle after contact.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="mt-3 text-xs text-slate-500">
+        Tip: Prioritize the <em>middle seam</em>, communicate early, and move as a unit.
+      </p>
+    </section>
+
+    <!-- Stroke & Skill Tier Matrix -->
+    <section id="stroke-skill-tiers" class="mx-auto max-w-5xl my-12">
+      <header class="mb-4">
+        <h2 class="text-2xl font-semibold tracking-tight">Stroke &amp; Skill Tier Matrix</h2>
+        <p class="text-slate-700 text-sm max-w-3xl">
+          A tiered roadmap of core strokes and skills—from essentials to advanced—showing primary purpose and coaching notes
+          to guide practice priorities.
+        </p>
+      </header>
+
+      <!-- Tier summary chips -->
+      <div class="flex flex-wrap gap-2 mb-8">
+        <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-sm font-medium">Tier 1: Fundamentals</span>
+        <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-sm font-medium">Tier 2: Offensive Development</span>
+        <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-sm font-medium">Tier 3: Advanced / Specialized</span>
+      </div>
+
+      <!-- Desktop table -->
+      <div class="hidden md:block">
+        <div class="overflow-hidden rounded-2xl ring-1 ring-slate-200 shadow-sm">
+          <table class="min-w-full divide-y divide-slate-200" aria-describedby="stroke-hierarchy-caption">
+            <caption id="stroke-hierarchy-caption" class="sr-only">Tennis strokes organized by tier, purpose, and coaching notes.</caption>
+            <thead class="bg-slate-50">
+              <tr>
+                <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-slate-900 sm:pl-6">Tier</th>
+                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-slate-900">Stroke</th>
+                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-slate-900">Purpose / Focus</th>
+                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-slate-900">Coaching Notes</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 bg-white">
+              <!-- Tier 1 -->
+              <tr class="align-top">
+                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 1 — Fundamentals</td>
+                <td class="px-3 py-4 text-sm text-slate-900">Forehand</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Core rally weapon; most-used shot.</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Repeatable swing path, topspin control, contact timing.</td>
+              </tr>
+              <tr class="align-top">
+                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 1 — Fundamentals</td>
+                <td class="px-3 py-4 text-sm text-slate-900">Backhand (two-handed)</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Balances baseline play and returns.</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Compact prep, body rotation, stable contact.</td>
+              </tr>
+              <tr class="align-top">
+                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 1 — Fundamentals</td>
+                <td class="px-3 py-4 text-sm text-slate-900">Serve (flat)</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Starts every point.</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Consistent toss, contact height; add spin later.</td>
+              </tr>
+              <tr class="align-top">
+                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 1 — Fundamentals</td>
+                <td class="px-3 py-4 text-sm text-slate-900">Return of Serve</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Neutralize opponent’s advantage.</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Short back-swing; block vs. pace, drive vs. slower serves.</td>
+              </tr>
+              <tr class="align-top">
+                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 1 — Fundamentals</td>
+                <td class="px-3 py-4 text-sm text-slate-900">Slice (groundstroke)</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Defensive or rhythm-change tool.</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Brush under; keep ball low; great for low balls.</td>
+              </tr>
+              <tr class="align-top">
+                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 1 — Fundamentals</td>
+                <td class="px-3 py-4 text-sm text-slate-900">Volley (FH/BH)</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Net finishing tool.</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Compact punch; firm wrist; out in front.</td>
+              </tr>
+              <tr class="align-top">
+                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 1 — Fundamentals</td>
+                <td class="px-3 py-4 text-sm text-slate-900">Overhead Smash</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Finish high balls and lobs.</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Footwork first; early shoulder turn; reach high.</td>
+              </tr>
+
+              <!-- Tier 2 -->
+              <tr class="align-top">
+                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 2 — Offensive Dev.</td>
+                <td class="px-3 py-4 text-sm text-slate-900">Aggressive FH/BH</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Turn neutral into offense.</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Racquet-head speed; depth first, then angle/power.</td>
+              </tr>
+              <tr class="align-top">
+                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 2 — Offensive Dev.</td>
+                <td class="px-3 py-4 text-sm text-slate-900">Slice / Chip Return</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Change pace; force awkward replies.</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Knife through; aim deep middle or at feet.</td>
+              </tr>
+              <tr class="align-top">
+                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 2 — Offensive Dev.</td>
+                <td class="px-3 py-4 text-sm text-slate-900">Transition Volley / Approach</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Move forward and shorten points.</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Deep to corners; follow in; split-step timing.</td>
+              </tr>
+              <tr class="align-top">
+                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 2 — Offensive Dev.</td>
+                <td class="px-3 py-4 text-sm text-slate-900">Drive Volley</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Attack floaters near service line.</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Groundstroke swing in air; contact in front.</td>
+              </tr>
+              <tr class="align-top">
+                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 2 — Offensive Dev.</td>
+                <td class="px-3 py-4 text-sm text-slate-900">Drop Shot / Drop Volley</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Exploit deep positioning.</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Same swing start; soften grip; finish short.</td>
+              </tr>
+              <tr class="align-top">
+                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 2 — Offensive Dev.</td>
+                <td class="px-3 py-4 text-sm text-slate-900">Lob (defensive — backspin)</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Reset under pressure.</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Lift through; height > speed; land deep middle.</td>
+              </tr>
+
+              <!-- Tier 3 -->
+              <tr class="align-top">
+                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 3 — Advanced</td>
+                <td class="px-3 py-4 text-sm text-slate-900">Kick Serve (topspin)</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Reliable second serve; high bounce.</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Upward brush; full follow-through; aim cross first.</td>
+              </tr>
+              <tr class="align-top">
+                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 3 — Advanced</td>
+                <td class="px-3 py-4 text-sm text-slate-900">Slice Serve</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Pulls opponent wide; sets up next ball.</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Work both sides; vary body/T placement.</td>
+              </tr>
+              <tr class="align-top">
+                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 3 — Advanced</td>
+                <td class="px-3 py-4 text-sm text-slate-900">Lob (offensive — topspin)</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Pass net-rusher; dip fast, bounce high.</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Heavy brush; give yourself net clearance.</td>
+              </tr>
+              <tr class="align-top">
+                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 3 — Advanced</td>
+                <td class="px-3 py-4 text-sm text-slate-900">Lob Volley</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Surprise or defensive net tactic.</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Soft hands; prioritize height, then depth.</td>
+              </tr>
+              <tr class="align-top">
+                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 3 — Advanced</td>
+                <td class="px-3 py-4 text-sm text-slate-900">Half Volley</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Bridge between defense and offense.</td>
+                <td class="px-3 py-4 text-sm text-slate-600">Quiet hands; use body lift to control launch.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Mobile cards -->
+      <div class="md:hidden space-y-4" aria-label="Stroke tiers (mobile)">
+        <!-- Tier 1 group -->
+        <h3 class="text-xl font-semibold mt-8">Tier 1 — Fundamentals</h3>
+        <ul class="space-y-3">
+          <li class="rounded-2xl border border-slate-200 p-4 shadow-sm">
+            <p class="font-medium text-slate-900">Forehand</p>
+            <p class="text-sm text-slate-600">Core rally weapon; most-used shot.</p>
+            <p class="text-sm text-slate-600 mt-1">Notes: repeatable swing, topspin control, timing.</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 p-4 shadow-sm">
+            <p class="font-medium text-slate-900">Backhand (two-handed)</p>
+            <p class="text-sm text-slate-600">Balances baseline play and returns.</p>
+            <p class="text-sm text-slate-600 mt-1">Notes: compact prep, rotate body.</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 p-4 shadow-sm">
+            <p class="font-medium text-slate-900">Serve (flat)</p>
+            <p class="text-sm text-slate-600">Starts every point.</p>
+            <p class="text-sm text-slate-600 mt-1">Notes: consistent toss, high contact; add spin later.</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 p-4 shadow-sm">
+            <p class="font-medium text-slate-900">Return of Serve</p>
+            <p class="text-sm text-slate-600">Neutralize opponent’s advantage.</p>
+            <p class="text-sm text-slate-600 mt-1">Notes: short back-swing; block vs pace, drive vs slow.</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 p-4 shadow-sm">
+            <p class="font-medium text-slate-900">Slice (groundstroke)</p>
+            <p class="text-sm text-slate-600">Defensive or rhythm-change tool.</p>
+            <p class="text-sm text-slate-600 mt-1">Notes: brush under; keep ball low.</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 p-4 shadow-sm">
+            <p class="font-medium text-slate-900">Volley (FH/BH)</p>
+            <p class="text-sm text-slate-600">Net finishing tool.</p>
+            <p class="text-sm text-slate-600 mt-1">Notes: compact punch; firm wrist; out in front.</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 p-4 shadow-sm">
+            <p class="font-medium text-slate-900">Overhead Smash</p>
+            <p class="text-sm text-slate-600">Finish high balls and lobs.</p>
+            <p class="text-sm text-slate-600 mt-1">Notes: early shoulder turn; reach high.</p>
+          </li>
+        </ul>
+
+        <!-- Tier 2 group -->
+        <h3 class="text-xl font-semibold mt-10">Tier 2 — Offensive Development</h3>
+        <ul class="space-y-3">
+          <li class="rounded-2xl border border-slate-200 p-4 shadow-sm">
+            <p class="font-medium text-slate-900">Aggressive FH/BH</p>
+            <p class="text-sm text-slate-600">Turn neutral into offense.</p>
+            <p class="text-sm text-slate-600 mt-1">Notes: depth first, then angle/power.</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 p-4 shadow-sm">
+            <p class="font-medium text-slate-900">Slice / Chip Return</p>
+            <p class="text-sm text-slate-600">Change pace; force awkward replies.</p>
+            <p class="text-sm text-slate-600 mt-1">Notes: knife through; target deep middle/feet.</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 p-4 shadow-sm">
+            <p class="font-medium text-slate-900">Transition Volley / Approach</p>
+            <p class="text-sm text-slate-600">Move forward and shorten points.</p>
+            <p class="text-sm text-slate-600 mt-1">Notes: split-step timing; close in.</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 p-4 shadow-sm">
+            <p class="font-medium text-slate-900">Drive Volley</p>
+            <p class="text-sm text-slate-600">Attack floaters near service line.</p>
+            <p class="text-sm text-slate-600 mt-1">Notes: groundstroke swing in air; contact in front.</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 p-4 shadow-sm">
+            <p class="font-medium text-slate-900">Drop Shot / Drop Volley</p>
+            <p class="text-sm text-slate-600">Exploit deep positioning.</p>
+            <p class="text-sm text-slate-600 mt-1">Notes: same swing start; soften grip.</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 p-4 shadow-sm">
+            <p class="font-medium text-slate-900">Lob (defensive — backspin)</p>
+            <p class="text-sm text-slate-600">Reset under pressure.</p>
+            <p class="text-sm text-slate-600 mt-1">Notes: height > speed; land deep middle.</p>
+          </li>
+        </ul>
+
+        <!-- Tier 3 group -->
+        <h3 class="text-xl font-semibold mt-10">Tier 3 — Advanced / Specialized</h3>
+        <ul class="space-y-3">
+          <li class="rounded-2xl border border-slate-200 p-4 shadow-sm">
+            <p class="font-medium text-slate-900">Kick Serve (topspin)</p>
+            <p class="text-sm text-slate-600">Reliable 2nd serve; high bounce.</p>
+            <p class="text-sm text-slate-600 mt-1">Notes: upward brush; full follow-through.</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 p-4 shadow-sm">
+            <p class="font-medium text-slate-900">Slice Serve</p>
+            <p class="text-sm text-slate-600">Pulls opponent wide; sets up next ball.</p>
+            <p class="text-sm text-slate-600 mt-1">Notes: practice both deuce & ad placements.</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 p-4 shadow-sm">
+            <p class="font-medium text-slate-900">Lob (offensive — topspin)</p>
+            <p class="text-sm text-slate-600">Pass net-rusher; dip fast, bounce high.</p>
+            <p class="text-sm text-slate-600 mt-1">Notes: heavy brush; clear the net with margin.</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 p-4 shadow-sm">
+            <p class="font-medium text-slate-900">Lob Volley</p>
+            <p class="text-sm text-slate-600">Surprise or defensive net tactic.</p>
+            <p class="text-sm text-slate-600 mt-1">Notes: soften grip; prioritize height.</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 p-4 shadow-sm">
+            <p class="font-medium text-slate-900">Half Volley</p>
+            <p class="text-sm text-slate-600">Bridge between defense and offense.</p>
+            <p class="text-sm text-slate-600 mt-1">Notes: quiet hands; use body lift.</p>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
 
-  <footer class="border-t py-8 mt-10">
-    <div class="mx-auto max-w-screen-xl px-4">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-        <p class="text-sm">© <span id="year"></span> Octopus Tennis. All rights reserved.</p>
-        <nav aria-label="Footer">
-          <ul class="flex gap-4 text-sm">
-            <li><a class="hover:underline" href="/sitemap.xml">Sitemap</a></li>
-            <li><a class="hover:underline" href="/robots.txt">Robots</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+  <footer class="mt-10 mb-10 mx-auto max-w-screen-xl px-4">
+    <p class="mt-6 text-xs text-slate-500">© Octopus Tennis. All rights reserved.</p>
   </footer>
-
-  <!-- Compiled site JS -->
-  <script src="/assets/site.js" defer></script>
-  
-  <!-- Minimal menu toggle to avoid layout FOUC; safe if site.js hasn’t wired it yet. Remove if redundant. -->
-  <script>
-    (function(){
-      const btn = document.getElementById('menu-toggle');
-      const menu = document.getElementById('mobile-menu');
-      if(!btn || !menu) return;
-      let open = false;
-      function setOpen(v){
-        open = v; btn.setAttribute('aria-expanded', String(open));
-        if(open){ menu.classList.remove('invisible','opacity-0','-translate-y-2'); }
-        else{ menu.classList.add('invisible','opacity-0','-translate-y-2'); }
-      }
-      setOpen(false);
-      btn.addEventListener('click', ()=> setOpen(!open));
-    })();
-    // Yearless footer helper
-    (function(){ var y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear(); })();
-  </script>
 </body>
 </html>
