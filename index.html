@@ -97,23 +97,21 @@
 <a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:text-slate-900" href="#main">
    Skip to content
   </a>
-
-<!-- Header / Navbar — OT badge version (stable) -->
-<header id="site-header" class="sticky top-0 z-40 transition-all duration-300 bg-white/80 backdrop-blur dark:bg-slate-900/70">
+<!-- Header -->
+<header id="site-header" class="sticky top-0 z-40 bg-white/80 backdrop-blur dark:bg-slate-900/70">
   <div class="mx-auto max-w-screen-xl px-4">
-    <!-- grid keeps spacing tight: brand | flexible nav | buttons -->
-    <div id="header-inner" class="grid grid-cols-[auto,1fr,auto] items-center gap-3 md:gap-4 py-2.5 md:py-3 w-full">
-      <!-- Brand (OT badge) -->
-      <a href="/" class="flex items-center gap-2 shrink-0" aria-label="Octopus Tennis home">
-        <span class="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-brand-700 text-white select-none">OT</span>
+    <div class="flex items-center justify-between py-3 md:py-4">
+      <!-- Brand -->
+      <a href="/" class="flex items-center gap-2" aria-label="Octopus Tennis home">
+        <img src="/assets/img/octopus.svg" alt="Octopus Tennis logo" class="h-8 w-auto" />
         <span class="font-display text-lg font-semibold tracking-wide whitespace-nowrap leading-none">
           Octopus Tennis
         </span>
       </a>
 
-      <!-- Desktop nav (no overlap; scrolls if tight) -->
+      <!-- Desktop Nav -->
       <nav id="primary-nav" aria-label="Primary"
-           class="hidden md:flex flex-nowrap items-center gap-4 md:gap-5 lg:gap-6 overflow-x-auto min-w-0">
+           class="hidden md:flex items-center gap-4 lg:gap-5">
         <a class="nav-link text-brand-700 font-semibold" aria-current="page" href="/">Home</a>
         <a class="nav-link" href="/serve.html">Serve</a>
         <a class="nav-link" href="/return-of-serve.html">Return</a>
@@ -131,19 +129,18 @@
         <a class="nav-link" href="/inspiration.html">Inspiration</a>
       </nav>
 
-      <!-- Buttons (hamburger flush right; matches existing JS) -->
-      <div class="flex items-center gap-2 md:gap-3 shrink-0 ml-auto">
-        <button id="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"
-                class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-900 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-800">
-          <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewBox="0 0 24 24">
-            <path d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
+      <!-- Mobile Toggle -->
+      <button id="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"
+              class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-900 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-800">
+        <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round"
+             stroke-linejoin="round" stroke-width="2.25" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
     </div>
   </div>
 
-  <!-- Mobile drawer (unchanged so your site.js continues to work) -->
+  <!-- Mobile Drawer -->
   <div id="mobile-menu"
        class="absolute inset-x-0 top-full z-30 md:hidden duration-200 invisible opacity-0 -translate-y-2 h-[calc(100dvh-64px)]"
        data-open="false">
