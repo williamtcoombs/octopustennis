@@ -1,229 +1,161 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
-<head>
-  <script>
-    /* Light-only mode guard (standardized). */
-    (function () {
-      try {
-        var root = document.documentElement;
-        if (root && root.classList) root.classList.remove('dark');
-        if (typeof localStorage !== 'undefined') {
-          localStorage.setItem('theme', 'light');
-        }
-      } catch (_) {}
-    })();
-  </script>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Strategy | Octopus Tennis</title>
+    <meta name="description" content="Plan smarter, play smarter — learn how to structure points, identify opponent patterns, and apply effective court positioning.">
+    <link rel="canonical" href="https://www.octopustennis.com/strategy.html">
+    <meta name="theme-color" content="#0d9488">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Strategy | Octopus Tennis">
+    <meta property="og:description" content="Plan smarter, play smarter — learn how to structure points, identify opponent patterns, and apply effective court positioning.">
+    <meta property="og:url" content="https://www.octopustennis.com/strategy.html">
+    <meta property="og:image" content="/assets/og-default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Strategy | Octopus Tennis">
+    <meta name="twitter:description" content="Plan smarter, play smarter — learn how to structure points, identify opponent patterns, and apply effective court positioning.">
+    <meta name="twitter:image" content="/assets/og-default.png">
+    <link rel="stylesheet" href="/assets/site.css">
+    <script src="/assets/site.js" defer></script>
+  </head>
 
-  <!-- Meta -->
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-
-  <!-- SEO core: title, description, canonical, OG/Twitter (standardized) -->
-  <title>Strategy | Octopus Tennis</title>
-  <meta name="description" content="Master the art of intelligent point construction—control space, stay patient, and win with purpose.">
-  <link rel="canonical" href="https://www.octopustennis.com/strategy.html" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Octopus Tennis" />
-  <meta property="og:title" content="Strategy | Octopus Tennis" />
-  <meta property="og:description" content="Master the art of intelligent point construction—control space, stay patient, and win with purpose.">
-  <meta property="og:url" content="https://www.octopustennis.com/strategy.html" />
-  <meta property="og:image" content="https://www.octopustennis.com/assets/img/og-default.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Strategy | Octopus Tennis" />
-  <meta name="twitter:description" content="Master the art of intelligent point construction—control space, stay patient, and win with purpose.">
-  <meta name="twitter:image" content="https://www.octopustennis.com/assets/img/og-default.png" />
-
-  <!-- Theme color (sitewide standard) -->
-  <meta name="theme-color" content="#0369a1" />
-
-  <!-- Fonts & Styles (preserved) -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/site.css" />
-
-  <script src="/assets/site.js" defer></script>
-</head>
-
-<body class="typography-v1 bg-white text-slate-900 min-h-dvh font-body antialiased">
-  <a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[9999] focus:rounded focus:bg-white focus:px-3 focus:py-2 focus:text-slate-900" href="#main">Skip to content</a>
-
-  <!-- Header -->
-  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur transition-all duration-300" id="site-header">
-    <div class="mx-auto max-w-screen-xl px-4">
-      <div class="flex items-center justify-between py-3 lg:py-4" id="header-inner">
-        <a class="flex items-center gap-2" href="/">
-          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">OT</span>
-          <span class="font-display text-lg font-semibold tracking-wide">Octopus Tennis</span>
-        </a>
-
-        <!-- Desktop nav -->
-        <nav aria-label="Primary" class="hidden gap-6 md:flex is-collapsible" id="primary-nav">
-          <a class="nav-link" href="/">Home</a>
-          <a class="nav-link" href="/serve.html">Serve</a>
-          <a class="nav-link" href="/return-of-serve.html">Return</a>
-          <a class="nav-link" href="/forehand.html">Forehand</a>
-          <a class="nav-link" href="/backhand.html">Backhand</a>
-          <a class="nav-link" href="/volley.html">Volley</a>
-          <a class="nav-link" href="/lob.html">Lob</a>
-          <a class="nav-link" href="/overhead.html">Overhead</a>
-          <a class="nav-link" href="/drop-shot.html">Drop Shot</a>
-          <a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/strategy.html">Strategy</a>
-          <a class="nav-link" href="/tactics.html">Tactics</a>
-          <a class="nav-link" href="/drills.html">Drills</a>
-          <a class="nav-link" href="/fitness.html">Fitness</a>
-          <a class="nav-link" href="/competition.html">Competition</a>
-          <a class="nav-link" href="/inspiration.html">Inspiration</a>
-        </nav>
-
-        <!-- Hamburger -->
-        <button aria-controls="mobile-menu" aria-expanded="false" class="inline-flex items-center justify-center gap-1 rounded-xl border border-slate-200 bg-white/70 px-3 py-2 text-sm font-medium text-slate-900 hover:bg-slate-50 md:hidden" id="menu-toggle" type="button">
-          <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewBox="0 0 24 24">
-            <path d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-          Menu
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile drawer -->
-    <div id="mobile-menu" data-open="false" class="absolute inset-x-0 top-full z-30 md:hidden duration-200 invisible opacity-0 -translate-y-2 h-[calc(100dvh-64px)]">
-      <div class="mx-4 rounded-2xl border border-slate-200/60 bg-white/95 shadow-xl backdrop-blur p-4">
-        <nav aria-label="Mobile" class="grid gap-2 text-base">
-          <a class="nav-link" href="/">Home</a>
-          <a class="nav-link" href="/serve.html">Serve</a>
-          <a class="nav-link" href="/return-of-serve.html">Return</a>
-          <a class="nav-link" href="/forehand.html">Forehand</a>
-          <a class="nav-link" href="/backhand.html">Backhand</a>
-          <a class="nav-link" href="/volley.html">Volley</a>
-          <a class="nav-link" href="/lob.html">Lob</a>
-          <a class="nav-link" href="/overhead.html">Overhead</a>
-          <a class="nav-link" href="/drop-shot.html">Drop Shot</a>
-          <a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/strategy.html">Strategy</a>
-          <a class="nav-link" href="/tactics.html">Tactics</a>
-          <a class="nav-link" href="/drills.html">Drills</a>
-          <a class="nav-link" href="/fitness.html">Fitness</a>
-          <a class="nav-link" href="/competition.html">Competition</a>
-          <a class="nav-link" href="/inspiration.html">Inspiration</a>
-        </nav>
-      </div>
-    </div>
-  </header>
-
-<!-- HERO: Generic Page -->
-<section
-  style="
-    min-height:60vh;
-    display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
-    background:linear-gradient(to bottom,#075985,#0369a1);
-    color:#ffffff;padding:80px 16px;">
-  
-  <!-- Title -->
-  <div role='heading' aria-level='1'
-       style="
-         font-family: var(--font-display, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans');
-         font-weight:800; line-height:1.1; margin:0;
-         font-size:clamp(44px,8vw,88px) !important;">
-    Strategy
-  </div>
-
-  <!-- Tagline -->
-  <p
-    style="
-      margin:22px 0 0 0; max-width:48rem; line-height:1.6; opacity:.9;
-      font-size:clamp(18px,2.2vw,24px) !important;">
-    Build your plan around patterns, patience, and precision — play smarter, not just harder.
-  </p>
-</section>
-
-
-  <main id="main" tabindex="-1">
-    <!-- Content wrapper -->
-    <section class="mx-auto max-w-screen-xl px-4">
-      <article class="prose prose-slate mx-auto max-w-3xl py-12">
-        <p><strong>Strategy is the why behind the where.</strong> While tactics choose shots, strategy shapes the court, tempo, and options you leave yourself.</p>
-
-        <h2>1. Win the Map Before the Rally</h2>
-        <p>Your first goal is to control space: start neutral, create advantage, exploit it, then reset. Think in phases and invest in positioning that compounds later.</p>
-
-        <h2>2. Build Sustainable Pressure</h2>
-        <p>Consistency, depth, and height are pressure. Use margin to make your patterns repeatable under stress. Don’t just hit harder — remove air from your opponent’s options.</p>
-
-        <h2>3. Think in Patterns, Not Points</h2>
-        <p>Winning rallies comes from chains, not single strikes. Define your A/B patterns from common ball feeds and rehearse them until they run on rails.</p>
-
-        <h2>4. Adapt Like an Octopus</h2>
-        <p>Change shape as the situation changes. If they rush the net, thread through lanes; if they camp deep, take time away; if they moonball, step in and reframe height vs. depth.</p>
-
-        <h2>5. Train Decision, Not Just Execution</h2>
-        <p>Skill under pressure is decision + action. Add time constraints, variable feeds, and score pressure to practice so your choices become automatic and robust.</p>
-
-        <h2>6. From Strategy to Tactics</h2>
-        <p>Once the why is clear, the what gets easier. Pick patterns that express your strengths, disrupt theirs, and scale as matches get tight.</p>
-
-        <footer class="mt-10">
-          <p class="text-slate-500 italic text-center">
-            “Fluid, connected, and intelligent — like the octopus itself.”
-          </p>
-        </footer>
-      </article>
-    </section>
-  </main>
-
-  <!-- Site-wide footer -->
-  <footer class="mt-16 border-t border-slate-200/60 bg-slate-50/60 py-10">
-    <div class="mx-auto max-w-screen-xl px-4">
-      <div class="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
-        <div class="flex items-center gap-2">
-          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">OT</span>
-          <span class="font-display text-lg font-semibold">Octopus Tennis</span>
+  <body>
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-white/80 backdrop-blur dark:bg-slate-900/70">
+      <div class="mx-auto max-w-screen-xl px-4">
+        <div class="flex items-center justify-between py-3 lg:py-4">
+          <a href="/" class="flex items-center gap-2">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">OT</span>
+            <span class="font-display text-lg font-semibold tracking-wide">Octopus Tennis</span>
+          </a>
+          <nav id="primary-nav" aria-label="Primary" class="hidden md:flex gap-6">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/serve.html" class="nav-link">Serve</a>
+            <a href="/return-of-serve.html" class="nav-link">Return</a>
+            <a href="/forehand.html" class="nav-link">Forehand</a>
+            <a href="/backhand.html" class="nav-link">Backhand</a>
+            <a href="/strategy.html" class="nav-link text-brand-700 font-semibold" aria-current="page">Strategy</a>
+            <a href="/tactics.html" class="nav-link">Tactics</a>
+            <a href="/drills.html" class="nav-link">Drills</a>
+            <a href="/fitness.html" class="nav-link">Fitness</a>
+            <a href="/competition.html" class="nav-link">Competition</a>
+            <a href="/inspiration.html" class="nav-link">Inspiration</a>
+          </nav>
+          <button id="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"
+            class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-900 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-800">
+            <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewBox="0 0 24 24">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
         </div>
-        <nav aria-label="Primary" class="hidden gap-6 md:flex">
-          <a class="nav-link text-sm" href="/">Home</a>
-          <a class="nav-link text-sm" href="/serve.html">Serve</a>
-          <a class="nav-link text-sm" href="/return-of-serve.html">Return</a>
-          <a class="nav-link text-sm" href="/forehand.html">Forehand</a>
-          <a class="nav-link text-sm" href="/backhand.html">Backhand</a>
-          <a class="nav-link text-sm" href="/volley.html">Volley</a>
-          <a class="nav-link text-sm" href="/lob.html">Lob</a>
-          <a class="nav-link text-sm" href="/overhead.html">Overhead</a>
-          <a class="nav-link text-sm" href="/drop-shot.html">Drop Shot</a>
-          <a aria-current="page" class="nav-link text-brand-700 font-semibold text-sm" href="/strategy.html">Strategy</a>
-          <a class="nav-link text-sm" href="/tactics.html">Tactics</a>
-          <a class="nav-link text-sm" href="/drills.html">Drills</a>
-          <a class="nav-link text-sm" href="/fitness.html">Fitness</a>
-          <a class="nav-link text-sm" href="/competition.html">Competition</a>
-          <a class="nav-link text-sm" href="/inspiration.html">Inspiration</a>
-        </nav>
       </div>
-      <p class="mt-6 text-xs text-slate-500">© Octopus Tennis. All rights reserved.</p>
-    </div>
-  </footer>
+      <div id="mobile-menu" data-open="false" class="absolute inset-x-0 top-full z-30 md:hidden duration-200 invisible opacity-0 -translate-y-2 h-[calc(100dvh-64px)]">
+        <div class="mx-4 rounded-2xl border border-slate-200/60 bg-white/95 shadow-xl backdrop-blur dark:border-slate-800 dark:bg-slate-900/90 p-4">
+          <nav aria-label="Mobile" class="grid gap-2 text-base">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/serve.html" class="nav-link">Serve</a>
+            <a href="/return-of-serve.html" class="nav-link">Return</a>
+            <a href="/forehand.html" class="nav-link">Forehand</a>
+            <a href="/backhand.html" class="nav-link">Backhand</a>
+            <a href="/strategy.html" class="nav-link text-brand-700 font-semibold" aria-current="page">Strategy</a>
+            <a href="/tactics.html" class="nav-link">Tactics</a>
+            <a href="/drills.html" class="nav-link">Drills</a>
+            <a href="/fitness.html" class="nav-link">Fitness</a>
+            <a href="/competition.html" class="nav-link">Competition</a>
+            <a href="/inspiration.html" class="nav-link">Inspiration</a>
+          </nav>
+        </div>
+      </div>
+    </header>
 
-  <!-- Back to top shadow button -->
-  <script>
-  (function () {
-    if (window.__OT_BTT__) return; window.__OT_BTT__ = true;
-    var showAt = 60;
-    var host = document.createElement('div');
-    host.style.position='fixed'; host.style.bottom='20px'; host.style.right='20px';
-    host.style.zIndex='2147483647'; host.style.pointerEvents='auto';
-    document.body.appendChild(host);
-    var root = host.attachShadow({mode:'open'});
-    root.innerHTML = '<style>button{all:initial;font:600 14px/1 system-ui,-apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial;display:none;padding:.55rem .75rem;border-radius:9999px;background:#fff;color:#111;box-shadow:0 8px 24px rgba(0,0,0,.18);cursor:pointer}button.show{display:inline-block}</style><button id="btn" aria-label="Back to top">↑</button>';
-    var btn = root.getElementById('btn');
-    function y(){return window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0}
-    function onScroll(){ if(y()>showAt) btn.classList.add('show'); else btn.classList.remove('show'); }
-    window.addEventListener('scroll', onScroll, {passive:true});
-    onScroll();
-    btn.addEventListener('click', function(){ try{window.scrollTo({top:0,behavior:'smooth'})}catch(e){window.scrollTo(0,0)}; btn.blur(); });
-  })();
-  </script>
-</body>
+    <!-- Hero -->
+    <section class="bg-gradient-to-b from-brand-700 to-teal-600 text-white py-20 text-center">
+      <div class="mx-auto max-w-4xl px-4">
+        <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">Strategy</h1>
+        <p class="mt-4 text-lg text-teal-100">
+          Build smarter points. Shape rallies with intent. Control the flow of every match.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 prose">
+      <h2>Building a Strategic Mindset</h2>
+      <p>Strategy in tennis is about structure and anticipation — crafting points that play to your strengths while exposing your opponent’s weaknesses.</p>
+
+      <h3>Understanding Patterns</h3>
+      <p>Great players win not because they hit harder, but because they hit smarter. Recognize recurring situations: crosscourt exchanges, short balls, deep rally patterns. Identify what shot combinations produce the highest percentage of success for you.</p>
+
+      <h3>Adapting Mid-Match</h3>
+      <p>A strong strategy adjusts. Recognize early when a plan isn’t working, and have a backup ready. Change direction, pace, or positioning to disrupt rhythm.</p>
+
+      <h3>Energy Management</h3>
+      <p>Strategy includes pacing — knowing when to press and when to reset. Use efficient movement and shot selection to conserve stamina and stay fresh deep into matches.</p>
+    </main>
+
+    <!-- Stroke Progression (global reference) -->
+    <section id="stroke-tiers" class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12 border-t border-slate-200">
+      <header class="max-w-3xl mb-6">
+        <h2 class="text-3xl font-extrabold tracking-tight">Stroke Progression by Tier</h2>
+        <p class="mt-3 text-slate-700">
+          A quick reference for building skills in order — use it to plan sessions and keep your practice balanced.
+        </p>
+      </header>
+
+      <div class="flex flex-wrap gap-2 mb-8">
+        <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-sm font-medium">Tier 1: Fundamentals</span>
+        <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-sm font-medium">Tier 2: Offensive Development</span>
+        <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-sm font-medium">Tier 3: Advanced / Specialized</span>
+      </div>
+
+      <div class="hidden md:block">
+        <div class="overflow-hidden rounded-2xl ring-1 ring-slate-200 shadow-sm">
+          <table class="min-w-full divide-y divide-slate-200" aria-describedby="stroke-hierarchy-caption">
+            <caption id="stroke-hierarchy-caption" class="sr-only">Tennis strokes organized by tier, purpose, and coaching notes.</caption>
+            <thead class="bg-slate-50">
+              <tr>
+                <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-slate-900 sm:pl-6">Tier</th>
+                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-slate-900">Stroke</th>
+                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-slate-900">Purpose / Focus</th>
+                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-slate-900">Coaching Notes</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 bg-white">
+              <tr><td class="py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 1</td><td class="px-3 py-4 text-sm text-slate-700">Serve</td><td class="px-3 py-4 text-sm text-slate-700">Basic motion, toss control, and rhythm</td><td class="px-3 py-4 text-sm text-slate-700">Emphasize consistent contact and balanced finish</td></tr>
+              <tr><td class="py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 1</td><td class="px-3 py-4 text-sm text-slate-700">Forehand</td><td class="px-3 py-4 text-sm text-slate-700">Establish reliable baseline shot</td><td class="px-3 py-4 text-sm text-slate-700">Develop compact swing and topspin drive</td></tr>
+              <tr><td class="py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 1</td><td class="px-3 py-4 text-sm text-slate-700">Backhand</td><td class="px-3 py-4 text-sm text-slate-700">Build stable mechanics and control</td><td class="px-3 py-4 text-sm text-slate-700">Focus on early preparation and steady contact point</td></tr>
+              <tr><td class="py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 2</td><td class="px-3 py-4 text-sm text-slate-700">Return of Serve</td><td class="px-3 py-4 text-sm text-slate-700">Neutralize and start the point effectively</td><td class="px-3 py-4 text-sm text-slate-700">Compact swing, adjust grip and stance quickly</td></tr>
+              <tr><td class="py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 2</td><td class="px-3 py-4 text-sm text-slate-700">Volley</td><td class="px-3 py-4 text-sm text-slate-700">Develop net confidence and quick reactions</td><td class="px-3 py-4 text-sm text-slate-700">Keep racquet head up and movement compact</td></tr>
+              <tr><td class="py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 2</td><td class="px-3 py-4 text-sm text-slate-700">Overhead</td><td class="px-3 py-4 text-sm text-slate-700">Transition from defense to attack</td><td class="px-3 py-4 text-sm text-slate-700">Footwork under the ball, maintain rhythm like serve</td></tr>
+              <tr><td class="py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 3</td><td class="px-3 py-4 text-sm text-slate-700">Drop Shot</td><td class="px-3 py-4 text-sm text-slate-700">Change pace, bring opponent forward</td><td class="px-3 py-4 text-sm text-slate-700">Use disguise and soft hands</td></tr>
+              <tr><td class="py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 3</td><td class="px-3 py-4 text-sm text-slate-700">Lob</td><td class="px-3 py-4 text-sm text-slate-700">Reset point or attack deep</td><td class="px-3 py-4 text-sm text-slate-700">Topspin for depth, disguise when possible</td></tr>
+              <tr><td class="py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6">Tier 3</td><td class="px-3 py-4 text-sm text-slate-700">Slice Backhand</td><td class="px-3 py-4 text-sm text-slate-700">Variety and low-bouncing defense</td><td class="px-3 py-4 text-sm text-slate-700">Maintain shoulder turn and level racquet path</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="md:hidden space-y-4" aria-label="Stroke tiers (mobile)">
+        <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm"><h3 class="text-sm font-semibold text-slate-900">Tier 1: Serve</h3><p class="mt-1 text-sm text-slate-700">Basic motion, toss control, and rhythm</p><p class="mt-1 text-xs text-slate-500">Emphasize consistent contact and balanced finish</p></div>
+        <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm"><h3 class="text-sm font-semibold text-slate-900">Tier 1: Forehand</h3><p class="mt-1 text-sm text-slate-700">Establish reliable baseline shot</p><p class="mt-1 text-xs text-slate-500">Develop compact swing and topspin drive</p></div>
+        <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm"><h3 class="text-sm font-semibold text-slate-900">Tier 1: Backhand</h3><p class="mt-1 text-sm text-slate-700">Build stable mechanics and control</p><p class="mt-1 text-xs text-slate-500">Focus on early preparation and steady contact point</p></div>
+        <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm"><h3 class="text-sm font-semibold text-slate-900">Tier 2: Return of Serve</h3><p class="mt-1 text-sm text-slate-700">Neutralize and start the point effectively</p><p class="mt-1 text-xs text-slate-500">Compact swing, adjust grip and stance quickly</p></div>
+        <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm"><h3 class="text-sm font-semibold text-slate-900">Tier 2: Volley</h3><p class="mt-1 text-sm text-slate-700">Develop net confidence and quick reactions</p><p class="mt-1 text-xs text-slate-500">Keep racquet head up and movement compact</p></div>
+        <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm"><h3 class="text-sm font-semibold text-slate-900">Tier 2: Overhead</h3><p class="mt-1 text-sm text-slate-700">Transition from defense to attack</p><p class="mt-1 text-xs text-slate-500">Footwork under the ball, maintain rhythm like serve</p></div>
+        <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm"><h3 class="text-sm font-semibold text-slate-900">Tier 3: Drop Shot</h3><p class="mt-1 text-sm text-slate-700">Change pace, bring opponent forward</p><p class="mt-1 text-xs text-slate-500">Use disguise and soft hands</p></div>
+        <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm"><h3 class="text-sm font-semibold text-slate-900">Tier 3: Lob</h3><p class="mt-1 text-sm text-slate-700">Reset point or attack deep</p><p class="mt-1 text-xs text-slate-500">Topspin for depth, disguise when possible</p></div>
+        <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm"><h3 class="text-sm font-semibold text-slate-900">Tier 3: Slice Backhand</h3><p class="mt-1 text-sm text-slate-700">Variety and low-bouncing defense</p><p class="mt-1 text-xs text-slate-500">Maintain shoulder turn and level racquet path</p></div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 bg-white/80 backdrop-blur py-8 text-center text-sm text-slate-600">
+      <p>&copy; <span id="year"></span> Octopus Tennis. All rights reserved.</p>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
