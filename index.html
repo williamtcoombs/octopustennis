@@ -98,29 +98,22 @@
    Skip to content
   </a>
 
-<!-- Header / Navbar — stable rollback -->
+<!-- Header / Navbar — OT badge version (stable) -->
 <header id="site-header" class="sticky top-0 z-40 transition-all duration-300 bg-white/80 backdrop-blur dark:bg-slate-900/70">
   <div class="mx-auto max-w-screen-xl px-4">
-    <!-- grid: brand | flex-nav | buttons -->
-    <div id="header-inner" class="grid grid-cols-[auto,1fr,auto] items-center gap-3 md:gap-4 py-2 md:py-2.5 lg:py-3 w-full">
-      <!-- Brand (hard-locked icon size so it can’t explode) -->
-      <a href="/" class="flex items-center gap-2 flex-none shrink-0" aria-label="Octopus Tennis home">
-        <img
-          src="/assets/img/ot-mark.svg"
-          alt="Octopus Tennis logo"
-          width="32" height="32"
-          class="block h-8 w-8 -translate-y-[1px] shrink-0"
-          style="width:32px;height:32px;max-width:32px;max-height:32px"
-          loading="lazy"
-        />
-        <span class="font-display font-semibold tracking-wide whitespace-nowrap leading-none text-base sm:text-[1.075rem] md:text-lg">
+    <!-- grid keeps spacing tight: brand | flexible nav | buttons -->
+    <div id="header-inner" class="grid grid-cols-[auto,1fr,auto] items-center gap-3 md:gap-4 py-2.5 md:py-3 w-full">
+      <!-- Brand (OT badge) -->
+      <a href="/" class="flex items-center gap-2 shrink-0" aria-label="Octopus Tennis home">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-brand-700 text-white select-none">OT</span>
+        <span class="font-display text-lg font-semibold tracking-wide whitespace-nowrap leading-none">
           Octopus Tennis
         </span>
       </a>
 
       <!-- Desktop nav (no overlap; scrolls if tight) -->
       <nav id="primary-nav" aria-label="Primary"
-           class="hidden md:flex flex-nowrap items-center gap-3 md:gap-4 lg:gap-5 overflow-x-auto min-w-0">
+           class="hidden md:flex flex-nowrap items-center gap-4 md:gap-5 lg:gap-6 overflow-x-auto min-w-0">
         <a class="nav-link text-brand-700 font-semibold" aria-current="page" href="/">Home</a>
         <a class="nav-link" href="/serve.html">Serve</a>
         <a class="nav-link" href="/return-of-serve.html">Return</a>
@@ -138,10 +131,10 @@
         <a class="nav-link" href="/inspiration.html">Inspiration</a>
       </nav>
 
-      <!-- Buttons: hamburger flush right; JS expects this exact markup -->
-      <div class="flex items-center gap-2 md:gap-3 flex-none ml-auto">
+      <!-- Buttons (hamburger flush right; matches existing JS) -->
+      <div class="flex items-center gap-2 md:gap-3 shrink-0 ml-auto">
         <button id="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"
-                class="md:hidden inline-flex h-8 w-8 md:h-9 md:w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-900 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-800">
+                class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-900 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-800">
           <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewBox="0 0 24 24">
             <path d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
@@ -150,7 +143,7 @@
     </div>
   </div>
 
-  <!-- Mobile drawer (unchanged + compatible with your site.js) -->
+  <!-- Mobile drawer (unchanged so your site.js continues to work) -->
   <div id="mobile-menu"
        class="absolute inset-x-0 top-full z-30 md:hidden duration-200 invisible opacity-0 -translate-y-2 h-[calc(100dvh-64px)]"
        data-open="false">
@@ -175,6 +168,7 @@
     </div>
   </div>
 </header>
+
 
 
 
