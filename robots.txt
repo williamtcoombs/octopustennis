@@ -1,10 +1,10 @@
-# Allow everything in production
 User-agent: *
+# Allow all production paths
 Allow: /
 
-# Disallow internal or staging subdomains
-User-agent: *
+# Block any on-domain staging paths
 Disallow: /preview/
 Disallow: /dev/
 
+# Explicit sitemap location
 Sitemap: https://www.octopustennis.com/sitemap.xml
