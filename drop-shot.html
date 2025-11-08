@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html class="scroll-smooth" lang="en">
 <head>
   <script>
@@ -61,364 +60,376 @@
 
   <script src="/assets/site.js" defer></script>
 
-<style>/* Page-scoped: Remove faint focus/shadow ring in iOS Safari/Chrome for the mobile drawer */
-#mobile-menu a:focus,
-#mobile-menu a:focus-visible,
-#mobile-menu button:focus,
-#mobile-menu button:focus-visible {
-  outline: none;
-  box-shadow: none;
-}
-
-/* Reduce iOS tap highlight halo on links/buttons in the mobile drawer */
-#mobile-menu a, 
-#mobile-menu button {
-  -webkit-tap-highlight-color: transparent;
-}</style>
+  <style>
+  /* Page-scoped: Remove faint focus/shadow ring in iOS Safari/Chrome for the mobile drawer */
+  #mobile-menu a:focus,
+  #mobile-menu a:focus-visible,
+  #mobile-menu button:focus,
+  #mobile-menu button:focus-visible {
+    outline: none;
+    box-shadow: none;
+  }
+  /* Reduce iOS tap highlight halo on links/buttons in the mobile drawer */
+  #mobile-menu a, 
+  #mobile-menu button {
+    -webkit-tap-highlight-color: transparent;
+  }
+  </style>
 </head>
 <body class="min-h-dvh bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100 font-body typography-v1">
-<a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded-lg focus:bg-white/90 focus:px-3 focus:py-2 focus:text-slate-900" href="#main">
-   Skip to content
+  <a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded-lg focus:bg-white/90 focus:px-3 focus:py-2 focus:text-slate-900" href="#main">
+     Skip to content
   </a>
-<header class="sticky top-0 z-40 transition-all duration-300 bg-white/80 backdrop-blur dark:bg-slate-900/70" id="site-header">
-<div class="mx-auto max-w-screen-xl px-4">
-<div class="flex items-center justify-between py-3 lg:py-4" id="header-inner">
-<!-- Brand -->
-<a class="flex items-center gap-2" href="/">
-<span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">OT</span>
-<span class="font-display text-lg font-semibold tracking-wide">Octopus Tennis</span>
-</a>
-<!-- Desktop nav -->
-<nav aria-label="Primary" class="hidden gap-6 md:flex is-collapsible" id="primary-nav">
-<a class="nav-link" href="/">Home</a>
-<a class="nav-link" href="/serve.html">Serve</a>
-<a class="nav-link" href="/return-of-serve.html">Return</a>
-<a class="nav-link" href="/forehand.html">Forehand</a>
-<a class="nav-link" href="/backhand.html">Backhand</a>
-<a class="nav-link" href="/volley.html">Volley</a>
-<a class="nav-link" href="/lob.html">Lob</a>
-<a class="nav-link" href="/overhead.html">Overhead</a>
-<a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/drop-shot.html">Drop Shot</a>
-<a class="nav-link" href="/strategy.html">Strategy</a>
-<a class="nav-link" href="/tactics.html">Tactics</a>
-<a class="nav-link" href="/drills.html">Drills</a>
-<a class="nav-link" href="/fitness.html">Fitness</a>
-<a class="nav-link" href="/competition.html">Competition</a>
-<a class="nav-link" href="/inspiration.html">Inspiration</a>
-</nav>
-<!-- Buttons -->
-<div class="flex items-center gap-2 md:gap-3">
-<!-- Theme toggle intentionally disabled (light-only mode) -->
+  <header class="sticky top-0 z-40 transition-all duration-300 bg-white/80 backdrop-blur dark:bg-slate-900/70" id="site-header">
+    <div class="mx-auto max-w-screen-xl px-4">
+      <div class="flex items-center justify-between py-3 lg:py-4" id="header-inner">
+        <!-- Brand -->
+        <a class="flex items-center gap-2" href="/">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">OT</span>
+          <span class="font-display text-lg font-semibold tracking-wide">Octopus Tennis</span>
+        </a>
+        <!-- Desktop nav -->
+        <nav aria-label="Primary" class="hidden gap-6 md:flex is-collapsible" id="primary-nav">
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/serve.html">Serve</a>
+          <a class="nav-link" href="/return-of-serve.html">Return</a>
+          <a class="nav-link" href="/forehand.html">Forehand</a>
+          <a class="nav-link" href="/backhand.html">Backhand</a>
+          <a class="nav-link" href="/volley.html">Volley</a>
+          <a class="nav-link" href="/lob.html">Lob</a>
+          <a class="nav-link" href="/overhead.html">Overhead</a>
+          <a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/drop-shot.html">Drop Shot</a>
+          <a class="nav-link" href="/strategy.html">Strategy</a>
+          <a class="nav-link" href="/tactics.html">Tactics</a>
+          <a class="nav-link" href="/drills.html">Drills</a>
+          <a class="nav-link" href="/fitness.html">Fitness</a>
+          <a class="nav-link" href="/competition.html">Competition</a>
+          <a class="nav-link" href="/inspiration.html">Inspiration</a>
+        </nav>
+        <!-- Buttons -->
+        <div class="flex items-center gap-2 md:gap-3">
+          <!-- Theme toggle intentionally disabled (light-only mode) -->
+          <!-- Mobile menu toggle (no data-menu-toggle) -->
+          <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-900 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-800" id="menu-toggle" type="button">
+            <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewBox="0 0 24 24">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile drawer -->
+    <div class="absolute inset-x-0 top-full z-30 md:hidden duration-200 invisible opacity-0 -translate-y-2 h-[calc(100dvh-64px)]" data-open="false" id="mobile-menu">
+      <div class="mx-4 rounded-2xl border border-slate-200/60 bg-white/95 shadow-xl backdrop-blur dark:border-slate-800 dark:bg-slate-900/90 p-4">
+        <nav aria-label="Mobile" class="grid gap-2 text-base">
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/serve.html">Serve</a>
+          <a class="nav-link" href="/return-of-serve.html">Return</a>
+          <a class="nav-link" href="/forehand.html">Forehand</a>
+          <a class="nav-link" href="/backhand.html">Backhand</a>
+          <a class="nav-link" href="/volley.html">Volley</a>
+          <a class="nav-link" href="/lob.html">Lob</a>
+          <a class="nav-link" href="/overhead.html">Overhead</a>
+          <a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/drop-shot.html">Drop Shot</a>
+          <a class="nav-link" href="/strategy.html">Strategy</a>
+          <a class="nav-link" href="/tactics.html">Tactics</a>
+          <a class="nav-link" href="/drills.html">Drills</a>
+          <a class="nav-link" href="/fitness.html">Fitness</a>
+          <a class="nav-link" href="/competition.html">Competition</a>
+          <a class="nav-link" href="/inspiration.html">Inspiration</a>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-<!-- Mobile menu toggle (no data-menu-toggle) -->
-<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-900 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-800" id="menu-toggle" type="button">
-<svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewbox="0 0 24 24">
-<path d="M4 6h16M4 12h16M4 18h16"></path>
-</svg>
-</button>
-</div>
-</div>
-</div>
-<!-- Mobile drawer -->
-<div class="absolute inset-x-0 top-full z-30 md:hidden duration-200 invisible opacity-0 -translate-y-2 h-[calc(100dvh-64px)]" data-open="false" id="mobile-menu">
-<div class="mx-4 rounded-2xl border border-slate-200/60 bg-white/95 shadow-xl backdrop-blur dark:border-slate-800 dark:bg-slate-900/90 p-4">
-<nav aria-label="Mobile" class="grid gap-2 text-base">
-<a class="nav-link" href="/">Home</a>
-<a class="nav-link" href="/serve.html">Serve</a>
-<a class="nav-link" href="/return-of-serve.html">Return</a>
-<a class="nav-link" href="/forehand.html">Forehand</a>
-<a class="nav-link" href="/backhand.html">Backhand</a>
-<a class="nav-link" href="/volley.html">Volley</a>
-<a class="nav-link" href="/lob.html">Lob</a>
-<a class="nav-link" href="/overhead.html">Overhead</a>
-<a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/drop-shot.html">Drop Shot</a>
-<a class="nav-link" href="/strategy.html">Strategy</a>
-<a class="nav-link" href="/tactics.html">Tactics</a>
-<a class="nav-link" href="/drills.html">Drills</a>
-<a class="nav-link" href="/fitness.html">Fitness</a>
-<a class="nav-link" href="/competition.html">Competition</a>
-<a class="nav-link" href="/inspiration.html">Inspiration</a>
-</nav>
-</div>
-</div>
-</header>
-
-<!-- HERO: Generic Page -->
-<section
-  style="
-    min-height:60vh;
-    display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
-    background:linear-gradient(to bottom,#075985,#0369a1);
-    color:#ffffff;padding:80px 16px;">
-  
-  <!-- Title -->
-  <div role='heading' aria-level='1'
-       style="
-         font-family: var(--font-display, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans');
-         font-weight:800; line-height:1.1; margin:0;
-         font-size:clamp(44px,8vw,88px) !important;">
-    Drop Shot
-  </div>
-
-  <!-- Tagline -->
-  <p
+  <!-- HERO: Generic Page -->
+  <section
     style="
-      margin:22px 0 0 0; max-width:48rem; line-height:1.6; opacity:.9;
-      font-size:clamp(18px,2.2vw,24px) !important;">
-    Catch opponents off guard with touch, disguise, and perfect feel.
-  </p>
-</section>
+      min-height:60vh;
+      display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+      background:linear-gradient(to bottom,#075985,#0369a1);
+      color:#ffffff;padding:80px 16px;">
+    
+    <!-- Title -->
+    <div role='heading' aria-level='1'
+         style="
+           font-family: var(--font-display, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans');
+           font-weight:800; line-height:1.1; margin:0;
+           font-size:clamp(44px,8vw,88px) !important;">
+      Drop Shot
+    </div>
 
-
-<main class="py-10 md:max-w-4xl lg:px-8 px-4 sm:px-6 mx-auto container max-w-3xl lg:max-w-5xl" id="main">
-  <!-- Hero / Intro -->
-  <section class="mx-auto max-w-5xl mb-10">
-    <header class="mb-6">
-      <h1 class="text-4xl font-extrabold tracking-tight">Drop Shot</h1>
-      <p class="mt-3 text-slate-700">Change pace, change space. A good drop shot turns defense into doubt and draws opponents into your game.</p>
-    </header>
-  </section>
-        <br>
-        <iframe
-        src="https://www.youtube.com/embed/No9kyIayAG0"
-        title="drop shot"
-        frameborder="0"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-        </iframe>
-  <!-- Fundamentals -->
-  <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-    <h2 class="text-2xl font-bold">Drop Shot Fundamentals</h2>
-    <ul class="mt-3 list-disc pl-5 text-slate-700">
-      <li><strong>Set Up Early:</strong> Same prep as your drive—keep disguise.</li>
-      <li><strong>Soft Hands:</strong> Loosen grip at contact; let strings cradle the ball.</li>
-      <li><strong>Shape the Ball:</strong> Slightly open face, brush <em>up</em> and <em>short</em> to create lift and slow pace.</li>
-    </ul>
-    <p class="mt-3 text-slate-600">The best drop shots look like a drive until the last moment.</p>
+    <!-- Tagline -->
+    <p
+      style="
+        margin:22px 0 0 0; max-width:48rem; line-height:1.6; opacity:.9;
+        font-size:clamp(18px,2.2vw,24px) !important;">
+      Catch opponents off guard with touch, disguise, and perfect feel.
+    </p>
   </section>
 
-  <!-- When to Use It -->
-  <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-    <h2 class="text-2xl font-bold">When to Use It</h2>
-    <ul class="mt-3 list-disc pl-5 text-slate-700">
-      <li>Opponent deep behind baseline or leaning back.</li>
-      <li>After heavy cross-court patterns that push them wide.</li>
-      <li>On slower balls you can take early from inside the court.</li>
-      <li>As a tempo change to stop a hitter’s rhythm.</li>
-    </ul>
-  </section>
 
-  <!-- Technique Cues -->
-  <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-    <h2 class="text-2xl font-bold">Technique Cues</h2>
-    <ul class="mt-3 list-disc pl-5 text-slate-700">
-      <li>Contact in front with relaxed wrist; minimal follow-through.</li>
-      <li>Knife with a hint of underspin or cushion with topspin fade—choose what you control.</li>
-      <li>Aim second bounce near or before the service line.</li>
-      <li>Recover forward to cut off the reply or be ready for the lob.</li>
-    </ul>
-  </section>
+  <main class="py-10 md:max-w-4xl lg:px-8 px-4 sm:px-6 mx-auto container max-w-3xl lg:max-w-5xl" id="main">
+    <!-- Hero / Intro -->
+    <section class="mx-auto max-w-5xl mb-10">
+      <header class="mb-6">
+        <h1 class="text-4xl font-extrabold tracking-tight">Drop Shot</h1>
+        <p class="mt-3 text-slate-700">
+          Change pace, change space. A trusted drop shot turns defense into doubt and drags opponents into <em>your</em> court.
+        </p>
+        <p class="mt-3 text-slate-700"><em><strong>Coach’s Tip:</strong> As the ball crosses the net, say: “Same prep → Soft hand → Short finish.” Disguise first, feel second.</em></p>
+      </header>
+    </section>
 
-  <!-- Patterns & Decisions -->
-  <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-    <h2 class="text-2xl font-bold">Patterns & Decisions</h2>
-    <ul class="mt-3 list-disc pl-5 text-slate-700">
-      <li><strong>Heavy Cross → Drop Short:</strong> After moving them wide and back, drop into open court.</li>
-      <li><strong>Drop → Lob:</strong> If they sprint forward aggressively, lift the next ball over their backhand shoulder.</li>
-      <li><strong>Drop → Pass:</strong> If they reach but pop it up, pass to open lane; keep racquet prepared.</li>
-      <li><strong>Inside Court Read:</strong> Any ball inside the baseline and sitting high is a green light to show drop or drive.</li>
-    </ul>
-    <p class="mt-3 text-slate-600">Two-ball plans create confidence and clarity.</p>
-  </section>
+    <br>
+    <iframe
+      src="https://www.youtube.com/embed/No9kyIayAG0"
+      title="drop shot"
+      frameborder="0"
+      loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
 
-  <!-- Drills -->
-  <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-    <h2 class="text-2xl font-bold">Drills</h2>
-    <ul class="mt-3 list-disc pl-5 text-slate-700">
-      <li><strong>Cone Kiss:</strong> Place a cone 3–4 feet past the net; land ball just beyond it ×10.</li>
-      <li><strong>Disguise Series:</strong> Coach calls "drive" or "drop" late; same prep, different finish.</li>
-      <li><strong>Drop–Lob Combo:</strong> Alternate soft drop with controlled lob to train read and response.</li>
-      <li><strong>Approach Drop:</strong> Take early from inside court; follow forward and split.</li>
-    </ul>
-    <p class="mt-3 text-slate-600">Find more scoring games on the <a href="/drills.html" class="text-brand-700 underline">Drills</a> page.</p>
-  </section>
+    <!-- Fundamentals -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Drop Shot Fundamentals</h2>
+      <ul class="mt-3 list-disc pl-5 text-slate-700">
+        <li><strong>Same Setup:</strong> Prep like your drive — shoulder turn, racquet takeback — then soften late.</li>
+        <li><strong>Soft Hands:</strong> Loosen the grip at contact so the strings cradle the ball; let the ball leave quietly.</li>
+        <li><strong>Shape &amp; Height:</strong> Slightly open face; brush <em>up</em> and <em>short</em> to clear the net with spin and kill the bounce.</li>
+      </ul>
+      <p class="mt-3 text-slate-600">The best drops look like drives until the last instant.</p>
+      <p class="mt-3 text-slate-700"><em><strong>Goal:</strong> 7/10 drop shots landing within 6–8 feet of the net with the second bounce near or before the service line.</em></p>
+    </section>
 
-  <!-- Common Errors -->
-  <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-    <h2 class="text-2xl font-bold">Common Errors</h2>
-    <ul class="mt-3 list-disc pl-5 text-slate-700">
-      <li>Telegraphing early with a big grip change or open face.</li>
-      <li>Hitting too hard; ball bounces high and sits up.</li>
-      <li>Trying drop from too deep behind the baseline.</li>
-    </ul>
-    <p class="mt-3 text-slate-600">Fix it: same setup as a drive, soften the hand, and choose the right ball.</p>
-  </section>
+    <!-- When to Use It -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">When to Use It</h2>
+      <ul class="mt-3 list-disc pl-5 text-slate-700">
+        <li>Opponent is deep behind the baseline or leaning back.</li>
+        <li>After heavy cross-court patterns that push them wide.</li>
+        <li>On slower, shorter balls you can take early from inside the court.</li>
+        <li>As a tempo change to break a hitter’s rhythm.</li>
+      </ul>
+      <p class="mt-3 text-slate-700"><em><strong>Cue:</strong> Think “short to open space,” not “perfect winner.” Make them run <em>forward</em>.</em></p>
+    </section>
 
-  <!-- Checklist & Links -->
-  <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-    <h2 class="text-2xl font-bold">Drop Shot Checklist</h2>
-    <ul class="mt-3 list-disc pl-5 text-slate-700">
-      <li>⬜ Same prep as drive (disguise)</li>
-      <li>⬜ Relaxed wrist + minimal follow-through</li>
-      <li>⬜ Second bounce near service line</li>
-      <li>⬜ Ready for lob or pass on next ball</li>
-    </ul>
-    <p class="mt-3 text-slate-700">For height changes and counters, see <a href="/lob.html" class="text-brand-700 underline">Lob</a>. For finishing options, visit <a href="/volley.html" class="text-brand-700 underline">Volley</a>. For point construction, check <a href="/tactics.html" class="text-brand-700 underline">Tactics</a>.</p>
-  </section>
-</main>
+    <!-- Technique Cues -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Technique Cues</h2>
+      <ul class="mt-3 list-disc pl-5 text-slate-700">
+        <li>Contact in front with a relaxed wrist; finish compact — no big follow-through.</li>
+        <li>Knife a touch of underspin (control) or cushion with a topspin fade (disguise) — choose the one you repeat.</li>
+        <li>Second bounce target: near or before the service line.</li>
+        <li>Recover forward: cut off the reply or be ready for the lob.</li>
+      </ul>
+      <p class="mt-3 text-slate-600">If you feel tense, exhale on contact and hold the finish for a one-count.</p>
+    </section>
 
-<footer class="mt-16 border-t border-slate-200/60 bg-slate-50/60 py-10 dark:border-slate-800 dark:bg-slate-900/40">
-<div class="mx-auto max-w-screen-xl px-4">
-<div class="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
-<div class="flex items-center gap-2">
-<span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">
-       OT
-      </span>
-<span class="font-display text-lg font-semibold">
-       Octopus Tennis
-      </span>
-</div>
-<nav aria-label="Primary" class="hidden gap-6 md:flex">
-<a class="nav-link text-sm dark:text-slate-200" href="/">
-       Home
-      </a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/serve.html">
-       Serve
-      </a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/return-of-serve.html">
-       Return
-      </a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/forehand.html">
-       Forehand
-      </a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/backhand.html">
-       Backhand
-      </a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/volley.html">
-       Volley
-      </a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/lob.html">
-       Lob
-      </a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/overhead.html">
-       Overhead
-      </a>
-<a aria-current="page" class="nav-link text-brand-700 font-semibold text-sm dark:text-slate-200" href="/drop-shot.html">Drop Shot</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/strategy.html">
-       Strategy
-      </a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/tactics.html">
-       Tactics
-      </a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/drills.html">
-       Drills
-      </a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/fitness.html">
-       Fitness
-      </a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/competition.html">
-       Competition
-      </a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/inspiration.html">
-       Inspiration
-      </a>
-</nav>
-</div>
-<p class="mt-6 text-xs text-slate-500">
-     © Octopus Tennis. All rights reserved.</p>
-</div>
-</footer>
-<script>
-   (function () {
-  function sample(el) {
-    if (!el) return "(n/a)";
-    return window.getComputedStyle(el).fontFamily;
-  }
-  function log() {
-    var body = document.body;
-    var h1 = document.querySelector("h1");
-    var p = document.querySelector("p");
-    var info = {
-      body: sample(body),
-      h1: sample(h1),
-      p: sample(p)
-    };
-    console.log("[FontCheck]", info);
-    // visible, non-intrusive badge for quick glance
-    var badge = document.createElement('div');
-    badge.textContent = 'Fonts ✓';
-    badge.style.position = 'fixed';
-    badge.style.bottom = '10px';
-    badge.style.right = '10px';
-    badge.style.padding = '4px 8px';
-    badge.style.background = 'rgba(0,0,0,0.6)';
-    badge.style.color = '#fff';
-    badge.style.fontSize = '12px';
-    badge.style.borderRadius = '6px';
-    badge.style.zIndex = '99999';
-    badge.title = 'Open DevTools console to see computed font-family for body/h1/p';
-    document.body.appendChild(badge);
-    setTimeout(function(){ badge.remove(); }, 3500);
-  }
-  if (document.readyState === "complete" || document.readyState === "interactive") {
-    setTimeout(log, 0);
-  } else {
-    document.addEventListener("DOMContentLoaded", log);
-  }
-})();
-  </script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var btn = document.getElementById('menu-toggle');
-    var drawer = document.getElementById('mobile-menu');
-    if (!btn || !drawer) return;
+    <!-- Patterns & Decisions -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Patterns &amp; Decisions</h2>
+      <ul class="mt-3 list-disc pl-5 text-slate-700">
+        <li><strong>Heavy Cross → Drop Short:</strong> After moving them back and wide, drop into the open court.</li>
+        <li><strong>Drop → Lob:</strong> If they sprint forward aggressively, lift the next ball over the backhand shoulder.</li>
+        <li><strong>Drop → Pass:</strong> If they reach and float it, pass to the open lane. Racquet ready.</li>
+        <li><strong>Inside-Court Read:</strong> Any ball inside the baseline and sitting high is a green light to show drop or drive.</li>
+      </ul>
+      <p class="mt-3 text-slate-600">Two-ball plans create confidence and clarity under pressure.</p>
+    </section>
 
-    function setOpen(open) {
-      drawer.setAttribute('data-open', open ? 'true' : 'false');
-      btn.setAttribute('aria-expanded', String(open));
+    <!-- Drills -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Drills</h2>
+      <ul class="mt-3 list-disc pl-5 text-slate-700">
+        <li><strong>Cone Kiss:</strong> Place a cone 3–4 feet past the net; land the ball just beyond it ×10.</li>
+        <li><strong>Disguise Series:</strong> Coach calls “drive” or “drop” late — same prep, different finish.</li>
+        <li><strong>Drop–Lob Combo:</strong> Alternate soft drop with controlled lob to train read and response.</li>
+        <li><strong>Approach Drop:</strong> Take early from inside the court; follow forward and split.</li>
+      </ul>
+      <p class="mt-3 text-slate-600">Find more scoring games on the <a href="/drills.html" class="text-brand-700 underline">Drills</a> page.</p>
+      <p class="mt-3 text-slate-700"><em><strong>Weekly Challenge:</strong> Win 60% of points in practice where you attempt at least one drop shot by pairing it with a lob or pass on the next ball.</em></p>
+    </section>
 
-      if (open) {
-        drawer.removeAttribute('hidden');
-        if (drawer.classList) drawer.classList.remove('hidden');
-        if (window.innerWidth < 1024) drawer.style.display = 'block';
+    <!-- Common Errors -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Common Errors</h2>
+      <ul class="mt-3 list-disc pl-5 text-slate-700">
+        <li>Telegraphing early with a big grip change or open face.</li>
+        <li>Hitting too hard — high, sit-up bounces that get punished.</li>
+        <li>Trying the drop from too deep behind the baseline.</li>
+      </ul>
+      <p class="mt-3 text-slate-700"><em><strong>Fix:</strong> Film 10 attempts. Grade: disguise (same prep), contact softness, second-bounce spot, recovery path.</em></p>
+    </section>
+
+    <!-- Checklist & Links -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Drop Shot Checklist</h2>
+      <ul class="mt-3 list-disc pl-5 text-slate-700">
+        <li>⬜ Same prep as drive (disguise)</li>
+        <li>⬜ Relaxed wrist + minimal follow-through</li>
+        <li>⬜ Second bounce near service line</li>
+        <li>⬜ Ready for lob or pass on next ball</li>
+      </ul>
+      <p class="mt-3 text-slate-700">
+        For height changes and counters, see <a href="/lob.html" class="text-brand-700 underline">Lob</a>. For finishing options, visit <a href="/volley.html" class="text-brand-700 underline">Volley</a>. For point construction with variety, explore <a href="/tactics.html" class="text-brand-700 underline">Tactics</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer class="mt-16 border-t border-slate-200/60 bg-slate-50/60 py-10 dark:border-slate-800 dark:bg-slate-900/40">
+    <div class="mx-auto max-w-screen-xl px-4">
+      <div class="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
+        <div class="flex items-center gap-2">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">
+            OT
+          </span>
+          <span class="font-display text-lg font-semibold">
+            Octopus Tennis
+          </span>
+        </div>
+        <nav aria-label="Primary" class="hidden gap-6 md:flex">
+          <a class="nav-link text-sm dark:text-slate-200" href="/">
+            Home
+          </a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/serve.html">
+            Serve
+          </a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/return-of-serve.html">
+            Return
+          </a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/forehand.html">
+            Forehand
+          </a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/backhand.html">
+            Backhand
+          </a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/volley.html">
+            Volley
+          </a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/lob.html">
+            Lob
+          </a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/overhead.html">
+            Overhead
+          </a>
+          <a aria-current="page" class="nav-link text-brand-700 font-semibold text-sm dark:text-slate-200" href="/drop-shot.html">Drop Shot</a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/strategy.html">
+            Strategy
+          </a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/tactics.html">
+            Tactics
+          </a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/drills.html">
+            Drills
+          </a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/fitness.html">
+            Fitness
+          </a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/competition.html">
+            Competition
+          </a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/inspiration.html">
+            Inspiration
+          </a>
+        </nav>
+      </div>
+      <p class="mt-6 text-xs text-slate-500">
+        © Octopus Tennis. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      function sample(el) {
+        if (!el) return "(n/a)";
+        return window.getComputedStyle(el).fontFamily;
+      }
+      function log() {
+        var body = document.body;
+        var h1 = document.querySelector("h1");
+        var p = document.querySelector("p");
+        var info = {
+          body: sample(body),
+          h1: sample(h1),
+          p: sample(p)
+        };
+        console.log("[FontCheck]", info);
+        // visible, non-intrusive badge for quick glance
+        var badge = document.createElement('div');
+        badge.textContent = 'Fonts ✓';
+        badge.style.position = 'fixed';
+        badge.style.bottom = '10px';
+        badge.style.right = '10px';
+        badge.style.padding = '4px 8px';
+        badge.style.background = 'rgba(0,0,0,0.6)';
+        badge.style.color = '#fff';
+        badge.style.fontSize = '12px';
+        badge.style.borderRadius = '6px';
+        badge.style.zIndex = '99999';
+        badge.title = 'Open DevTools console to see computed font-family for body/h1/p';
+        document.body.appendChild(badge);
+        setTimeout(function(){ badge.remove(); }, 3500);
+      }
+      if (document.readyState === "complete" || document.readyState === "interactive") {
+        setTimeout(log, 0);
       } else {
-        drawer.setAttribute('hidden', '');
-        if (drawer.classList) drawer.classList.add('hidden');
-        drawer.style.display = '';
+        document.addEventListener("DOMContentLoaded", log);
+      }
+    })();
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var btn = document.getElementById('menu-toggle');
+      var drawer = document.getElementById('mobile-menu');
+      if (!btn || !drawer) return;
+
+      function setOpen(open) {
+        drawer.setAttribute('data-open', open ? 'true' : 'false');
+        btn.setAttribute('aria-expanded', String(open));
+
+        if (open) {
+          drawer.removeAttribute('hidden');
+          if (drawer.classList) drawer.classList.remove('hidden');
+          if (window.innerWidth < 1024) drawer.style.display = 'block';
+        } else {
+          drawer.setAttribute('hidden', '');
+          if (drawer.classList) drawer.classList.add('hidden');
+          drawer.style.display = '';
+        }
+
+        drawer.classList.toggle('invisible', !open);
+        drawer.classList.toggle('opacity-0', !open);
+        drawer.classList.toggle('-translate-y-2', !open);
       }
 
-      drawer.classList.toggle('invisible', !open);
-      drawer.classList.toggle('opacity-0', !open);
-      drawer.classList.toggle('-translate-y-2', !open);
-    }
+      btn.addEventListener('click', function () {
+        var open = drawer.getAttribute('data-open') === 'true';
+        setOpen(!open);
+      });
 
-    btn.addEventListener('click', function () {
-      var open = drawer.getAttribute('data-open') === 'true';
-      setOpen(!open);
+      setOpen(false);
     });
-
-    setOpen(false);
-  });
-</script>
-<script>
-(function () {
-  if (window.__TC_BTT_SHADOW__) return;
-  window.__TC_BTT_SHADOW__ = true;
-  var showAt = 60;
-  var host = document.createElement('div');
-  host.style.position='fixed'; host.style.bottom='20px'; host.style.right='20px';
-  host.style.zIndex='2147483647'; host.style.pointerEvents='auto';
-  document.body.appendChild(host);
-  var root = host.attachShadow({mode:'open'});
-  root.innerHTML = '<style>button{all:initial;font:600 14px/1 system-ui,-apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial;display:none;padding:.55rem .75rem;border-radius:9999px;background:#fff;color:#111;box-shadow:0 8px 24px rgba(0,0,0,.18);cursor:pointer}button.show{display:inline-block}</style><button id="btn" aria-label="Back to top">↑</button>';
-  var btn = root.getElementById('btn');
-  function y(){return window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0}
-  function onScroll(){ if(y()>showAt) btn.classList.add('show'); else btn.classList.remove('show'); }
-  window.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
-  btn.addEventListener('click', function(){ try{window.scrollTo({top:0,behavior:'smooth'})}catch(e){window.scrollTo(0,0)}; btn.blur(); });
-})();
-</script>
+  </script>
+  <script>
+    (function () {
+      if (window.__TC_BTT_SHADOW__) return;
+      window.__TC_BTT_SHADOW__ = true;
+      var showAt = 60;
+      var host = document.createElement('div');
+      host.style.position='fixed'; host.style.bottom='20px'; host.style.right='20px';
+      host.style.zIndex='2147483647'; host.style.pointerEvents='auto';
+      document.body.appendChild(host);
+      var root = host.attachShadow({mode:'open'});
+      root.innerHTML = '<style>button{all:initial;font:600 14px/1 system-ui,-apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial;display:none;padding:.55rem .75rem;border-radius:9999px;background:#fff;color:#111;box-shadow:0 8px 24px rgba(0,0,0,.18);cursor:pointer}button.show{display:inline-block}</style><button id="btn" aria-label="Back to top">↑</button>';
+      var btn = root.getElementById('btn');
+      function y(){return window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0}
+      function onScroll(){ if(y()>showAt) btn.classList.add('show'); else btn.classList.remove('show'); }
+      window.addEventListener('scroll', onScroll, {passive:true});
+      onScroll();
+      btn.addEventListener('click', function(){ try{window.scrollTo({top:0,behavior:'smooth'})}catch(e){window.scrollTo(0,0)}; btn.blur(); });
+    })();
+  </script>
 </body>
 </html>
