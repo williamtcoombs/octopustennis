@@ -73,7 +73,13 @@
 #mobile-menu a, 
 #mobile-menu button {
   -webkit-tap-highlight-color: transparent;
-}</style>
+}
+
+/* Lightweight responsive helper for inline iframes (keeps original structure intact) */
+.video-wrap{position:relative;width:100%;height:0;padding-bottom:56.25%;border-radius:0.75rem;overflow:hidden;border:1px solid rgba(100,116,139,.35);background:#fff;box-shadow:0 1px 2px rgba(15,23,42,.05)}
+.video-wrap>iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-caption{margin-top:.5rem;color:#334155;font-size:.875rem}
+</style>
 </head>
 <body class="min-h-dvh bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100 font-body typography-v1">
 <a class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 bg-white dark:bg-slate-900 px-3 py-2 rounded-md shadow" href="#main">Skip to content</a>
@@ -109,7 +115,7 @@
 
 <!-- Mobile menu toggle (no data-menu-toggle) -->
 <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-900 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-800" id="menu-toggle" type="button">
-<svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewbox="0 0 24 24">
+<svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewBox="0 0 24 24">
 <path d="M4 6h16M4 12h16M4 18h16"></path>
 </svg>
 </button>
@@ -176,30 +182,36 @@
       <p class="mt-3 text-slate-700">
         Own the high ball. Read early, move your feet, and finish above contact with calm hands. Your overhead should feel like a <em>serve in the air</em>.
       </p>
-      <p class="mt-3 text-slate-700"><em><strong>Coach’s Tip:</strong> Say this as the lob goes up: “Turn → Track → Up.” Eyes steady, compact swing, big target.</em></p>
+      <p class="mt-3 text-slate-700"><em><strong>Coach’s Cue:</strong> “Turn → Track → Up.” Eyes steady, compact swing, big target.</em></p>
     </header>
   </section>
 
-  <br>
-  <iframe
-    src="https://www.youtube.com/embed/SUancsyW1HI"
-    title="overhead"
-    frameborder="0"
-    loading="lazy"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
+  <!-- Video Coaching Insight (kept, made responsive, with caption + slow‑mo tip) -->
+  <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+    <h2 class="text-2xl font-bold">Video Coaching Insight</h2>
+    <div class="video-wrap mt-4">
+      <iframe
+        src="https://www.youtube.com/embed/SUancsyW1HI"
+        title="overhead"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <p class="video-caption">Track with the off‑hand, turn early, and contact high with a simple, serve‑like motion.</p>
+    <p class="mt-3 text-slate-700 italic"><strong>Coach’s Tip:</strong> Watch in <span class='whitespace-nowrap'>0.75×</span> for footwork rhythm; drop to <span class='whitespace-nowrap'>0.5×</span> to check contact height and follow‑through.</p>
+  </section>
 
   <!-- Overhead Fundamentals -->
   <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
     <h2 class="text-2xl font-bold">Overhead Fundamentals</h2>
     <ul class="mt-3 list-disc pl-5 text-slate-700">
       <li><strong>Read Early:</strong> Track the lob off the strings and turn the shoulders immediately.</li>
-      <li><strong>Side-On:</strong> Racquet up; non-dominant hand points to the ball to keep spacing.</li>
+      <li><strong>Side‑On:</strong> Racquet up; non‑dominant hand points to the ball to keep spacing.</li>
       <li><strong>Contact High:</strong> Strike fully extended, slightly in front; finish through your target.</li>
     </ul>
     <p class="mt-3 text-slate-600">Simple rule: turn, track, and take it high.</p>
-    <p class="mt-3 text-slate-700"><em><strong>Goal:</strong> Convert 8/10 sitter overheads to deep middle or clean angle without clipping the tape.</em></p>
+    <p class="mt-3 text-slate-700"><em><strong>Team Standard:</strong> Convert 8/10 sitter overheads to deep middle or clean angle without clipping the tape.</em></p>
   </section>
 
   <!-- Footwork & Positioning -->
@@ -217,11 +229,11 @@
   <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
     <h2 class="text-2xl font-bold">Contact &amp; Cueing</h2>
     <ul class="mt-3 list-disc pl-5 text-slate-700">
-      <li>Keep the off-hand up until the last moment; pull it down to trigger rotation.</li>
-      <li>Compact, over-the-head path — no wind-up. Think “serve in the air.”</li>
+      <li>Keep the off‑hand up until the last moment; pull it down to trigger rotation.</li>
+      <li>Compact, over‑the‑head path — no wind‑up. Think “serve in the air.”</li>
       <li>Pick a big target: deep middle or into open court.</li>
     </ul>
-    <p class="mt-3 text-slate-700"><em><strong>Reset Cue:</strong> Exhale as you load under the ball → say “Up” at contact → hold your finish for a one-count.</em></p>
+    <p class="mt-3 text-slate-700"><em><strong>Reset Cue:</strong> Exhale as you load under the ball → say “Up” at contact → hold your finish for a one‑count.</em></p>
   </section>
 
   <!-- Overhead Types -->
@@ -230,27 +242,33 @@
     <div class="mt-4 grid gap-4">
       <div class="rounded-xl border border-slate-200 p-4">
         <h3 class="font-semibold">Standard Overhead</h3>
-        <p class="text-slate-700">Taken high and in front at mid-net or closer. Step through and finish to deep middle or angle away.</p>
+        <p class="text-slate-700">Taken high and in front at mid‑net or closer. Step through and finish to deep middle or angle away.</p>
+        <p class="mt-2 text-slate-700 italic"><strong>Goal:</strong> 8/10 to deep middle with height over the net‑strap.</p>
       </div>
       <div class="rounded-xl border border-slate-200 p-4">
-        <h3 class="font-semibold">Scissor-Kick Overhead</h3>
-        <p class="text-slate-700">Moving back? Jump with a rear-to-front scissor action to transfer weight forward through contact.</p>
+        <h3 class="font-semibold">Scissor‑Kick Overhead</h3>
+        <p class="text-slate-700">Moving back? Jump with a rear‑to‑front scissor action to transfer weight forward through contact.</p>
+        <p class="mt-2 text-slate-700 italic"><strong>Goal:</strong> Land moving forward after contact 7/10 reps.</p>
       </div>
       <div class="rounded-xl border border-slate-200 p-4">
-        <h3 class="font-semibold">Bounce (Let-It-Bounce) Overhead</h3>
-        <p class="text-slate-700">If late or wind-affected, let it bounce, get behind it, then strike like a high forehand/serve hybrid.</p>
+        <h3 class="font-semibold">Bounce (Let‑It‑Bounce) Overhead</h3>
+        <p class="text-slate-700">If late or wind‑affected, let it bounce, get behind it, then strike like a high forehand/serve hybrid.</p>
+        <p class="mt-2 text-slate-700 italic"><strong>Goal:</strong> 6/8 clean put‑aways after a controlled bounce.</p>
       </div>
       <div class="rounded-xl border border-slate-200 p-4">
         <h3 class="font-semibold">Defensive Overhead</h3>
         <p class="text-slate-700">Under pressure? Play deep middle with height to reset; don’t force the winner.</p>
+        <p class="mt-2 text-slate-700 italic"><strong>Goal:</strong> 7/10 successful resets that keep you in offense after the next ball.</p>
       </div>
       <div class="rounded-xl border border-slate-200 p-4">
         <h3 class="font-semibold">Swinging Volley Overhead</h3>
         <p class="text-slate-700">Ball high and sitting? Use a compact forehand swing above shoulder height; drive to open court.</p>
+        <p class="mt-2 text-slate-700 italic"><strong>Goal:</strong> 6/8 finished to space with balanced recovery.</p>
       </div>
       <div class="rounded-xl border border-slate-200 p-4">
         <h3 class="font-semibold">Backpedal Overhead (Emergency)</h3>
         <p class="text-slate-700">When you can’t turn in time: short steps back, eyes steady, shorten swing, play to big margin.</p>
+        <p class="mt-2 text-slate-700 italic"><strong>Goal:</strong> No more than 1 miss into the tape per set from this pattern.</p>
       </div>
     </div>
   </section>
@@ -263,15 +281,15 @@
       <li><strong>Drop → Lob Read:</strong> After a short ball, expect another lob — be ready to turn instantly.</li>
       <li><strong>Follow Forward:</strong> Overhead to deep middle → close the net and split for the next ball.</li>
     </ul>
-    <p class="mt-3 text-slate-700"><em><strong>Goal:</strong> On a two-ball pattern, win 7/10 points when the first overhead goes deep middle.</em></p>
+    <p class="mt-3 text-slate-700"><em><strong>Goal:</strong> On a two‑ball pattern, win 7/10 points when the first overhead goes deep middle.</em></p>
   </section>
 
   <!-- Drills -->
   <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
     <h2 class="text-2xl font-bold">Drills</h2>
     <ul class="mt-3 list-disc pl-5 text-slate-700">
-      <li><strong>Turn &amp; Track Series:</strong> Coach lobs alternating sides; player turns, points with off-hand, finishes high.</li>
-      <li><strong>Scissor-Kick Ladder:</strong> Progressive deeper lobs — execute scissor and land moving forward.</li>
+      <li><strong>Turn &amp; Track Series:</strong> Coach lobs alternating sides; player turns, points with off‑hand, finishes high.</li>
+      <li><strong>Scissor‑Kick Ladder:</strong> Progressive deeper lobs — execute scissor and land moving forward.</li>
       <li><strong>Bounce Overhead:</strong> Let it bounce by design; step behind and strike through target.</li>
       <li><strong>Deep Middle First:</strong> First overhead to deep center, second to angle — repeat.</li>
     </ul>
@@ -287,7 +305,7 @@
       <li>Huge backswing that ruins timing.</li>
       <li>Hitting down too steeply and clipping the tape.</li>
     </ul>
-    <p class="mt-3 text-slate-700"><em><strong>Fix:</strong> Film 10 overheads. Grade: early turn, spacing with off-hand, contact height, follow-through direction.</em></p>
+    <p class="mt-3 text-slate-700"><em><strong>Fix:</strong> Film 10 overheads. Grade: early turn, spacing with off‑hand, contact height, follow‑through direction.</em></p>
   </section>
 
   <!-- Checklist & Links -->
@@ -295,7 +313,7 @@
     <h2 class="text-2xl font-bold">Overhead Checklist</h2>
     <ul class="mt-3 list-disc pl-5 text-slate-700">
       <li>⬜ Immediate shoulder turn</li>
-      <li>⬜ Point with off-hand; contact high and in front</li>
+      <li>⬜ Point with off‑hand; contact high and in front</li>
       <li>⬜ First target deep middle</li>
       <li>⬜ Recover forward and split</li>
     </ul>
