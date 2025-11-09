@@ -1,85 +1,312 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Drills | Octopus Tennis</title>
+  <script>
+    /* Light-only mode guard (standardized). */
+    (function () {
+      try {
+        var root = document.documentElement;
+        if (root && root.classList) root.classList.remove('dark');
+        if (typeof localStorage !== 'undefined') {
+          localStorage.setItem('theme', 'light');
+        }
+      } catch (_) {}
+    })();
+  </script>
+
+  <!-- Meta -->
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <!-- SEO core: title, description, canonical, OG/Twitter (standardized) -->
+  <title>Drills — Octopus Tennis</title>
+  <meta name="description" content="Turn strategy and tactics into skill with structured, measurable training sessions and match‑ready games." />
+  <link rel="canonical" href="https://www.octopustennis.com/drills.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Octopus Tennis" />
+  <meta property="og:title" content="Drills — Octopus Tennis" />
+  <meta property="og:description" content="Turn strategy and tactics into skill with structured, measurable training sessions and match‑ready games." />
+  <meta property="og:url" content="https://www.octopustennis.com/drills.html" />
+  <meta property="og:image" content="https://www.octopustennis.com/assets/img/og-default.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Drills — Octopus Tennis" />
+  <meta name="twitter:description" content="Turn strategy and tactics into skill with structured, measurable training sessions and match‑ready games." />
+  <meta name="twitter:image" content="https://www.octopustennis.com/assets/img/og-default.png" />
+
+  <!-- Theme color (sitewide standard) -->
+  <meta name="theme-color" content="#0369a1">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-512x512.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&amp;family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/site.css" />
+
+  <script src="/assets/site.js" defer></script>
+
+  <style>
+    /* Page-scoped helpers only; keep global site design intact */
+    #mobile-menu a:focus, #mobile-menu a:focus-visible, #mobile-menu button:focus, #mobile-menu button:focus-visible { outline: none; box-shadow: none; }
+    #mobile-menu a, #mobile-menu button { -webkit-tap-highlight-color: transparent; }
+    .callout{border:1px solid rgba(100,116,139,.35);background:#fff;border-radius:.75rem;padding:1rem;box-shadow:0 1px 2px rgba(15,23,42,.05)}
+    .metric{background:rgba(3,105,161,.08);border:1px solid rgba(3,105,161,.22);padding:.4rem .6rem;border-radius:.65rem;display:inline-block;font-size:.9rem}
+      .pill{display:inline-block;font-size:.72rem;line-height:1;padding:.18rem .5rem;border-radius:9999px;border:1px solid rgba(100,116,139,.35);background:rgba(148,163,184,.08);color:#334155;margin-left:.4rem;vertical-align:middle;white-space:nowrap}
+    .pill-percentages{border-color:rgba(15,23,42,.25);background:rgba(15,23,42,.06)}
+    .pill-pressure{border-color:rgba(3,105,161,.28);background:rgba(3,105,161,.08)}
+    .pill-patience{border-color:rgba(217,119,6,.28);background:rgba(217,119,6,.10)}
+    .pill-position{border-color:rgba(16,185,129,.28);background:rgba(16,185,129,.10)}
+  </style>
 </head>
-<body>
-  <main class="prose mx-auto px-4 py-10">
-    <h1>Drills</h1>
-    <p class="text-lg font-semibold text-slate-700">Every drill connects to match habits — train the way you play, measure your improvement, and repeat your best patterns until they’re automatic.</p>
-    <p>Turn strategy and tactics into skill through structured, measurable training. Each drill connects to one of the four pillars—Percentages, Pressure, Patience, Position—and includes a clear cue, goal, and scoring method. Use the time blocks below to organize a productive practice.</p>
+<body class="min-h-dvh bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100 font-body typography-v1">
+  <a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded-lg focus:bg-white/90 focus:px-3 focus:py-2 focus:text-slate-900" href="#main">Skip to content</a>
 
-    <h2>📅 Ready-to-Run Session Plans</h2>
+  <!-- Header / Navbar (kept) -->
+  <header class="sticky top-0 z-40 transition-all duration-300 bg-white/80 backdrop-blur dark:bg-slate-900/70" id="site-header">
+    <div class="mx-auto max-w-screen-xl px-4">
+      <div class="flex items-center justify-between py-3 lg:py-4" id="header-inner">
+        <a class="flex items-center gap-2" href="/"><span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">OT</span><span class="font-display text-lg font-semibold tracking-wide">Octopus Tennis</span></a>
+        <nav aria-label="Primary" class="hidden gap-6 md:flex is-collapsible" id="primary-nav">
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/serve.html">Serve</a>
+          <a class="nav-link" href="/return-of-serve.html">Return</a>
+          <a class="nav-link" href="/forehand.html">Forehand</a>
+          <a class="nav-link" href="/backhand.html">Backhand</a>
+          <a class="nav-link" href="/volley.html">Volley</a>
+          <a class="nav-link" href="/lob.html">Lob</a>
+          <a class="nav-link" href="/overhead.html">Overhead</a>
+          <a class="nav-link" href="/strategy.html">Strategy</a>
+          <a class="nav-link" href="/tactics.html">Tactics</a>
+          <a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/drills.html">Drills</a>
+          <a class="nav-link" href="/fitness.html">Fitness</a>
+          <a class="nav-link" href="/competition.html">Competition</a>
+          <a class="nav-link" href="/inspiration.html">Inspiration</a>
+        </nav>
+        <div class="flex items-center gap-2 md:gap-3">
+          <button id="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-900 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-800">
+            <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" data-open="false" class="absolute inset-x-0 top-full z-30 md:hidden duration-200 invisible opacity-0 -translate-y-2 h-[calc(100dvh-64px)]">
+      <div class="mx-4 rounded-2xl border border-slate-200/60 bg-white/95 shadow-xl backdrop-blur dark:border-slate-800 dark:bg-slate-900/90 p-4">
+        <nav aria-label="Mobile" class="grid gap-2 text-base">
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/serve.html">Serve</a>
+          <a class="nav-link" href="/return-of-serve.html">Return</a>
+          <a class="nav-link" href="/forehand.html">Forehand</a>
+          <a class="nav-link" href="/backhand.html">Backhand</a>
+          <a class="nav-link" href="/volley.html">Volley</a>
+          <a class="nav-link" href="/lob.html">Lob</a>
+          <a class="nav-link" href="/overhead.html">Overhead</a>
+          <a class="nav-link" href="/strategy.html">Strategy</a>
+          <a class="nav-link" href="/tactics.html">Tactics</a>
+          <a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/drills.html">Drills</a>
+          <a class="nav-link" href="/fitness.html">Fitness</a>
+          <a class="nav-link" href="/competition.html">Competition</a>
+          <a class="nav-link" href="/inspiration.html">Inspiration</a>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-    <h3>60-Minute Session (Efficient Focus)</h3>
-    <ul>
-      <li><strong>0–10 min:</strong> Dynamic warm-up and footwork ladder — rhythm, balance, reaction.</li>
-      <li><strong>10–25 min:</strong> Serve+1 ladder — track win% and depth (65–70% goal).</li>
-      <li><strong>25–35 min:</strong> Return+1 and deep middle rally — neutralize 7/10 serves.</li>
-      <li><strong>35–50 min:</strong> Net transition series — approach + volley + overhead chain.</li>
-      <li><strong>50–60 min:</strong> Pressure ladder — 10-point tiebreak simulation, emotional control focus.</li>
-    </ul>
+  <!-- HERO: Generic Page -->
+  <section style="min-height:60vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(to bottom,#075985,#0369a1);color:#ffffff;padding:80px 16px;">
+    <div role='heading' aria-level='1' style="font-family: var(--font-display, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans');font-weight:800; line-height:1.1; margin:0;font-size:clamp(44px,8vw,88px) !important;">Drills</div>
+    <p style="margin:22px 0 0 0; max-width:48rem; line-height:1.6; opacity:.9;font-size:clamp(18px,2.2vw,24px) !important;">Every drill connects to match habits — train the way you play, measure your improvement, and repeat your best patterns until they’re automatic.</p>
+  </section>
 
-    <h3>90-Minute Session (Comprehensive Development)</h3>
-    <ul>
-      <li><strong>0–10 min:</strong> Movement prep and shadow rally (split, load, recover).</li>
-      <li><strong>10–25 min:</strong> Serve targets + Serve+1 play (20 serves/side, log make% and point result).</li>
-      <li><strong>25–45 min:</strong> Return + Neutral to Offense drill (deep middle → angle pattern).</li>
-      <li><strong>45–60 min:</strong> Transition & Net + Doubles game pattern (approach, close, finish).</li>
-      <li><strong>60–75 min:</strong> Pressure games — first-ball margin, deuce/ad ladder, momentum shift control.</li>
-      <li><strong>75–90 min:</strong> Fitness finisher — on-court sprints, toss recovery, and reflection journal.</li>
-    </ul>
+  <!-- Main Content -->
+  <main class="py-10 md:max-w-4xl lg:px-8 px-4 sm:px-6 mx-auto container max-w-3xl lg:max-w-5xl" id="main">
 
-    <p>Each session can be scaled: reduce reps for early season, extend live points for match prep. Rotate drill blocks weekly to target different tactical themes.</p>
+    <!-- Intro -->
+    <section class="mx-auto max-w-5xl mb-10">
+      <header class="mb-6">
+        <h1 class="text-4xl font-extrabold tracking-tight">Drills</h1>
+        <p class="mt-3 text-slate-700">Turn strategy and tactics into skill through structured, measurable training. Each drill ties to a Strategy pillar and a Tactics module with a clear cue, goal, and scoring method.</p>
+      </header>
+      <div class="mt-2 text-sm text-slate-600 flex flex-wrap items-center gap-2" aria-label="Pillars legend">
+        <span class="pill pill-percentages">Percentages</span>
+        <span class="pill pill-pressure">Pressure</span>
+        <span class="pill pill-patience">Patience</span>
+        <span class="pill pill-position">Position</span>
+      </div>
+    </section>
 
-    <h2>🎯 Foundation Drills</h2>
-    <p>Warm up with consistency and feel. Build rhythm, timing, and court awareness before layering in pressure.</p>
-    <ul>
-      <li><strong>Mini-Tennis Groove:</strong> rally 50 continuous balls inside service boxes, no misses. Cue: “Lift and land.”</li>
-      <li><strong>Middle Control Rally:</strong> 3×2 min intervals aiming deep middle. Goal: 80% clearance, 3 ft over net.</li>
-      <li><strong>Cross/Line Alternation:</strong> 10-ball sequences alternating targets. Track pattern success.</li>
-    </ul>
+    <!-- Session Plans -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Ready‑to‑Run Session Plans</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-2">
+        <div class="callout">
+          <h3 class="font-semibold">60‑Minute Session (Efficient Focus)</h3>
+          <ul class="mt-2 list-disc pl-5 text-slate-700">
+            <li><strong>0–10 min:</strong> Dynamic warm‑up & footwork ladder — rhythm, balance, reaction.</li>
+            <li><strong>10–25 min:</strong> Serve+1 ladder — track win% & depth (65–70% goal).</li>
+            <li><strong>25–35 min:</strong> Return+1 & deep middle rally — neutralize 7/10 serves.</li>
+            <li><strong>35–50 min:</strong> Net transition series — approach + volley + overhead chain.</li>
+            <li><strong>50–60 min:</strong> Pressure ladder — 10‑point tiebreak simulation, emotional control focus.</li>
+          </ul>
+        </div>
+        <div class="callout">
+          <h3 class="font-semibold">90‑Minute Session (Comprehensive Development)</h3>
+          <ul class="mt-2 list-disc pl-5 text-slate-700">
+            <li><strong>0–10 min:</strong> Movement prep & shadow rally (split, load, recover).</li>
+            <li><strong>10–25 min:</strong> Serve targets + Serve+1 play (20 serves/side, log make% & point result).</li>
+            <li><strong>25–45 min:</strong> Return + Neutral→Offense drill (deep middle → angle).</li>
+            <li><strong>45–60 min:</strong> Transition & Net + Doubles formation game (approach, close, finish).</li>
+            <li><strong>60–75 min:</strong> Pressure games — first‑ball margin, deuce/ad ladder, momentum control.</li>
+            <li><strong>75–90 min:</strong> Fitness finisher — on‑court sprints, toss recovery, reflection journal.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="mt-3 text-slate-600">Scale reps early season; extend live points for match prep. Rotate themes weekly.</p>
+    </section>
 
-    <h2>🧩 Tactical Drill Blocks</h2>
-    <p>Reinforce the decisions from <a href="strategy.html">Strategy</a> and <a href="tactics.html">Tactics</a> through live, scored patterns.</p>
-    <ul>
-      <li><strong>Serve+1 Ladder:</strong> 10 serves each side, point starts live. Goal: 65–70% serve+1 won.</li>
-      <li><strong>Return+1 Battle:</strong> alternate first/second serve returns; log neutralizations. Target: 7/10 neutralized.</li>
-      <li><strong>Neutral → Offense Trigger:</strong> Deep middle rally; attack short/height triggers. Win 60% <6-ball rallies.</li>
-      <li><strong>Transition Series:</strong> Approach + volley + overhead pattern. Convert 7/10 approach points.</li>
-      <li><strong>Doubles Call Drill:</strong> Practice I-formation and middle-first returns. Hold 80% of service games.</li>
-    </ul>
+    <!-- Foundation -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Foundation Drills</h2>
+      <ul class="mt-3 list-disc pl-5 text-slate-700">
+        <li><strong>Mini‑Tennis Groove:</strong><span class="pill pill-patience">Patience</span> 50 continuous balls inside service boxes, no misses. <em>Cue:</em> Lift & land.</li>
+        <li><strong>Middle Control Rally:</strong><span class="pill pill-percentages">Percentages</span> 3×2‑min aiming deep middle. <span class="metric">Goal: 80% clearance, 3 ft over strap</span></li>
+        <li><strong>Cross/Line Alternation:</strong><span class="pill pill-position">Position</span> 10‑ball sequences alternating targets. Track pattern success.</li>
+      </ul>
+    </section>
 
-    <h2>💪 Competitive Games & Pressure Tests</h2>
-    <ul>
-      <li><strong>21 Rally:</strong> first to 21 points, win by two, only from live rallies. Focus on margin and patience.</li>
-      <li><strong>Serve Race:</strong> 20 serves total; 2 pts for aces/forced errors, 1 for neutral points won. Goal: 14+ pts.</li>
-      <li><strong>Approach Convert:</strong> Feed, approach, and play out. Win 7/10 points at net.</li>
-      <li><strong>First-Ball Margin Game:</strong> Replay if first ball missed long; goal ≤3 errors per set.</li>
-    </ul>
+    <!-- Tactical Blocks -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Tactical Drill Blocks</h2>
+      <ul class="mt-3 list-disc pl-5 text-slate-700">
+        <li><strong>Serve+1 Ladder:</strong><span class="pill pill-pressure">Pressure</span> 10 serves/side; point plays live. <span class="metric">Target: 65–70% won</span></li>
+        <li><strong>Return+1 Battle:</strong><span class="pill pill-pressure">Pressure</span> Alternate first/second serves; log neutralizations. <span class="metric">Target: 7/10</span></li>
+        <li><strong>Neutral → Offense Trigger:</strong><span class="pill pill-position">Position</span> Deep middle rally; attack short/middle/height triggers. <span class="metric">Win 60% of &lt;6‑ball rallies</span></li>
+        <li><strong>Transition Series:</strong><span class="pill pill-position">Position</span> Approach + volley + overhead pattern. <span class="metric">Convert 7/10 approach points</span></li>
+        <li><strong>Doubles Call Drill:</strong><span class="pill pill-position">Position</span> I‑formation & middle‑first returns. <span class="metric">Team hold 80%</span></li>
+      </ul>
+    </section>
 
-    <h2>🏋️‍♀️ Footwork & Fitness Integration</h2>
-    <ul>
-      <li><strong>Split-Step Timing:</strong> partner call drill; sync landing to ball strike. 90%+ correct timing target.</li>
-      <li><strong>Shadow Rally Series:</strong> simulate 6-ball points with recovery steps. Focus on balance.</li>
-      <li><strong>Ladder & Cone Circuit:</strong> quick feet into recovery shuffle; 4×30 sec rounds.</li>
-      <li><strong>Toss Stability Drill:</strong> hold toss 2 sec; recover balance. 10 perfect reps per side.</li>
-    </ul>
+    <!-- Competitive & Pressure -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Competitive Games &amp; Pressure Tests</h2>
+      <ul class="mt-3 list-disc pl-5 text-slate-700">
+        <li><strong>21 Rally:</strong><span class="pill pill-patience">Patience</span> First to 21, win by two, from live rallies. Focus on margin & patience.</li>
+        <li><strong>Serve Race:</strong><span class="pill pill-pressure">Pressure</span> 20 serves; 2 pts for aces/forced errors, 1 for neutral points won. <span class="metric">Goal: 14+ pts</span></li>
+        <li><strong>Approach Convert:</strong><span class="pill pill-position">Position</span> Feed, approach, play out. <span class="metric">Win 7/10 points at net</span></li>
+        <li><strong>First‑Ball Margin Game:</strong><span class="pill pill-percentages">Percentages</span> Replay if first ball missed long; ≤3 emotional errors per set.</li>
+      </ul>
+    </section>
 
-    <h2>🏹 Specialty Drills</h2>
-    <ul>
-      <li><strong>Volley Depth Challenge:</strong> 10 feeds; must land in back ⅓. Goal: 8/10.</li>
-      <li><strong>Lob–Overhead Chain:</strong> alternate lob & overhead under pressure; rally until drop.</li>
-      <li><strong>Drop→Lob Series:</strong> execute drop, recover, lob over net player. Track success rate.</li>
-    </ul>
+    <!-- Fitness -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Footwork &amp; Fitness Integration</h2>
+      <ul class="mt-3 list-disc pl-5 text-slate-700">
+        <li><strong>Split‑Step Timing:</strong><span class="pill pill-position">Position</span> Partner call; sync landing to strike. <span class="metric">90%+ correct</span></li>
+        <li><strong>Shadow Rally Series:</strong><span class="pill pill-patience">Patience</span> Simulate 6‑ball points with recovery steps; emphasize balance.</li>
+        <li><strong>Ladder &amp; Cone Circuit:</strong><span class="pill pill-pressure">Pressure</span> Quick feet → recovery shuffle; 4×30‑sec rounds.</li>
+        <li><strong>Toss Stability:</strong><span class="pill pill-percentages">Percentages</span> Hold toss 2 sec; recover balance. 10 perfect reps/side.</li>
+      </ul>
+    </section>
 
-    <h2>📊 Tracking & Reflection</h2>
-    <p>After each session, record three metrics: consistency %, pressure conversion %, and emotional control (1–5 scale). Review weekly trends.</p>
+    <!-- Specialty -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Specialty Drills</h2>
+      <ul class="mt-3 list-disc pl-5 text-slate-700">
+        <li><strong>Volley Depth Challenge:</strong><span class="pill pill-percentages">Percentages</span> 10 feeds; land in back third. <span class="metric">Goal: 8/10</span></li>
+        <li><strong>Lob–Overhead Chain:</strong><span class="pill pill-position">Position</span> Alternate lob & overhead under pressure; rally until drop.</li>
+        <li><strong>Drop → Lob Series:</strong><span class="pill pill-patience">Patience</span> Execute drop, recover, lob over net player; track success.</li>
+      </ul>
+    </section>
 
-    <h3>Weekly Challenge</h3>
-    <p><em>Increase your serve+1 and return+1 win rates by 10% compared to last week. Reward consistency and poise.</em></p>
+    <!-- Tracking -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Tracking &amp; Reflection</h2>
+      <p class="mt-3 text-slate-700">After each session, record three metrics: consistency %, pressure conversion %, and emotional control (1–5). Review weekly trends.</p>
+      <p class="mt-3 text-slate-700"><em><strong>Weekly Challenge:</strong> Increase Serve+1 and Return+1 win rates by 10% vs last week.</em></p>
+    </section>
   </main>
+
+  <!-- Footer (kept static) -->
+  <footer class="mt-16 border-t border-slate-200/60 bg-slate-50/60 py-10 dark:border-slate-800 dark:bg-slate-900/40">
+    <div class="mx-auto max-w-screen-xl px-4">
+      <div class="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
+        <div class="flex items-center gap-2"><span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">OT</span><span class="font-display text-lg font-semibold">Octopus Tennis</span></div>
+        <nav aria-label="Primary" class="hidden gap-6 md:flex">
+          <a class="nav-link text-sm dark:text-slate-200" href="/">Home</a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/serve.html">Serve</a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/return-of-serve.html">Return</a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/forehand.html">Forehand</a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/backhand.html">Backhand</a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/volley.html">Volley</a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/lob.html">Lob</a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/overhead.html">Overhead</a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/strategy.html">Strategy</a>
+          <a class="nav-link text-brand-700 font-semibold text-sm dark:text-slate-200" aria-current="page" href="/drills.html">Drills</a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/fitness.html">Fitness</a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/competition.html">Competition</a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/inspiration.html">Inspiration</a>
+        </nav>
+      </div>
+      <p class="mt-6 text-xs text-slate-500">© Octopus Tennis. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Utilities (kept) -->
+  <script>
+    (function () {
+      function sample(el) { if (!el) return "(n/a)"; return window.getComputedStyle(el).fontFamily; }
+      function log() {
+        var body = document.body; var h1 = document.querySelector("h1"); var p = document.querySelector("p");
+        var info = { body: sample(body), h1: sample(h1), p: sample(p) };
+        console.log("[FontCheck]", info);
+      }
+      if (document.readyState === "complete" || document.readyState === "interactive") { setTimeout(log, 0); }
+      else { document.addEventListener("DOMContentLoaded", log); }
+    })();
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var btn = document.getElementById('menu-toggle');
+      var drawer = document.getElementById('mobile-menu');
+      if (!btn || !drawer) return;
+      function setOpen(open) {
+        drawer.setAttribute('data-open', open ? 'true' : 'false');
+        btn.setAttribute('aria-expanded', String(open));
+        if (open) { drawer.removeAttribute('hidden'); if (drawer.classList) drawer.classList.remove('hidden'); if (window.innerWidth < 1024) drawer.style.display = 'block'; }
+        else { drawer.setAttribute('hidden', ''); if (drawer.classList) drawer.classList.add('hidden'); drawer.style.display = ''; }
+        drawer.classList.toggle('invisible', !open);
+        drawer.classList.toggle('opacity-0', !open);
+        drawer.classList.toggle('-translate-y-2', !open);
+      }
+      btn.addEventListener('click', function () { var open = drawer.getAttribute('data-open') === 'true'; setOpen(!open); });
+      setOpen(false);
+    });
+  </script>
+  <script>
+    (function () {
+      if (window.__TC_BTT_SHADOW__) return; window.__TC_BTT_SHADOW__ = true; var showAt = 60;
+      var host = document.createElement('div'); host.style.position='fixed'; host.style.bottom='20px'; host.style.right='20px'; host.style.zIndex='2147483647'; host.style.pointerEvents='auto'; document.body.appendChild(host);
+      var root = host.attachShadow({mode:'open'});
+      root.innerHTML = '<style>button{all:initial;font:600 14px/1 system-ui,-apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial;display:none;padding:.55rem .75rem;border-radius:9999px;background:#fff;color:#111;box-shadow:0 8px 24px rgba(0,0,0,.18);cursor:pointer}button.show{display:inline-block}</style><button id="btn" aria-label="Back to top">↑</button>';
+      var btn = root.getElementById('btn'); function y(){return window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0}
+      function onScroll(){ if(y()>showAt) btn.classList.add('show'); else btn.classList.remove('show'); }
+      window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+      btn.addEventListener('click', function(){ try{window.scrollTo({top:0,behavior:'smooth'})}catch(e){window.scrollTo(0,0)}; btn.blur(); });
+    })();
+  </script>
 </body>
 </html>
