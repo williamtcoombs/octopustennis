@@ -34,314 +34,385 @@
 
   <!-- SEO core: title, description, canonical, OG/Twitter (standardized) -->
   <title>Forehand — Octopus Tennis</title>
-  <meta name="description" content="Build a confident forehand: early unit turn, contact in front, and a balanced finish — with simple drills to make it repeatable under pressure." />
+  <meta name="description" content="Build a trustworthy forehand: clean unit turn, good spacing, contact in front, and a balanced finish. Clear cues, targets, and drills." />
   <link rel="canonical" href="https://www.octopustennis.com/forehand.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Octopus Tennis" />
   <meta property="og:title" content="Forehand — Octopus Tennis" />
-  <meta property="og:description" content="Build a confident forehand: early unit turn, contact in front, and a balanced finish — with simple drills to make it repeatable under pressure." />
+  <meta property="og:description" content="Build a trustworthy forehand: clean unit turn, good spacing, contact in front, and a balanced finish. Clear cues, targets, and drills." />
   <meta property="og:url" content="https://www.octopustennis.com/forehand.html" />
   <meta property="og:image" content="https://www.octopustennis.com/assets/img/og-default.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Forehand — Octopus Tennis" />
-  <meta name="twitter:description" content="Build a confident forehand: early unit turn, contact in front, and a balanced finish — with simple drills to make it repeatable under pressure." />
+  <meta name="twitter:description" content="Build a trustworthy forehand: clean unit turn, good spacing, contact in front, and a balanced finish. Clear cues, targets, and drills." />
   <meta name="twitter:image" content="https://www.octopustennis.com/assets/img/og-default.png" />
-  <!-- Theme color -->
+
+  <!-- Theme color (sitewide standard) -->
   <meta name="theme-color" content="#0369a1">
   <script src="/assets/site.js" defer></script>
 
+  <!-- Structured data: Breadcrumbs for inner page -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.octopustennis.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Forehand", "item": "https://www.octopustennis.com/forehand.html" }
-    ]
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.octopustennis.com/"
+     },
+     {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Forehand",
+       "item": "https://www.octopustennis.com/forehand.html"
+     }
+   ]
   }
   </script>
-
   <style>
-    /* Page-scoped: Remove faint focus/shadow ring in iOS Safari/Chrome for the mobile drawer */
-    #mobile-menu a:focus,
-    #mobile-menu a:focus-visible,
-    #mobile-menu button:focus,
-    #mobile-menu button:focus-visible {
-      outline: none;
-      box-shadow: none;
-    }
+  /* Page-scoped: Remove faint focus/shadow ring in iOS Safari/Chrome for the mobile drawer */
+  #mobile-menu a:focus,
+  #mobile-menu a:focus-visible,
+  #mobile-menu button:focus,
+  #mobile-menu button:focus-visible {
+    outline: none;
+    box-shadow: none;
+  }
 
-    /* Reduce iOS tap highlight halo on links/buttons in the mobile drawer */
-    #mobile-menu a,
-    #mobile-menu button {
-      -webkit-tap-highlight-color: transparent;
-    }
+  /* Reduce iOS tap highlight halo on links/buttons in the mobile drawer */
+  #mobile-menu a,
+  #mobile-menu button {
+    -webkit-tap-highlight-color: transparent;
+  }
   </style>
 </head>
-<body class="min-h-dvh bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100 font-body typography-v1">
-  <a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded-lg focus:bg-white/90 focus:px-3 focus:py-2 focus:text-slate-900" href="#main">
+<body class="font-body text-slate-900 typography-v1 min-h-dvh bg-white dark:text-slate-100 dark:bg-slate-950 antialiased">
+<a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded-lg focus:bg-white/90 focus:px-3 focus:py-2 focus:text-slate-900" href="#main">
     Skip to content
-  </a>
+</a>
+<!-- Header / Navbar -->
+<header class="sticky top-0 z-40 transition-all duration-300 bg-white/80 backdrop-blur dark:bg-slate-900/70" id="site-header">
+  <div class="mx-auto max-w-screen-xl px-4">
+    <div class="flex items-center justify-between py-3 lg:py-4" id="header-inner">
+      <!-- Brand -->
+      <a class="flex items-center gap-2" href="/">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">OT</span>
+        <span class="font-display text-lg font-semibold tracking-wide">Octopus Tennis</span>
+      </a>
+      <!-- Desktop nav -->
+      <nav aria-label="Primary" class="hidden gap-6 md:flex is-collapsible" id="primary-nav">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/serve.html">Serve</a>
+        <a class="nav-link" href="/return-of-serve.html">Return</a>
+        <a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/forehand.html">Forehand</a>
+        <a class="nav-link" href="/backhand.html">Backhand</a>
+        <a class="nav-link" href="/volley.html">Volley</a>
+        <a class="nav-link" href="/lob.html">Lob</a>
+        <a class="nav-link" href="/overhead.html">Overhead</a>
+        <a class="nav-link" href="/drop-shot.html">Drop Shot</a>
+        <a class="nav-link" href="/strategy.html">Strategy</a>
+        <a class="nav-link" href="/tactics.html">Tactics</a>
+        <a class="nav-link" href="/drills.html">Drills</a>
+        <a class="nav-link" href="/fitness.html">Fitness</a>
+        <a class="nav-link" href="/competition.html">Competition</a>
+        <a class="nav-link" href="/inspiration.html">Inspiration</a>
+      </nav>
+      <!-- Buttons -->
+      <div class="flex items-center gap-2 md:gap-3">
+        <!-- Theme toggle intentionally disabled (light-only mode) -->
 
-  <header class="sticky top-0 z-40 transition-all duration-300 bg-white/80 backdrop-blur dark:bg-slate-900/70" id="site-header">
-    <div class="mx-auto max-w-screen-xl px-4">
-      <div class="flex items-center justify-between py-3 lg:py-4" id="header-inner">
-        <!-- Brand -->
-        <a class="flex items-center gap-2" href="/">
-          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">OT</span>
-          <span class="font-display text-lg font-semibold tracking-wide">Octopus Tennis</span>
-        </a>
-        <!-- Desktop nav -->
-        <nav aria-label="Primary" class="hidden gap-6 md:flex is-collapsible" id="primary-nav">
-          <a class="nav-link" href="/">Home</a>
-          <a class="nav-link" href="/serve.html">Serve</a>
-          <a class="nav-link" href="/return-of-serve.html">Return</a>
-          <a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/forehand.html">Forehand</a>
-          <a class="nav-link" href="/backhand.html">Backhand</a>
-          <a class="nav-link" href="/volley.html">Volley</a>
-          <a class="nav-link" href="/lob.html">Lob</a>
-          <a class="nav-link" href="/overhead.html">Overhead</a>
-          <a class="nav-link" href="/drop-shot.html">Drop Shot</a>
-          <a class="nav-link" href="/strategy.html">Strategy</a>
-          <a class="nav-link" href="/tactics.html">Tactics</a>
-          <a class="nav-link" href="/drills.html">Drills</a>
-          <a class="nav-link" href="/fitness.html">Fitness</a>
-          <a class="nav-link" href="/competition.html">Competition</a>
-          <a class="nav-link" href="/inspiration.html">Inspiration</a>
-        </nav>
-        <!-- Buttons -->
-        <div class="flex items-center gap-2 md:gap-3">
-          <!-- Theme toggle intentionally disabled (light-only mode) -->
-
-          <!-- Mobile menu toggle (no data-menu-toggle) -->
-          <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-900 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-800" id="menu-toggle" type="button">
-            <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewBox="0 0 24 24">
-              <path d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
+        <!-- Mobile menu toggle (no data-menu-toggle) -->
+        <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-900 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-800" id="menu-toggle" type="button">
+          <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewBox="0 0 24 24">
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
       </div>
     </div>
-    <!-- Mobile drawer -->
-    <div class="absolute inset-x-0 top-full z-30 md:hidden duration-200 invisible opacity-0 -translate-y-2 h-[calc(100dvh-64px)]" data-open="false" id="mobile-menu">
-      <div class="mx-4 rounded-2xl border border-slate-200/60 bg-white/95 shadow-xl backdrop-blur dark:border-slate-800 dark:bg-slate-900/90 p-4">
-        <nav aria-label="Mobile" class="grid gap-2 text-base">
-          <a class="nav-link" href="/">Home</a>
-          <a class="nav-link" href="/serve.html">Serve</a>
-          <a class="nav-link" href="/return-of-serve.html">Return</a>
-          <a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/forehand.html">Forehand</a>
-          <a class="nav-link" href="/backhand.html">Backhand</a>
-          <a class="nav-link" href="/volley.html">Volley</a>
-          <a class="nav-link" href="/lob.html">Lob</a>
-          <a class="nav-link" href="/overhead.html">Overhead</a>
-          <a class="nav-link" href="/drop-shot.html">Drop Shot</a>
-          <a class="nav-link" href="/strategy.html">Strategy</a>
-          <a class="nav-link" href="/tactics.html">Tactics</a>
-          <a class="nav-link" href="/drills.html">Drills</a>
-          <a class="nav-link" href="/fitness.html">Fitness</a>
-          <a class="nav-link" href="/competition.html">Competition</a>
-          <a class="nav-link" href="/inspiration.html">Inspiration</a>
-        </nav>
-      </div>
+  </div>
+  <!-- Mobile drawer -->
+  <div class="absolute inset-x-0 top-full z-30 md:hidden duration-200 invisible opacity-0 -translate-y-2 h-[calc(100dvh-64px)]" data-open="false" id="mobile-menu">
+    <div class="mx-4 rounded-2xl border border-slate-200/60 bg-white/95 shadow-xl backdrop-blur dark:border-slate-800 dark:bg-slate-900/90 p-4">
+      <nav aria-label="Mobile" class="grid gap-2 text-base">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/serve.html">Serve</a>
+        <a class="nav-link" href="/return-of-serve.html">Return</a>
+        <a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/forehand.html">Forehand</a>
+        <a class="nav-link" href="/backhand.html">Backhand</a>
+        <a class="nav-link" href="/volley.html">Volley</a>
+        <a class="nav-link" href="/lob.html">Lob</a>
+        <a class="nav-link" href="/overhead.html">Overhead</a>
+        <a class="nav-link" href="/drop-shot.html">Drop Shot</a>
+        <a class="nav-link" href="/strategy.html">Strategy</a>
+        <a class="nav-link" href="/tactics.html">Tactics</a>
+        <a class="nav-link" href="/drills.html">Drills</a>
+        <a class="nav-link" href="/fitness.html">Fitness</a>
+        <a class="nav-link" href="/competition.html">Competition</a>
+        <a class="nav-link" href="/inspiration.html">Inspiration</a>
+      </nav>
     </div>
-  </header>
-  
-  <!-- HERO: Generic Page -->
-  <section
+  </div>
+</header>
+
+<!-- HERO: Generic Page -->
+<section
+  style="
+    min-height:60vh;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+    background:linear-gradient(to bottom,#075985,#0369a1);
+    color:#ffffff;padding:80px 16px;">
+
+  <!-- Title -->
+  <div role='heading' aria-level='1'
+       style="
+         font-family: var(--font-display, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans');
+         font-weight:800; line-height:1.1; margin:0;
+         font-size:clamp(44px,8vw,88px) !important;">
+    Forehand
+  </div>
+
+  <!-- Tagline -->
+  <p
     style="
-      min-height:60vh;
-      display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
-      background:linear-gradient(to bottom,#075985,#0369a1);
-      color:#ffffff;padding:80px 16px;">
-    
-    <!-- Title -->
-    <div role='heading' aria-level='1'
-         style="
-           font-family: var(--font-display, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans');
-           font-weight:800; line-height:1.1; margin:0;
-           font-size:clamp(44px,8vw,88px) !important;">
-      Forehand
-    </div>
+      margin:22px 0 0 0; max-width:48rem; line-height:1.6; opacity:.9;
+      font-size:clamp(18px,2.2vw,24px) !important;">
+    Build a forehand you trust under pressure: clean unit turn, contact in front, balanced finish, and big cross‑court margins.
+  </p>
+</section>
 
-    <!-- Tagline -->
-    <p
-      style="
-        margin:22px 0 0 0; max-width:48rem; line-height:1.6; opacity:.9;
-        font-size:clamp(18px,2.2vw,24px) !important;">
-      Strike with confidence through clean mechanics, balanced rhythm, and purposeful direction.
-    </p>
+<!-- Main Content -->
+<main class="py-10 md:max-w-4xl lg:px-8 px-4 sm:px-6 mx-auto container max-w-3xl lg:max-w-5xl" id="main">
+  <!-- Hero / Intro -->
+  <section class="mx-auto max-w-5xl mb-10">
+    <header class="mb-6">
+      <h1 class="text-4xl font-extrabold tracking-tight">Forehand</h1>
+      <p class="mt-3 text-slate-700">
+        At Poolesville, your forehand is a <strong>field position weapon</strong> — depth first, shape second, pace third. We build a repeatable pattern: unit turn → space → contact in front → tall finish.
+      </p>
+      <p class="mt-3 text-slate-700">Pick big targets and let your legs load the shot. Power comes from posture and timing, not from forcing the swing.</p>
+      <p class="mt-3 text-slate-700"><em><strong>Coach’s Cue:</strong> “Turn • Space • Front • Up.” Say it softly as the ball crosses the net.</em></p>
+    </header>
   </section>
 
-  <main class="py-10 md:max-w-4xl lg:px-8 px-4 sm:px-6 mx-auto container max-w-3xl lg:max-w-5xl" id="main">
-    <!-- Hero / Intro -->
-    <section class="mx-auto max-w-5xl mb-10">
-      <header class="mb-6">
-        <h1 class="text-4xl font-extrabold tracking-tight">Forehand</h1>
-        <p class="mt-3 text-slate-700">
-          Build your weapon, not just your swing. A trusted forehand turns neutral balls into pressure, and pressure into points.
-        </p>
-        <p class="mt-3 text-slate-700">
-          We’ll focus on three pillars: <strong>early unit turn</strong>, <strong>clean contact in front</strong>, and a <strong>balanced finish</strong>. Rhythm beats muscle.
-        </p>
-        <p class="mt-3 text-slate-700"><em><strong>Coach’s Tip:</strong> Say this out loud as the ball crosses the net: “Turn → Bounce → Lift.” It keeps the motion smooth when matches get loud.</em></p>
-      </header>
-    </section>
+  <!-- Video Coaching Insights (optional; replace src with your clip) -->
+  <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+    <h2 class="text-2xl font-bold">Video Coaching Insights</h2>
+    <p class="mt-2 text-slate-700">See the cues in motion. Watch in <span class='whitespace-nowrap'>0.75×</span> to study rhythm; drop to <span class='whitespace-nowrap'>0.5×</span> to check contact in front and balance.</p>
 
-    <br>
-    <iframe
-      src="https://www.youtube.com/embed/tr-ztoxmc2I"
-      title="Slow Motion Forehands"
-      frameborder="0"
-      loading="lazy"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-
-    <!-- Forehand Fundamentals -->
-    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-      <h2 class="text-2xl font-bold">Forehand Fundamentals</h2>
-      <p class="mt-3 text-slate-700">
-        Set early, move clean, finish tall. Once your base is consistent, the court slows down and targets get bigger.
-      </p>
-      <ul class="mt-3 list-disc pl-5 text-slate-700">
-        <li><strong>Set Up Early:</strong> Turn the shoulders first — the racquet moves because the torso turns, not because the arm yanks.</li>
-        <li><strong>Stable Base:</strong> Wide stance and quiet head. Load on the outside leg; feel the ground before you swing.</li>
-        <li><strong>Relaxed Finish:</strong> High, long follow-through. Let momentum pull the racquet through — don’t force it.</li>
-      </ul>
-      <p class="mt-3 text-slate-600">A clean forehand starts with timing — not tension.</p>
-      <p class="mt-3 text-slate-700"><em><strong>Goal:</strong> 9/10 forehands clearing the net by two feet with spin, landing past the service line.</em></p>
-    </section>
-
-    <!-- Contact & Spin -->
-    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-      <h2 class="text-2xl font-bold">Contact &amp; Spin</h2>
-      <p class="mt-3 text-slate-700">Topspin is free safety. Aim higher, swing smoother, trust the drop.</p>
-      <ul class="mt-3 list-disc pl-5 text-slate-700">
-        <li>Brush <em>up</em> the back of the ball (not across it).</li>
-        <li>Lift from legs and core — the wrist stays relaxed and along for the ride.</li>
-        <li>Aim above the strap for margin; let gravity and spin pull it down.</li>
-      </ul>
-      <p class="mt-3 text-slate-700"><em><strong>Coach’s Tip:</strong> Picture a “window” two feet above the net. Send every rally forehand through that window.</em></p>
-    </section>
-
-    <!-- Footwork & Positioning -->
-    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-      <h2 class="text-2xl font-bold">Footwork &amp; Positioning</h2>
-      <p class="mt-3 text-slate-700">Your feet buy your swing time. Win the first step and the rest is easier.</p>
-      <ul class="mt-3 list-disc pl-5 text-slate-700">
-        <li><strong>Load:</strong> Pivot and coil around the back hip as you move to the ball.</li>
-        <li><strong>Explode:</strong> Uncoil and drive through contact — think “from ground to strings.”</li>
-        <li><strong>Recover:</strong> Land balanced and return inside the hash quickly after the finish.</li>
-      </ul>
-      <p class="mt-3 text-slate-700"><em><strong>Cue:</strong> “Hit → Land → Reset.”</em></p>
-    </section>
-
-    <!-- Shot Shapes -->
-    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-      <h2 class="text-2xl font-bold">Shot Shapes</h2>
-      <p class="mt-3 text-slate-700">Pick a purpose for each ball: build, pressure, or finish.</p>
-      <ul class="mt-3 list-disc pl-5 text-slate-700">
-        <li><strong>Heavy Cross-Court:</strong> Safest shape for depth and rhythm.</li>
-        <li><strong>Inside-Out:</strong> Move the opponent and pressure the backhand.</li>
-        <li><strong>Down the Line:</strong> Use when balanced and early — it opens the court or ends the rally.</li>
-        <li><strong>High Roller:</strong> Defensive height to buy time and reset.</li>
-      </ul>
-      <p class="mt-3 text-slate-700"><em><strong>Goal:</strong> 8/10 cross-courts landing deep half; then 6/10 DTL winners when set.</em></p>
-    </section>
-
-    <!-- Forehand Rally Patterns -->
-    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-      <h2 class="text-2xl font-bold">Forehand Rally Patterns</h2>
-      <p class="mt-3 text-slate-700">Pattern beats power. Build a default plan and live in it.</p>
-      <ul class="mt-3 list-disc pl-5 text-slate-700">
-        <li>Cross-court at backhand until you earn the line.</li>
-        <li>Inside-out forehand → inside-in follow-up to finish.</li>
-        <li>High heavy cross → flatten down the line when ahead in the rally.</li>
-      </ul>
-      <p class="mt-3 text-slate-600">See <a href="/tactics.html" class="text-brand-700 underline">Tactics</a> for match patterns built around the forehand.</p>
-    </section>
-
-    <!-- Common Errors -->
-    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-      <h2 class="text-2xl font-bold">Common Errors</h2>
-      <ul class="mt-3 list-disc pl-5 text-slate-700">
-        <li>Overhitting when off-balance — add height, not force.</li>
-        <li>Late preparation — turn the shoulders before the bounce.</li>
-        <li>Flat trajectory under pressure — trust spin and the window above the strap.</li>
-        <li>Arm-only swing — forgets the legs and core loading.</li>
-      </ul>
-      <p class="mt-3 text-slate-700"><em><strong>Fix:</strong> Film 10 rally forehands. Grade: early turn, contact in front, finish height, recovery path.</em></p>
-    </section>
-
-    <!-- Drills -->
-    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-      <h2 class="text-2xl font-bold">Drills</h2>
-      <ul class="mt-3 list-disc pl-5 text-slate-700">
-        <li><strong>Cross-Court Groove (10 mins):</strong> 10 in a row deep and heavy; restart if you miss.</li>
-        <li><strong>Inside-Out Ladder:</strong> 6 cross-court to move them, then 4 line to finish.</li>
-        <li><strong>Balance Drill:</strong> Open-stance hit → hold the finish for a one-count → recover middle.</li>
-      </ul>
-      <p class="mt-3 text-slate-600">See <a href="/drills.html" class="text-brand-700 underline">Drills</a> for controlled live-ball variations.</p>
-      <p class="mt-3 text-slate-700"><em><strong>Weekly Challenge:</strong> Win 70% of forehand-to-forehand cross-court exchanges in practice sets.</em></p>
-    </section>
-
-    <!-- Reflection Checklist -->
-    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-      <h2 class="text-2xl font-bold">Forehand Checklist</h2>
-      <ul class="mt-3 list-disc pl-5 text-slate-700">
-        <li>⬜ Early shoulder turn</li>
-        <li>⬜ Contact clearly in front</li>
-        <li>⬜ Topspin height over the strap</li>
-        <li>⬜ Recovery inside the hash</li>
-      </ul>
-      <p class="mt-3 text-slate-600">Repeat with rhythm — your forehand becomes your anchor.</p>
-    </section>
-
-    <!-- Cross-links -->
-    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-      <p class="text-slate-700">Next, build the same trust on your backhand. See <a href="/backhand.html" class="text-brand-700 underline">Backhand</a> for balance and versatility.</p>
-    </section>
-  </main>
-
-  <footer class="mt-16 border-t border-slate-200/60 bg-slate-50/60 py-10 dark:border-slate-800 dark:bg-slate-900/40">
-    <div class="mx-auto max-w-screen-xl px-4">
-      <div class="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
-        <div class="flex items-center gap-2">
-          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">
-            OT
-          </span>
-          <span class="font-display text-lg font-semibold">
-            Octopus Tennis
-          </span>
+    <div class="mt-6 grid gap-6 sm:grid-cols-2">
+      <!-- Video 1 (replace with your URL) -->
+      <figure class="rounded-xl overflow-hidden border border-slate-200/70 bg-white shadow-sm">
+        <div style="position:relative;width:100%;height:0;padding-bottom:56.25%;">
+          <iframe
+            src="https://www.youtube.com/embed/tr-ztoxmc2I"
+            title="Slow Motion Forehands"
+            style="position:absolute;inset:0;width:100%;height:100%;border:0;"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
         </div>
-        <nav aria-label="Primary" class="hidden gap-6 md:flex">
-          <a class="nav-link text-sm dark:text-slate-200" href="/">Home</a>
-          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/serve.html">Serve</a>
-          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/return-of-serve.html">Return</a>
-          <a aria-current="page" class="nav-link text-brand-700 font-semibold text-sm dark:text-slate-200" href="/forehand.html">Forehand</a>
-          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/backhand.html">Backhand</a>
-          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/volley.html">Volley</a>
-          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/lob.html">Lob</a>
-          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/overhead.html">Overhead</a>
-          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/drop-shot.html">Drop Shot</a>
-          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/strategy.html">Strategy</a>
-          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/tactics.html">Tactics</a>
-          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/drills.html">Drills</a>
-          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/fitness.html">Fitness</a>
-          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/competition.html">Competition</a>
-          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/inspiration.html">Inspiration</a>
-        </nav>
-      </div>
-      <p class="mt-6 text-xs text-slate-500">
-        © Octopus Tennis. All rights reserved.
-      </p>
-    </div>
-  </footer>
+        <figcaption class="p-3 text-sm text-slate-700">
+          Watch the early shoulder turn and the space created with the outside foot. Finish tall with the chest to target.
+        </figcaption>
+      </figure>
 
-  <!-- Dev-only FontCheck script (kept as requested) -->
-  <script>
+      <!-- Video 2 (optional second clip) -->
+      <figure class="rounded-xl overflow-hidden border border-slate-200/70 bg-white shadow-sm">
+        <div style="position:relative;width:100%;height:0;padding-bottom:56.25%;">
+          <iframe
+            src="https://www.youtube.com/embed/Aib4RgynvcE"
+            title="Forehand patterns — cross‑court depth, inside‑out, earned line"
+            style="position:absolute;inset:0;width:100%;height:100%;border:0;"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <figcaption class="p-3 text-sm text-slate-700">
+          Focus on smooth weight transfer and balanced recovery. Notice how each finish lets the player flow back to neutral, ready for the next ball.
+        </figcaption>
+      </figure>
+    </div>
+
+    <p class="mt-6 text-slate-700 italic"><strong>Coach’s Tip:</strong> Use <span class='whitespace-nowrap'>0.75×</span> speed for rhythm and spacing; <span class='whitespace-nowrap'>0.5×</span> to check that contact is clearly <em>in front</em> of your lead hip.</p>
+  </section>
+
+  <!-- Forehand Fundamentals -->
+  <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+    <h2 class="text-2xl font-bold">Forehand Fundamentals</h2>
+    <p class="mt-3 text-slate-700">We want a reliable ball under pressure, not a highlight reel. Build the base and the pace will come.</p>
+    <ul class="mt-3 list-disc pl-5 text-slate-700">
+      <li><strong>Grip &amp; Feel:</strong> Semi‑western or eastern is fine — keep the wrist soft and the string‑bed square at contact.</li>
+      <li><strong>Unit Turn:</strong> Turn shoulders as you split; racquet up, elbow relaxed. Show your back to the target.</li>
+      <li><strong>Spacing:</strong> Create room with the outside foot; keep comfortable hip‑to‑hand distance.</li>
+      <li><strong>Contact in Front:</strong> Strike slightly ahead of the lead hip; eyes quiet at contact.</li>
+      <li><strong>Finish Tall:</strong> Chest to target, palm to the sky feeling, balanced on the outside edge.</li>
+    </ul>
+    <p class="mt-3 text-slate-600">Consistency creates confidence; posture + legs create pace.</p>
+    <p class="mt-3 text-slate-700"><em><strong>Team Standard:</strong> 8/10 cross‑court rally balls landing deep (past the service line) with height over the net strap.</em></p>
+  </section>
+
+  <!-- Shapes & Targets -->
+  <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+    <h2 class="text-2xl font-bold">Shapes &amp; Targets</h2>
+    <p class="mt-2 text-slate-700">Choose a shape before the bounce. Margin first, damage second.</p>
+    <ul class="mt-3 list-disc pl-5 text-slate-700">
+      <li><strong>Cross‑Court (Default):</strong> Highest net, longest court. Use height and heavy spin.</li>
+      <li><strong>Inside‑Out:</strong> Step around and send big to the backhand corner; recover through the middle.</li>
+      <li><strong>Down‑the‑Line (Earned):</strong> Use when early and balanced; finish your weight into the court.</li>
+      <li><strong>Body Middle:</strong> Neutralize pace; jam and reset when under pressure.</li>
+    </ul>
+    <p class="mt-3 text-slate-700"><em><strong>Goal:</strong> 6/10 balls land within a cross‑court cone (service line to corner) and bounce above hip height.</em></p>
+  </section>
+
+  <!-- Footwork Patterns -->
+  <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+    <h2 class="text-2xl font-bold">Footwork Patterns</h2>
+    <p class="mt-2 text-slate-700">Feet write the story. Match your move to the ball.</p>
+    <ul class="mt-3 list-disc pl-5 text-slate-700">
+      <li><strong>Step‑Through:</strong> On short/mid balls; drive through contact and recover forward.</li>
+      <li><strong>Load‑Hop:</strong> On higher pace; load on outside leg and hop into balance after contact.</li>
+      <li><strong>Open Stance:</strong> On deep/wide balls; turn early, rotate through, finish tall.</li>
+      <li><strong>Emergency Block:</strong> Shorten swing, aim big middle, buy time.</li>
+    </ul>
+    <p class="mt-3 text-slate-600">Your first step decides your shape.</p>
+  </section>
+
+  <!-- Pressure Plan -->
+  <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+    <h2 class="text-2xl font-bold">Pressure Plan</h2>
+    <p class="mt-2 text-slate-700">When the score tightens: breathe, choose the big lane, and raise your net clearance.</p>
+    <ul class="mt-3 list-disc pl-5 text-slate-700">
+      <li>Default to cross‑court depth with height; take the line only when early.</li>
+      <li>Body‑middle to jam pace when rushed.</li>
+      <li>Call your shape before the bounce: “XC high,” “IO heavy,” or “Middle jam.”</li>
+    </ul>
+    <p class="mt-3 text-slate-700"><em><strong>Reset Cue:</strong> “Turn • Space • Front • Up.”</em></p>
+  </section>
+
+  <!-- Forehand +1 Connection -->
+  <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+    <h2 class="text-2xl font-bold">Forehand +1 Connection</h2>
+    <p class="mt-2 text-slate-700">Decide your follow‑up before you swing.</p>
+    <ul class="mt-3 list-disc pl-5 text-slate-700">
+      <li><strong>XC Heavy →</strong> Attack the open court to the backhand corner.</li>
+      <li><strong>IO Big →</strong> Step through and look for the short ball to finish.</li>
+      <li><strong>Middle Jam →</strong> Take time, then move the ball to space.</li>
+    </ul>
+    <p class="mt-3 text-slate-600">See <a href="/tactics.html" class="text-brand-700 underline">Tactics</a> for patterns.</p>
+  </section>
+
+  <!-- Drills & Practice -->
+  <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+    <h2 class="text-2xl font-bold">Drills &amp; Practice</h2>
+    <ul class="mt-3 list-disc pl-5 text-slate-700">
+      <li><strong>XC Cone Ladder:</strong> 20‑ball sets to a cross‑court cone; score balls that land past the service line.</li>
+      <li><strong>IO Step‑Around:</strong> Feed to backhand corner → step around → inside‑out to deep deuce; 8/10 make‑rate.</li>
+      <li><strong>Earn the Line:</strong> Rally XC; when coach calls “Early!” take the line and recover middle.</li>
+    </ul>
+    <p class="mt-3 text-slate-600">More routines in <a href="/drills.html" class="text-brand-700 underline">Drills</a>.</p>
+  </section>
+
+  <!-- Common Errors & Quick Fixes -->
+  <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+    <h2 class="text-2xl font-bold">Common Errors &amp; Quick Fixes</h2>
+    <ul class="mt-3 list-disc pl-5 text-slate-700">
+      <li><strong>Late Contact:</strong> Ball flying long or wide → call “Front!” and move sooner; shorten the backswing.</li>
+      <li><strong>Shanks:</strong> Crowding the ball → create spacing with an outside step before you swing.</li>
+      <li><strong>Low Net Clips:</strong> Flat swing path → raise finish, use more net clearance.</li>
+      <li><strong>Off‑Balance Finish:</strong> Over‑rotating → stick the landing tall; chest to target.</li>
+    </ul>
+    <p class="mt-3 text-slate-700"><em><strong>Self‑check:</strong> Film 8 forehands from the side; grade unit turn timing, contact in front, and finish balance.</em></p>
+  </section>
+
+  <!-- Reflection Checklist -->
+  <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+    <h2 class="text-2xl font-bold">Forehand Checklist</h2>
+    <ul class="mt-3 list-disc pl-5 text-slate-700">
+      <li>⬜ Early unit turn as the ball crosses the net</li>
+      <li>⬜ Comfortable spacing with outside‑foot adjust</li>
+      <li>⬜ Contact clearly in front of lead hip</li>
+      <li>⬜ Tall, balanced finish with height over net</li>
+    </ul>
+    <p class="mt-3 text-slate-700"><em><strong>Weekly Challenge:</strong> Win to 11 with cross‑court forehands only; must land past the service line.</em></p>
+  </section>
+
+  <!-- Cross-links -->
+  <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+    <p class="text-slate-700">Next skill: <a href="/backhand.html" class="text-brand-700 underline">Backhand →</a> mirror the same cues on your non‑dominant side.</p>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="mt-16 border-t border-slate-200/60 bg-slate-50/60 py-10 dark:border-slate-800 dark:bg-slate-900/40">
+  <div class="mx-auto max-w-screen-xl px-4">
+    <div class="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">
+          OT
+        </span>
+        <span class="font-display text-lg font-semibold">
+          Octopus Tennis
+        </span>
+      </div>
+      <nav aria-label="Primary" class="hidden gap-6 md:flex">
+        <a class="nav-link text-sm dark:text-slate-200" href="/">
+          Home
+        </a>
+        <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/serve.html">
+          Serve
+        </a>
+        <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/return-of-serve.html">
+          Return
+        </a>
+        <a aria-current="page" class="nav-link text-brand-700 font-semibold text-sm dark:text-slate-200" href="/forehand.html">Forehand</a>
+        <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/backhand.html">
+          Backhand
+        </a>
+        <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/volley.html">
+          Volley
+        </a>
+        <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/lob.html">
+          Lob
+        </a>
+        <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/overhead.html">
+          Overhead
+        </a>
+        <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/drop-shot.html">
+          Drop Shot
+        </a>
+        <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/strategy.html">
+          Strategy
+        </a>
+        <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/tactics.html">
+          Tactics
+        </a>
+        <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/drills.html">
+          Drills
+        </a>
+        <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/fitness.html">
+          Fitness
+        </a>
+        <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/competition.html">
+          Competition
+        </a>
+        <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/inspiration.html">
+          Inspiration
+        </a>
+      </nav>
+    </div>
+    <p class="mt-6 text-xs text-slate-500">© Octopus Tennis. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Back to top & FontCheck (kept intact) -->
+<script>
   (function () {
     function sample(el) {
       if (!el) return "(n/a)";
@@ -357,7 +428,6 @@
         p: sample(p)
       };
       console.log("[FontCheck]", info);
-      // visible, non-intrusive badge for quick glance
       var badge = document.createElement('div');
       badge.textContent = 'Fonts ✓';
       badge.style.position = 'fixed';
@@ -379,10 +449,9 @@
       document.addEventListener("DOMContentLoaded", log);
     }
   })();
-  </script>
+</script>
 
-  <!-- Back to top (subtle) -->
-  <script>
+<script>
   (function () {
     if (window.__TC_BTT_SHADOW__) return;
     window.__TC_BTT_SHADOW__ = true;
@@ -400,6 +469,6 @@
     onScroll();
     btn.addEventListener('click', function(){ try{window.scrollTo({top:0,behavior:'smooth'})}catch(e){window.scrollTo(0,0)}; btn.blur(); });
   })();
-  </script>
+</script>
 </body>
 </html>
