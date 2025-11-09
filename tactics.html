@@ -20,14 +20,14 @@
 
   <!-- SEO core: title, description, canonical, OG/Twitter (standardized) -->
   <title>Tactics — Octopus Tennis</title>
-  <meta name="description" content="Adapt to every opponent: manage time and space, choose high-percentage patterns, and pressure weaknesses one ball at a time." />
+  <meta name="description" content="Your on‑court playbook: serve+1 and return schemes, neutral patterns, transition plans, opponent reads, and doubles formations — all with clear metrics." />
   <link rel="canonical" href="https://www.octopustennis.com/tactics.html" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Octopus Tennis" />
   <meta property="og:title" content="Tactics — Octopus Tennis" />
-  <meta property="og:description" content="Adapt to every opponent: manage time and space, choose high-percentage patterns, and pressure weaknesses one ball at a time." />
+  <meta property="og:description" content="Your on‑court playbook: serve+1 and return schemes, neutral patterns, transition plans, opponent reads, and doubles formations — all with clear metrics." />
   <meta property="og:url" content="https://www.octopustennis.com/tactics.html" />
   <meta property="og:image" content="https://www.octopustennis.com/assets/img/og-default.png" />
   <meta property="og:image:width" content="1200" />
@@ -36,7 +36,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Tactics — Octopus Tennis" />
-  <meta name="twitter:description" content="Adapt to every opponent: manage time and space, choose high-percentage patterns, and pressure weaknesses one ball at a time." />
+  <meta name="twitter:description" content="Your on‑court playbook: serve+1 and return schemes, neutral patterns, transition plans, opponent reads, and doubles formations — all with clear metrics." />
   <meta name="twitter:image" content="https://www.octopustennis.com/assets/img/og-default.png" />
 
   <!-- Theme color (sitewide standard) -->
@@ -60,410 +60,337 @@
 
   <script src="/assets/site.js" defer></script>
 
-<style>/* Page-scoped: Remove faint focus/shadow ring in iOS Safari/Chrome for the mobile drawer */
-#mobile-menu a:focus,
-#mobile-menu a:focus-visible,
-#mobile-menu button:focus,
-#mobile-menu button:focus-visible {
-  outline: none;
-  box-shadow: none;
-}
-
-/* Reduce iOS tap highlight halo on links/buttons in the mobile drawer */
-#mobile-menu a, 
-#mobile-menu button {
-  -webkit-tap-highlight-color: transparent;
-}</style>
+  <style>
+  /* Page-scoped tweaks; layout/IDs preserved */
+  #mobile-menu a:focus, #mobile-menu a:focus-visible, #mobile-menu button:focus, #mobile-menu button:focus-visible { outline: none; box-shadow: none; }
+  #mobile-menu a, #mobile-menu button { -webkit-tap-highlight-color: transparent; }
+  .callout{border:1px solid rgba(100,116,139,.35);background:#fff;border-radius:.75rem;padding:1rem;box-shadow:0 1px 2px rgba(15,23,42,.05)}
+  .metric{background:rgba(3,105,161,.08);border:1px solid rgba(3,105,161,.22);padding:.5rem .75rem;border-radius:.65rem;display:inline-block}
+  .play{display:grid;gap:.5rem}
+  .play small{color:#334155}
+  </style>
 </head>
 <body class="min-h-dvh bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100 font-body typography-v1">
-<a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded-lg focus:bg-white/90 focus:px-3 focus:py-2 focus:text-slate-900" href="#main">
-   Skip to content
-  </a>
-<header class="sticky top-0 z-40 transition-all duration-300 bg-white/80 backdrop-blur dark:bg-slate-900/70" id="site-header">
-<div class="mx-auto max-w-screen-xl px-4">
-<div class="flex items-center justify-between py-3 lg:py-4" id="header-inner">
-<!-- Brand -->
-<a class="flex items-center gap-2" href="/">
-<span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">OT</span>
-<span class="font-display text-lg font-semibold tracking-wide">Octopus Tennis</span>
-</a>
-<!-- Desktop nav -->
-<nav aria-label="Primary" class="hidden gap-6 md:flex is-collapsible" id="primary-nav">
-<a class="nav-link" href="/">Home</a>
-<a class="nav-link" href="/serve.html">Serve</a>
-<a class="nav-link" href="/return-of-serve.html">Return</a>
-<a class="nav-link" href="/forehand.html">Forehand</a>
-<a class="nav-link" href="/backhand.html">Backhand</a>
-<a class="nav-link" href="/volley.html">Volley</a>
-<a class="nav-link" href="/lob.html">Lob</a>
-<a class="nav-link" href="/overhead.html">Overhead</a>
-<a class="nav-link" href="/drop-shot.html">Drop Shot</a>
-<a class="nav-link" href="/strategy.html">Strategy</a>
-<a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/tactics.html">Tactics</a>
-<a class="nav-link" href="/drills.html">Drills</a>
-<a class="nav-link" href="/fitness.html">Fitness</a>
-<a class="nav-link" href="/competition.html">Competition</a>
-<a class="nav-link" href="/inspiration.html">Inspiration</a>
-</nav>
-<!-- Buttons -->
-<div class="flex items-center gap-2 md:gap-3">
-<!-- Theme toggle intentionally disabled (light-only mode) -->
+  <a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded-lg focus:bg-white/90 focus:px-3 focus:py-2 focus:text-slate-900" href="#main">Skip to content</a>
 
-<!-- Mobile menu toggle (no data-menu-toggle) -->
-<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-900 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-800" id="menu-toggle" type="button">
-<svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewBox="0 0 24 24">
-<path d="M4 6h16M4 12h16M4 18h16"></path>
-</svg>
-</button>
-</div>
-</div>
-</div>
-<!-- Mobile drawer -->
-<div class="absolute inset-x-0 top-full z-30 md:hidden duration-200 invisible opacity-0 -translate-y-2 h-[calc(100dvh-64px)]" data-open="false" id="mobile-menu">
-<div class="mx-4 rounded-2xl border border-slate-200/60 bg-white/95 shadow-xl backdrop-blur dark:border-slate-800 dark:bg-slate-900/90 p-4">
-<nav aria-label="Mobile" class="grid gap-2 text-base">
-<a class="nav-link" href="/">Home</a>
-<a class="nav-link" href="/serve.html">Serve</a>
-<a class="nav-link" href="/return-of-serve.html">Return</a>
-<a class="nav-link" href="/forehand.html">Forehand</a>
-<a class="nav-link" href="/backhand.html">Backhand</a>
-<a class="nav-link" href="/volley.html">Volley</a>
-<a class="nav-link" href="/lob.html">Lob</a>
-<a class="nav-link" href="/overhead.html">Overhead</a>
-<a class="nav-link" href="/drop-shot.html">Drop Shot</a>
-<a class="nav-link" href="/strategy.html">Strategy</a>
-<a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/tactics.html">Tactics</a>
-<a class="nav-link" href="/drills.html">Drills</a>
-<a class="nav-link" href="/fitness.html">Fitness</a>
-<a class="nav-link" href="/competition.html">Competition</a>
-<a class="nav-link" href="/inspiration.html">Inspiration</a>
-</nav>
-</div>
-</div>
-</header>
-  
-<!-- HERO: Generic Page -->
-<section
-  style="
-    min-height:60vh;
-    display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
-    background:linear-gradient(to bottom,#075985,#0369a1);
-    color:#ffffff;padding:80px 16px;">
-  
-  <!-- Title -->
-  <div role='heading' aria-level='1'
-       style="
-         font-family: var(--font-display, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans');
-         font-weight:800; line-height:1.1; margin:0;
-         font-size:clamp(44px,8vw,88px) !important;">
-    Tactics
-  </div>
-
-  <!-- Tagline -->
-  <p
-    style="
-      margin:22px 0 0 0; max-width:48rem; line-height:1.6; opacity:.9;
-      font-size:clamp(18px,2.2vw,24px) !important;">
-    Adapt to every opponent and situation through awareness, creativity, and execution.
-  </p>
-</section>
-
-
-  
-<main class="py-10 md:max-w-4xl lg:px-8 px-4 sm:px-6 mx-auto container max-w-3xl lg:max-w-5xl" id="main">
-  <!-- Overview -->
-  <section class="mx-auto max-w-5xl mb-10">
-    <header class="mb-6">
-      <h1 class="text-4xl font-extrabold tracking-tight">Match Tactics</h1>
-      <p class="mt-3 text-slate-700">Make smart choices one ball at a time. Use height and depth to control time, the middle of the court to control space, and your patterns to control the score.</p>
-      <p class="mt-3 text-slate-700"><em><strong>Coach’s Tip:</strong> Say this at the line: “Height. Depth. Middle.” Simple beats fancy in big moments.</em></p>
-    </header>
-    <ul class="grid gap-3 text-slate-800">
-      <li>📍 <strong>Position:</strong> Recover to the center hash; defend line <em>after</em> you’ve won the middle.</li>
-      <li>🎯 <strong>Target:</strong> Cross-court until you’ve <em>earned</em> the line change.</li>
-      <li>⏱️ <strong>Tempo:</strong> Add height when rushed; take on the rise when set.</li>
-      <li>🧭 <strong>Scoreboard:</strong> Build at 40–0; aim biggest margins at 30–30 and 15–30.</li>
-    </ul>
-  </section>
-
-  <!-- Serve +1 -->
-  <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-    <h2 class="text-2xl font-bold">Serve +1 Patterns</h2>
-    <p class="mt-2 text-slate-700">Decide the first two shots before you toss. Serve to predict the return and script the +1.</p>
-    <div class="mt-4 grid gap-4">
-      <div class="rounded-xl border border-slate-200 p-4">
-        <h3 class="font-semibold">Ad Court — Body → Backhand</h3>
-        <p class="text-slate-700">Body serve jams the return. Step inside and send +1 deep cross to backhand; recover middle.</p>
-        <ul class="mt-2 list-disc pl-5 text-slate-700">
-          <li>+1 clears the strap by 2–3 ft — depth before angle.</li>
-          <li>If short: approach through the backhand and split at the service line.</li>
-        </ul>
-      </div>
-      <div class="rounded-xl border border-slate-200 p-4">
-        <h3 class="font-semibold">Deuce — Wide → Open Court</h3>
-        <p class="text-slate-700">Pull them wide; drive the open lane. If the reply floats, close and volley deep middle first, angle second.</p>
+  <!-- Header / Navbar (kept) -->
+  <header class="sticky top-0 z-40 transition-all duration-300 bg-white/80 backdrop-blur dark:bg-slate-900/70" id="site-header">
+    <div class="mx-auto max-w-screen-xl px-4">
+      <div class="flex items-center justify-between py-3 lg:py-4" id="header-inner">
+        <a class="flex items-center gap-2" href="/"><span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">OT</span><span class="font-display text-lg font-semibold tracking-wide">Octopus Tennis</span></a>
+        <nav aria-label="Primary" class="hidden gap-6 md:flex is-collapsible" id="primary-nav">
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/serve.html">Serve</a>
+          <a class="nav-link" href="/return-of-serve.html">Return</a>
+          <a class="nav-link" href="/forehand.html">Forehand</a>
+          <a class="nav-link" href="/backhand.html">Backhand</a>
+          <a class="nav-link" href="/volley.html">Volley</a>
+          <a class="nav-link" href="/lob.html">Lob</a>
+          <a class="nav-link" href="/overhead.html">Overhead</a>
+          <a class="nav-link" href="/strategy.html">Strategy</a>
+          <a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/tactics.html">Tactics</a>
+          <a class="nav-link" href="/drills.html">Drills</a>
+          <a class="nav-link" href="/fitness.html">Fitness</a>
+          <a class="nav-link" href="/competition.html">Competition</a>
+          <a class="nav-link" href="/inspiration.html">Inspiration</a>
+        </nav>
+        <div class="flex items-center gap-2 md:gap-3">
+          <button id="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-900 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-800">
+            <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
       </div>
     </div>
-    <p class="mt-3 text-slate-700"><em><strong>Goal:</strong> Win 70% of “serve +1” points by committing to the scripted target.</em></p>
-  </section>
-
-  <!-- Return Tactics -->
-  <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-    <h2 class="text-2xl font-bold">Return Games: Start on Your Terms</h2>
-    <ul class="mt-3 grid gap-3 text-slate-700">
-      <li><strong>Second serves:</strong> Green light — step in and drive deep middle.</li>
-      <li><strong>First serves:</strong> Block neutral to the center hash to buy recovery time.</li>
-      <li><strong>Lefty/Righty:</strong> Favor body returns to chest height; take away free swings.</li>
-    </ul>
-    <p class="mt-3 text-slate-700"><em><strong>Goal:</strong> 8/10 second-serve returns land past the service line, middle third.</em></p>
-  </section>
-
-  <!-- Neutral → Offense -->
-  <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-    <h2 class="text-2xl font-bold">From Neutral to Offense</h2>
-    <p class="mt-2 text-slate-700">Wait for green lights—then go. If you don’t clearly have it, recycle and build again.</p>
-    <div class="grid gap-4 mt-4">
-      <div class="rounded-xl border border-slate-200 p-4">
-        <h3 class="font-semibold">Green-Light Cues</h3>
-        <ul class="list-disc pl-5 text-slate-700">
-          <li>Short ball inside baseline</li>
-          <li>Opponent off-balance or outside the singles sideline</li>
-          <li>Ball rising into your strike zone</li>
-        </ul>
-      </div>
-      <div class="rounded-xl border border-slate-200 p-4">
-        <h3 class="font-semibold">Recycling Tools</h3>
-        <ul class="list-disc pl-5 text-slate-700">
-          <li>High heavy cross-court to the backhand</li>
-          <li>Deep middle to shrink angles</li>
-          <li>Loopy line → back cross to reset</li>
-        </ul>
+    <div id="mobile-menu" data-open="false" class="absolute inset-x-0 top-full z-30 md:hidden duration-200 invisible opacity-0 -translate-y-2 h-[calc(100dvh-64px)]">
+      <div class="mx-4 rounded-2xl border border-slate-200/60 bg-white/95 shadow-xl backdrop-blur dark:border-slate-800 dark:bg-slate-900/90 p-4">
+        <nav aria-label="Mobile" class="grid gap-2 text-base">
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/serve.html">Serve</a>
+          <a class="nav-link" href="/return-of-serve.html">Return</a>
+          <a class="nav-link" href="/forehand.html">Forehand</a>
+          <a class="nav-link" href="/backhand.html">Backhand</a>
+          <a class="nav-link" href="/volley.html">Volley</a>
+          <a class="nav-link" href="/lob.html">Lob</a>
+          <a class="nav-link" href="/overhead.html">Overhead</a>
+          <a class="nav-link" href="/strategy.html">Strategy</a>
+          <a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/tactics.html">Tactics</a>
+          <a class="nav-link" href="/drills.html">Drills</a>
+          <a class="nav-link" href="/fitness.html">Fitness</a>
+          <a class="nav-link" href="/competition.html">Competition</a>
+          <a class="nav-link" href="/inspiration.html">Inspiration</a>
+        </nav>
       </div>
     </div>
+  </header>
+
+  <!-- HERO: Generic Page -->
+  <section style="min-height:60vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(to bottom,#075985,#0369a1);color:#ffffff;padding:80px 16px;">
+    <div role='heading' aria-level='1' style="font-family: var(--font-display, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans');font-weight:800; line-height:1.1; margin:0;font-size:clamp(44px,8vw,88px) !important;">Tactics</div>
+    <p style="margin:22px 0 0 0; max-width:48rem; line-height:1.6; opacity:.9;font-size:clamp(18px,2.2vw,24px) !important;">Turn principles into patterns. One simple choice at a time — with metrics.</p>
   </section>
 
-  <!-- Pressure & Closing -->
-  <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-    <h2 class="text-2xl font-bold">Applying Pressure & Closing Games</h2>
-    <div class="mt-4 grid gap-4">
-      <div class="rounded-xl border border-slate-200 p-4">
-        <h3 class="font-semibold">1–2 Punch</h3>
-        <p class="text-slate-700">Heavy cross to move them; take the next ball early into the open lane. Approach behind a backhand when possible.</p>
+  <!-- Main Content -->
+  <main class="py-10 md:max-w-4xl lg:px-8 px-4 sm:px-6 mx-auto container max-w-3xl lg:max-w-5xl" id="main">
+
+    <!-- Intro -->
+    <section class="mx-auto max-w-5xl mb-10">
+      <header class="mb-6">
+        <h1 class="text-4xl font-extrabold tracking-tight">Tactics</h1>
+        <p class="mt-3 text-slate-700">This is your applied playbook. Use the frameworks below to make fast, high‑percentage choices under pressure.</p>
+        <p class="mt-3 text-slate-700"><em><strong>Coach’s Cue:</strong> “Plan → Breathe → Commit.” From <a href="/strategy.html" class="text-brand-700 underline">Strategy</a>.</em></p>
+      </header>
+    </section>
+
+    <!-- Serve +1 Trees -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Serve +1 Trees</h2>
+      <div class="grid gap-4 md:grid-cols-2">
+        <div class="callout play">
+          <h3 class="font-semibold">Deuce Court</h3>
+          <small>Pick one pattern per game; change if they solve it.</small>
+          <ul class="list-disc pl-5 text-slate-700">
+            <li><strong>Wide →</strong> +1 to open court (safe to deep corner).</li>
+            <li><strong>Body →</strong> +1 deep middle; look for short ball next.</li>
+            <li><strong>T‑serve →</strong> +1 inside‑out; hold the line only when set.</li>
+          </ul>
+          <p class="mt-2 text-slate-700 italic"><strong>Metric:</strong> Win 65–70% of serve+1 points.</p>
+        </div>
+        <div class="callout play">
+          <h3 class="font-semibold">Ad Court</h3>
+          <small>Highest margin on big points.</small>
+          <ul class="list-disc pl-5 text-slate-700">
+            <li><strong>Body →</strong> +1 deep middle; shrink angles first.</li>
+            <li><strong>Wide kicker →</strong> +1 to space; follow to net if floated.</li>
+            <li><strong>T‑serve →</strong> +1 cross then inside‑in to finish.</li>
+          </ul>
+          <p class="mt-2 text-slate-700 italic"><strong>Metric:</strong> First ball clears net by 2–3 ft 80%+.</p>
+        </div>
       </div>
-      <div class="rounded-xl border border-slate-200 p-4">
-        <h3 class="font-semibold">Net as a Finisher</h3>
-        <p class="text-slate-700">Approach through the backhand; volley deep middle first, angle second. Split at every contact.</p>
+      <p class="mt-3 text-slate-600">Use your strength early; repeat until they prove a counter.</p>
+    </section>
+
+    <!-- Return +1 Schemes -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Return +1 Schemes</h2>
+      <div class="grid gap-4 md:grid-cols-2">
+        <div class="callout play">
+          <h3 class="font-semibold">Vs First Serve</h3>
+          <ul class="list-disc pl-5 text-slate-700">
+            <li><strong>Block middle/body</strong>; height beats pace.</li>
+            <li><strong>+1 deep middle</strong> to reset, then take space.</li>
+          </ul>
+          <p class="mt-2 text-slate-700 italic"><strong>Metric:</strong> Neutralize 7/10 first serves in play.</p>
+        </div>
+        <div class="callout play">
+          <h3 class="font-semibold">Vs Second Serve</h3>
+          <ul class="list-disc pl-5 text-slate-700">
+            <li><strong>Step in</strong>; pick forehand if possible.</li>
+            <li><strong>Drive to body/deep middle</strong>; follow to the ball.</li>
+          </ul>
+          <p class="mt-2 text-slate-700 italic"><strong>Metric:</strong> Create a short ball within 3 shots 60%+.</p>
+        </div>
       </div>
+    </section>
+
+    <!-- Neutral Patterns (Cross‑Court Triggers) -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Neutral Patterns</h2>
+      <ul class="mt-3 list-disc pl-5 text-slate-700">
+        <li><strong>Live cross‑court</strong> until you see <em>short / middle / height</em> — then change.</li>
+        <li><strong>Height first</strong> on rally ball one; raise net clearance when nervous.</li>
+        <li><strong>Inside‑in only when set</strong>; otherwise recycle to deep middle.</li>
+      </ul>
+      <p class="mt-3 text-slate-700"><span class="metric"><strong>Target:</strong> Win 60% of neutral rallies under 6 balls.</span></p>
+    </section>
+
+    <!-- Transition & Net Play (Singles) -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Transition &amp; Net (Singles)</h2>
+      <ul class="mt-3 list-disc pl-5 text-slate-700">
+        <li><strong>Approach to deep middle</strong> unless the angle is obvious.</li>
+        <li><strong>First volley: deep middle</strong>; second to angle or body jam.</li>
+        <li><strong>Read → Volleys:</strong> standard to build, drop to punish, lob volley to reset.</li>
+      </ul>
+      <p class="mt-3 text-slate-700"><em><strong>Cue:</strong> “Middle first.” Earn the sharp angle on ball two.</em></p>
+    </section>
+
+    <!-- Doubles Formations & Signals -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Doubles: Formations &amp; Signals</h2>
+      <div class="grid gap-4 md:grid-cols-2">
+        <div class="callout play">
+          <h3 class="font-semibold">Serve Formations</h3>
+          <ul class="list-disc pl-5 text-slate-700">
+            <li><strong>Standard:</strong> Poach on predictable returns; middle first on big points.</li>
+            <li><strong>I‑Formation:</strong> Hide weakness; signal poach/stay; serve body.</li>
+            <li><strong>Australian:</strong> Take returner’s strength; guard the line with the server.</li>
+          </ul>
+          <p class="mt-2 text-slate-700 italic"><strong>Metric:</strong> Hold 80% of service games across the team.</p>
+        </div>
+        <div class="callout play">
+          <h3 class="font-semibold">Return Teams</h3>
+          <ul class="list-disc pl-5 text-slate-700">
+            <li><strong>Middle first</strong> to jam poacher and shrink angles.</li>
+            <li><strong>Lob return</strong> over active net player 1–2 times per set.</li>
+          </ul>
+          <p class="mt-2 text-slate-700 italic"><strong>Metric:</strong> Break 1 in 3 games at 3.5–4.0 level; adjust by level.</p>
+        </div>
+      </div>
+      <p class="mt-3 text-slate-600">Use simple hand signals; confirm the <em>if/then</em> before every point.</p>
+    </section>
+
+    <!-- Opponent‑Type Plans (If/Then) -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Opponent‑Type Plans</h2>
+      <div class="grid gap-4 md:grid-cols-2">
+        <div class="callout">
+          <h3 class="font-semibold">Big Hitter</h3>
+          <ul class="list-disc pl-5 text-slate-700">
+            <li><strong>If</strong> they blast cross → <strong>then</strong> raise height and play deep middle.</li>
+            <li><strong>If</strong> they rush net → <strong>then</strong> jam body; lob only when balanced.</li>
+          </ul>
+          <p class="mt-2 text-slate-700 italic"><strong>Metric:</strong> Force 2+ extra balls before you change direction.</p>
+        </div>
+        <div class="callout">
+          <h3 class="font-semibold">Counter‑puncher</h3>
+          <ul class="list-disc pl-5 text-slate-700">
+            <li><strong>If</strong> they float short → <strong>then</strong> approach deep middle and follow.</li>
+            <li><strong>If</strong> rallies stretch long → <strong>then</strong> step inside on neutral balls.</li>
+          </ul>
+          <p class="mt-2 text-slate-700 italic"><strong>Metric:</strong> Finish within 2 shots after gaining court.</p>
+        </div>
+        <div class="callout">
+          <h3 class="font-semibold">Net Rusher</h3>
+          <ul class="list-disc pl-5 text-slate-700">
+            <li><strong>If</strong> they close early → <strong>then</strong> return/body jam; pass to space on ball two.</li>
+            <li><strong>If</strong> you’re jammed → <strong>then</strong> lob volley or lift high middle to reset.</li>
+          </ul>
+          <p class="mt-2 text-slate-700 italic"><strong>Metric:</strong> Win 60% of points when they touch first volley.</p>
+        </div>
+        <div class="callout">
+          <h3 class="font-semibold">All‑Court</h3>
+          <ul class="list-disc pl-5 text-slate-700">
+            <li><strong>If</strong> they vary tempo → <strong>then</strong> anchor to deep middle, change on your terms.</li>
+            <li><strong>If</strong> they poach often → <strong>then</strong> return middle and lob once per game.</li>
+          </ul>
+          <p class="mt-2 text-slate-700 italic"><strong>Metric:</strong> Keep unforced tape errors ≤1 per set.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pressure Packages (Big Points) -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Pressure Packages</h2>
+      <ul class="mt-3 list-disc pl-5 text-slate-700">
+        <li><strong>Serve (Ad):</strong> Body or T → +1 deep middle. No line‑painting.</li>
+        <li><strong>Return (Deuce):</strong> Block middle; +1 deep middle; reset feet.</li>
+        <li><strong>Rally:</strong> Height + depth until you see a sitter; then attack to space.</li>
+      </ul>
+      <p class="mt-3 text-slate-700"><span class="metric"><strong>Goal:</strong> Win 55%+ of deuce/ad deciding points.</span></p>
+    </section>
+
+    <!-- Special Situations -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Special Situations</h2>
+      <ul class="mt-3 list-disc pl-5 text-slate-700">
+        <li><strong>Wind:</strong> Into wind → drive more; with wind → add height & spin; aim bigger targets.</li>
+        <li><strong>Sun/Glare:</strong> Favor cross‑court lobs and higher net clearance.</li>
+        <li><strong>Fatigue:</strong> Play middle first, shorten swings, walk the towel (BPR).</li>
+      </ul>
+    </section>
+
+    <!-- Drill Bridges -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Drill Bridges</h2>
+      <ul class="mt-3 list-disc pl-5 text-slate-700">
+        <li><strong>Serve+1 Ladder:</strong> Repeat chosen tree ×10 each side; track win%.</li>
+        <li><strong>Return Jam:</strong> Block middle → +1 deep middle; score only on pressure points.</li>
+        <li><strong>Deep Middle → Angle:</strong> Two‑ball pattern from <a href="/volley.html" class="text-brand-700 underline">Volley</a>.</li>
+      </ul>
+      <p class="mt-3 text-slate-600">See <a href="/drills.html" class="text-brand-700 underline">Drills</a> for full progressions.</p>
+    </section>
+
+    <!-- Checklist & Weekly Challenge -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Tactics Checklist</h2>
+      <ul class="mt-3 list-disc pl-5 text-slate-700">
+        <li>⬜ One pattern per game (don’t sample endlessly)</li>
+        <li>⬜ First ball to margin (height + big target)</li>
+        <li>⬜ Call the if/then before pressure points</li>
+        <li>⬜ BPR every point: Plan → Breathe → Commit</li>
+      </ul>
+      <p class="mt-3 text-slate-700"><em><strong>Weekly Challenge:</strong> Track Serve+1 and Return+1 win% across two practice sets; aim for +10% improvement week over week.</em></p>
+    </section>
+  </main>
+
+  <!-- Footer (kept static) -->
+  <footer class="mt-16 border-t border-slate-200/60 bg-slate-50/60 py-10 dark:border-slate-800 dark:bg-slate-900/40">
+    <div class="mx-auto max-w-screen-xl px-4">
+      <div class="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
+        <div class="flex items-center gap-2"><span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">OT</span><span class="font-display text-lg font-semibold">Octopus Tennis</span></div>
+        <nav aria-label="Primary" class="hidden gap-6 md:flex">
+          <a class="nav-link text-sm dark:text-slate-200" href="/">Home</a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/serve.html">Serve</a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/return-of-serve.html">Return</a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/forehand.html">Forehand</a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/backhand.html">Backhand</a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/volley.html">Volley</a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/lob.html">Lob</a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/overhead.html">Overhead</a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/strategy.html">Strategy</a>
+          <a aria-current="page" class="nav-link text-brand-700 font-semibold text-sm dark:text-slate-200" href="/tactics.html">Tactics</a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/drills.html">Drills</a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/fitness.html">Fitness</a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/competition.html">Competition</a>
+          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/inspiration.html">Inspiration</a>
+        </nav>
+      </div>
+      <p class="mt-6 text-xs text-slate-500">© Octopus Tennis. All rights reserved.</p>
     </div>
-    <p class="mt-3 text-slate-700"><em><strong>Goal:</strong> Convert 65% of approach points by choosing deep middle on the first volley.</em></p>
-  </section>
+  </footer>
 
-  <!-- Score-Based Choices -->
-  <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-    <h2 class="text-2xl font-bold">Scoreboard Tactics</h2>
-    <ul class="mt-3 list-disc pl-5 text-slate-700">
-      <li><strong>30–30 / 15–30:</strong> Highest-margin cross-court; no hero lines.</li>
-      <li><strong>40–0:</strong> Rehearse a pattern you’ll need later — earn a rep.</li>
-      <li><strong>Tiebreak:</strong> Returns to deep middle; serve body to reduce free points.</li>
-    </ul>
-  </section>
-
-  <!-- Opponent Types -->
-  <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-    <h2 class="text-2xl font-bold">Adjusting to Opponent Types</h2>
-    <div class="mt-4 grid gap-4">
-      <div class="rounded-xl border border-slate-200 p-4">
-        <h3 class="font-semibold">Pusher / Counterpuncher</h3>
-        <p class="text-slate-700">Accept long points. Build with height and depth; finish only on green lights. Come forward behind backhand targets.</p>
-      </div>
-      <div class="rounded-xl border border-slate-200 p-4">
-        <h3 class="font-semibold">Big Hitter</h3>
-        <p class="text-slate-700">Steal time back: earlier contact, deeper middle, and occasional high balls. Make them hit one extra from chest height.</p>
-      </div>
-      <div class="rounded-xl border border-slate-200 p-4">
-        <h3 class="font-semibold">All-Courter</h3>
-        <p class="text-slate-700">Take away their favorite pattern. Force backhand approaches; pass cross first, then line.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Practice Bridge -->
-  <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-    <h2 class="text-2xl font-bold">Train the Tactics</h2>
-    <ol class="mt-3 list-decimal pl-5 text-slate-700">
-      <li><strong>Serve+1 Ladder (10 min):</strong> Deuce wide → open; Ad body → backhand. Track first-ball error %.</li>
-      <li><strong>Return Deep Middle (10 min):</strong> Block/drive to center hash; hitter aims corners.</li>
-      <li><strong>Green-Light Live (10 min):</strong> Attack only on listed cues; otherwise recycle.</li>
-    </ol>
-    <p class="mt-3 text-slate-700"><em><strong>Weekly Challenge:</strong> In practice sets, execute your called pattern on 70% of big points (30–30, 15–30, deuce).</em></p>
-    <p class="mt-3 text-slate-600">See the <a class="text-brand-700 underline" href="/drills.html">Drills</a> page for progressions and scoring games.</p>
-  </section>
-
-  <!-- Quick Checklist -->
-  <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-    <h2 class="text-2xl font-bold">Match Checklist</h2>
-    <ul class="mt-3 grid gap-2">
-      <li>⬜ Serve target chosen + scripted +1</li>
-      <li>⬜ Second-serve return: deep middle</li>
-      <li>⬜ Cross-court until you’ve clearly earned line</li>
-      <li>⬜ Recover inside the hash after every ball</li>
-      <li>⬜ Use height when rushed; take early when set</li>
-    </ul>
-  </section>
-</main>
-
-
-<footer class="mt-16 border-t border-slate-200/60 bg-slate-50/60 py-10 dark:border-slate-800 dark:bg-slate-900/40">
-<div class="mx-auto max-w-screen-xl px-4">
-<div class="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
-<div class="flex items-center gap-2">
-<span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">
-       OT
-      </span>
-<span class="font-display text-lg font-semibold">
-       Octopus Tennis
-      </span>
-</div>
-<nav aria-label="Primary" class="hidden gap-6 md:flex">
-<a class="nav-link text-sm dark:text-slate-200" href="/">
-       Home
-      </a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/serve.html">
-       Serve
-      </a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/return-of-serve.html">
-       Return
-      </a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/forehand.html">
-       Forehand
-      </a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/backhand.html">
-       Backhand
-      </a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/volley.html">
-       Volley
-      </a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/lob.html">
-       Lob
-      </a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/overhead.html">
-       Overhead
-      </a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/drop-shot.html">
-       Drop Shot
-      </a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/strategy.html">
-       Strategy
-      </a>
-<a aria-current="page" class="nav-link text-brand-700 font-semibold text-sm dark:text-slate-200" href="/tactics.html">Tactics</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/drills.html">
-       Drills
-      </a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/fitness.html">
-       Fitness
-      </a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/competition.html">
-       Competition
-      </a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/inspiration.html">
-       Inspiration
-      </a>
-</nav>
-</div>
-<p class="mt-6 text-xs text-slate-500">
-     © Octopus Tennis. All rights reserved.</p>
-</div>
-</footer>
-<script>
-   (function () {
-  function sample(el) {
-    if (!el) return "(n/a)";
-    return window.getComputedStyle(el).fontFamily;
-  }
-  function log() {
-    var body = document.body;
-    var h1 = document.querySelector("h1");
-    var p = document.querySelector("p");
-    var info = {
-      body: sample(body),
-      h1: sample(h1),
-      p: sample(p)
-    };
-    console.log("[FontCheck]", info);
-    // visible, non-intrusive badge for quick glance
-    var badge = document.createElement('div');
-    badge.textContent = 'Fonts ✓';
-    badge.style.position = 'fixed';
-    badge.style.bottom = '10px';
-    badge.style.right = '10px';
-    badge.style.padding = '4px 8px';
-    badge.style.background = 'rgba(0,0,0,0.6)';
-    badge.style.color = '#fff';
-    badge.style.fontSize = '12px';
-    badge.style.borderRadius = '6px';
-    badge.style.zIndex = '99999';
-    badge.title = 'Open DevTools console to see computed font-family for body/h1/p';
-    document.body.appendChild(badge);
-    setTimeout(function(){ badge.remove(); }, 3500);
-  }
-  if (document.readyState === "complete" || document.readyState === "interactive") {
-    setTimeout(log, 0);
-  } else {
-    document.addEventListener("DOMContentLoaded", log);
-  }
-})();
-  </script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var btn = document.getElementById('menu-toggle');
-    var drawer = document.getElementById('mobile-menu');
-    if (!btn || !drawer) return;
-
-    function setOpen(open) {
-      drawer.setAttribute('data-open', open ? 'true' : 'false');
-      btn.setAttribute('aria-expanded', String(open));
-
-      if (open) {
-        drawer.removeAttribute('hidden');
-        if (drawer.classList) drawer.classList.remove('hidden');
-        if (window.innerWidth < 1024) drawer.style.display = 'block';
-      } else {
-        drawer.setAttribute('hidden', '');
-        if (drawer.classList) drawer.classList.add('hidden');
-        drawer.style.display = '';
+  <!-- Small utilities preserved -->
+  <script>
+    (function () {
+      function sample(el) { if (!el) return "(n/a)"; return window.getComputedStyle(el).fontFamily; }
+      function log() {
+        var body = document.body; var h1 = document.querySelector("h1"); var p = document.querySelector("p");
+        var info = { body: sample(body), h1: sample(h1), p: sample(p) };
+        console.log("[FontCheck]", info);
       }
-
-      drawer.classList.toggle('invisible', !open);
-      drawer.classList.toggle('opacity-0', !open);
-      drawer.classList.toggle('-translate-y-2', !open);
-    }
-
-    btn.addEventListener('click', function () {
-      var open = drawer.getAttribute('data-open') === 'true';
-      setOpen(!open);
+      if (document.readyState === "complete" || document.readyState === "interactive") { setTimeout(log, 0); }
+      else { document.addEventListener("DOMContentLoaded", log); }
+    })();
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var btn = document.getElementById('menu-toggle');
+      var drawer = document.getElementById('mobile-menu');
+      if (!btn || !drawer) return;
+      function setOpen(open) {
+        drawer.setAttribute('data-open', open ? 'true' : 'false');
+        btn.setAttribute('aria-expanded', String(open));
+        if (open) { drawer.removeAttribute('hidden'); if (drawer.classList) drawer.classList.remove('hidden'); if (window.innerWidth < 1024) drawer.style.display = 'block'; }
+        else { drawer.setAttribute('hidden', ''); if (drawer.classList) drawer.classList.add('hidden'); drawer.style.display = ''; }
+        drawer.classList.toggle('invisible', !open);
+        drawer.classList.toggle('opacity-0', !open);
+        drawer.classList.toggle('-translate-y-2', !open);
+      }
+      btn.addEventListener('click', function () { var open = drawer.getAttribute('data-open') === 'true'; setOpen(!open); });
+      setOpen(false);
     });
-
-    setOpen(false);
-  });
-</script>
-<script>
-(function () {
-  if (window.__TC_BTT_SHADOW__) return;
-  window.__TC_BTT_SHADOW__ = true;
-  var showAt = 60;
-  var host = document.createElement('div');
-  host.style.position='fixed'; host.style.bottom='20px'; host.style.right='20px';
-  host.style.zIndex='2147483647'; host.style.pointerEvents='auto';
-  document.body.appendChild(host);
-  var root = host.attachShadow({mode:'open'});
-  root.innerHTML = '<style>button{all:initial;font:600 14px/1 system-ui,-apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial;display:none;padding:.55rem .75rem;border-radius:9999px;background:#fff;color:#111;box-shadow:0 8px 24px rgba(0,0,0,.18);cursor:pointer}button.show{display:inline-block}</style><button id="btn" aria-label="Back to top">↑</button>';
-  var btn = root.getElementById('btn');
-  function y(){return window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0}
-  function onScroll(){ if(y()>showAt) btn.classList.add('show'); else btn.classList.remove('show'); }
-  window.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
-  btn.addEventListener('click', function(){ try{window.scrollTo({top:0,behavior:'smooth'})}catch(e){window.scrollTo(0,0)}; btn.blur(); });
-})();
-</script>
+  </script>
+  <script>
+    (function () {
+      if (window.__TC_BTT_SHADOW__) return; window.__TC_BTT_SHADOW__ = true; var showAt = 60;
+      var host = document.createElement('div'); host.style.position='fixed'; host.style.bottom='20px'; host.style.right='20px'; host.style.zIndex='2147483647'; host.style.pointerEvents='auto'; document.body.appendChild(host);
+      var root = host.attachShadow({mode:'open'});
+      root.innerHTML = '<style>button{all:initial;font:600 14px/1 system-ui,-apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial;display:none;padding:.55rem .75rem;border-radius:9999px;background:#fff;color:#111;box-shadow:0 8px 24px rgba(0,0,0,.18);cursor:pointer}button.show{display:inline-block}</style><button id="btn" aria-label="Back to top">↑</button>';
+      var btn = root.getElementById('btn'); function y(){return window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0}
+      function onScroll(){ if(y()>showAt) btn.classList.add('show'); else btn.classList.remove('show'); }
+      window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+      btn.addEventListener('click', function(){ try{window.scrollTo({top:0,behavior:'smooth'})}catch(e){window.scrollTo(0,0)}; btn.blur(); });
+    })();
+  </script>
 </body>
 </html>
