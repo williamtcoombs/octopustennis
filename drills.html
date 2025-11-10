@@ -20,14 +20,14 @@
 
   <!-- SEO core: title, description, canonical, OG/Twitter (standardized) -->
   <title>Drills — Octopus Tennis</title>
-  <meta name="description" content="Structured practice sets: serve/return, neutral, transition/net, pressure, situational. Link drills to strategy principles and tactical patterns." />
+  <meta name="description" content="Turn strategy and tactics into skill with structured, measurable training sessions and match‑ready games." />
   <link rel="canonical" href="https://www.octopustennis.com/drills.html" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Octopus Tennis" />
   <meta property="og:title" content="Drills — Octopus Tennis" />
-  <meta property="og:description" content="Structured practice sets: serve/return, neutral, transition/net, pressure, situational. Link drills to strategy principles and tactical patterns." />
+  <meta property="og:description" content="Turn strategy and tactics into skill with structured, measurable training sessions and match‑ready games." />
   <meta property="og:url" content="https://www.octopustennis.com/drills.html" />
   <meta property="og:image" content="https://www.octopustennis.com/assets/img/og-default.png" />
   <meta property="og:image:width" content="1200" />
@@ -36,7 +36,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Drills — Octopus Tennis" />
-  <meta name="twitter:description" content="Structured practice sets: serve/return, neutral, transition/net, pressure, situational. Link drills to strategy principles and tactical patterns." />
+  <meta name="twitter:description" content="Turn strategy and tactics into skill with structured, measurable training sessions and match‑ready games." />
   <meta name="twitter:image" content="https://www.octopustennis.com/assets/img/og-default.png" />
 
   <!-- Theme color (sitewide standard) -->
@@ -61,17 +61,22 @@
   <script src="/assets/site.js" defer></script>
 
   <style>
-  /* Page-scoped; keep structure intact */
-  #mobile-menu a:focus, #mobile-menu a:focus-visible, #mobile-menu button:focus, #mobile-menu button:focus-visible { outline: none; box-shadow: none; }
-  #mobile-menu a, #mobile-menu button { -webkit-tap-highlight-color: transparent; }
-  .callout{border:1px solid rgba(100,116,139,.35);background:#fff;border-radius:.75rem;padding:1rem;box-shadow:0 1px 2px rgba(15,23,42,.05)}
-  .metric{background:rgba(3,105,161,.08);border:1px solid rgba(3,105,161,.22);padding:.5rem .75rem;border-radius:.65rem;display:inline-block}
+    /* Page-scoped helpers only; keep global site design intact */
+    #mobile-menu a:focus, #mobile-menu a:focus-visible, #mobile-menu button:focus, #mobile-menu button:focus-visible { outline: none; box-shadow: none; }
+    #mobile-menu a, #mobile-menu button { -webkit-tap-highlight-color: transparent; }
+    .callout{border:1px solid rgba(100,116,139,.35);background:#fff;border-radius:.75rem;padding:1rem;box-shadow:0 1px 2px rgba(15,23,42,.05)}
+    .metric{background:rgba(3,105,161,.08);border:1px solid rgba(3,105,161,.22);padding:.4rem .6rem;border-radius:.65rem;display:inline-block;font-size:.9rem}
+      .pill{display:inline-block;font-size:.72rem;line-height:1;padding:.18rem .5rem;border-radius:9999px;border:1px solid rgba(100,116,139,.35);background:rgba(148,163,184,.08);color:#334155;margin-left:.4rem;vertical-align:middle;white-space:nowrap}
+    .pill-percentages{border-color:rgba(15,23,42,.25);background:rgba(15,23,42,.06)}
+    .pill-pressure{border-color:rgba(3,105,161,.28);background:rgba(3,105,161,.08)}
+    .pill-patience{border-color:rgba(217,119,6,.28);background:rgba(217,119,6,.10)}
+    .pill-position{border-color:rgba(16,185,129,.28);background:rgba(16,185,129,.10)}
   </style>
 </head>
 <body class="min-h-dvh bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100 font-body typography-v1">
   <a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded-lg focus:bg-white/90 focus:px-3 focus:py-2 focus:text-slate-900" href="#main">Skip to content</a>
 
-  <!-- Header kept as-is -->
+  <!-- Header / Navbar (kept) -->
   <header class="sticky top-0 z-40 transition-all duration-300 bg-white/80 backdrop-blur dark:bg-slate-900/70" id="site-header">
     <div class="mx-auto max-w-screen-xl px-4">
       <div class="flex items-center justify-between py-3 lg:py-4" id="header-inner">
@@ -85,7 +90,6 @@
           <a class="nav-link" href="/volley.html">Volley</a>
           <a class="nav-link" href="/lob.html">Lob</a>
           <a class="nav-link" href="/overhead.html">Overhead</a>
-          <a class="nav-link" href="/drop-shot.html">Drop Shot</a>
           <a class="nav-link" href="/strategy.html">Strategy</a>
           <a class="nav-link" href="/tactics.html">Tactics</a>
           <a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/drills.html">Drills</a>
@@ -111,7 +115,6 @@
           <a class="nav-link" href="/volley.html">Volley</a>
           <a class="nav-link" href="/lob.html">Lob</a>
           <a class="nav-link" href="/overhead.html">Overhead</a>
-          <a class="nav-link" href="/drop-shot.html">Drop Shot</a>
           <a class="nav-link" href="/strategy.html">Strategy</a>
           <a class="nav-link" href="/tactics.html">Tactics</a>
           <a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/drills.html">Drills</a>
@@ -126,41 +129,118 @@
   <!-- HERO: Generic Page -->
   <section style="min-height:60vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(to bottom,#075985,#0369a1);color:#ffffff;padding:80px 16px;">
     <div role='heading' aria-level='1' style="font-family: var(--font-display, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans');font-weight:800; line-height:1.1; margin:0;font-size:clamp(44px,8vw,88px) !important;">Drills</div>
-    <p style="margin:22px 0 0 0; max-width:48rem; line-height:1.6; opacity:.9;font-size:clamp(18px,2.2vw,24px) !important;">Turn principles into reps. Track targets, build patterns, and measure progress.</p>
+    <p style="margin:22px 0 0 0; max-width:48rem; line-height:1.6; opacity:.9;font-size:clamp(18px,2.2vw,24px) !important;">Every drill connects to match habits — train the way you play, measure your improvement, and repeat your best patterns until they’re automatic.</p>
   </section>
 
+  <!-- Main Content -->
   <main class="py-10 md:max-w-4xl lg:px-8 px-4 sm:px-6 mx-auto container max-w-3xl lg:max-w-5xl" id="main">
 
-    <!-- Intro (kept) -->
+    <!-- Intro -->
     <section class="mx-auto max-w-5xl mb-10">
       <header class="mb-6">
         <h1 class="text-4xl font-extrabold tracking-tight">Drills</h1>
-        <p class="mt-3 text-slate-700">Practice with purpose: call your purpose (build / pressure / finish), then track a simple metric for each block.</p>
-        <p class="mt-3 text-slate-700"><em><strong>Coach’s Cue:</strong> “Reps with reason.” Every set should tie to Strategy and Tactics.</em></p>
+        <p class="mt-3 text-slate-700">Turn strategy and tactics into skill through structured, measurable training. Each drill ties to a Strategy pillar and a Tactics module with a clear cue, goal, and scoring method.</p>
       </header>
+      <div class="mt-2 text-sm text-slate-600 flex flex-wrap items-center gap-2" aria-label="Pillars legend">
+        <span class="pill pill-percentages">Percentages</span>
+        <span class="pill pill-pressure">Pressure</span>
+        <span class="pill pill-patience">Patience</span>
+        <span class="pill pill-position">Position</span>
+      </div>
     </section>
 
-    <!-- Drill Index (added) -->
+    <!-- Session Plans -->
     <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-      <h2 class="text-2xl font-bold">Drill Index</h2>
-      <p class="mt-2 text-slate-700">Quick links to drill groups. Pair these with <a href="/strategy.html#strategy-at-a-glance" class="text-brand-700 underline">Strategy</a> (BPR, Scoreboard Rules) and <a href="/tactics.html" class="text-brand-700 underline">Tactics</a> (Serve+1, Return+1, Neutral/Transition) for context and goals.</p>
-      <ul class="mt-3 grid gap-2 md:grid-cols-2 list-none pl-0">
-        <!-- Auto-generated list of section anchors goes here in the built file; keep in sync with your H2s -->
-        <li class="callout"><a class="text-brand-700 underline font-semibold" href="#foundation">Foundation</a></li>
-        <li class="callout"><a class="text-brand-700 underline font-semibold" href="#tactical">Tactical</a></li>
-        <li class="callout"><a class="text-brand-700 underline font-semibold" href="#competitive">Competitive</a></li>
-        <li class="callout"><a class="text-brand-700 underline font-semibold" href="#fitness">Fitness</a></li>
-        <li class="callout"><a class="text-brand-700 underline font-semibold" href="#specialty">Specialty</a></li>
-        <li class="callout"><a class="text-brand-700 underline font-semibold" href="#tracking">Tracking</a></li>
+      <h2 class="text-2xl font-bold">Ready‑to‑Run Session Plans</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-2">
+        <div class="callout">
+          <h3 class="font-semibold">60‑Minute Session (Efficient Focus)</h3>
+          <ul class="mt-2 list-disc pl-5 text-slate-700">
+            <li><strong>0–10 min:</strong> Dynamic warm‑up & footwork ladder — rhythm, balance, reaction.</li>
+            <li><strong>10–25 min:</strong> Serve+1 ladder — track win% & depth (65–70% goal).</li>
+            <li><strong>25–35 min:</strong> Return+1 & deep middle rally — neutralize 7/10 serves.</li>
+            <li><strong>35–50 min:</strong> Net transition series — approach + volley + overhead chain.</li>
+            <li><strong>50–60 min:</strong> Pressure ladder — 10‑point tiebreak simulation, emotional control focus.</li>
+          </ul>
+        </div>
+        <div class="callout">
+          <h3 class="font-semibold">90‑Minute Session (Comprehensive Development)</h3>
+          <ul class="mt-2 list-disc pl-5 text-slate-700">
+            <li><strong>0–10 min:</strong> Movement prep & shadow rally (split, load, recover).</li>
+            <li><strong>10–25 min:</strong> Serve targets + Serve+1 play (20 serves/side, log make% & point result).</li>
+            <li><strong>25–45 min:</strong> Return + Neutral→Offense drill (deep middle → angle).</li>
+            <li><strong>45–60 min:</strong> Transition & Net + Doubles formation game (approach, close, finish).</li>
+            <li><strong>60–75 min:</strong> Pressure games — first‑ball margin, deuce/ad ladder, momentum control.</li>
+            <li><strong>75–90 min:</strong> Fitness finisher — on‑court sprints, toss recovery, reflection journal.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="mt-3 text-slate-600">Scale reps early season; extend live points for match prep. Rotate themes weekly.</p>
+    </section>
+
+    <!-- Foundation -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Foundation Drills</h2>
+      <ul class="mt-3 list-disc pl-5 text-slate-700">
+        <li><strong>Mini‑Tennis Groove:</strong><span class="pill pill-patience">Patience</span> 50 continuous balls inside service boxes, no misses. <em>Cue:</em> Lift & land.</li>
+        <li><strong>Middle Control Rally:</strong><span class="pill pill-percentages">Percentages</span> 3×2‑min aiming deep middle. <span class="metric">Goal: 80% clearance, 3 ft over strap</span></li>
+        <li><strong>Cross/Line Alternation:</strong><span class="pill pill-position">Position</span> 10‑ball sequences alternating targets. Track pattern success.</li>
       </ul>
     </section>
 
-    <!-- Your original drill groups continue below, unchanged except for stable IDs on the <section> wrappers. -->
+    <!-- Tactical Blocks -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Tactical Drill Blocks</h2>
+      <ul class="mt-3 list-disc pl-5 text-slate-700">
+        <li><strong>Serve+1 Ladder:</strong><span class="pill pill-pressure">Pressure</span> 10 serves/side; point plays live. <span class="metric">Target: 65–70% won</span></li>
+        <li><strong>Return+1 Battle:</strong><span class="pill pill-pressure">Pressure</span> Alternate first/second serves; log neutralizations. <span class="metric">Target: 7/10</span></li>
+        <li><strong>Neutral → Offense Trigger:</strong><span class="pill pill-position">Position</span> Deep middle rally; attack short/middle/height triggers. <span class="metric">Win 60% of &lt;6‑ball rallies</span></li>
+        <li><strong>Transition Series:</strong><span class="pill pill-position">Position</span> Approach + volley + overhead pattern. <span class="metric">Convert 7/10 approach points</span></li>
+        <li><strong>Doubles Call Drill:</strong><span class="pill pill-position">Position</span> I‑formation & middle‑first returns. <span class="metric">Team hold 80%</span></li>
+      </ul>
+    </section>
 
-    <!-- …existing content preserved… -->
+    <!-- Competitive & Pressure -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Competitive Games &amp; Pressure Tests</h2>
+      <ul class="mt-3 list-disc pl-5 text-slate-700">
+        <li><strong>21 Rally:</strong><span class="pill pill-patience">Patience</span> First to 21, win by two, from live rallies. Focus on margin & patience.</li>
+        <li><strong>Serve Race:</strong><span class="pill pill-pressure">Pressure</span> 20 serves; 2 pts for aces/forced errors, 1 for neutral points won. <span class="metric">Goal: 14+ pts</span></li>
+        <li><strong>Approach Convert:</strong><span class="pill pill-position">Position</span> Feed, approach, play out. <span class="metric">Win 7/10 points at net</span></li>
+        <li><strong>First‑Ball Margin Game:</strong><span class="pill pill-percentages">Percentages</span> Replay if first ball missed long; ≤3 emotional errors per set.</li>
+      </ul>
+    </section>
 
+    <!-- Fitness -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Footwork &amp; Fitness Integration</h2>
+      <ul class="mt-3 list-disc pl-5 text-slate-700">
+        <li><strong>Split‑Step Timing:</strong><span class="pill pill-position">Position</span> Partner call; sync landing to strike. <span class="metric">90%+ correct</span></li>
+        <li><strong>Shadow Rally Series:</strong><span class="pill pill-patience">Patience</span> Simulate 6‑ball points with recovery steps; emphasize balance.</li>
+        <li><strong>Ladder &amp; Cone Circuit:</strong><span class="pill pill-pressure">Pressure</span> Quick feet → recovery shuffle; 4×30‑sec rounds.</li>
+        <li><strong>Toss Stability:</strong><span class="pill pill-percentages">Percentages</span> Hold toss 2 sec; recover balance. 10 perfect reps/side.</li>
+      </ul>
+    </section>
+
+    <!-- Specialty -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Specialty Drills</h2>
+      <ul class="mt-3 list-disc pl-5 text-slate-700">
+        <li><strong>Volley Depth Challenge:</strong><span class="pill pill-percentages">Percentages</span> 10 feeds; land in back third. <span class="metric">Goal: 8/10</span></li>
+        <li><strong>Lob–Overhead Chain:</strong><span class="pill pill-position">Position</span> Alternate lob & overhead under pressure; rally until drop.</li>
+        <li><strong>Drop → Lob Series:</strong><span class="pill pill-patience">Patience</span> Execute drop, recover, lob over net player; track success.</li>
+      </ul>
+    </section>
+
+    <!-- Tracking -->
+    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Tracking &amp; Reflection</h2>
+      <p class="mt-3 text-slate-700">After each session, record three metrics: consistency %, pressure conversion %, and emotional control (1–5). Review weekly trends.</p>
+      <p class="mt-3 text-slate-700"><em><strong>Weekly Challenge:</strong> Increase Serve+1 and Return+1 win rates by 10% vs last week.</em></p>
+    </section>
   </main>
 
+  <!-- Footer (kept static) -->
   <footer class="mt-16 border-t border-slate-200/60 bg-slate-50/60 py-10 dark:border-slate-800 dark:bg-slate-900/40">
     <div class="mx-auto max-w-screen-xl px-4">
       <div class="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
@@ -174,10 +254,8 @@
           <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/volley.html">Volley</a>
           <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/lob.html">Lob</a>
           <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/overhead.html">Overhead</a>
-          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/drop-shot.html">Drop Shot</a>
           <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/strategy.html">Strategy</a>
-          <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/tactics.html">Tactics</a>
-          <a aria-current="page" class="nav-link text-brand-700 font-semibold text-sm dark:text-slate-200" href="/drills.html">Drills</a>
+          <a class="nav-link text-brand-700 font-semibold text-sm dark:text-slate-200" aria-current="page" href="/drills.html">Drills</a>
           <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/fitness.html">Fitness</a>
           <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/competition.html">Competition</a>
           <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/inspiration.html">Inspiration</a>
@@ -187,7 +265,7 @@
     </div>
   </footer>
 
-  <!-- Small utilities preserved -->
+  <!-- Utilities (kept) -->
   <script>
     (function () {
       function sample(el) { if (!el) return "(n/a)"; return window.getComputedStyle(el).fontFamily; }
