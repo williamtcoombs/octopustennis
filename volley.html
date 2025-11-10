@@ -1,125 +1,468 @@
 <!DOCTYPE html>
+
 <html class="scroll-smooth" lang="en">
 <head>
-  <!-- head contents unchanged -->
-</head>
-<body class="typography-v1 bg-white min-h-dvh text-slate-900 font-body antialiased">
-  <!-- header/nav unchanged -->
+<script>
+    /* Light-only mode guard (standardized). */
+    (function () {
+      try {
+        var root = document.documentElement;
+        if (root && root.classList) root.classList.remove('dark');
+        if (typeof localStorage !== 'undefined') {
+          localStorage.setItem('theme', 'light');
+        }
+      } catch (_) {}
+    })();
+  </script>
+<!-- Meta -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<!-- SEO core: title, description, canonical, OG/Twitter (standardized) -->
+<title>Volley — Octopus Tennis</title>
+<meta content="Command the net with quick reflexes, soft hands, and smart positioning—clean technique for reliable put‑aways." name="description"/>
+<link href="https://www.octopustennis.com/volley.html" rel="canonical"/>
+<!-- Open Graph -->
+<meta content="website" property="og:type"/>
+<meta content="Octopus Tennis" property="og:site_name"/>
+<meta content="Volley — Octopus Tennis" property="og:title"/>
+<meta content="Command the net with quick reflexes, soft hands, and smart positioning—clean technique for reliable put‑aways." property="og:description"/>
+<meta content="https://www.octopustennis.com/volley.html" property="og:url"/>
+<meta content="https://www.octopustennis.com/assets/img/og-default.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<!-- Twitter -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Volley — Octopus Tennis" name="twitter:title"/>
+<meta content="Command the net with quick reflexes, soft hands, and smart positioning—clean technique for reliable put‑aways." name="twitter:description"/>
+<meta content="https://www.octopustennis.com/assets/img/og-default.png" name="twitter:image"/>
+<!-- Theme color (sitewide standard) -->
+<meta content="#0369a1" name="theme-color"/>
+<!-- Favicons -->
+<link href="/assets/img/favicon-512x512.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/img/favicon-192x192.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/img/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/favicon.ico" rel="shortcut icon"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&amp;family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet">
+<!-- Styles -->
+<link href="/assets/site.css" rel="stylesheet">
+<script defer="" src="/assets/site.js"></script>
+<style>/* Page-scoped: Remove faint focus/shadow ring in iOS Safari/Chrome for the mobile drawer */
+#mobile-menu a:focus,
+#mobile-menu a:focus-visible,
+#mobile-menu button:focus,
+#mobile-menu button:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
 
-  <!-- HERO -->
-  <section style="min-height:60vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(to bottom,#075985,#0369a1);color:#ffffff;padding:80px 16px;">
-    <div role="heading" aria-level="1" style="font-family:var(--font-display,system-ui);font-weight:800;line-height:1.1;margin:0;font-size:clamp(44px,8vw,88px)">Volley</div>
-    <p style="margin:22px 0 0 0;max-width:48rem;line-height:1.6;opacity:.9;font-size:clamp(18px,2.2vw,24px)">Stay balanced, react fast, and control the air game with confidence at the net.</p>
-  </section>
+/* Reduce iOS tap highlight halo on links/buttons in the mobile drawer */
+#mobile-menu a, 
+#mobile-menu button {
+  -webkit-tap-highlight-color: transparent;
+}</style>
+</link></link></link></link></head>
+<body class="min-h-dvh bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100 font-body typography-v1">
+<a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded-lg focus:bg-white/90 focus:px-3 focus:py-2 focus:text-slate-900" href="#main">
+   Skip to content
+  </a>
+<!-- Header / Navbar -->
+<header class="sticky top-0 z-40 transition-all duration-300 bg-white/80 backdrop-blur dark:bg-slate-900/70" id="site-header">
+<div class="mx-auto max-w-screen-xl px-4">
+<div class="flex items-center justify-between py-3 lg:py-4" id="header-inner">
+<!-- Brand -->
+<a class="flex items-center gap-2" href="/">
+<span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">OT</span>
+<span class="font-display text-lg font-semibold tracking-wide">Octopus Tennis</span>
+</a>
+<!-- Desktop nav -->
+<nav aria-label="Primary" class="hidden gap-6 md:flex is-collapsible" id="primary-nav">
+<a class="nav-link" href="/">Home</a>
+<a class="nav-link" href="/serve.html">Serve</a>
+<a class="nav-link" href="/return-of-serve.html">Return</a>
+<a class="nav-link" href="/forehand.html">Forehand</a>
+<a class="nav-link" href="/backhand.html">Backhand</a>
+<a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/volley.html">Volley</a>
+<a class="nav-link" href="/lob.html">Lob</a>
+<a class="nav-link" href="/overhead.html">Overhead</a>
+<a class="nav-link" href="/drop-shot.html">Drop Shot</a>
+<a class="nav-link" href="/strategy.html">Strategy</a>
+<a class="nav-link" href="/tactics.html">Tactics</a>
+<a class="nav-link" href="/drills.html">Drills</a>
+<a class="nav-link" href="/fitness.html">Fitness</a>
+<a class="nav-link" href="/competition.html">Competition</a>
+<a class="nav-link" href="/inspiration.html">Inspiration</a>
+</nav>
+<!-- Buttons -->
+<div class="flex items-center gap-2 md:gap-3">
+<!-- Theme toggle intentionally disabled (light-only mode) -->
+<!-- Mobile menu toggle (no data-menu-toggle) -->
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-900 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-800" id="menu-toggle" type="button">
+<svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile drawer -->
+<div class="absolute inset-x-0 top-full z-30 md:hidden duration-200 invisible opacity-0 -translate-y-2 h-[calc(100dvh-64px)]" data-open="false" id="mobile-menu">
+<div class="mx-4 rounded-2xl border border-slate-200/60 bg-white/95 shadow-xl backdrop-blur dark:border-slate-800 dark:bg-slate-900/90 p-4">
+<nav aria-label="Mobile" class="grid gap-2 text-base">
+<a class="nav-link" href="/">Home</a>
+<a class="nav-link" href="/serve.html">Serve</a>
+<a class="nav-link" href="/return-of-serve.html">Return</a>
+<a class="nav-link" href="/forehand.html">Forehand</a>
+<a class="nav-link" href="/backhand.html">Backhand</a>
+<a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/volley.html">Volley</a>
+<a class="nav-link" href="/lob.html">Lob</a>
+<a class="nav-link" href="/overhead.html">Overhead</a>
+<a class="nav-link" href="/drop-shot.html">Drop Shot</a>
+<a class="nav-link" href="/strategy.html">Strategy</a>
+<a class="nav-link" href="/tactics.html">Tactics</a>
+<a class="nav-link" href="/drills.html">Drills</a>
+<a class="nav-link" href="/fitness.html">Fitness</a>
+<a class="nav-link" href="/competition.html">Competition</a>
+<a class="nav-link" href="/inspiration.html">Inspiration</a>
+</nav>
+</div>
+</div>
+</header>
+<!-- HERO: Generic Page -->
+<section style="
+    min-height:60vh;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+    background:linear-gradient(to bottom,#075985,#0369a1);
+    color:#ffffff;padding:80px 16px;">
+<!-- Title -->
+<div aria-level="1" role="heading" style="
+         font-family: var(--font-display, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans');
+         font-weight:800; line-height:1.1; margin:0;
+         font-size:clamp(44px,8vw,88px) !important;">
+    Volley
+  </div>
+<!-- Tagline -->
+<p style="
+      margin:22px 0 0 0; max-width:48rem; line-height:1.6; opacity:.9;
+      font-size:clamp(18px,2.2vw,24px) !important;">
+    Command the net with quick reflexes, soft hands, and smart positioning.
+  </p>
+</section>
+<!-- Main Content -->
+<main class="py-10 md:max-w-4xl lg:px-8 px-4 sm:px-6 mx-auto container max-w-3xl lg:max-w-5xl" id="main">
+<section class="mx-auto max-w-5xl mb-10">
+<header class="mb-6">
+<h1 class="text-4xl font-extrabold tracking-tight">Volley</h1>
+<p class="mt-3 text-slate-700">
+        Own the air game with <strong>quiet hands</strong> and <strong>decisive feet</strong>. Split on time, punch to big targets, and recover forward.
+      </p>
+<p class="mt-3 text-slate-700"><em><strong>Coach’s Cue:</strong> “Split → Read → Step.” Hands guide, feet deliver.</em></p>
+</header>
+</section><section class="mx-auto max-w-5xl py-8 border-t border-slate-200"><h2 class="text-2xl font-bold">Video Coaching Insights</h2><p class="mt-2 text-slate-700">Watch these clips in 0.75× for rhythm and split timing; use 0.5× to check contact point and finish height.</p><div class="mt-6 grid gap-6 sm:grid-cols-2"><figure class="rounded-xl overflow-hidden border border-slate-200/70 bg-white shadow-sm"><div style="position:relative;width:100%;height:0;padding-bottom:56.25%;"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="True" loading="lazy" src="https://www.youtube.com/embed/Je6f2T5hA4Q" style="position:absolute;inset:0;width:100%;height:100%;border:0;" title="standard volley by Robert Lindstedt"></iframe></div><figcaption class="p-3 text-sm text-slate-700">standard volley by Robert Lindstedt</figcaption></figure><figure class="rounded-xl overflow-hidden border border-slate-200/70 bg-white shadow-sm"><div style="position:relative;width:100%;height:0;padding-bottom:56.25%;"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="True" loading="lazy" src="https://www.youtube.com/embed/3CgkkDQfy4Q" style="position:absolute;inset:0;width:100%;height:100%;border:0;" title="James Ludlow"></iframe></div><figcaption class="p-3 text-sm text-slate-700">James Ludlow</figcaption></figure><figure class="rounded-xl overflow-hidden border border-slate-200/70 bg-white shadow-sm"><div style="position:relative;width:100%;height:0;padding-bottom:56.25%;"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="True" loading="lazy" src="https://www.youtube.com/embed/RrLKqcRpZtc" style="position:absolute;inset:0;width:100%;height:100%;border:0;" title="approach volley"></iframe></div><figcaption class="p-3 text-sm text-slate-700">approach volley</figcaption></figure><figure class="rounded-xl overflow-hidden border border-slate-200/70 bg-white shadow-sm"><div style="position:relative;width:100%;height:0;padding-bottom:56.25%;"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="True" loading="lazy" src="https://www.youtube.com/embed/YtR76A_3lOs" style="position:absolute;inset:0;width:100%;height:100%;border:0;" title="How to hit a drop volley"></iframe></div><figcaption class="p-3 text-sm text-slate-700">How to hit a drop volley</figcaption></figure><figure class="rounded-xl overflow-hidden border border-slate-200/70 bg-white shadow-sm"><div style="position:relative;width:100%;height:0;padding-bottom:56.25%;"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="True" loading="lazy" src="https://www.youtube.com/embed/imNBibX0QV8" style="position:absolute;inset:0;width:100%;height:100%;border:0;" title="lob volley"></iframe></div><figcaption class="p-3 text-sm text-slate-700">lob volley</figcaption></figure><figure class="rounded-xl overflow-hidden border border-slate-200/70 bg-white shadow-sm"><div style="position:relative;width:100%;height:0;padding-bottom:56.25%;"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="True" loading="lazy" src="https://www.youtube.com/embed/nJcYuKohlPw" style="position:absolute;inset:0;width:100%;height:100%;border:0;" title="how to hit a half volley"></iframe></div><figcaption class="p-3 text-sm text-slate-700">how to hit a half volley</figcaption></figure><figure class="rounded-xl overflow-hidden border border-slate-200/70 bg-white shadow-sm"><div style="position:relative;width:100%;height:0;padding-bottom:56.25%;"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="True" loading="lazy" src="https://www.youtube.com/embed/VkCjd2D_-5Y" style="position:absolute;inset:0;width:100%;height:100%;border:0;" title="How to hit a drive volley"></iframe></div><figcaption class="p-3 text-sm text-slate-700">How to hit a drive volley</figcaption></figure><figure class="rounded-xl overflow-hidden border border-slate-200/70 bg-white shadow-sm"><div style="position:relative;width:100%;height:0;padding-bottom:56.25%;"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="True" loading="lazy" src="https://www.youtube.com/embed/6fAtunAkRX4" style="position:absolute;inset:0;width:100%;height:100%;border:0;" title="Doubles Volley"></iframe></div><figcaption class="p-3 text-sm text-slate-700">Doubles Volley</figcaption></figure><figure class="rounded-xl overflow-hidden border border-slate-200/70 bg-white shadow-sm"><div style="position:relative;width:100%;height:0;padding-bottom:56.25%;"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="True" loading="lazy" src="https://www.youtube.com/embed/G__XMFhGVC4" style="position:absolute;inset:0;width:100%;height:100%;border:0;" title="High Volley"></iframe></div><figcaption class="p-3 text-sm text-slate-700">High Volley</figcaption></figure></div></section>
+<!-- Volley Fundamentals -->
+<section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+<h2 class="text-2xl font-bold">Volley Fundamentals</h2>
+<ul class="mt-3 list-disc pl-5 text-slate-700">
+<li><strong>Split &amp; Stick:</strong> Land the split <em>as</em> they hit; short punch, not a swing.</li>
+<li><strong>Racquet Quiet:</strong> Firm wrist, slightly open face; meet the ball out front.</li>
+<li><strong>Feet First:</strong> Step through toward target — body supplies most of the pace.</li>
+</ul>
+<p class="mt-3 text-slate-600">Small move, big control. Guide, don’t wind up.</p>
+<p class="mt-3 text-slate-700"><em><strong>Team Standard:</strong> 8/10 first volleys placed deep middle from the service line.</em></p>
+</section>
+<!-- Court Position & Targets -->
+<section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+<h2 class="text-2xl font-bold">Court Position &amp; Targets</h2>
+<ul class="mt-3 list-disc pl-5 text-slate-700">
+<li><strong>Positions:</strong> Service line (transition), mid‑net (standard), close‑in (put‑away).</li>
+<li><strong>Primary Targets:</strong> Deep middle to shrink angles; body to jam; short angle to pull wide.</li>
+<li><strong>Split Timing:</strong> Land split on opponent contact, then read and step.</li>
+</ul>
+<p class="mt-3 text-slate-700"><em><strong>Cue:</strong> “Middle first.” Earn the sharp angle on ball two.</em></p>
+</section>
+<!-- Volley Types -->
+<section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+<h2 class="text-2xl font-bold">Volley Types</h2>
+<div class="mt-4 grid gap-4">
+<!-- Standard Volley -->
+<div class="rounded-xl border border-slate-200 p-4">
+<h3 class="font-semibold">Standard Volley</h3>
+<p class="text-slate-700">
+          Neutral ball, waist height. Racquet out front, quiet wrist, short punch to a big target (deep middle or body).
+        </p>
+<p class="mt-2 text-slate-700 italic"><strong>Goal:</strong> Make 9/10 standard volleys to deep middle; hold finish for one count.</p>
+<br/>
 
-  <main class="py-10 md:max-w-4xl lg:px-8 px-4 sm:px-6 mx-auto container max-w-3xl lg:max-w-5xl" id="main">
+<br/>
 
-    <!-- Intro -->
-    <section class="mx-auto max-w-5xl mb-10">
-      <header class="mb-6">
-        <h1 class="text-4xl font-extrabold tracking-tight">Volley</h1>
-        <p class="mt-3 text-slate-700">Your volley is about control and anticipation. We’ll cover movement, position, and precision to own the net.</p>
-      </header>
-    </section>
+</div>
+<!-- Approach Volley -->
+<div class="rounded-xl border border-slate-200 p-4">
+<h3 class="font-semibold">Approach Volley</h3>
+<p class="text-slate-700">
+          Taken near the service line while moving in. Prioritize <em>height + depth</em> to buy time, then recover forward to mid‑net.
+        </p>
+<p class="mt-2 text-slate-700 italic"><strong>Goal:</strong> 8/10 land past service line with 3+ feet net clearance; recover two steps forward.</p>
+<br/>
 
-    <!-- Video Coaching Insights -->
-    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-      <h2 class="text-2xl font-bold">Video Coaching Insights</h2>
-      <p class="mt-2 text-slate-700">Watch these clips at 0.75× speed for rhythm and split timing; at 0.5× to check reaction, racquet prep, and finish.</p>
-      <div class="mt-6 grid gap-6 sm:grid-cols-2">
-        <!-- Example video blocks, all original clips consolidated -->
-        <figure class="rounded-xl overflow-hidden border border-slate-200/70 bg-white shadow-sm">
-          <div style="position:relative;width:100%;height:0;padding-bottom:56.25%;">
-            <iframe src="https://www.youtube.com/embed/1fBHTxVbt5U" title="Standard Volley Technique" style="position:absolute;inset:0;width:100%;height:100%;border:0;" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <figcaption class="p-3 text-sm text-slate-700">Standard forehand volley technique — short takeback, firm wrist, smooth punch.</figcaption>
-        </figure>
-        <figure class="rounded-xl overflow-hidden border border-slate-200/70 bg-white shadow-sm">
-          <div style="position:relative;width:100%;height:0;padding-bottom:56.25%;">
-            <iframe src="https://www.youtube.com/embed/WdDQJrHkGUc" title="Backhand Volley Control" style="position:absolute;inset:0;width:100%;height:100%;border:0;" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <figcaption class="p-3 text-sm text-slate-700">Backhand volley control — lead with knuckles, push through contact, recover balanced.</figcaption>
-        </figure>
-        <!-- Additional figures for all other volley types (Approach, Drop, Half, Drive, Put-away, etc.) would continue here, each preserved from original page -->
-      </div>
-    </section>
+</div>
+<!-- Drop Volley -->
+<div class="rounded-xl border border-slate-200 p-4">
+<h3 class="font-semibold">Drop Volley</h3>
+<p class="text-slate-700">
+          Soften the grip at contact; short follow‑through. Use when the opponent is deep or off balance. Place just over the net with angle.
+        </p>
+<p class="mt-2 text-slate-700 italic"><strong>Goal:</strong> Die the ball inside the service box with two bounces before the baseline.</p>
+<br/>
 
-    <!-- Volley Fundamentals -->
-    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-      <h2 class="text-2xl font-bold">Volley Fundamentals</h2>
-      <p class="mt-3 text-slate-700">A great volley starts with split timing, compact preparation, and body stability through contact.</p>
-      <ul class="mt-3 list-disc pl-5 text-slate-700">
-        <li><strong>Split Step:</strong> Time your split as your opponent hits.</li>
-        <li><strong>Compact Swing:</strong> No backswing — punch forward with controlled firmness.</li>
-        <li><strong>Balance:</strong> Keep knees soft and chest facing target.</li>
-      </ul>
-      <p class="mt-3 text-slate-700 italic"><strong>Coach’s Cue:</strong> “Split → Read → Step.”</p>
-    </section>
+</div>
+<!-- Lob Volley -->
+<div class="rounded-xl border border-slate-200 p-4">
+<h3 class="font-semibold">Lob Volley</h3>
+<p class="text-slate-700">
+          Open the face and lift with the legs. Great against aggressive net rushers or when jammed. Aim high to the backhand side.
+        </p>
+<p class="mt-2 text-slate-700 italic"><strong>Goal:</strong> Clear opponent by 8–10 feet; land deep and force a backpedal.
+        </p>
+<br/>
 
-    <!-- Court Position & Targets -->
-    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-      <h2 class="text-2xl font-bold">Court Position &amp; Targets</h2>
-      <p class="mt-3 text-slate-700">Smart positioning turns defense into offense. Own the middle first, then close space with every volley.</p>
-      <ul class="mt-3 list-disc pl-5 text-slate-700">
-        <li>First volley: aim deep middle 8/10 times.</li>
-        <li>Close diagonally after contact; cover the line with your partner.</li>
-        <li>Finish the point with clear angles only when balanced.</li>
-      </ul>
-    </section>
+</div>
+<!-- Half Volley -->
+<div class="rounded-xl border border-slate-200 p-4">
+<h3 class="font-semibold">Half Volley</h3>
+<p class="text-slate-700">
+          Low, short hop just after the bounce. Keep the racquet quiet, accept the ball, and guide deep middle to reset.
+        </p>
+<p class="mt-2 text-slate-700 italic"><strong>Goal:</strong> 7/10 guided to deep middle without a swing — just a firm block.</p>
+<br/>
 
-    <!-- Volley Types -->
-    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-      <h2 class="text-2xl font-bold">Volley Types</h2>
-      <ul class="mt-3 list-disc pl-5 text-slate-700">
-        <li><strong>Standard Volley:</strong> Controlled punch through the middle.</li>
-        <li><strong>Approach Volley:</strong> Deep and firm to the corner, follow in behind.</li>
-        <li><strong>Drop Volley:</strong> Feathered, soft hands, ball dies short.</li>
-        <li><strong>Lob Volley:</strong> Defensive lift over aggressive net player.</li>
-        <li><strong>Half Volley:</strong> Pick-up off the bounce, steady and compact.</li>
-        <li><strong>Drive Volley:</strong> Aggressive put-away in mid-air.</li>
-      </ul>
-    </section>
+</div>
+<!-- Drive Volley -->
+<div class="rounded-xl border border-slate-200 p-4">
+<h3 class="font-semibold">Drive Volley</h3>
+<p class="text-slate-700">
+          Taken high and rising. Compact swing, contact well in front, drive toward open court. Use when set and balanced.
+        </p>
+<p class="mt-2 text-slate-700 italic"><strong>Goal:</strong> 8/10 driven to open court; finish chest to target.</p>
+<br/>
 
-    <!-- Patterns at Net -->
-    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-      <h2 class="text-2xl font-bold">Patterns at Net</h2>
-      <p class="mt-3 text-slate-700">Anticipation and positioning make your volley game unstoppable.</p>
-      <ul class="mt-3 list-disc pl-5 text-slate-700">
-        <li><strong>Poach Pattern:</strong> Read serve direction, move early across middle.</li>
-        <li><strong>Cover + Finish:</strong> First volley deep middle, second volley angled off.</li>
-        <li><strong>Reset + Recover:</strong> When stretched, volley high middle, recover stance.</li>
-      </ul>
-    </section>
+</div>
+<!-- Put-Away Volley -->
+<div class="rounded-xl border border-slate-200 p-4">
+<h3 class="font-semibold">Put‑Away Volley</h3>
+<p class="text-slate-700">
+          High sitter or slow floater. Step through, contact in front, finish through the court to space — no second chances at the net.
+        </p>
+<p class="mt-2 text-slate-700 italic"><strong>Goal:</strong> Finish 9/10 within two swings; choose space, not the line judge.</p>
+<br/>
 
-    <!-- Drills -->
-    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-      <h2 class="text-2xl font-bold">Drills</h2>
-      <ul class="mt-3 list-disc pl-5 text-slate-700">
-        <li><strong>Rapid Fire (5 mins):</strong> 10 volleys in a row from service line, reset feet each rep.</li>
-        <li><strong>Triangle Net Drill:</strong> Alternate middle-left-right volleys, 3 cycles.</li>
-        <li><strong>Approach + Finish:</strong> Approach volley, close, put-away — 5 rounds each side.</li>
-      </ul>
-      <p class="mt-3 text-slate-700 italic"><strong>Goal:</strong> Win 70% of net exchanges in practice sets.</p>
-    </section>
+<br/>
 
-    <!-- Volley Checklist -->
-    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-      <h2 class="text-2xl font-bold">Volley Checklist</h2>
-      <ul class="mt-3 list-disc pl-5 text-slate-700">
-        <li>⬜ Timed split step</li>
-        <li>⬜ Compact swing, no backswing</li>
-        <li>⬜ Chest to target through contact</li>
-        <li>⬜ Quick recovery ready for next ball</li>
-      </ul>
-      <p class="mt-3 text-slate-600">Calm, quick, and ready — that’s your volley mindset.</p>
-    </section>
+</div>
+</div>
+</section>
+<!-- Patterns at Net -->
+<section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+<h2 class="text-2xl font-bold">Patterns at Net</h2>
+<ul class="mt-3 list-disc pl-5 text-slate-700">
+<li><strong>Deep Middle → Angle:</strong> First volley deep middle; second creates the angle.</li>
+<li><strong>Body Jam → Open Court:</strong> Jam to chest, then finish to space.</li>
+<li><strong>Drop → Lob:</strong> If they sprint forward, show a soft drop then lift the next ball over.</li>
+</ul>
+<p class="mt-3 text-slate-700"><em><strong>Coach’s Tip:</strong> Call the target before contact (middle, body, or angle). Decisiveness is half the volley.</em></p>
+<p class="mt-3 text-slate-600">Two‑ball plans keep you composed under pressure.</p>
+</section>
+<!-- Drills -->
+<section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+<h2 class="text-2xl font-bold">Drills</h2>
+<ul class="mt-3 list-disc pl-5 text-slate-700">
+<li><strong>Service‑Line Wall:</strong> 50 quick punch volleys; quiet hands, racquet out front.</li>
+<li><strong>Deep‑Middle First:</strong> Coach feeds; first volley deep middle, second to angle.</li>
+<li><strong>Half‑Volley Reset:</strong> Low feeds at service line; guide to deep middle, hold your finish.</li>
+<li><strong>Drop &amp; Lob Series:</strong> Alternate soft drop with controlled lob volley.</li>
+</ul>
+<p class="mt-3 text-slate-700"><em><strong>Goal:</strong> Win 7/10 first‑volley exchanges in practice points by choosing deep middle first.</em></p>
+<p class="mt-3 text-slate-600">See <a class="text-brand-700 underline" href="/drills.html">Drills</a> for progressions that blend movement and touch.</p>
+</section>
+<!-- Checklist -->
+<section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+<h2 class="text-2xl font-bold">Volley Checklist</h2>
+<ul class="mt-3 list-disc pl-5 text-slate-700">
+<li>⬜ Split timed with opponent contact</li>
+<li>⬜ Contact out in front, quiet wrist</li>
+<li>⬜ First volley deep middle</li>
+<li>⬜ Finish with feet toward the target</li>
+</ul>
+<p class="mt-3 text-slate-700"><em><strong>Weekly Challenge:</strong> In doubles drills, convert 70% of net‑position points when you touch the first volley.</em></p>
+</section>
+<!-- Cross-links -->
+<section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+<p class="text-slate-700">
+      Build the approach that gets you there: see <a class="text-brand-700 underline" href="/tactics.html">Tactics</a> for approach patterns, and <a class="text-brand-700 underline" href="/competition.html">Competition</a> for matchday composure.
+    </p>
+</section>
+</main>
+<!-- Footer (kept static) -->
+<footer class="mt-16 border-t border-slate-200/60 bg-slate-50/60 py-10 dark:border-slate-800 dark:bg-slate-900/40">
+<div class="mx-auto max-w-screen-xl px-4">
+<div class="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
+<div class="flex items-center gap-2">
+<span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">
+       OT
+      </span>
+<span class="font-display text-lg font-semibold">
+       Octopus Tennis
+      </span>
+</div>
+<nav aria-label="Primary" class="hidden gap-6 md:flex">
+<a class="nav-link text-sm dark:text-slate-200" href="/">
+       Home
+      </a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/serve.html">
+       Serve
+      </a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/return-of-serve.html">
+       Return
+      </a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/forehand.html">
+       Forehand
+      </a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/backhand.html">
+       Backhand
+      </a>
+<a aria-current="page" class="nav-link text-brand-700 font-semibold text-sm dark:text-slate-200" href="/volley.html">Volley</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/lob.html">
+       Lob
+      </a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/overhead.html">
+       Overhead
+      </a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/drop-shot.html">
+       Drop Shot
+      </a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/strategy.html">
+       Strategy
+      </a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/tactics.html">
+       Tactics
+      </a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/drills.html">
+       Drills
+      </a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/fitness.html">
+       Fitness
+      </a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/competition.html">
+       Competition
+      </a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/inspiration.html">
+       Inspiration
+      </a>
+</nav>
+</div>
+<p class="mt-6 text-xs text-slate-500">
+     © Octopus Tennis. All rights reserved.</p>
+</div>
+</footer>
+<!-- Back to top -->
+<style>
+   /* Page-specific tweaks */
+      .prose :where(h2,h3) { scroll-margin-top: 96px; }
+  </style>
+<script>
+   (function () {
+  function sample(el) {
+    if (!el) return "(n/a)";
+    return window.getComputedStyle(el).fontFamily;
+  }
+  function log() {
+    var body = document.body;
+    var h1 = document.querySelector("h1");
+    var p = document.querySelector("p");
+    var info = {
+      body: sample(body),
+      h1: sample(h1),
+      p: sample(p)
+    };
+    console.log("[FontCheck]", info);
+    // visible, non-intrusive badge for quick glance
+    var badge = document.createElement('div');
+    badge.textContent = 'Fonts ✓';
+    badge.style.position = 'fixed';
+    badge.style.bottom = '10px';
+    badge.style.right = '10px';
+    badge.style.padding = '4px 8px';
+    badge.style.background = 'rgba(0,0,0,0.6)';
+    badge.style.color = '#fff';
+    badge.style.fontSize = '12px';
+    badge.style.borderRadius = '6px';
+    badge.style.zIndex = '99999';
+    badge.title = 'Open DevTools console to see computed font-family for body/h1/p';
+    document.body.appendChild(badge);
+    setTimeout(function(){ badge.remove(); }, 3500);
+  }
+  if (document.readyState === "complete" || document.readyState === "interactive") {
+    setTimeout(log, 0);
+  } else {
+    document.addEventListener("DOMContentLoaded", log);
+  }
+})();
+  </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var btn = document.getElementById('menu-toggle');
+    var drawer = document.getElementById('mobile-menu');
+    if (!btn || !drawer) return;
 
-    <!-- Cross-links -->
-    <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-      <p class="text-slate-700">Next, master the defensive lift. See <a href="/lob.html" class="text-brand-700 underline">Lob</a> for controlled height under pressure.</p>
-    </section>
-  </main>
+    function setOpen(open) {
+      drawer.setAttribute('data-open', open ? 'true' : 'false');
+      btn.setAttribute('aria-expanded', String(open));
 
-  <!-- footer/scripts unchanged -->
+      if (open) {
+        drawer.removeAttribute('hidden');
+        if (drawer.classList) drawer.classList.remove('hidden');
+        if (window.innerWidth < 1024) drawer.style.display = 'block';
+      } else {
+        drawer.setAttribute('hidden', '');
+        if (drawer.classList) drawer.classList.add('hidden');
+        drawer.style.display = '';
+      }
+
+      drawer.classList.toggle('invisible', !open);
+      drawer.classList.toggle('opacity-0', !open);
+      drawer.classList.toggle('-translate-y-2', !open);
+    }
+
+    btn.addEventListener('click', function () {
+      var open = drawer.getAttribute('data-open') === 'true';
+      setOpen(!open);
+    });
+
+    setOpen(false);
+  });
+</script>
+<script>
+(function () {
+  if (window.__TC_BTT_SHADOW__) return;
+  window.__TC_BTT_SHADOW__ = true;
+  var showAt = 60;
+  var host = document.createElement('div');
+  host.style.position='fixed'; host.style.bottom='20px'; host.style.right='20px';
+  host.style.zIndex='2147483647'; host.style.pointerEvents='auto';
+  document.body.appendChild(host);
+  var root = host.attachShadow({mode:'open'});
+  root.innerHTML = '<style>button{all:initial;font:600 14px/1 system-ui,-apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial;display:none;padding:.55rem .75rem;border-radius:9999px;background:#fff;color:#111;box-shadow:0 8px 24px rgba(0,0,0,.18);cursor:pointer}button.show{display:inline-block}</style><button id="btn" aria-label="Back to top">↑</button>';
+  var btn = root.getElementById('btn');
+  function y(){return window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0}
+  function onScroll(){ if(y()>showAt) btn.classList.add('show'); else btn.classList.remove('show'); }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  btn.addEventListener('click', function(){ try{window.scrollTo({top:0,behavior:'smooth'})}catch(e){window.scrollTo(0,0)}; btn.blur(); });
+})();
+</script>
 </body>
 </html>
