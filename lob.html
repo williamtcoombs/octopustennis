@@ -12,16 +12,26 @@
       } catch (_) {}
     })();
   </script>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+
+  <!-- Styles -->
   <link rel="stylesheet" href="/assets/site.css" />
+
+  <!-- Meta -->
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-512x512.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-192x192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
   <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- SEO core: title, description, canonical, OG/Twitter -->
   <title>Lob — Octopus Tennis</title>
   <meta name="description" content="Lift under pressure with balance, height, and intent. The lob buys time, resets points, and finishes over stretched opponents." />
   <link rel="canonical" href="https://www.octopustennis.com/lob.html" />
@@ -36,10 +46,13 @@
   <meta name="twitter:description" content="Lift under pressure with balance, height, and intent. The lob buys time, resets points, and finishes over stretched opponents." />
   <meta name="twitter:image" content="https://www.octopustennis.com/assets/img/og-default.png" />
   <meta name="theme-color" content="#0369a1">
+
   <script src="/assets/site.js" defer></script>
 </head>
 <body class="min-h-dvh bg-white text-slate-900 antialiased font-body typography-v1">
   <a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded-lg focus:bg-white/90 focus:px-3 focus:py-2 focus:text-slate-900" href="#main">Skip to content</a>
+
+  <!-- HEADER -->
   <header class="sticky top-0 z-40 transition-all duration-300 bg-white/80 backdrop-blur" id="site-header">
     <div class="mx-auto max-w-screen-xl px-4">
       <div class="flex items-center justify-between py-3 lg:py-4">
@@ -47,6 +60,7 @@
           <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">OT</span>
           <span class="font-display text-lg font-semibold tracking-wide">Octopus Tennis</span>
         </a>
+
         <nav aria-label="Primary" class="hidden gap-6 md:flex" id="primary-nav">
           <a class="nav-link" href="/">Home</a>
           <a class="nav-link" href="/serve.html">Serve</a>
@@ -64,195 +78,200 @@
           <a class="nav-link" href="/competition.html">Competition</a>
           <a class="nav-link" href="/inspiration.html">Inspiration</a>
         </nav>
+
         <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-900 hover:bg-slate-50" id="menu-toggle" type="button">
           <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
         </button>
       </div>
     </div>
+    <div class="absolute inset-x-0 top-full z-30 md:hidden duration-200 invisible opacity-0 -translate-y-2 h-[calc(100dvh-64px)]" data-open="false" id="mobile-menu">
+      <div class="mx-4 rounded-2xl border border-slate-200/60 bg-white/95 shadow-xl backdrop-blur p-4">
+        <nav aria-label="Mobile" class="grid gap-2 text-base">
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/serve.html">Serve</a>
+          <a class="nav-link" href="/return-of-serve.html">Return</a>
+          <a class="nav-link" href="/forehand.html">Forehand</a>
+          <a class="nav-link" href="/backhand.html">Backhand</a>
+          <a class="nav-link" href="/volley.html">Volley</a>
+          <a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/lob.html">Lob</a>
+          <a class="nav-link" href="/overhead.html">Overhead</a>
+          <a class="nav-link" href="/drop-shot.html">Drop Shot</a>
+          <a class="nav-link" href="/strategy.html">Strategy</a>
+          <a class="nav-link" href="/tactics.html">Tactics</a>
+          <a class="nav-link" href="/drills.html">Drills</a>
+          <a class="nav-link" href="/fitness.html">Fitness</a>
+          <a class="nav-link" href="/competition.html">Competition</a>
+          <a class="nav-link" href="/inspiration.html">Inspiration</a>
+        </nav>
+      </div>
+    </div>
   </header>
 
+  <!-- HERO -->
   <section class="relative flex min-h-[60vh] flex-col items-center justify-center text-center bg-gradient-to-b from-sky-800 to-sky-700 text-white px-4 py-20">
-  <h1 class="font-display font-extrabold text-5xl sm:text-6xl md:text-7xl">Lob</h1>
-  <p class="mt-6 max-w-2xl text-lg sm:text-xl md:text-2xl opacity-90">
-    Lift under pressure with balance, height, and intent.
-  </p>
-</section>
+    <h1 class="font-display font-extrabold text-5xl sm:text-6xl md:text-7xl">Lob</h1>
+    <p class="mt-6 max-w-2xl text-lg sm:text-xl md:text-2xl opacity-90">Lift under pressure with balance, height, and intent.</p>
+  </section>
 
-  <main id="main" class="prose prose-slate prose-lg md:prose-xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-    <!-- ===== LOB CONTENT START ===== -->
+  <!-- MAIN (prose wrapper inside to avoid affecting hero/footer) -->
+  <main id="main" class="mx-auto px-4 sm:px-6 lg:px-8 py-10 md:max-w-4xl lg:max-w-5xl">
+    <div class="prose prose-slate prose-lg md:prose-xl leading-relaxed tracking-wide max-w-none">
 
-    <section class="prose max-w-none">
-      <h2>What the Lob Does</h2>
-      <p>
-        The lob buys time, resets when you’re pressured, and punishes opponents who camp the net.
-        Your goals: <strong>get height, get depth, and recover</strong>. If they smash, you make them hit one more
-        ball from an awkward spot; if they retreat, you take the court back.
-      </p>
-    </section>
+      <section>
+        <h2>What the Lob Does</h2>
+        <p>
+          The lob buys time, resets when you’re pressured, and punishes opponents who camp the net.
+          Your goals: <strong>get height, get depth, and recover</strong>. If they smash, you make them hit one more
+          ball from an awkward spot; if they retreat, you take the court back.
+        </p>
+      </section>
 
-    <section class="mt-10">
-      <h2>Fundamentals</h2>
-      <div class="grid gap-6 md:grid-cols-2">
-        <div>
-          <h3>Setup & Footwork</h3>
-          <ul class="list-disc pl-5">
-            <li><strong>Stance:</strong> Wide base, chest up, chin level. Think “lift with legs.”</li>
-            <li><strong>Contact:</strong> Slightly in front, strings facing the sky; finish high over shoulder.</li>
-            <li><strong>Margin:</strong> Aim 10–15 ft above net tape (~3–4× net height) on defensive lobs.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Contact & Finish</h3>
-          <ul class="list-disc pl-5">
-            <li><strong>Low → High:</strong> Brush up, not across. Let the racket “carry” the ball up.</li>
-            <li><strong>Head still:</strong> Freeze after contact for one beat; watch the ball up the line it travels.</li>
-            <li><strong>Recover:</strong> Split-step as the ball peaks; read their movement (retreat vs. smash).
-          </ul>
-        </div>
-      </div>
-
-      <div class="mt-6">
-        <h3>Common Mistakes</h3>
-        <ul class="list-disc pl-5">
-          <li>Trying to “place” with the wrist (causes floaters). Use legs + forearm, not wrist flicks.</li>
-          <li>Hitting too flat (low arc). Build height first; depth follows.</li>
-          <li>Watching the result instead of <em>recovering</em>. Finish, split, and reposition immediately.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="mt-10">
-      <h2>Types of Lobs</h2>
-      <div class="grid gap-6 md:grid-cols-2">
-        <div>
-          <h3>Defensive Lob</h3>
-          <p>When stretched or under pace: big arc, big margin, middle of court. Reset the point.</p>
-          <ul class="list-disc pl-5">
-            <li><strong>Target:</strong> Deep middle to avoid angles.</li>
-            <li><strong>Cue:</strong> “Lift the sky,” finish high, recover to center.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Topspin Lob</h3>
-          <p>When they’re close to the net and you have time: fast lift with heavy brush so it <em>dips</em> in.</p>
-          <ul class="list-disc pl-5">
-            <li><strong>Target:</strong> Cross or DTL over their backhand side.</li>
-            <li><strong>Cue:</strong> “Brush the back up,” accelerate through contact.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Slice / Touch Lob</h3>
-          <p>Use when they’re backpedaling already: carve under slightly; soft hands, early prep.</p>
-        </div>
-        <div>
-          <h3>Volley & On-the-Run Lobs</h3>
-          <p>Short backswing, firm wrist on the volley lob; for on-the-run, exaggerate lift and clear higher.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="mt-10">
-      <h2>Patterns (Singles & Doubles)</h2>
-      <div class="grid gap-6 md:grid-cols-2">
-        <div>
-          <h3>Singles</h3>
-          <ul class="list-disc pl-5">
-            <li><strong>vs. Net-Rushers:</strong> Deep cross defensive lob → recover → attack next short ball.</li>
-            <li><strong>Pull & Lob:</strong> Roll heavy cross to pull them wide, then topspin lob DTL.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Doubles</h3>
-          <ul class="list-disc pl-5">
-            <li><strong>Over the Poacher:</strong> Topspin lob over active net player; follow to middle.</li>
-            <li><strong>Reset Middle:</strong> Defensive lob down the center to neutralize both players.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="mt-10">
-      <h2>Drills (Measurable Goals)</h2>
-      <div class="grid gap-6 md:grid-cols-2">
-        <div>
-          <h3>Arc & Depth Ladder</h3>
-          <p>Cones at baseline center. Aim to land balls past the cones with a high arc.</p>
-          <ul class="list-disc pl-5">
-            <li><strong>Goal:</strong> 8/10 balls clear net by ≥12 ft and land past the baseline cone.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Topspin Dip Challenge</h3>
-          <p>Partner at service line. Hit topspin lobs that clear high and dip inside court.</p>
-          <ul class="list-disc pl-5">
-            <li><strong>Goal:</strong> 6/10 drop inside last 6 feet with visible topspin kick.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Pressure Reset</h3>
-          <p>Coach feeds on the run. Player must lift a defensive lob, recover, and split on peak.</p>
-          <ul class="list-disc pl-5">
-            <li><strong>Goal:</strong> 5 successful resets in a row (height + recovery timing).</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Poacher Counter (Doubles)</h3>
-          <p>Opponent poaches; you respond with lob over their backhand shoulder.</p>
-          <ul class="list-disc pl-5">
-            <li><strong>Goal:</strong> 7/10 land deep cross; partner pinches middle on your call.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- -------- Video Coaching Insights (placeholders replaced with live videos) -------- -->
-    <section class="mt-12 border-t border-slate-200 pt-8">
-      <h2>Video Coaching Insights</h2>
-      <p class="text-slate-700">
-        Watch at 0.75× for rhythm; 0.5× to check peak height, contact, and recovery split.
-      </p>
-
-      <div class="mt-4 grid gap-10">
-        <!-- VIDEO 1 -->
-        <article>
-          <h3 id="clip-1">Lob Fundamentals — Height & Recovery</h3>
-          <p class="text-slate-600">Look for low-to-high lift, finish over shoulder, and immediate split on peak.</p>
-          <div class="aspect-video w-full rounded-xl overflow-hidden bg-slate-100">
-            <iframe
-              src="https://www.youtube.com/embed/Q3GnQ-j9Lis"
-              title="Lob Fundamentals — Height & Recovery"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-              class="h-full w-full"></iframe>
+      <section>
+        <h2>Fundamentals</h2>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div>
+            <h3>Setup &amp; Footwork</h3>
+            <ul class="list-disc pl-5">
+              <li><strong>Stance:</strong> Wide base, chest up, chin level. Think “lift with legs.”</li>
+              <li><strong>Contact:</strong> Slightly in front, strings facing the sky; finish high over shoulder.</li>
+              <li><strong>Margin:</strong> Aim 10–15 ft above net tape (~3–4× net height) on defensive lobs.</li>
+            </ul>
           </div>
-        </article>
-
-        <!-- VIDEO 2 -->
-        <article>
-          <h3 id="clip-2">Topspin Lob — Brush & Dip</h3>
-          <p class="text-slate-600">Notice the brush speed: clear high, then dip inside the baseline.</p>
-          <div class="aspect-video w-full rounded-xl overflow-hidden bg-slate-100">
-            <iframe
-              src="https://www.youtube.com/embed/YUJABtAXh1c"
-              title="Topspin Lob — Brush & Dip"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-              class="h-full w-full"></iframe>
+          <div>
+            <h3>Contact &amp; Finish</h3>
+            <ul class="list-disc pl-5">
+              <li><strong>Low → High:</strong> Brush up, not across. Let the racket “carry” the ball up.</li>
+              <li><strong>Head still:</strong> Freeze after contact for one beat; watch the ball up the line it travels.</li>
+              <li><strong>Recover:</strong> Split-step as the ball peaks; read their movement (retreat vs. smash).</li>
+            </ul>
           </div>
-        </article>
-      </div>
+        </div>
 
-      <div class="mt-6 text-sm">
-        Jump to: <a href="#clip-1" class="underline text-brand-700">Fundamentals clip</a> ·
-        <a href="#clip-2" class="underline text-brand-700">Topspin lob clip</a>
-      </div>
-    </section>
+        <div class="mt-6">
+          <h3>Common Mistakes</h3>
+          <ul class="list-disc pl-5">
+            <li>Trying to “place” with the wrist (causes floaters). Use legs + forearm, not wrist flicks.</li>
+            <li>Hitting too flat (low arc). Build height first; depth follows.</li>
+            <li>Watching the result instead of <em>recovering</em>. Finish, split, and reposition immediately.</li>
+          </ul>
+        </div>
+      </section>
 
-    <!-- ===== LOB CONTENT END ===== -->
+      <section>
+        <h2>Types of Lobs</h2>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div>
+            <h3>Defensive Lob</h3>
+            <p>When stretched or under pace: big arc, big margin, middle of court. Reset the point.</p>
+            <ul class="list-disc pl-5">
+              <li><strong>Target:</strong> Deep middle to avoid angles.</li>
+              <li><strong>Cue:</strong> “Lift the sky,” finish high, recover to center.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Topspin Lob</h3>
+            <p>When they’re close to the net and you have time: fast lift with heavy brush so it <em>dips</em> in.</p>
+            <ul class="list-disc pl-5">
+              <li><strong>Target:</strong> Cross or DTL over their backhand side.</li>
+              <li><strong>Cue:</strong> “Brush the back up,” accelerate through contact.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Slice / Touch Lob</h3>
+            <p>Use when they’re backpedaling already: carve under slightly; soft hands, early prep.</p>
+          </div>
+          <div>
+            <h3>Volley &amp; On-the-Run Lobs</h3>
+            <p>Short backswing, firm wrist on the volley lob; for on-the-run, exaggerate lift and clear higher.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Patterns (Singles &amp; Doubles)</h2>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div>
+            <h3>Singles</h3>
+            <ul class="list-disc pl-5">
+              <li><strong>vs. Net-Rushers:</strong> Deep cross defensive lob → recover → attack next short ball.</li>
+              <li><strong>Pull &amp; Lob:</strong> Roll heavy cross to pull them wide, then topspin lob DTL.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Doubles</h3>
+            <ul class="list-disc pl-5">
+              <li><strong>Over the Poacher:</strong> Topspin lob over active net player; follow to middle.</li>
+              <li><strong>Reset Middle:</strong> Defensive lob down the center to neutralize both players.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Drills (Measurable Goals)</h2>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div>
+            <h3>Arc &amp; Depth Ladder</h3>
+            <p>Cones at baseline center. Aim to land balls past the cones with a high arc.</p>
+            <ul class="list-disc pl-5">
+              <li><strong>Goal:</strong> 8/10 balls clear net by ≥12 ft and land past the baseline cone.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Topspin Dip Challenge</h3>
+            <p>Partner at service line. Hit topspin lobs that clear high and dip inside court.</p>
+            <ul class="list-disc pl-5">
+              <li><strong>Goal:</strong> 6/10 drop inside last 6 feet with visible topspin kick.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Pressure Reset</h3>
+            <p>Coach feeds on the run. Player must lift a defensive lob, recover, and split on peak.</p>
+            <ul class="list-disc pl-5">
+              <li><strong>Goal:</strong> 5 successful resets in a row (height + recovery timing).</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Poacher Counter (Doubles)</h3>
+            <p>Opponent poaches; you respond with lob over their backhand shoulder.</p>
+            <ul class="list-disc pl-5">
+              <li><strong>Goal:</strong> 7/10 land deep cross; partner pinches middle on your call.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-12 border-t border-slate-200 pt-8">
+        <h2>Video Coaching Insights</h2>
+        <p class="text-slate-700">Watch at 0.75× for rhythm; 0.5× to check peak height, contact, and recovery split.</p>
+
+        <div class="mt-4 grid gap-10">
+          <article>
+            <h3 id="clip-1">Lob Fundamentals — Height &amp; Recovery</h3>
+            <p class="text-slate-600">Look for low-to-high lift, finish over shoulder, and immediate split on peak.</p>
+            <div class="aspect-video w-full rounded-xl overflow-hidden bg-slate-100">
+              <iframe src="https://www.youtube.com/embed/Q3GnQ-j9Lis" title="Lob Fundamentals — Height &amp; Recovery" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="h-full w-full"></iframe>
+            </div>
+          </article>
+
+          <article>
+            <h3 id="clip-2">Topspin Lob — Brush &amp; Dip</h3>
+            <p class="text-slate-600">Notice the brush speed: clear high, then dip inside the baseline.</p>
+            <div class="aspect-video w-full rounded-xl overflow-hidden bg-slate-100">
+              <iframe src="https://www.youtube.com/embed/YUJABtAXh1c" title="Topspin Lob — Brush &amp; Dip" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="h-full w-full"></iframe>
+            </div>
+          </article>
+        </div>
+
+        <div class="mt-6 text-sm">
+          Jump to: <a href="#clip-1" class="underline text-brand-700">Fundamentals clip</a> · <a href="#clip-2" class="underline text-brand-700">Topspin lob clip</a>
+        </div>
+      </section>
+
+    </div>
   </main>
 
+  <!-- FOOTER -->
   <footer class="mt-16 border-t border-slate-200/60 bg-slate-50/60 py-10">
     <div class="mx-auto max-w-screen-xl px-4">
       <div class="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
@@ -281,5 +300,11 @@
       <p class="mt-6 text-xs text-slate-500">© Octopus Tennis. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Back to Top Button (hooks into existing site.js) -->
+  <button id="back-to-top" aria-label="Back to top" class="fixed bottom-5 right-5 z-50 hidden rounded-full bg-brand-700 p-3 text-white shadow-lg transition-opacity duration-300 hover:bg-brand-800 focus:outline-none focus:ring-2 focus:ring-brand-500">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M5 15l7-7 7 7"></path></svg>
+  </button>
+
 </body>
 </html>
