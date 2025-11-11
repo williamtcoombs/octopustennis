@@ -53,7 +53,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&amp;family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
 
   <!-- Styles -->
   <link rel="stylesheet" href="/assets/site.css" />
@@ -73,8 +73,11 @@
   </script>
 
   <style>
-  /* Page-scoped: remove faint focus/shadow ring in iOS Safari/Chrome for the mobile drawer */
-  #mobile-menu a:focus, #mobile-menu a:focus-visible, #mobile-menu button:focus, #mobile-menu button:focus-visible { outline: none; box-shadow: none; }
+  /* Page-scoped: Remove faint focus/shadow ring in iOS Safari/Chrome for the mobile drawer */
+  #mobile-menu a:focus,
+  #mobile-menu a:focus-visible,
+  #mobile-menu button:focus,
+  #mobile-menu button:focus-visible { outline: none; box-shadow: none; }
   /* Reduce iOS tap highlight halo on links/buttons in the mobile drawer */
   #mobile-menu a, #mobile-menu button { -webkit-tap-highlight-color: transparent; }
   </style>
@@ -82,7 +85,7 @@
 <body class="min-h-dvh bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100 font-body typography-v1">
   <a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded-lg focus:bg-white/90 focus:px-3 focus:py-2 focus:text-slate-900" href="#main">Skip to content</a>
 
-  <!-- Header / Navbar (sitewide standard) -->
+  <!-- Header / Navbar (mirrors other stroke pages) -->
   <header class="sticky top-0 z-40 transition-all duration-300 bg-white/80 backdrop-blur dark:bg-slate-900/70" id="site-header">
     <div class="mx-auto max-w-screen-xl px-4">
       <div class="flex items-center justify-between py-3 lg:py-4" id="header-inner">
@@ -111,10 +114,11 @@
         </nav>
         <!-- Buttons -->
         <div class="flex items-center gap-2 md:gap-3">
-          <!-- Theme toggle intentionally disabled (light-only mode) -->
           <!-- Mobile menu toggle -->
           <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-900 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-800" id="menu-toggle" type="button">
-            <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewBox="0 0 24 24">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
           </button>
         </div>
       </div>
@@ -142,24 +146,29 @@
       </div>
     </div>
   </header>
-
+  
   <!-- HERO: rectangular gradient layout -->
-  <section style="min-height:60vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(to bottom,#075985,#0369a1);color:#ffffff;padding:80px 16px;">
-    <div role='heading' aria-level='1' style="font-family:var(--font-display,system-ui);font-weight:800;line-height:1.1;font-size:clamp(44px,8vw,88px);">Lob</div>
-    <p style="margin:22px 0 0;max-width:48rem;line-height:1.6;opacity:.9;font-size:clamp(18px,2.2vw,24px);">(Tagline TBD)</p>
+  <section
+    style="
+      min-height:60vh;
+      display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+      background:linear-gradient(to bottom,#075985,#0369a1);
+      color:#ffffff;padding:80px 16px;">
+    <div role='heading' aria-level='1'
+         style="font-family: var(--font-display, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans'); font-weight:800; line-height:1.1; font-size:clamp(44px,8vw,88px);">
+      Lob
+    </div>
+    <p style="margin:22px 0 0; max-width:48rem; line-height:1.6; opacity:.9; font-size:clamp(18px,2.2vw,24px);">
+      (Tagline TBD)
+    </p>
   </section>
 
-  <!-- Main Content (intentionally empty placeholders) -->
+  <!-- Main Content (empty for now) -->
   <main class="py-10 md:max-w-4xl lg:px-8 px-4 sm:px-6 mx-auto container max-w-3xl lg:max-w-5xl" id="main">
-    <!-- TODO: Write intro paragraph in coach-forward tone -->
-    <!-- TODO: Fundamentals -->
-    <!-- TODO: Types -->
-    <!-- TODO: Patterns -->
-    <!-- TODO: Drills with measurable goals -->
-    <!-- TODO: Video Coaching Insights list -->
+    <!-- TODO: Add Lob content here following the stroke-page structure -->
   </main>
 
-  <!-- Footer (sitewide standard) -->
+  <!-- Footer (mirrors other stroke pages) -->
   <footer class="mt-16 border-t border-slate-200/70 bg-white/70 backdrop-blur dark:border-slate-800 dark:bg-slate-900/60">
     <div class="mx-auto max-w-screen-xl px-4 py-10">
       <div class="grid gap-6 md:grid-cols-2 md:items-center">
@@ -167,28 +176,27 @@
           <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">OT</span>
           <span class="font-display text-lg font-semibold tracking-wide">Octopus Tennis</span>
         </a>
-        <nav aria-label="Footer" class="flex flex-wrap gap-x-6 gap-y-3 justify-start md:justify-end text-sm">
-          <a class="footer-link" href="/">Home</a>
-          <a class="footer-link" href="/serve.html">Serve</a>
-          <a class="footer-link" href="/return-of-serve.html">Return</a>
-          <a class="footer-link" href="/forehand.html">Forehand</a>
-          <a class="footer-link" href="/backhand.html">Backhand</a>
-          <a class="footer-link" href="/volley.html">Volley</a>
-          <a aria-current="page" class="footer-link text-brand-700 font-semibold" href="/lob.html">Lob</a>
-          <a class="footer-link" href="/overhead.html">Overhead</a>
-          <a class="footer-link" href="/drop-shot.html">Drop Shot</a>
-          <a class="footer-link" href="/strategy.html">Strategy</a>
-          <a class="footer-link" href="/tactics.html">Tactics</a>
-          <a class="footer-link" href="/drills.html">Drills</a>
-          <a class="footer-link" href="/fitness.html">Fitness</a>
-          <a class="footer-link" href="/competition.html">Competition</a>
-          <a class="footer-link" href="/inspiration.html">Inspiration</a>
+        <nav aria-label="Footer" class="flex flex-wrap items-center justify-start md:justify-end text-sm space-x-6">
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/serve.html">Serve</a>
+          <a class="nav-link" href="/return-of-serve.html">Return</a>
+          <a class="nav-link" href="/forehand.html">Forehand</a>
+          <a class="nav-link" href="/backhand.html">Backhand</a>
+          <a class="nav-link" href="/volley.html">Volley</a>
+          <a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/lob.html">Lob</a>
+          <a class="nav-link" href="/overhead.html">Overhead</a>
+          <a class="nav-link" href="/drop-shot.html">Drop Shot</a>
+          <a class="nav-link" href="/strategy.html">Strategy</a>
+          <a class="nav-link" href="/tactics.html">Tactics</a>
+          <a class="nav-link" href="/drills.html">Drills</a>
+          <a class="nav-link" href="/fitness.html">Fitness</a>
+          <a class="nav-link" href="/competition.html">Competition</a>
+          <a class="nav-link" href="/inspiration.html">Inspiration</a>
         </nav>
       </div>
       <div class="mt-6 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-600 dark:text-slate-400">
         <p>© Octopus Tennis. All rights reserved.</p>
-        <div class="flex items-center gap-4">
-          <!-- Optional policy/social links placeholders -->
+        <div class="flex items-center space-x-4">
           <a class="hover:underline" href="#">Privacy</a>
           <a class="hover:underline" href="#">Terms</a>
         </div>
@@ -198,7 +206,9 @@
 
   <!-- Back to Top Button -->
   <button id="back-to-top" aria-label="Back to top" class="fixed bottom-5 right-5 z-50 hidden rounded-full bg-brand-700 p-3 text-white shadow-lg transition-opacity duration-300 hover:bg-brand-800 focus:outline-none focus:ring-2 focus:ring-brand-500">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M5 15l7-7 7 7"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
+      <path d="M5 15l7-7 7 7"></path>
+    </svg>
   </button>
 </body>
 </html>
