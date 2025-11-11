@@ -107,13 +107,40 @@
     </div>
   </header>
 
-  <!-- HERO (restored to match serve.html) -->
-  <section class="relative flex min-h-[60vh] flex-col items-center justify-center text-center bg-gradient-to-b from-sky-800 to-sky-700 text-white px-4 py-20">
+  <!-- HERO (matches serve.html visual) -->
+  <section class="relative flex min-h-[60vh] flex-col items-center justify-center text-center text-white px-4 py-20" style="background:linear-gradient(to bottom,#075985,#0369a1);">
+    
     <h1 class="font-display font-extrabold text-5xl sm:text-6xl md:text-7xl">Lob</h1>
     <p class="mt-6 max-w-2xl text-lg sm:text-xl md:text-2xl opacity-90">Lift under pressure with balance, height, and intent.</p>
-  </section>
+    </section>
 
-  <main id="main" class="mx-auto px-4 sm:px-6 lg:px-8 py-16 max-w-5xl">
+  
+<section
+  style="
+    min-height:60vh;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+    background:linear-gradient(to bottom,#075985,#0369a1);
+    color:#ffffff;padding:80px 16px;">
+
+  <!-- Title -->
+  <div role='heading' aria-level='1'
+       style="
+         font-family: var(--font-display, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans');
+         font-weight:800; line-height:1.1; margin:0;
+         font-size:clamp(44px,8vw,88px) !important;">
+    Lob
+  </div>
+
+  <!-- Tagline -->
+  <p
+    style="
+      margin:22px 0 0 0; max-width:48rem; line-height:1.6; opacity:.9;
+      font-size:clamp(18px,2.2vw,24px) !important;">
+    Lift under pressure with balance, height, and intent.
+  </p>
+</section>
+
+$1
     <div class="prose prose-slate prose-lg md:prose-xl leading-relaxed tracking-wide max-w-none">
 
       <section>
@@ -302,10 +329,5 @@
   class="fixed bottom-5 right-5 z-50 opacity-0 pointer-events-none rounded-full bg-sky-700 p-3 text-white shadow-lg transition-all duration-300 hover:bg-sky-800 focus:outline-none focus:ring-2 focus:ring-sky-500">
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M5 15l7-7 7 7" /></svg>
 </button>
-
-  <!-- Back to Top Button -->
-  <button id="back-to-top" aria-label="Back to top" class="fixed bottom-5 right-5 z-50 hidden rounded-full bg-brand-700 p-3 text-white shadow-lg transition-opacity duration-300 hover:bg-brand-800 focus:outline-none focus:ring-2 focus:ring-brand-500">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M5 15l7-7 7 7"></path></svg>
-  </button>
-</body>
+  </body>
 </html>
