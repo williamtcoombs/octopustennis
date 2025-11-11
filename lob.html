@@ -14,53 +14,41 @@
     })();
   </script>
 
-  <!-- Meta -->
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-
-  <!-- SEO core: title, description, canonical, OG/Twitter (standardized) -->
-  <title>Lob — Octopus Tennis</title>
-  <meta name="description" content="(To write) Lift under pressure with balance, height, and intent. The lob buys time, resets points, and finishes over stretched opponents." />
-  <link rel="canonical" href="https://www.octopustennis.com/lob.html" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Octopus Tennis" />
-  <meta property="og:title" content="Lob — Octopus Tennis" />
-  <meta property="og:description" content="(To write) Lift under pressure with balance, height, and intent." />
-  <meta property="og:url" content="https://www.octopustennis.com/lob.html" />
-  <meta property="og:image" content="https://www.octopustennis.com/assets/img/og-default.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Lob — Octopus Tennis" />
-  <meta name="twitter:description" content="(To write) Lift under pressure with balance, height, and intent." />
-  <meta name="twitter:image" content="https://www.octopustennis.com/assets/img/og-default.png" />
-
-  <!-- Theme color (sitewide standard) -->
-  <meta name="theme-color" content="#0369a1">
-
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-512x512.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
-  <link rel="shortcut icon" href="/favicon.ico">
-
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
-
   <!-- Styles -->
   <link rel="stylesheet" href="/assets/site.css" />
 
+  <!-- Meta -->
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-512x512.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- SEO core: title, description, canonical, OG/Twitter (standardized) -->
+  <title>Lob — Octopus Tennis</title>
+  <meta name="description" content="Lift under pressure with balance, height, and intent. The lob buys time, resets points, and finishes over stretched opponents." />
+  <link rel="canonical" href="https://www.octopustennis.com/lob.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Octopus Tennis" />
+  <meta property="og:title" content="Lob — Octopus Tennis" />
+  <meta property="og:description" content="Lift under pressure with balance, height, and intent. The lob buys time, resets points, and finishes over stretched opponents." />
+  <meta property="og:url" content="https://www.octopustennis.com/lob.html" />
+  <meta property="og:image" content="https://www.octopustennis.com/assets/img/og-default.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Lob — Octopus Tennis" />
+  <meta name="twitter:description" content="Lift under pressure with balance, height, and intent. The lob buys time, resets points, and finishes over stretched opponents." />
+  <meta name="twitter:image" content="https://www.octopustennis.com/assets/img/og-default.png" />
+  <meta name="theme-color" content="#0369a1">
   <script src="/assets/site.js" defer></script>
 
-  <!-- Breadcrumbs (structured data) -->
+  <!-- Structured data: Breadcrumbs for inner page -->
   <script type="application/ld+json">
   {
    "@context": "https://schema.org",
@@ -73,29 +61,28 @@
   </script>
 
   <style>
-  /* Page-scoped: Remove faint focus/shadow ring in iOS Safari/Chrome for the mobile drawer */
-  #mobile-menu a:focus,
-  #mobile-menu a:focus-visible,
-  #mobile-menu button:focus,
-  #mobile-menu button:focus-visible { outline: none; box-shadow: none; }
-  /* Reduce iOS tap highlight halo on links/buttons in the mobile drawer */
-  #mobile-menu a, #mobile-menu button { -webkit-tap-highlight-color: transparent; }
+  #mobile-menu a:focus, #mobile-menu a:focus-visible, #mobile-menu button:focus, #mobile-menu button:focus-visible {
+    outline: none; box-shadow: none;
+  }
+  #mobile-menu a, #mobile-menu button {
+    -webkit-tap-highlight-color: transparent;
+  }
   </style>
 </head>
-<body class="min-h-dvh bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100 font-body typography-v1">
+
+<body class="min-h-dvh bg-white text-slate-900 antialiased font-body typography-v1">
   <a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded-lg focus:bg-white/90 focus:px-3 focus:py-2 focus:text-slate-900" href="#main">Skip to content</a>
 
-  <!-- Header / Navbar (mirrors other stroke pages) -->
-  <header class="sticky top-0 z-40 transition-all duration-300 bg-white/80 backdrop-blur dark:bg-slate-900/70" id="site-header">
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 transition-all duration-300 bg-white/80 backdrop-blur" id="site-header">
     <div class="mx-auto max-w-screen-xl px-4">
-      <div class="flex items-center justify-between py-3 lg:py-4" id="header-inner">
-        <!-- Brand -->
+      <div class="flex items-center justify-between py-3 lg:py-4">
         <a class="flex items-center gap-2" href="/">
           <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">OT</span>
           <span class="font-display text-lg font-semibold tracking-wide">Octopus Tennis</span>
         </a>
-        <!-- Desktop nav -->
-        <nav aria-label="Primary" class="hidden gap-6 md:flex is-collapsible" id="primary-nav">
+
+        <nav aria-label="Primary" class="hidden gap-6 md:flex" id="primary-nav">
           <a class="nav-link" href="/">Home</a>
           <a class="nav-link" href="/serve.html">Serve</a>
           <a class="nav-link" href="/return-of-serve.html">Return</a>
@@ -112,20 +99,15 @@
           <a class="nav-link" href="/competition.html">Competition</a>
           <a class="nav-link" href="/inspiration.html">Inspiration</a>
         </nav>
-        <!-- Buttons -->
-        <div class="flex items-center gap-2 md:gap-3">
-          <!-- Mobile menu toggle -->
-          <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-900 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-800" id="menu-toggle" type="button">
-            <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewBox="0 0 24 24">
-              <path d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
+
+        <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-900 hover:bg-slate-50" id="menu-toggle" type="button">
+          <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
       </div>
     </div>
-    <!-- Mobile drawer -->
+
     <div class="absolute inset-x-0 top-full z-30 md:hidden duration-200 invisible opacity-0 -translate-y-2 h-[calc(100dvh-64px)]" data-open="false" id="mobile-menu">
-      <div class="mx-4 rounded-2xl border border-slate-200/60 bg-white/95 shadow-xl backdrop-blur dark:border-slate-800 dark:bg-slate-900/90 p-4">
+      <div class="mx-4 rounded-2xl border border-slate-200/60 bg-white/95 shadow-xl backdrop-blur p-4">
         <nav aria-label="Mobile" class="grid gap-2 text-base">
           <a class="nav-link" href="/">Home</a>
           <a class="nav-link" href="/serve.html">Serve</a>
@@ -146,69 +128,71 @@
       </div>
     </div>
   </header>
-  
-  <!-- HERO: rectangular gradient layout -->
-  <section
-    style="
-      min-height:60vh;
-      display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
-      background:linear-gradient(to bottom,#075985,#0369a1);
-      color:#ffffff;padding:80px 16px;">
-    <div role='heading' aria-level='1'
-         style="font-family: var(--font-display, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans'); font-weight:800; line-height:1.1; font-size:clamp(44px,8vw,88px);">
-      Lob
-    </div>
-    <p style="margin:22px 0 0; max-width:48rem; line-height:1.6; opacity:.9; font-size:clamp(18px,2.2vw,24px);">
-      (Tagline TBD)
-    </p>
+
+  <!-- HERO -->
+  <section style="min-height:60vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(to bottom,#075985,#0369a1);color:#fff;padding:80px 16px;">
+    <div role="heading" aria-level="1" style="font-family:var(--font-display);font-weight:800;line-height:1.1;font-size:clamp(44px,8vw,88px);">Lob</div>
+    <p style="margin:22px 0 0;max-width:48rem;line-height:1.6;opacity:.9;font-size:clamp(18px,2.2vw,24px);">Lift under pressure with balance, height, and intent.</p>
   </section>
 
-  <!-- Main Content (empty for now) -->
-  <main class="py-10 md:max-w-4xl lg:px-8 px-4 sm:px-6 mx-auto container max-w-3xl lg:max-w-5xl" id="main">
-    <!-- TODO: Add Lob content here following the stroke-page structure -->
+  <main id="main" class="py-10 md:max-w-4xl lg:px-8 px-4 sm:px-6 mx-auto container max-w-3xl lg:max-w-5xl">
+    <!-- Content will go here -->
   </main>
 
-  <!-- Footer (mirrors other stroke pages) -->
-  <footer class="mt-16 border-t border-slate-200/70 bg-white/70 backdrop-blur dark:border-slate-800 dark:bg-slate-900/60">
-    <div class="mx-auto max-w-screen-xl px-4 py-10">
-      <div class="grid gap-6 md:grid-cols-2 md:items-center">
-        <a class="flex items-center gap-2" href="/">
+  <!-- FOOTER -->
+  <footer class="mt-16 border-t border-slate-200/60 bg-slate-50/60 py-10">
+    <div class="mx-auto max-w-screen-xl px-4">
+      <div class="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
+        <div class="flex items-center gap-2">
           <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">OT</span>
-          <span class="font-display text-lg font-semibold tracking-wide">Octopus Tennis</span>
-        </a>
-        <nav aria-label="Footer" class="flex flex-wrap items-center justify-start md:justify-end text-sm space-x-6">
-          <a class="nav-link" href="/">Home</a>
-          <a class="nav-link" href="/serve.html">Serve</a>
-          <a class="nav-link" href="/return-of-serve.html">Return</a>
-          <a class="nav-link" href="/forehand.html">Forehand</a>
-          <a class="nav-link" href="/backhand.html">Backhand</a>
-          <a class="nav-link" href="/volley.html">Volley</a>
-          <a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/lob.html">Lob</a>
-          <a class="nav-link" href="/overhead.html">Overhead</a>
-          <a class="nav-link" href="/drop-shot.html">Drop Shot</a>
-          <a class="nav-link" href="/strategy.html">Strategy</a>
-          <a class="nav-link" href="/tactics.html">Tactics</a>
-          <a class="nav-link" href="/drills.html">Drills</a>
-          <a class="nav-link" href="/fitness.html">Fitness</a>
-          <a class="nav-link" href="/competition.html">Competition</a>
-          <a class="nav-link" href="/inspiration.html">Inspiration</a>
+          <span class="font-display text-lg font-semibold">Octopus Tennis</span>
+        </div>
+        <nav aria-label="Primary" class="hidden gap-6 md:flex">
+          <a class="nav-link text-sm" href="/">Home</a>
+          <a class="nav-link text-sm" href="/serve.html">Serve</a>
+          <a class="nav-link text-sm" href="/return-of-serve.html">Return</a>
+          <a class="nav-link text-sm" href="/forehand.html">Forehand</a>
+          <a class="nav-link text-sm" href="/backhand.html">Backhand</a>
+          <a class="nav-link text-sm" href="/volley.html">Volley</a>
+          <a aria-current="page" class="nav-link text-brand-700 font-semibold text-sm" href="/lob.html">Lob</a>
+          <a class="nav-link text-sm" href="/overhead.html">Overhead</a>
+          <a class="nav-link text-sm" href="/drop-shot.html">Drop Shot</a>
+          <a class="nav-link text-sm" href="/strategy.html">Strategy</a>
+          <a class="nav-link text-sm" href="/tactics.html">Tactics</a>
+          <a class="nav-link text-sm" href="/drills.html">Drills</a>
+          <a class="nav-link text-sm" href="/fitness.html">Fitness</a>
+          <a class="nav-link text-sm" href="/competition.html">Competition</a>
+          <a class="nav-link text-sm" href="/inspiration.html">Inspiration</a>
         </nav>
       </div>
-      <div class="mt-6 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-600 dark:text-slate-400">
-        <p>© Octopus Tennis. All rights reserved.</p>
-        <div class="flex items-center space-x-4">
-          <a class="hover:underline" href="#">Privacy</a>
-          <a class="hover:underline" href="#">Terms</a>
-        </div>
-      </div>
+      <p class="mt-6 text-xs text-slate-500">© Octopus Tennis. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Back to Top Button -->
-  <button id="back-to-top" aria-label="Back to top" class="fixed bottom-5 right-5 z-50 hidden rounded-full bg-brand-700 p-3 text-white shadow-lg transition-opacity duration-300 hover:bg-brand-800 focus:outline-none focus:ring-2 focus:ring-brand-500">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
-      <path d="M5 15l7-7 7 7"></path>
-    </svg>
-  </button>
+  <!-- BACK TO TOP -->
+  <script>
+    (function () {
+      if (window.__TC_BTT_SHADOW__) return;
+      window.__TC_BTT_SHADOW__ = true;
+      var showAt = 60;
+      var host = document.createElement('div');
+      host.style.position = 'fixed';
+      host.style.bottom = '20px';
+      host.style.right = '20px';
+      host.style.zIndex = '2147483647';
+      document.body.appendChild(host);
+      var root = host.attachShadow({ mode: 'open' });
+      root.innerHTML = '<style>button{all:initial;font:600 14px/1 system-ui;display:none;padding:.55rem .75rem;border-radius:9999px;background:#fff;color:#111;box-shadow:0 8px 24px rgba(0,0,0,.18);cursor:pointer}button.show{display:inline-block}</style><button id="btn" aria-label="Back to top">↑</button>';
+      var btn = root.getElementById('btn');
+      function y() { return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0; }
+      function onScroll() { if (y() > showAt) btn.classList.add('show'); else btn.classList.remove('show'); }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+      btn.addEventListener('click', function () {
+        try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch (e) { window.scrollTo(0, 0); }
+        btn.blur();
+      });
+    })();
+  </script>
 </body>
 </html>
