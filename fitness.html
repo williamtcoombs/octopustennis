@@ -17,7 +17,6 @@
   </head>
 
   <body class="bg-white text-slate-800 antialiased">
-    <!-- ✅ HEADER (consistent sitewide) -->
     <header class="backdrop-blur bg-white/90 border-b border-slate-200 sticky top-0 z-50">
       <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         <a href="/" class="text-xl font-semibold text-teal-700">Octopus Tennis</a>
@@ -47,7 +46,6 @@
           <li><a href="/inspiration.html" class="hover:text-teal-600">Inspiration</a></li>
         </ul>
       </nav>
-
       <div id="mobile-menu" class="hidden sm:hidden bg-white border-t border-slate-200">
         <ul class="flex flex-col p-4 space-y-2 text-sm">
           <li><a href="/index.html" class="hover:text-teal-600">Home</a></li>
@@ -69,7 +67,6 @@
       </div>
     </header>
 
-    <!-- ✅ MAIN CONTENT -->
     <main class="px-4 sm:px-6 lg:px-8 py-12 max-w-5xl mx-auto">
       <h1 class="text-3xl font-bold mb-4">Tennis Fitness</h1>
       <p class="mb-4">
@@ -83,11 +80,10 @@
         <strong>Weekly Goal (in-season):</strong> 2× movement blocks (15–20 min), 2× strength circuits (20 min), 2× mobility finishes (8–10 min).
       </p>
 
-      <!-- ✅ Correct responsive video embed -->
-      <div class="mx-auto max-w-5xl mb-8">
-        <div class="relative w-full overflow-hidden rounded-xl border border-slate-200" style="padding-top:56.25%;">
+      <!-- ✅ CLEAN RESPONSIVE VIDEO FIX -->
+      <div class="mb-10">
+        <div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-xl border border-slate-200">
           <iframe
-            class="absolute inset-0 w-full h-full"
             src="https://www.youtube-nocookie.com/embed/s9twENtOkwk?rel=0&modestbranding=1&playsinline=1"
             title="5 Easy Ladder Footwork Drills for Tennis"
             frameborder="0"
@@ -149,7 +145,6 @@
       </p>
     </main>
 
-    <!-- ✅ FOOTER -->
     <footer class="border-t border-slate-200 mt-16 py-8 text-center text-sm text-slate-600">
       <p>&copy; <span id="year"></span> Octopus Tennis. All rights reserved.</p>
       <script>
