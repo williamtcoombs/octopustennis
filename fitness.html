@@ -152,9 +152,9 @@
     color:#ffffff;padding:80px 16px;">
   
   <!-- Title -->
-  <div role='heading' aria-level='1'
+  <div role='heading' aria-level='1' aria-hidden="true"
        style="
-         font-family: var(--font-display, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans');
+         font-family: var(--font-display, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans');
          font-weight:800; line-height:1.1; margin:0;
          font-size:clamp(44px,8vw,88px) !important;">
     Fitness
@@ -182,14 +182,31 @@
     </header>
   </section>
         <br>
-        <iframe
-        src="https://www.youtube.com/embed/cTUfmc7a6SM"
-        title="Elena Rybakina Full Body Tennis Training Plan"
-        frameborder="0"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-        </iframe>
+
+
+<!-- Fitness video (single, responsive, no white gap) -->
+<div class="mx-auto max-w-5xl mb-8">
+  <div
+    class="rounded-xl border border-slate-200 overflow-hidden"
+    style="position:relative;width:100%;padding-top:56.25%;"
+  >
+    <iframe
+      title="5 Easy Ladder Footwork Drills for Tennis"
+      src="https://www.youtube-nocookie.com/embed/s9twENtOkwk?rel=0&modestbranding=1&playsinline=1"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      loading="lazy"
+      style="position:absolute;inset:0;width:100%;height:100%;border:0;display:block;"
+    ></iframe>
+  </div>
+  <p class="mt-2 text-slate-600 text-sm">
+    Ladder footwork drills tailored for tennis — sharpen first-step quickness, balance, and spatial awareness.
+  </p>
+  <hr class="border-t border-slate-200 my-8">
+</div>
+
+
+
   <!-- Movement & Agility -->
   <section class="mx-auto max-w-5xl py-8 border-t border-slate-200">
     <h2 class="text-2xl font-bold">Movement &amp; Agility</h2>
