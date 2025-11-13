@@ -167,30 +167,78 @@
 <!-- HERO: Home (override-proof) -->
 <section
   style="
-    min-height:60vh;
-    display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
-    background:linear-gradient(to bottom,#075985,#0369a1);
-    color:#ffffff;padding:80px 16px;">
-  
-  <!-- Title (not an <h1> so no global h1 styles apply) -->
-  <div role="heading" aria-level="1" aria-hidden="true"
-       style="
-         font-family: var(--font-display, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans');
-         font-weight:800; line-height:1.1; margin:0;
-         /* BIG on phones, HUGE on desktop */
-         font-size: clamp(44px, 8vw, 88px) !important;">
+    /* Layout */
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* Visuals */
+    background: linear-gradient(to bottom, #075985, #0369a1);
+    color: #ffffff;
+    padding: 80px 16px;
+  "
+>
+
+  <!-- Page label (role = heading to avoid global h1 styles) -->
+  <div
+    role="heading"
+    aria-level="1"
+    aria-hidden="true"
+    style="
+      font-family: var(--font-display, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans');
+      font-weight: 800;
+      line-height: 1.1;
+      margin: 0;
+
+      /* Scales from large on phone to huge on desktop */
+      font-size: clamp(44px, 8vw, 88px) !important;
+    "
+  >
     Home
   </div>
 
-  <!-- Tagline -->
+  <!-- Main program identity tagline -->
   <p
     style="
-      margin:22px 0 0 0; max-width:48rem; line-height:1.6; opacity:.9;
-      font-size: clamp(18px, 2.2vw, 24px) !important;">
+      margin: 24px auto 0 auto;
+      max-width: 700px;
+
+      /* Typography */
+      font-size: clamp(18px, 2.5vw, 24px);
+      line-height: 1.4;
+      font-weight: 500;
+
+      /* Visuals */
+      color: rgba(255, 255, 255, 0.9);
+    "
+  >
     Build confidence, sharpen skills, and grow together as a team.
     Where effort, integrity, and teamwork make champions on and off the court.
   </p>
+
+  <!-- Bridge line: links the hero to Coach’s Corner identity -->
+  <p
+    style="
+      margin: 20px auto 0 auto;
+      max-width: 680px;
+
+      /* Typography */
+      font-size: 16px;
+      line-height: 1.6;
+
+      /* Visuals */
+      color: rgba(255, 255, 255, 0.9);
+    "
+  >
+    Guided by a simple coaching system that helps every player grow with purpose.
+  </p>
+
 </section>
+
+
 
 <main id="main" class="py-10 md:max-w-5xl lg:px-8 px-4 sm:px-6 mx-auto container max-w-4xl">
   <!-- Hero -->
@@ -267,7 +315,7 @@
     </div>
   </section>
 
-  <!-- Weekly Focus / Coach's Corner -->
+  <!-- Weekly Focus -->
   <section class="mx-auto max-w-5xl mb-12">
     <div class="rounded-2xl border border-slate-200 p-5">
       <h2 class="text-2xl font-bold">This Week’s Focus</h2>
@@ -350,101 +398,87 @@
   </section>
 
   <!-- Coach's Corner -->
-  <section class="coachs-corner mx-auto my-12 max-w-3xl rounded-xl bg-white shadow-sm ring-1 ring-gray-200 px-6 py-8 sm:px-10 sm:py-10">
-    <div class="flex items-center gap-3 mb-5">
-      <div class="h-2 w-8 rounded-full bg-brand-700"></div>
-      <h2 class="text-xl font-semibold text-gray-900">Coach’s Corner — Program Framework</h2>
-    </div>
+<section class="coachs-corner" id="coachs-corner-program-framework">
+  <div class="cc-header">
+    <span class="cc-label">Coach’s Corner</span>
+    <h2 class="cc-title">Program Framework</h2>
+  </div>
 
-    <p class="text-gray-700 mb-4">
-      <span class="font-medium">For coaches, captains, and curious players:</span>
-      Octopus Tennis is built as a coaching ecosystem, not just a list of tips.
-      Every page fits into a simple loop we use at Poolesville:
-      <em>Strategy → Tactics → Drills → Fitness → Competition → Reflection.</em>
+  <div class="cc-body">
+    <h3>Focus Theme</h3>
+    <p>
+      Octopus Tennis is built as a <strong>coaching ecosystem</strong>, not just a list of tips.
+      Every page is part of a simple loop we use at Poolesville:
+      <em>Strategy → Tactics → Drills → Fitness → Competition → Reflection</em>.
+      Coach’s Corner exists so coaches, captains, and players can all see the same playbook.
     </p>
 
-    <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide mt-4 mb-2">
-      How the Pages Fit Together
-    </h3>
-    <ul class="list-disc pl-5 space-y-1.5 text-gray-800">
+    <h3>How Coach’s Corner Works</h3>
+    <ul>
       <li>
-        <strong>Strategy:</strong> Our big-picture <em>Principles → Plans → Plays</em> — how we want to win points over a whole match.
+        Each page ends with a Coach’s Corner card that captures the
+        <strong>big ideas, red flags, key cues, and one observation drill</strong>.
       </li>
       <li>
-        <strong>Tactics:</strong> The <em>Tactics Compass</em> — <strong>Tempo, Space, Identity, Pressure</strong> —
-        for in-match adjustments when things get messy.
+        The goal is clarity: when the match gets messy, we want simple language
+        everyone on the team recognizes.
       </li>
       <li>
-        <strong>Drills:</strong> Where Strategy and Tactics become reps and games with clear scoring and targets.
-      </li>
-      <li>
-        <strong>Fitness:</strong> The engine that lets players hold their technique and make good decisions deep into matches.
-      </li>
-      <li>
-        <strong>Competition:</strong> How we prepare before the match, steer during it, and learn from it afterward.
-      </li>
-      <li>
-        <strong>Stroke & skills pages (Serve, Return, Forehand, etc.):</strong>
-        Technical building blocks — each with a Coach’s Corner at the end to anchor teaching points.
+        Over time, this becomes our <strong>shared vocabulary</strong> for how we train,
+        how we compete, and how we support each other.
       </li>
     </ul>
 
-    <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide mt-6 mb-2">
-      For Coaches &amp; Captains
-    </h3>
-    <ul class="list-disc pl-5 space-y-1.5 text-gray-800">
+    <h3>For Coaches &amp; Captains</h3>
+    <ul>
       <li>
         Use <a href="/strategy.html" class="text-brand-700 underline">Strategy</a> and
-        <a href="/tactics.html" class="text-brand-700 underline">Tactics</a> to choose a
-        <strong>weekly theme</strong> (for example: “Middle first” or “Slow tempo, then strike”).
+        <a href="/tactics.html" class="text-brand-700 underline">Tactics</a>
+        to choose a weekly theme (for example: “Middle first” or “Slow tempo, then strike”),
+        then pull drills from the
+        <a href="/drills.html" class="text-brand-700 underline">Drills</a> page to support it.
       </li>
       <li>
-        Build practices from the <a href="/drills.html" class="text-brand-700 underline">Drills</a> page so every session
-        clearly supports that theme.
+        Before matches, skim the Coach’s Corner sections on
+        <a href="/serve.html" class="text-brand-700 underline">Serve</a>,
+        <a href="/return-of-serve.html" class="text-brand-700 underline">Return</a>,
+        and <a href="/competition.html" class="text-brand-700 underline">Competition</a>
+        to align talking points.
       </li>
       <li>
-        Check <a href="/fitness.html" class="text-brand-700 underline">Fitness</a> to match conditioning to how we want to play:
-        grinders, attackers, net-rushers, doubles specialists.
-      </li>
-      <li>
-        On match day, use <a href="/competition.html" class="text-brand-700 underline">Competition</a> as the guide for
-        pre-match meetings, changeover conversations, and post-match reflection.
-      </li>
-      <li>
-        When teaching a stroke, scroll to the <strong>Coach’s Corner at the end of that page</strong>
-        for key cues, red flags, and observation drills.
+        After matches or practices, use a Coach’s Corner card as a quick debrief:
+        which cues showed up, which red flags did we see, what do we train next?
       </li>
     </ul>
 
-    <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide mt-6 mb-2">
-      For Players
-    </h3>
-    <ul class="list-disc pl-5 space-y-1.5 text-gray-800">
+    <h3>For Players</h3>
+    <ul>
       <li>
-        Curious what your coach is thinking? Start with
-        <a href="/strategy.html" class="text-brand-700 underline">Strategy</a> and
+        Curious what your coach is thinking?
+        Start with <a href="/strategy.html" class="text-brand-700 underline">Strategy</a> and
         <a href="/tactics.html" class="text-brand-700 underline">Tactics</a>.
-        That’s the language behind most things you hear on court.
+        That’s the language behind most of what you hear on court.
       </li>
       <li>
-        When a shot is giving you trouble, visit that stroke’s page, scroll to the
-        <strong>Coach’s Corner at the bottom</strong>, and look at the “Key Cues” and “Observation Drill.”
+        When a shot is giving you trouble, go to that page
+        (<a href="/forehand.html" class="text-brand-700 underline">Forehand</a>,
+        <a href="/backhand.html" class="text-brand-700 underline">Backhand</a>,
+        <a href="/volley.html" class="text-brand-700 underline">Volley</a>, etc.),
+        scroll to the bottom, and read the Coach’s Corner “Key Cues” and “Observation Drill.”
       </li>
       <li>
-        Use the <a href="/drills.html" class="text-brand-700 underline">Drills</a> page to find
-        <strong>one or two drills</strong> you can repeat on your own or with a teammate.
-      </li>
-      <li>
-        After matches, use <a href="/competition.html" class="text-brand-700 underline">Competition</a> to reflect:
-        Which plans worked? Which patterns showed up? What do you want to train next week?
+        Use the <a href="/drills.html" class="text-brand-700 underline">Drills</a> and
+        <a href="/fitness.html" class="text-brand-700 underline">Fitness</a> pages
+        to find <strong>one or two things</strong> you can repeat each week to build confidence.
       </li>
     </ul>
 
-    <p class="text-gray-700 mt-6">
-      The big idea: this site is here so <strong>our whole program shares one clear playbook</strong> —
-      coaches, captains, and players all pulling in the same direction.
+    <p>
+      The big idea: Coach’s Corner is where the program’s values, language, and
+      game plans live in one place, so <strong>we grow together with a shared sense of purpose</strong>.
     </p>
-  </section>
+  </div>
+</section>
 
 </main>
 
