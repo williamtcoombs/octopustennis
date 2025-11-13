@@ -165,46 +165,80 @@
 </header>
 
 <!-- HERO: Home (override-proof) -->
+<!-- HERO: Home (override-proof) -->
 <section
   style="
-    min-height:60vh;
-    display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
-    background:linear-gradient(to bottom,#075985,#0369a1);
-    color:#ffffff;padding:80px 16px;">
+    /* Layout */
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
-  <!-- Title (not an <h1> so no global h1 styles apply) -->
-  <div role="heading" aria-level="1" aria-hidden="true"
-       style="
-         font-family: var(--font-display, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans');
-         font-weight:800; line-height:1.1; margin:0;
-         font-size: clamp(44px, 8vw, 88px) !important;">
+    /* Visuals */
+    background: linear-gradient(to bottom, #075985, #0369a1);
+    color: #ffffff;
+    padding: 80px 16px;
+  "
+>
+
+  <!-- Page label (role = heading to avoid global h1 styles) -->
+  <div
+    role="heading"
+    aria-level="1"
+    aria-hidden="true"
+    style="
+      font-family: var(--font-display, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans');
+      font-weight: 800;
+      line-height: 1.1;
+      margin: 0;
+
+      /* Scales from large on phone to huge on desktop */
+      font-size: clamp(44px, 8vw, 88px) !important;
+    "
+  >
     Home
   </div>
 
-  <!-- Main tagline -->
-  <p style="
-        margin-top:24px; margin-bottom:0;
-        max-width:700px;
-        font-size:clamp(18px,2.5vw,24px);
-        line-height:1.4;
-        color:rgba(255,255,255,0.9);
-        font-weight:500;">
-    Build confidence, sharpen skills, and grow together as a team. Where effort, integrity, and teamwork make champions on and off the court.
+  <!-- Main program identity tagline -->
+  <p
+    style="
+      margin: 24px auto 0 auto;
+      max-width: 700px;
+
+      /* Typography */
+      font-size: clamp(18px, 2.5vw, 24px);
+      line-height: 1.4;
+      font-weight: 500;
+
+      /* Visuals */
+      color: rgba(255, 255, 255, 0.9);
+    "
+  >
+    Build confidence, sharpen skills, and grow together as a team.
+    Where effort, integrity, and teamwork make champions on and off the court.
   </p>
 
-  <!-- NEW: Bridge line (Option B) -->
-  <p style="
-        margin-top:20px;
-        max-width:680px;
-        margin-left:auto;
-        margin-right:auto;
-        color:rgba(255,255,255,0.9);
-        font-size:16px;
-        line-height:1.6;">
+  <!-- Bridge line: links the hero to Coach’s Corner identity -->
+  <p
+    style="
+      margin: 20px auto 0 auto;
+      max-width: 680px;
+
+      /* Typography */
+      font-size: 16px;
+      line-height: 1.6;
+
+      /* Visuals */
+      color: rgba(255, 255, 255, 0.9);
+    "
+  >
     Guided by a simple coaching system that helps every player grow with purpose.
   </p>
 
 </section>
+
 
 
 <main id="main" class="py-10 md:max-w-5xl lg:px-8 px-4 sm:px-6 mx-auto container max-w-4xl">
