@@ -171,26 +171,41 @@
     display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
     background:linear-gradient(to bottom,#075985,#0369a1);
     color:#ffffff;padding:80px 16px;">
-  
+
   <!-- Title (not an <h1> so no global h1 styles apply) -->
   <div role="heading" aria-level="1" aria-hidden="true"
        style="
          font-family: var(--font-display, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans');
          font-weight:800; line-height:1.1; margin:0;
-         /* BIG on phones, HUGE on desktop */
          font-size: clamp(44px, 8vw, 88px) !important;">
     Home
   </div>
 
-  <!-- Tagline -->
-  <p
-    style="
-      margin:22px 0 0 0; max-width:48rem; line-height:1.6; opacity:.9;
-      font-size: clamp(18px, 2.2vw, 24px) !important;">
-    Build confidence, sharpen skills, and grow together as a team.
-    Where effort, integrity, and teamwork make champions on and off the court.
+  <!-- Main tagline -->
+  <p style="
+        margin-top:24px; margin-bottom:0;
+        max-width:700px;
+        font-size:clamp(18px,2.5vw,24px);
+        line-height:1.4;
+        color:rgba(255,255,255,0.9);
+        font-weight:500;">
+    Build confidence, sharpen skills, and grow together as a team. Where effort, integrity, and teamwork make champions on and off the court.
   </p>
+
+  <!-- NEW: Bridge line (Option B) -->
+  <p style="
+        margin-top:20px;
+        max-width:680px;
+        margin-left:auto;
+        margin-right:auto;
+        color:rgba(255,255,255,0.9);
+        font-size:16px;
+        line-height:1.6;">
+    Guided by a simple coaching system that helps every player grow with purpose.
+  </p>
+
 </section>
+
 
 <main id="main" class="py-10 md:max-w-5xl lg:px-8 px-4 sm:px-6 mx-auto container max-w-4xl">
   <!-- Hero -->
