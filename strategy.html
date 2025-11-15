@@ -58,6 +58,16 @@
   <!-- Styles -->
   <link rel="stylesheet" href="/assets/site.css" />
 
+  <style>
+  /* Normalize typography inside Strategy callout boxes */
+  #strategic-game-plans .callout p,
+  #strategic-game-plans .callout ul,
+  #strategic-game-plans .callout li {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+</style>
+
   <script src="/assets/site.js" defer></script>
 
   <style>
@@ -149,11 +159,19 @@
       </header>
     </section>
 
+    <p class="mx-auto max-w-5xl mt-2 text-slate-700">
+      Most of the strategy on this page applies to <strong>both singles and doubles</strong>.
+      When something matters more for one format, you’ll see a small tag like
+      <strong>[Singles Focus]</strong> or <strong>[Doubles Focus]</strong> so you can connect it
+      directly to how you play for Poolesville.
+    </p>
+
     <!-- Strategy at a Glance (index added) -->
     <section id="strategy-at-a-glance" class="mx-auto max-w-5xl py-8 border-t border-slate-200">
       <h2 class="text-2xl font-bold">Strategy at a Glance</h2>
       <p class="mt-2 text-slate-700">
         Quick index to the key strategy building blocks. Skim this before matches and between sets.
+        Use it for both singles and doubles — the tags will tell you where each one matters most.
       </p>
       <ul class="mt-3 grid gap-2 md:grid-cols-2 list-none pl-0">
         <li class="callout"><a class="text-brand-700 underline font-semibold" href="#core-pillars">Core Pillars</a></li>
@@ -169,9 +187,14 @@
 
     <!-- Core Pillars -->
     <section id="core-pillars" class="mx-auto max-w-5xl py-8 border-t border-slate-200">
-      <h2 class="text-2xl font-bold">Core Pillars</h2>
+      <h2 class="text-2xl font-bold">The Four P’s (Core Pillars)</h2>
       <p class="mt-2 text-slate-700">
-        These are your non-negotiables. If a point goes badly, check which pillar you ignored.
+        These are your non-negotiables in <strong>both singles and doubles</strong>. If a point goes badly,
+        check which pillar you ignored.
+      </p>
+      <p class="mt-2 text-slate-700">
+        We call them the <strong>Four P’s</strong> so they’re easy to remember on changeovers:
+        <strong>Percentages, Pressure, Patience, Position.</strong>
       </p>
       <ul class="mt-3 list-disc pl-5 text-slate-700">
         <li>
@@ -197,18 +220,51 @@
           (deep middle or body).
         </span>
       </p>
+
+      <h3 class="mt-6 text-xl font-semibold">[Doubles Focus] The Four T’s</h3>
+      <p class="mt-2 text-slate-700">
+        Doubles teams who live the <strong>Four T’s</strong> every point win more — period.
+        In doubles, strategy is also about <strong>connection</strong>. Use the Four T’s after
+        every point — win or lose — to stay locked in with your partner:
+      </p>
+      <ul class="mt-3 list-disc pl-5 text-slate-700">
+        <li>
+          <strong>Turn:</strong> Turn <em>toward</em> your partner after the point. Don’t stare at the fence
+          or the other team.
+        </li>
+        <li>
+          <strong>T:</strong> Meet at the <strong>T</strong> (center of the baseline and service line) or a clear
+          checkpoint between points so you’re on the same page.
+        </li>
+        <li>
+          <strong>Talk:</strong> Say something specific — recognition (“Nice depth”), encouragement
+          (“We’re fine, big margins here”), or tactic (“Middle on this one”).
+        </li>
+        <li>
+          <strong>Touch:</strong> Racquets, fist bump, quick tap on the shoulder — a small physical reset that
+          says “We’re in this together.”
+        </li>
+      </ul>
+      <p class="mt-3 text-slate-700">
+        Cue for captains: “Four P’s for how we play, Four T’s for how we stay connected.”
+      </p>
     </section>
 
     <!-- Between-Point Routine -->
     <section id="between-point-routine-bpr" class="mx-auto max-w-5xl py-8 border-t border-slate-200 callout">
       <h2 class="text-2xl font-bold">Between-Point Routine (BPR)</h2>
       <p class="mt-2 text-slate-700">
-        Use a short, repeatable routine to connect your strategy to every single point.
+        Use a short, repeatable routine to connect your strategy to every single point — singles
+        or doubles. Same routine, different targets.
       </p>
       <ol class="mt-3 list-decimal pl-5 text-slate-700">
         <li>
           <strong>Plan:</strong>
           Name your target and purpose out loud (build / pressure / finish).
+          <span class="block text-slate-600 text-sm mt-1">
+            [Singles Focus] “Deep cross to the backhand.”  
+            [Doubles Focus] “Middle on return” or “Serve wide, partner pinches.”
+          </span>
         </li>
         <li>
           <strong>Breathe:</strong>
@@ -228,16 +284,24 @@
     <section id="scoreboard-rules" class="mx-auto max-w-5xl py-8 border-t border-slate-200">
       <h2 class="text-2xl font-bold">Scoreboard Rules</h2>
       <p class="mt-2 text-slate-700">
-        The score should change your <em>margin</em>, not your identity. Use these simple defaults:
+        The score should change your <em>margin</em>, not your identity. Use these simple defaults
+        in both singles and doubles.
       </p>
       <ul class="mt-3 list-disc pl-5 text-slate-700">
         <li>
           <strong>Up 30–0 / 40–15:</strong>
           Add pressure with depth; look for angles on the second ball, not the first.
+          <span class="block text-slate-600 text-sm mt-1">
+            [Doubles Focus] With the lead, challenge the middle more and let the net player hunt.
+          </span>
         </li>
         <li>
           <strong>30–30 / Deuce:</strong>
           Highest-margin targets only — deep middle or body.
+          <span class="block text-slate-600 text-sm mt-1">
+            [Singles Focus] Force them to play one more solid rally ball.  
+            [Doubles Focus] Hit middle and make them decide “whose ball is this?”
+          </span>
         </li>
         <li>
           <strong>Break Points (for or against):</strong>
@@ -259,43 +323,77 @@
     <section id="environment-and-adjustments" class="mx-auto max-w-5xl py-8 border-t border-slate-200">
       <h2 class="text-2xl font-bold">Environment &amp; Adjustments</h2>
       <p class="mt-2 text-slate-700">
-        Conditions don’t change who you are as a player, but they <em>do</em> change the safest way to express your game.
-        Use simple rules you can remember on the baseline.
+        Conditions don’t change who you are as a player, but they <em>do</em> change the safest way
+        to express your game. Great players adjust to the environment faster than their opponents.
       </p>
-      <ul class="mt-3 list-disc pl-5 text-slate-700">
-        <li>
-          <strong>Wind:</strong>
-          <br>
-          <strong>Into the wind</strong> – Think “drive and brave.” Hit a bit more <em>through</em> the ball with solid
-          racquet speed, aim a little <em>deeper</em> than usual, and still use spin. The wind is your brake, so you can
-          trust a firmer swing to a big target without floating the ball.
-          <br>
-          <strong>With the wind</strong> – Think “high and heavy, land it shorter.” Add <emreal> topspin, not just height</emreal>,
-          and aim 2–3 feet <em>shorter</em> than your normal deep target. Let the wind carry the ball deeper for you.
-          The cue is: <em>“Brush more, don’t pop it up.”</em>
-        </li>
-        <li>
-        <strong>Sun:</strong>
-        When hitting into glare, avoid low or flat shots that require precise depth judgment. 
-        Favor <em>cross-court</em> because the net is lower and the court is longer, and use 
-        <em>higher net clearance</em> so you’re not aiming at small targets you can’t see well. 
-        If vision is really compromised, send a calm cross-court lob to buy time and reset your eyes.
-        </li>
-<li>
-  <strong>Surface:</strong>
-  Slow courts (like hard courts on a cold day) give your opponent more time, so extend rallies with 
-  big cross-court targets and trust your legs—patterns last longer, and patience wins. 
-  Fast courts (warm hard courts or slick indoor surfaces) shorten reaction time, so simplify your 
-  plan to first-strike tennis: a clear <em>Serve+1</em> and <em>Return+1</em>, bigger targets, and 
-  early offense when the ball sits up. Let the court speed decide whether you play longer patterns 
-  or take initiative sooner.
-</li>
 
+      <h3 class="mt-4 text-xl font-semibold">Wind</h3>
+      <p class="mt-1 text-slate-700">
+        On windy days, your job is to <strong>simplify</strong> — bigger margins, higher net clearance,
+        cleaner targets.
+      </p>
+      <ul class="mt-2 list-disc pl-5 text-slate-700">
+        <li>
+          <strong>[Singles Focus]</strong> Play more <strong>heavy cross-court</strong>, especially into
+          the wind. Avoid low, flat shots the wind can shove long or wide.
+        </li>
+        <li>
+          <strong>[Doubles Focus]</strong> Use the wind to your advantage by aiming
+          <strong>through the middle</strong> first. Make the other team guess who should take it.
+        </li>
+        <li>
+          <strong>Into the wind</strong> – Think “drive and brave.” Hit a bit more <em>through</em> the ball with solid
+          racquet speed, aim a little <em>deeper</em>, and still use spin. The wind is your brake.
+        </li>
+        <li>
+          <strong>With the wind</strong> – Think “high and heavy, land it shorter.” Add <em>topspin, not just height</em>,
+          and aim 2–3 feet <em>shorter</em> than your normal deep target. Let the wind carry the ball.
+        </li>
       </ul>
+
+      <h3 class="mt-4 text-xl font-semibold">Sun</h3>
+      <p class="mt-1 text-slate-700">
+        When the sun is in your eyes, you need a clear plan for toss height, overheads, and lobs.
+      </p>
+      <ul class="mt-2 list-disc pl-5 text-slate-700">
+        <li>
+          <strong>[Singles Focus]</strong> If one side has brutal glare, use that side to
+          <strong>break serve</strong> and protect your own service games on the easier side.
+        </li>
+        <li>
+          <strong>[Doubles Focus]</strong> Decide <strong>before the point</strong> who will take balls
+          that go into the sun, especially lobs in the middle, and say it out loud.
+        </li>
+        <li>
+          Favor <em>cross-court</em> because the net is lower and the court is longer, and use
+          <em>higher net clearance</em> so you’re not aiming at tiny, hard-to-see targets. If vision is
+          really compromised, send a calm cross-court lob to buy time and reset your eyes.
+        </li>
+      </ul>
+
+      <h3 class="mt-4 text-xl font-semibold">Surface &amp; Bounce</h3>
+      <p class="mt-1 text-slate-700">
+        Hard courts, slower courts, and bouncy courts all reward slightly different decisions.
+      </p>
+      <ul class="mt-2 list-disc pl-5 text-slate-700">
+        <li>
+          <strong>[Singles Focus]</strong> On slower or higher-bouncing courts, lean into
+          <strong>heavy topspin and patience</strong>. Make your opponent hit one more ball.
+        </li>
+        <li>
+          <strong>[Doubles Focus]</strong> On faster courts, commit to <strong>first-strike doubles</strong>:
+          aggressive returns, strong first volleys, and decisive poaches.
+        </li>
+        <li>
+          After warmup, say out loud what the bounce is doing (“skidding low” vs “jumping up”) and
+          choose Serve+1, Return+1, and net patterns that fit that bounce.
+        </li>
+      </ul>
+
       <p class="mt-3 text-slate-700">
         <span class="metric">
-          <strong>Standard:</strong> After a side change, play the next game with <em>zero</em> tape errors by using your
-          wind and surface adjustments on every first ball.
+          <strong>Standard:</strong> After a side change, play the next game with <em>zero</em> tape errors
+          by using your wind, sun, and surface adjustments on every first ball.
         </span>
       </p>
     </section>
@@ -304,14 +402,22 @@
     <section id="strategic-game-plans" class="mx-auto max-w-5xl py-8 border-t border-slate-200">
       <h2 class="text-2xl font-bold">Strategic Game Plans</h2>
       <p class="mt-2 text-slate-700">
-        These are simple “big-picture” plans. Tactics on the next page are how you execute them point by point.
+        These are simple “big-picture” plans. <strong>Tactics</strong> on the next page are how you
+        execute them point by point. Each plan can be used in singles and doubles with small tweaks.
       </p>
       <div class="grid gap-4 md:grid-cols-2">
         <div class="callout">
           <h3 class="font-semibold">Serve-First Plan</h3>
-          <p class="text-slate-700">
+          <p class="text-slate-700 mt-1">
             Serve to big targets, play the first ball deep middle, then finish into open space.
           </p>
+          <p class="mt-2 text-slate-700 text-sm">
+            <strong>Default:</strong> Big serve target → recover → first ball deep middle → then attack space.
+          </p>
+          <ul class="mt-2 text-slate-700 text-sm list-disc pl-5">
+            <li><strong>[Singles Focus]</strong> Serve wide → hit deep cross → finish to the open court.</li>
+            <li><strong>[Doubles Focus]</strong> Serve wide → partner pinches middle looking to poach.</li>
+          </ul>
           <p class="mt-2 text-slate-700 italic">
             <strong>Goal:</strong> Win 65–70% of Serve+1 exchanges.
           </p>
@@ -321,9 +427,16 @@
         </div>
         <div class="callout">
           <h3 class="font-semibold">Return-First Plan</h3>
-          <p class="text-slate-700">
+          <p class="text-slate-700 mt-1">
             Neutralize with height to the body or deep middle; step in on second serves.
           </p>
+          <p class="mt-2 text-slate-700 text-sm">
+            <strong>Default:</strong> Heavy cross or deep middle return → recover inside the hash → wait for short.
+          </p>
+          <ul class="mt-2 text-slate-700 text-sm list-disc pl-5">
+            <li><strong>[Singles Focus]</strong> Heavy cross-court return, then control middle with depth.</li>
+            <li><strong>[Doubles Focus]</strong> Return middle to shrink angles and let your partner attack.</li>
+          </ul>
           <p class="mt-2 text-slate-700 italic">
             <strong>Goal:</strong> Win about 45% of return games by forcing a short ball in the first three shots.
           </p>
@@ -333,8 +446,16 @@
         </div>
         <div class="callout">
           <h3 class="font-semibold">Neutral to Offense</h3>
-          <p class="text-slate-700">
-            Rally cross-court until you see <em>short / middle / height</em>, then take space and pressure.
+          <p class="text-slate-700 mt-1">
+            Stay cross-court until you get an easier ball — <em>short, in the middle, or sitting up higher</em>.
+            When you see it, step in and attack to space.
+          </p>
+          <p class="mt-2 text-slate-700 text-sm">
+            <strong>Default:</strong> Build cross-court; when you see a short or middle ball, step in and attack space.
+          </p>
+          <p class="mt-2 text-slate-700 text-sm">
+            [Singles Focus] Look to step inside the baseline on anything short in the middle.  
+            [Doubles Focus] When you pull them wide, your partner looks to finish at the net.
           </p>
           <p class="mt-2 text-slate-700 italic">
             <strong>Cue:</strong> “Short or middle? Go.”
@@ -342,8 +463,15 @@
         </div>
         <div class="callout">
           <h3 class="font-semibold">Defense to Reset</h3>
-          <p class="text-slate-700">
+          <p class="text-slate-700 mt-1">
             Raise height, aim deep middle, and recover inside the hash to buy time.
+          </p>
+          <p class="mt-2 text-slate-700 text-sm">
+            <strong>Default:</strong> High, heavy ball deep middle → recover inside the hash → restart the point.
+          </p>
+          <p class="mt-2 text-slate-700 text-sm">
+            [Singles Focus] High, heavy to deep middle, recover and restart.  
+            [Doubles Focus] Reset high and deep <em>through the middle</em> so your team can regroup.
           </p>
           <p class="mt-2 text-slate-700 italic">
             <strong>Goal:</strong> Reset to neutral within two balls at least 6/10 times.
@@ -357,27 +485,157 @@
       <h2 class="text-2xl font-bold">Opponent Archetypes</h2>
       <p class="mt-2 text-slate-700">
         Use simple labels so your team can agree quickly on what you’re facing, then choose a plan.
+        These show up in both singles and doubles; in doubles you’ll also notice <strong>formations</strong>
+        that change where the space is.
       </p>
-      <ul class="mt-3 list-disc pl-5 text-slate-700">
+
+      <h3 class="mt-4 text-xl font-semibold">Player Types</h3>
+      <p class="mt-1 text-slate-700">
+        First, tag the <strong>type of player or team</strong> you’re dealing with:
+      </p>
+      <ul class="mt-2 list-disc pl-5 text-slate-700">
         <li>
-          <strong>Big Hitter:</strong>
+          <strong>Big Hitter — Make them rally:</strong>
           Add height and depth; make them hit one more ball from uncomfortable positions.
+          <span class="block text-slate-600 text-sm mt-1">
+            [Doubles Focus] Make them hit from low-and-wide positions, then let your net player finish.
+          </span>
         </li>
         <li>
-          <strong>Counter-puncher:</strong>
+          <strong>Counter-puncher — Don’t over-attack:</strong>
           Take balls early inside the court; finish to space, not to the line.
         </li>
         <li>
-          <strong>Net Rusher:</strong>
+          <strong>Net Rusher — Make them volley up:</strong>
           Target body and feet first; lob or pass only when balanced.
+          <span class="block text-slate-600 text-sm mt-1">
+            [Doubles Focus] Hit low through the middle to jam both players before you try the big angle.
+          </span>
         </li>
         <li>
-          <strong>All-Court:</strong>
+          <strong>All-Court — Win the middle:</strong>
           Win the middle and vary height and tempo to force them into making decisions.
         </li>
       </ul>
+
+      <h3 class="mt-6 text-xl font-semibold">[Doubles Focus] Formations to Recognize</h3>
+      <p class="mt-1 text-slate-700">
+        In doubles, also notice <strong>how</strong> the other team is standing. That tells you where to aim:
+      </p>
+      <ul class="mt-2 list-disc pl-5 text-slate-700">
+        <li>
+          <strong>Both Back:</strong>
+          Both opponents are on the baseline.
+          <span class="block text-slate-600 text-sm mt-1">
+            Look to <strong>take the net</strong>, use deep heavy balls first, then bring them forward with
+            short angles or drop shots.
+          </span>
+        </li>
+        <li>
+          <strong>One Up, One Back (Staggered):</strong>
+          The most common formation — one at net, one at the baseline.
+          <span class="block text-slate-600 text-sm mt-1">
+            Aim <strong>deep cross-court</strong> at the back player, or <strong>low at the net player’s feet</strong>.
+            When in doubt, go <strong>through the middle</strong>.
+          </span>
+        </li>
+        <li>
+          <strong>Both Up:</strong>
+          Both opponents are at or near the net.
+          <span class="block text-slate-600 text-sm mt-1">
+            Use <strong>dipping passing shots, lobs with real height, or heavy middle</strong> to push them back.
+            Avoid floating anything soft through the center.
+          </span>
+        </li>
+        <li>
+          <strong>I Formation:</strong>
+          Server and net player start stacked near the center line.
+          <span class="block text-slate-600 text-sm mt-1">
+            Default to a <strong>deep, heavy return through the middle</strong> with height until you’re comfortable
+            reading their signals. Make them volley up instead of guessing lines.
+          </span>
+        </li>
+        <li>
+          <strong>Australian:</strong>
+          Server and net player start on the same side.
+          <span class="block text-slate-600 text-sm mt-1">
+            Aim to the <strong>open half of the court</strong> cross-court, or go back behind the server if you’re
+            set up and balanced.
+          </span>
+        </li>
+      </ul>
+
+      <h4 class="mt-4 text-lg font-semibold">Doubles Defaults (Quick Reminders)</h4>
+      <ul class="mt-2 list-disc pl-5 text-slate-700">
+        <li>One Up / One Back → play the back player.</li>
+        <li>Both Back → take the net behind heavy, deep balls.</li>
+        <li>Both Up → use height (lob) or heavy middle.</li>
+        <li>I-Formation → hit deep, heavy middle until you can read the play.</li>
+        <li>Australian → aim to the open half of the court.</li>
+      </ul>
+
       <p class="mt-3 text-slate-600">
-        The detailed playbook lives on <a href="/tactics.html" class="text-brand-700 underline">Tactics</a>.
+        The detailed playbook lives on <a href="/tactics.html" class="text-brand-700 underline">Tactics</a> —
+        use this page to name <strong>who</strong> you’re facing and <strong>how</strong> they’re standing before
+        you choose patterns.
+      </p>
+    </section>
+
+    <!-- Mini-Quiz: Doubles Focus -->
+    <section id="mini-quiz-doubles" class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Strategy Mini-Quiz — Doubles Focus</h2>
+      <p class="mt-2 text-slate-700">
+        A quick check to reinforce formation recognition and high-percentage choices in doubles.
+      </p>
+
+      <ol class="mt-4 list-decimal pl-5 text-slate-700">
+        <li>
+          Your opponents start in a <strong>One Up, One Back</strong> formation. 
+          Where is the <strong>highest-percentage return target</strong>?
+          <ul class="mt-2 list-disc pl-5">
+            <li>A) Low dipper at the net player</li>
+            <li>B) Hard drive down the line</li>
+            <li>C) Deep cross-court to the back player</li>
+            <li>D) Short angle to the service box</li>
+          </ul>
+
+          <details class="mt-2">
+            <summary class="text-brand-700 font-semibold cursor-pointer">Show Answer</summary>
+            <p class="mt-2 text-slate-700">
+              <strong>Correct Answer: C — Deep cross-court to the back player.</strong><br>
+              This gives you the biggest margin, keeps the net player neutral, and forces the 
+              back player to hit from a tougher position. It’s the safest, smartest default 
+              return against One Up, One Back.
+            </p>
+          </details>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Singles vs Doubles Snapshot -->
+    <section id="singles-vs-doubles-snapshot" class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Singles vs Doubles: Quick Strategy Snapshot</h2>
+      <div class="mt-3 grid gap-6 md:grid-cols-2">
+        <div>
+          <h3 class="text-xl font-semibold">Singles Strategy Snapshot</h3>
+          <ul class="mt-2 list-disc pl-5 text-slate-700">
+            <li>Make the court feel <strong>big for them, small for you</strong> with deep, safe targets.</li>
+            <li>Have a clear <strong>“home base” pattern</strong> you trust at big moments.</li>
+            <li>Be patient: let your opponent miss first instead of forcing low-percentage winners.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold">Doubles Strategy Snapshot</h3>
+          <ul class="mt-2 list-disc pl-5 text-slate-700">
+            <li>Win with <strong>position + communication</strong> as much as shot-making.</li>
+            <li>Use the <strong>net player as the boss</strong> of the point — active, threatening, ready to poach.</li>
+            <li>Default to <strong>middle + cross</strong>: middle returns, middle volleys, and smart crosses at the right time.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="mt-3 text-slate-700">
+        Before each match, choose <strong>one singles goal</strong> and <strong>one doubles goal</strong> from this list
+        to focus on. That’s how you build strategy that actually shows up when you compete.
       </p>
     </section>
 
@@ -386,33 +644,103 @@
       <h2 class="text-2xl font-bold">Match Metrics &amp; Review</h2>
       <p class="mt-2 text-slate-700">
         Use simple numbers to check whether your strategy actually showed up in the match.
+        Some will skew more singles, some more doubles — but all keep you honest.
       </p>
       <ul class="mt-3 list-disc pl-5 text-slate-700">
         <li><strong>First-Ball Margin:</strong> 80%+ of first balls clear the net by 2–3 feet.</li>
         <li><strong>Serve+1 Win%:</strong> 65–70% target in practice sets.</li>
         <li><strong>Neutral Rally Wins:</strong> About 60% in rallies under 6 balls; 55% in rallies over 6 balls.</li>
         <li><strong>Emotional Errors:</strong> At most 1 rushed, low-margin swing per set.</li>
+        <li><strong>[Doubles] Poach Attempts:</strong> Aim for at least 3–5 <em>real</em> poach attempts per set.</li>
       </ul>
       <p class="mt-3 text-slate-700">
         <em><strong>Post-Match:</strong> Write down one principle you kept well and one you’ll emphasize next match.</em>
       </p>
     </section>
 
-    <!-- Checklist & Cross-links -->
+    <!-- Strategy Mini-Quiz (general) -->
+    <section id="strategy-mini-quiz" class="mx-auto max-w-5xl py-8 border-t border-slate-200">
+      <h2 class="text-2xl font-bold">Strategy Mini-Quiz</h2>
+      <p class="mt-2 text-slate-700">
+        Use this quick quiz to test whether the main ideas from this page are actually sticking.
+        Answer honestly first, then reveal the suggested answer.
+      </p>
+      <ol class="mt-3 list-decimal pl-5 text-slate-700 space-y-4">
+        <li>
+          In a 30–30 rally, you choose a big cross-court target with height instead of going down the line.
+          Which of the Four P’s are you leaning on the most?
+          <details class="mt-2">
+            <summary class="font-semibold text-brand-700 cursor-pointer">Answer</summary>
+            <p class="mt-1 text-slate-700">
+              <strong>Percentages and Patience.</strong> You’re choosing a high-margin target (Percentages)
+              and trusting a longer point instead of forcing a low-percentage winner (Patience).
+            </p>
+          </details>
+        </li>
+        <li>
+          In doubles, what do the Four T’s stand for and when should you use them?
+          <details class="mt-2">
+            <summary class="font-semibold text-brand-700 cursor-pointer">Answer</summary>
+            <p class="mt-1 text-slate-700">
+              <strong>Turn, T, Talk, Touch.</strong> Turn toward your partner, meet at the T, talk
+              (recognition / encouragement / tactic), and touch (racquets or fist bump).
+              Use them after <strong>every point</strong> to stay connected.
+            </p>
+          </details>
+        </li>
+        <li>
+          On a very windy day, which default is smarter: trying to hit flat winners through the wind, or
+          changing your height and targets? Describe one adjustment.
+          <details class="mt-2">
+            <summary class="font-semibold text-brand-700 cursor-pointer">Answer</summary>
+            <p class="mt-1 text-slate-700">
+              Change your height and targets. Into the wind, hit <strong>through</strong> the ball a bit more,
+              aim <strong>deeper</strong>, and still use spin. With the wind, go <strong>high and heavy</strong>
+              and aim a little <strong>shorter</strong> so the wind carries the ball deeper.
+            </p>
+          </details>
+        </li>
+        <li>
+          What is the main job of the “Plan” step in your BPR?
+          <details class="mt-2">
+            <summary class="font-semibold text-brand-700 cursor-pointer">Answer</summary>
+            <p class="mt-1 text-slate-700">
+              To choose <strong>one clear purpose</strong> (build / pressure / finish) and
+              <strong>one clear target</strong> before the point starts. No guessing once the ball is in play.
+            </p>
+          </details>
+        </li>
+        <li>
+          You’re starting a tie-breaker. Which focus is better: “swing bigger and aim closer to the lines”
+          or “play first-ball with height to a big target”? Why?
+          <details class="mt-2">
+            <summary class="font-semibold text-brand-700 cursor-pointer">Answer</summary>
+            <p class="mt-1 text-slate-700">
+              <strong>Play first-ball with height to a big target.</strong>
+              Tie-breakers reward first-ball margin and emotional control. Big swings to small targets
+              under pressure usually feed errors.
+            </p>
+          </details>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Strategy Checklist & Cross-links -->
     <section id="strategy-checklist" class="mx-auto max-w-5xl py-8 border-t border-slate-200">
       <h2 class="text-2xl font-bold">Strategy Checklist</h2>
       <p class="mt-2 text-slate-700">
-        Use this as a quick reset between sets or before practice.
+        Use this as a quick reset between sets or before practice. Run it for both singles and doubles.
       </p>
       <ul class="mt-3 list-disc pl-5 text-slate-700">
         <li>⬜ First ball to a big target with height</li>
         <li>⬜ Recover inside the hash after every swing</li>
         <li>⬜ Decide the purpose before serve/return (build / pressure / finish)</li>
         <li>⬜ Run your BPR every point: Plan → Breathe → Commit</li>
+        <li>⬜ Name one <strong>[Singles Focus]</strong> and one <strong>[Doubles Focus]</strong> goal before the match</li>
       </ul>
       <p class="mt-3 text-slate-700">
         <em><strong>Weekly Challenge:</strong> In two practice sets, keep a simple BPR note on your towel
-        and track Serve+1 win% and first-ball margin.</em>
+        and track Serve+1 win%, first-ball margin, and (for doubles) real poach attempts.</em>
       </p>
       <p class="mt-3 text-slate-600">
         Ready to turn principles into patterns? Head to
@@ -430,21 +758,45 @@
       <div class="cc-body">
         <h3>Focus Theme</h3>
         <p>
-          Strategy is your <em>program compass</em>. Think in three layers —
-          <strong>Principles → Plans → Plays</strong> —
-          so every coach and player is speaking the same language on match day.
+          Strategy is your <em>program compass</em>. For Octopus Tennis, we keep it simple:
+          <strong>Four P’s for how we play, Four T’s for how we stay connected.</strong>
+          Everything else on this page plugs into those anchors.
         </p>
-
-        <h3>Layer 1 — Principles (Non-Negotiables)</h3>
         <ul>
-          <li><em>Win with margin:</em> height, depth, and spin first; “miss long, never in the tape.”</li>
-          <li><em>Neutral → Advantage → Finish:</em> build pressure before going for the hero ball.</li>
-          <li><em>Own the middle:</em> recover inside the hash until you’ve <strong>earned</strong> the angle.</li>
-          <li><em>One plan per point:</em> choose build / pressure / finish in the BPR and stick to it.</li>
-          <li><em>Cool head, clear cue:</em> players respond to simple cues (“Height”, “Middle”, “Up”) not speeches.</li>
+          <li><strong>Four P’s (Core Pillars):</strong> Percentages, Pressure, Patience, Position.</li>
+          <li><strong>Four T’s (Doubles):</strong> Turn, T, Talk, Touch.</li>
+          <li><strong>Three Layers:</strong> Principles → Plans → Plays.</li>
         </ul>
 
+        <h3>Layer 1 — Principles (Non-Negotiables)</h3>
+        <p>
+          Use the Four P’s as your “checklist language” on the fence and at changeovers.
+          Any correction should point back to a P:
+        </p>
+        <ul>
+          <li>
+            <em>Percentages:</em> “We’re aiming too small. Big targets, high net, heavy topspin.”
+          </li>
+          <li>
+            <em>Pressure:</em> “Build first, then attack. Make them feel every rally ball.”
+          </li>
+          <li>
+            <em>Patience:</em> “Win boring points. One more ball with shape.”
+          </li>
+          <li>
+            <em>Position:</em> “Own the middle. Recover inside the hash until you’ve earned the angle.”
+          </li>
+        </ul>
+        <p>
+          In huddles, name <strong>one P to emphasize</strong> for the next few games instead of giving
+          five different technical fixes.
+        </p>
+
         <h3>Layer 2 — Plans (Match &amp; Set Plans)</h3>
+        <p>
+          Before matches, give each player <strong>one primary plan</strong> and
+          <strong>one backup</strong> (and label them Singles / Doubles / Both):
+        </p>
         <ul>
           <li>
             <strong>Serve-First Plan:</strong> big targets on serve, first ball deep middle, finish to space.
@@ -459,35 +811,151 @@
             <em>short / middle / height</em>, then attack.
           </li>
           <li>
-            <strong>Defense-to-Reset Plan:</strong> raise height, aim deep middle, recover inside the hash within two balls.
-          </li>
-          <li>
-            For each player, pick <strong>one primary plan</strong> to start the match and
-            <strong>one backup</strong> to try after a side change.
+            <strong>Defense-to-Reset Plan:</strong> raise height, aim deep middle, recover inside the hash
+            within two balls.
           </li>
         </ul>
+        <p>
+          The goal is that every player can answer, “What’s your plan right now?” in under five seconds.
+        </p>
 
         <h3>Layer 3 — Plays (Point-Level Patterns)</h3>
+        <p>
+          Use a small menu of named plays so your team has a shared language between
+          this page and <a href="/tactics.html" class="text-brand-700 underline">Tactics</a>:
+        </p>
         <ul>
-          <li><strong>“Two cross, one change”:</strong> build with two cross-court balls, change direction only when balanced.</li>
-          <li><strong>“Deep middle reset”:</strong> under pressure, send a high, heavy ball deep middle and recover.</li>
-          <li><strong>“Short or middle? Go.”:</strong> if they leave the ball short or middle, step in and pressure space.</li>
-          <li><strong>“High then low”:</strong> lift deep with height, then pull them short (drop or short angle).</li>
           <li>
-            Use <a href="/tactics.html" class="text-brand-700 underline">Tactics</a> as the detailed playbook:
-            Serve+1 trees, Return+1 branches, and pattern cards.
+            <strong>“Two Cross, One Change”:</strong> two solid cross-courts, then change direction only
+            when balanced.
+          </li>
+          <li>
+            <strong>“Deep Middle Reset”:</strong> under pressure, send a high, heavy ball deep middle and recover.
+          </li>
+          <li>
+            <strong>“Short or Middle? Go.”:</strong> if they leave the ball short or middle, step in and pressure space.
+          </li>
+          <li>
+            <strong>“High then Low”:</strong> lift deep with height, then pull them short (drop or short angle).
+          </li>
+        </ul>
+        <p>
+          These become <strong>callable plays</strong> you can reference on the fence and in practice plans.
+        </p>
+
+        <h3>[Doubles Focus] Coaching the Four T’s</h3>
+        <p>
+          Make the Four T’s a <strong>program habit</strong> for every doubles team:
+          Turn, T, Talk, Touch after <em>every point</em>.
+        </p>
+        <ul>
+          <li>
+            <strong>Turn:</strong> First movement after the point is toward your partner, not the fence
+            or opponents.
+          </li>
+          <li>
+            <strong>T:</strong> Meet at or glance toward the “T” (center line / service line area) so you
+            reset together.
+          </li>
+          <li>
+            <strong>Talk:</strong> Require one clear message — recognition, encouragement, or tactic
+            (“Nice depth,” “We’re fine,” “Middle here”).
+          </li>
+          <li>
+            <strong>Touch:</strong> Racquets or fist bump as a small physical reset, win or lose.
+          </li>
+        </ul>
+        <p>
+          Hold teams accountable: if they skip Talk or Touch, it’s a coaching moment, not a shrug.
+        </p>
+
+        <h3>Practice &amp; Match Implementation</h3>
+        <ul>
+          <li>
+            <strong>Film One Set:</strong> Track how often players actually use their BPR and Four T’s.
+            Debrief with 2–3 clips, not a full video session.
+          </li>
+          <li>
+            <strong>“Principle of the Day”:</strong> Choose one P (e.g., Percentages) and design
+            a practice game that forces it — bonus points for height and big targets.
+          </li>
+          <li>
+            <strong>Pre-Match Cards:</strong> For each lineup, list Four P’s on the front and each
+            player’s primary plan + one key play on the back.
+          </li>
+          <li>
+            <strong>Post-Match Huddle:</strong> Ask each player to name
+            <strong>one principle they kept</strong> and <strong>one they’ll sharpen</strong> next match.
           </li>
         </ul>
 
-        <h3>Coach Implementation Drill</h3>
+        <h3>Program Goal</h3>
         <p>
-          In a team meeting, pick one upcoming match. As a staff (and captains), define:
-          <strong>2 core principles</strong> to emphasize,
-          <strong>1 primary plan</strong> per player (Serve-First, Return-First, or Neutral-to-Offense),
-          and <strong>2 go-to plays</strong> from the Tactics page.
-          Write them on a simple card or in a notes app.
-          <strong>Goal:</strong> after the match, each player can explain their plan and name at least one play
-          they actually used under pressure.
+          When this page is working, your players don’t just “try harder” — they
+          <strong>talk like strategists</strong>. They can name the Four P’s and Four T’s,
+          state their plan, and describe a play they actually used under pressure.
+          That’s how strategy turns into identity for Octopus Tennis.
+        </p>
+      </div>
+    </section>
+
+    <!-- Captain's Checklist -->
+    <section class="coachs-corner" id="captains-checklist-strategy">
+      <div class="cc-header">
+        <span class="cc-label">Captain’s Checklist</span>
+        <h2 class="cc-title">Strategy</h2>
+      </div>
+
+      <div class="cc-body">
+        <p>
+          Screenshot this. Use it in huddles, on changeovers, and before lineups go on court.
+          It’s the fast version of this whole page.
+        </p>
+        <ul>
+          <li>
+            <strong>🧭 Know your P:</strong>
+            Ask, “Which P do we need right now — Percentages, Pressure, Patience, or Position?”
+          </li>
+          <li>
+            <strong>🎯 Big targets first:</strong>
+            Deep middle is the default when the score is tight or energy is shaky.
+          </li>
+          <li>
+            <strong>🎾 On serve:</strong>
+            One clear Serve-First plan: big target, deep first ball, then finish to space.
+          </li>
+          <li>
+            <strong>📍 On return:</strong>
+            Default to deep cross or deep middle unless you’ve clearly earned a different look.
+          </li>
+          <li>
+            <strong>🤝 Doubles rule:</strong>
+            Four T’s every point — Turn, T, Talk, Touch. Call it out if it’s missing.
+          </li>
+          <li>
+            <strong>♟ Formations:</strong>
+            One Up/One Back → play the back player. Both Back → take the net. Both Up → use height or heavy middle.
+          </li>
+          <li>
+            <strong>🧊 Under pressure:</strong>
+            Reset high, heavy, and middle before you try anything fancy.
+          </li>
+          <li>
+            <strong>🚦 Green light:</strong>
+            Short or middle ball = “Go” — step in and attack to space, not to the line.
+          </li>
+          <li>
+            <strong>📣 Communication:</strong>
+            One clear cue between points: Recognition → Encouragement → Plan.
+          </li>
+          <li>
+            <strong>💪 Body language:</strong>
+            Stay taller than the scoreboard — captains model calm eyes, relaxed shoulders, and belief.
+          </li>
+        </ul>
+        <p>
+          If your team can say the Four P’s, Four T’s, and name their current plan, they’re already ahead
+          of most high school opponents before the first ball is struck.
         </p>
       </div>
     </section>
