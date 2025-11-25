@@ -30,9 +30,19 @@ export default {
     },
   },
   plugins: [
-    function ({ addComponents, theme }) {
+    function ({ addComponents, addBase, theme }) {
       const accent = theme("colors.brand.accent");
       const teal = theme("colors.brand.600");
+
+      // 🔹 Global base styles
+      addBase({
+        ":root": {
+          "color-scheme": "light",
+        },
+        html: {
+          "-webkit-text-size-adjust": "100%",
+        },
+      });
 
       addComponents({
         /* ============================
